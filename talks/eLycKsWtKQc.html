@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>5,000 Nodes in Minutes, Twice in a Week: A Pattern for Fleet-Wide Node Changes | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-5">Lightning Talks</span></div>
+<h1>5,000 Nodes in Minutes, Twice in a Week: A Pattern for Fleet-Wide Node Changes</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Alex Yuskauskas</dd></div>
+<div><dt>Track</dt><dd>Lightning Talks</dd></div>
+<div><dt>Topic</dt><dd>Operations + Performance</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a><a class="tag theme-tag" href="../index.html?theme=Delivery%2C%20GitOps%20and%20release%20safety#library">Delivery, GitOps and release safety</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=eLycKsWtKQc">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1247641">Schedule</a> · <a href="https://sessionize.com/download/ynaoji~3wnvyHazKja8b9S2cNH9hY.pdf~kubecon-na-2026-5000-nodes-in-3-minutes-twice-in-a-week-1.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Alex Yuskauskas describes patching the Copy-Fail and Dirty Frag kernel CVEs across NVIDIA&#x27;s fleet with NodeWright, a controller he maintains for changing node operating systems. His main point is to ship every node change together with a check that fails when the change did not work, declared as a Kubernetes resource so kubectl shows the rollout status.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you need to roll out a kernel or OS change to every node and prove it actually took effect.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=eLycKsWtKQc&amp;t=18s" aria-label="Watch at 0:18">0:18</a> Alex Yuskauskas recounts the Copy-Fail CVE workaround: a one-line modprobe drop-in file plus unloading the module with rmmod.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=eLycKsWtKQc&amp;t=45s" aria-label="Watch at 0:45">0:45</a> He explains the catch: if the module is in use, rmmod silently leaves it loaded, so nodes look fixed but are not until they reboot.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=eLycKsWtKQc&amp;t=80s" aria-label="Watch at 1:20">1:20</a> He says the NodeWright package ships the change and its check in the same image, and the check only passes once the module is gone from /proc/modules.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=eLycKsWtKQc&amp;t=146s" aria-label="Watch at 2:26">2:26</a> He describes rollout status as a fixed set of values (complete, in progress, erroring, blocked), which let the SRE team write an agent skill that stops and asks a human when a cluster does not complete.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=eLycKsWtKQc&amp;t=185s" aria-label="Watch at 3:05">3:05</a> He says they ran it across 16 clusters with thousands of nodes in half an hour, then folded Dirty Frag into the same package so the next CVE is a YAML change.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">NodeWright</span><span class="tag project-tag">Kubernetes</span></div><p><strong>Tools:</strong> kubectl, rmmod</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

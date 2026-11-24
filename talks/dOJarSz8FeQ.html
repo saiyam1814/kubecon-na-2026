@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Agentic AI: Let’s Build a Reference Architecture, Live? Or at Least Try! | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-7">Experiences</span></div>
+<h1>Agentic AI: Let’s Build a Reference Architecture, Live? Or at Least Try!</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Ricardo Rocha</dd></div>
+<div><dt>Track</dt><dd>Experiences</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a><a class="tag theme-tag" href="../index.html?theme=Platform%20engineering%20and%20developer%20experience#library">Platform engineering and developer experience</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=dOJarSz8FeQ">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1374950">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Ricardo Rocha invites practitioners to sketch a cloud-native reference architecture for agentic AI from their own deployments. The group maps layers for gateway and inference, then discusses caller identity, privacy, and why an agent&#x27;s lifetime affects how it should be run.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>Watch this if you are planning an agent platform and want to compare architecture choices with other practitioners.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=dOJarSz8FeQ&amp;t=396s" aria-label="Watch at 6:36">6:36</a> Rocha shows the draft architecture and places the gateway at the entry point, LangChain around orchestration, and Langfuse in the observability layer.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=dOJarSz8FeQ&amp;t=611s" aria-label="Watch at 10:11">10:11</a> An attendee says caller identity can be lost on the way to the model and suggests preserving it across the chain for attribution and tracing, mentioning SPIFFE and SPIRE.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=dOJarSz8FeQ&amp;t=786s" aria-label="Watch at 13:06">13:06</a> An attendee describes identifying and tokenizing sensitive fields before sending requests to a third-party inference engine, even if the requests are already signed.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=dOJarSz8FeQ&amp;t=1336s" aria-label="Watch at 22:16">22:16</a> An attendee contrasts one-shot agents that are seldom reused with long-running jobs, and Rocha adds that distinction to the architecture discussion about checkpointing and resuming work.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=dOJarSz8FeQ&amp;t=1714s" aria-label="Watch at 28:34">28:34</a> Rocha asks teams to contribute reference architectures and says submissions should include what worked, what did not, and the custom integration work they needed.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">AWS</span><span class="tag project-tag">Amazon Bedrock</span><span class="tag project-tag">Amazon Bedrock AgentCore</span><span class="tag project-tag">Envoy</span><span class="tag project-tag">Firecracker</span><span class="tag project-tag">Kata Containers</span><span class="tag project-tag">LangChain</span><span class="tag project-tag">Langfuse</span><span class="tag project-tag">LiteLLM</span><span class="tag project-tag">Model Context Protocol</span><span class="tag project-tag">NVIDIA Dynamo</span><span class="tag project-tag">NVIDIA Dynamo-Triton</span><span class="tag project-tag">OpenTelemetry</span><span class="tag project-tag">Prometheus</span><span class="tag project-tag">SGLang</span><span class="tag project-tag">SPIFFE</span><span class="tag project-tag">SPIRE</span><span class="tag project-tag">agentgateway</span><span class="tag project-tag">bubblewrap</span><span class="tag project-tag">gVisor</span><span class="tag project-tag">llama.cpp</span><span class="tag project-tag">llm-d</span><span class="tag project-tag">n8n</span><span class="tag project-tag">vLLM</span></div><p><strong>Tools:</strong> GitHub, Slack</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

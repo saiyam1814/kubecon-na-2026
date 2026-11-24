@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>What monday.com&#x27;s 500+ Engineers and AI Agents Have in Common | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">AI Inference + Agentic</span></div>
+<h1>What monday.com&#x27;s 500+ Engineers and AI Agents Have in Common</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>David Gohberg, Marek Pelka</dd></div>
+<div><dt>Track</dt><dd>AI Inference + Agentic</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a><a class="tag theme-tag" href="../index.html?theme=Platform%20engineering%20and%20developer%20experience#library">Platform engineering and developer experience</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=qs2NWQdRxOE">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1248305">Schedule</a> · <a href="https://sessionize.com/download/ifsafheg~n5JjAQojVuKdPBHHmif8Y3.pdf~kubecon-500-engineers-2.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Marek Pelka and David Gohberg describe how monday.com gives coding agents isolated environments on its shared staging cluster so the agents can check their changes against real dependencies. They say the approach uses mirrord for request routing, database branching and per-agent queue splitting, and that it now also serves developers and non-technical users.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You let coding agents open pull requests and want them to test changes against a real shared environment.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=qs2NWQdRxOE&amp;t=86s" aria-label="Watch at 1:26">1:26</a> Marek Pelka says agents at monday.com merged 22,000 pull requests in three months, 80% with no human touch, and frames the question of how to trust them.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=qs2NWQdRxOE&amp;t=234s" aria-label="Watch at 3:54">3:54</a> He compares lightweight mocked environments with full copies of monday.com, which he says took about 30 minutes to provision and were expensive.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=qs2NWQdRxOE&amp;t=414s" aria-label="Watch at 6:54">6:54</a> David Gohberg explains request-level isolation on the shared staging environment, labelling agent requests with OpenTelemetry baggage headers.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=qs2NWQdRxOE&amp;t=599s" aria-label="Watch at 9:59">9:59</a> He describes using mirrord to run a changed service locally in the agent runtime while the cluster routes the agent&#x27;s requests to it.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=qs2NWQdRxOE&amp;t=731s" aria-label="Watch at 12:11">12:11</a> He covers shared resources: database branching, per-agent splitting of message queues, and case-by-case handling of external API side effects.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">Kubernetes</span><span class="tag project-tag">OpenTelemetry</span><span class="tag project-tag">mirrord</span><span class="tag project-tag">GitHub</span></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

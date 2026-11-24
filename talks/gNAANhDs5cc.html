@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Choose Your Own Adventure: The Saga of Serving LLM Inference | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-7">Cloud Native Novice</span><span class="demo-badge">Demo</span></div>
+<h1>Choose Your Own Adventure: The Saga of Serving LLM Inference</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Whitney Lee, Viktor Farcic</dd></div>
+<div><dt>Track</dt><dd>Cloud Native Novice</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=AI%20inference%20and%20serving#library">AI inference and serving</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=gNAANhDs5cc">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1237600">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Whitney Lee and Viktor Farcic let the audience choose inference settings for a Qwen model on Kubernetes, then deploy that configuration alongside its opposite. They explain the tradeoffs behind each choice and compare signals from the running deployments.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You want to see quantization, replication versus sharding, and speculative decoding compared in a live inference deployment.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=gNAANhDs5cc&amp;t=196s" aria-label="Watch at 3:16">3:16</a> Farcic starts deploying both the audience&#x27;s configuration and the opposite choices so the two inference setups can be compared.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=gNAANhDs5cc&amp;t=698s" aria-label="Watch at 11:38">11:38</a> Lee explains how quantizing model weights can make a model fit on a GPU or leave more memory for the cache used by active conversations.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=gNAANhDs5cc&amp;t=1001s" aria-label="Watch at 16:41">16:41</a> Lee compares replicating the whole model on multiple GPUs with sharding it across GPUs and explains why separate replica caches affect routing.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=gNAANhDs5cc&amp;t=1446s" aria-label="Watch at 24:06">24:06</a> Lee explains how speculative decoding drafts several tokens ahead and how the model checks the guesses before accepting them.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=gNAANhDs5cc&amp;t=1753s" aria-label="Watch at 29:13">29:13</a> The speakers use a Datadog dashboard fed by OpenTelemetry to inspect request rates for the two configurations under audience load.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">Kubernetes</span><span class="tag project-tag">ModelPlane</span><span class="tag project-tag">OpenTelemetry</span><span class="tag project-tag">Qwen</span><span class="tag project-tag">vLLM</span></div><p><strong>Tools:</strong> Datadog</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

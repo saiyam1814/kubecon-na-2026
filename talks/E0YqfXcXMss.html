@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Every Kubernetes Object Deserves an Identity: The SPIFFE Broker API | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">Maintainer Track</span></div>
+<h1>Every Kubernetes Object Deserves an Identity: The SPIFFE Broker API</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Arndt Schwenkschuster</dd></div>
+<div><dt>Track</dt><dd>Maintainer Track</dd></div>
+<div><dt>Topic</dt><dd>SPIFFE</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a><a class="tag theme-tag" href="../index.html?theme=Security%2C%20identity%20and%20policy#library">Security, identity and policy</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=E0YqfXcXMss">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1289711">Schedule</a> · <a href="https://sessionize.com/download/jkaxyen~EKVirYLKsJs4HeDWx7owVt.pdf~every-kubernetes-object-deserves-an-identity.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Arndt Schwenkschuster explains why a shared controller identity can be too broad when a Kubernetes operator acts for individual objects. He describes how the SPIFFE Broker API could give those objects separate identities and discusses uses in Flux, Istio, and secrets management.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>Watch this if you need a Kubernetes operator to access an external system without giving every object the same identity.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=E0YqfXcXMss&amp;t=393s" aria-label="Watch at 6:33">6:33</a> Schwenkschuster explains that assigning one service account to the controller makes onboarding easy but can give different teams&#x27; objects the same access to external Git repositories.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=E0YqfXcXMss&amp;t=525s" aria-label="Watch at 8:45">8:45</a> Schwenkschuster shows how a controller could act as a broker, requesting a SPIFFE ID for a specific GitRepository object so the external system can authorize that object rather than the whole controller.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=E0YqfXcXMss&amp;t=676s" aria-label="Watch at 11:16">11:16</a> Schwenkschuster says the Kubernetes object reference can include a UID, allowing a recreated object with the same name to receive a different identity.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=E0YqfXcXMss&amp;t=771s" aria-label="Watch at 12:51">12:51</a> Schwenkschuster says Flux can already use SPIFFE identifiers for its custom resources and explains how that can replace static secrets or a shared service account.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=E0YqfXcXMss&amp;t=891s" aria-label="Watch at 14:51">14:51</a> Schwenkschuster describes work on Istio ambient mode in which ztunnel would use a pod reference to request the pod&#x27;s identity rather than authenticating as ztunnel itself.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">Argo CD</span><span class="tag project-tag">Envoy</span><span class="tag project-tag">External Secrets Operator</span><span class="tag project-tag">Flux</span><span class="tag project-tag">Istio</span><span class="tag project-tag">Kubernetes</span><span class="tag project-tag">Kubernetes API server</span><span class="tag project-tag">OpenBao</span><span class="tag project-tag">SPIFFE</span><span class="tag project-tag">SPIRE</span></div><p><strong>Tools:</strong> Git, systemd</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

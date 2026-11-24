@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Sovereign AI Starts at the Traffic Layer | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-2">Keynote Sessions</span></div>
+<h1>Sovereign AI Starts at the Traffic Layer</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Andjelko Iharos</dd></div>
+<div><dt>Track</dt><dd>Keynote Sessions</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=AI%20inference%20and%20serving#library">AI inference and serving</a><a class="tag theme-tag" href="../index.html?theme=Networking%20and%20connectivity#library">Networking and connectivity</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=GFFB8A-tLHU">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1294242">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Andjelko Iharos of HAProxy Technologies argues that sending inference to vendor APIs takes sensitive data out of your control, and that in-cluster inference can be routed with the HTTP data plane you already run. He covers routing on the model field in the JSON body and consistent hashing across GPU clusters to protect KV caches during maintenance.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you are bringing LLM inference in-house and want to route it with the load balancer you already run.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=GFFB8A-tLHU&amp;t=10s" aria-label="Watch at 0:10">0:10</a> Andjelko Iharos says that when AI arrives, sensitive requests such as documents and prompts with customer data start leaving your stack without visibility: &quot;your cluster is sovereign, your AI isn&#x27;t.&quot;</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=GFFB8A-tLHU&amp;t=71s" aria-label="Watch at 1:11">1:11</a> He argues you do not need a new gateway for in-cluster inference, because an inference request is plain HTTP, a method, a path and a JSON body, so the data plane you already run can route on the model field.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=GFFB8A-tLHU&amp;t=118s" aria-label="Watch at 1:58">1:58</a> He says routing on the model gives back observability and control, letting you log a request, pass it on or change its destination, and points to HAProxy, an open source project you may already run.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=GFFB8A-tLHU&amp;t=165s" aria-label="Watch at 2:45">2:45</a> He explains keeping requests on the same GPU cluster to reuse the KV cache, and using consistent hashing so a cluster under maintenance affects only itself.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=GFFB8A-tLHU&amp;t=246s" aria-label="Watch at 4:06">4:06</a> He says you can swap models with a config change instead of a vendor migration, with no new software stack, and notes this year is HAProxy&#x27;s 25th anniversary.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">HAProxy</span></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Feeling Lost? A Newcomer&#x27;s Guide to the Gateway API | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-7">Cloud Native Novice</span><span class="demo-badge">Demo</span></div>
+<h1>Feeling Lost? A Newcomer&#x27;s Guide to the Gateway API</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Ian Rudie, Mike Morris</dd></div>
+<div><dt>Track</dt><dd>Cloud Native Novice</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Networking%20and%20connectivity#library">Networking and connectivity</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=7saOJoZ59oI">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1251218">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Ian Rudie and Mike Morris introduce Gateway API and explain how its resources divide responsibility between platform and application teams. They discuss portability and conformance, then show an example conversion from Ingress and what the conversion leaves unresolved.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You are choosing a Gateway API implementation or migrating from Ingress and want to know which behaviors to verify first.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=7saOJoZ59oI&amp;t=128s" aria-label="Watch at 2:08">2:08</a> The speakers explain why Gateway API separates gateway configuration from routes so different teams can share traffic infrastructure.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=7saOJoZ59oI&amp;t=604s" aria-label="Watch at 10:04">10:04</a> The speakers show where a ReferenceGrant is needed when an HTTPRoute sends traffic to a service in another namespace.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=7saOJoZ59oI&amp;t=855s" aria-label="Watch at 14:15">14:15</a> The speakers explain why a successful kubectl apply is only the beginning and show which route status conditions to inspect when a backend reference fails.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=7saOJoZ59oI&amp;t=1107s" aria-label="Watch at 18:27">18:27</a> The speakers describe how conformance reports help compare implementations and distinguish supported features from project-specific extensions.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=7saOJoZ59oI&amp;t=1253s" aria-label="Watch at 20:53">20:53</a> The speakers run ingress2gateway on an ingress-nginx example and inspect the generated resources and a session-persistence annotation that did not carry over.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">Kubernetes</span><span class="tag project-tag">Gateway API</span><span class="tag project-tag">Envoy</span><span class="tag project-tag">Istio</span><span class="tag project-tag">agentgateway</span><span class="tag project-tag">ingress-nginx</span></div><p><strong>Tools:</strong> GitHub, ingress2gateway, kubectl, Slack</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

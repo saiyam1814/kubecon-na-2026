@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Going Cloud Native in Baseball | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-3">Application Development + Delivery</span></div>
+<h1>Going Cloud Native in Baseball</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Matt Dering, Long Nguyen</dd></div>
+<div><dt>Track</dt><dd>Application Development + Delivery</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Delivery%2C%20GitOps%20and%20release%20safety#library">Delivery, GitOps and release safety</a><a class="tag theme-tag" href="../index.html?theme=Platform%20engineering%20and%20developer%20experience#library">Platform engineering and developer experience</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=0edEo-iWJiY">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1250627">Schedule</a> · <a href="https://sessionize.com/download/imicbau~PJudrt2UZDBkrvGydG3LTN.pdf~going-cloud-native-in-baseball.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Matt Dering and Long Nguyen explain how the Phillies platform team supports baseball analysts without asking them to become infrastructure specialists. They describe workflows for containerized model jobs, typed inference APIs, and an event-driven approach to data processing with Knative.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You support a small data science team that needs to run large jobs and ship inference services without managing Kubernetes directly.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=0edEo-iWJiY&amp;t=266s" aria-label="Watch at 4:26">4:26</a> The speakers trace model input and output through BigQuery and explain how selected outputs move into relational databases for the web app used by coaches and front-office staff.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=0edEo-iWJiY&amp;t=415s" aria-label="Watch at 6:55">6:55</a> The speakers show how projects can share code while keeping separate dependencies and container definitions, with a template that works for local Docker Compose and Kubernetes.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=0edEo-iWJiY&amp;t=511s" aria-label="Watch at 8:31">8:31</a> The speakers describe replacing hand-managed compute with templated Kubernetes Jobs that analysts can launch with their own image and command.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=0edEo-iWJiY&amp;t=815s" aria-label="Watch at 13:35">13:35</a> The speakers describe turning familiar typed Python code into validated clients and FastAPI services, with automated checks for schema compatibility.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=0edEo-iWJiY&amp;t=1072s" aria-label="Watch at 17:52">17:52</a> The speakers outline how Knative Functions, Eventing, and request-driven scaling fit their move from scheduled batch scripts toward event-driven processing.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">Apache Airflow</span><span class="tag project-tag">Docker</span><span class="tag project-tag">FastAPI</span><span class="tag project-tag">Google Kubernetes Engine</span><span class="tag project-tag">Jupyter Notebook</span><span class="tag project-tag">Knative</span><span class="tag project-tag">Kubernetes</span><span class="tag project-tag">MySQL</span><span class="tag project-tag">PostgreSQL</span><span class="tag project-tag">Python</span></div><p><strong>Tools:</strong> BigQuery, Chef, Cookiecutter, Docker Compose, Google Cloud Storage</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

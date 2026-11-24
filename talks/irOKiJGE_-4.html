@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Allocating Kubernetes Idle Per-Instance — Letting Scale Do What Fairness Rules Couldn&#x27;t | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-5">Lightning Talks</span></div>
+<h1>Allocating Kubernetes Idle Per-Instance — Letting Scale Do What Fairness Rules Couldn&#x27;t</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Vinicius Krischke</dd></div>
+<div><dt>Track</dt><dd>Lightning Talks</dd></div>
+<div><dt>Topic</dt><dd>Platform Engineering</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=irOKiJGE_-4">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1250015">Schedule</a> · <a href="https://sessionize.com/download/ikhahxeb~Tsqmm8ArRPNh4LBhSHdKp2.pdf~allocating-kubernetes-idle-per-instance.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Vinicius Krischke describes how Nubank allocates Kubernetes idle cost node by node instead of spreading it across all workloads by their share of requests. He argues that this sends a cost signal to the services that cause idle, and that at large scale the allocation evens out without hand-written fairness rules.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you allocate Kubernetes costs to teams and want idle cost to reach the services that cause it.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=irOKiJGE_-4&amp;t=19s" aria-label="Watch at 0:19">0:19</a> Vinicius Krischke describes the common approach: take the whole month&#x27;s idle and spread it across services by their share of requests.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=irOKiJGE_-4&amp;t=57s" aria-label="Watch at 0:57">0:57</a> He explains Nubank&#x27;s alternative: allocate idle per node, to the pods running on that node.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=irOKiJGE_-4&amp;t=95s" aria-label="Watch at 1:35">1:35</a> He says this shifts idle cost to the services that generate it and sends a cost signal, while engineers still decide whether a resource is worth it.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=irOKiJGE_-4&amp;t=151s" aria-label="Watch at 2:31">2:31</a> He takes the fairness objection, a service landing on a node next to a wasteful one, and argues the odds of that repeating are small.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=irOKiJGE_-4&amp;t=184s" aria-label="Watch at 3:04">3:04</a> He says that as the number of instances grows the allocation approaches the mean, so no complicated rules are needed.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">Kubernetes</span></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Free Tokens for Everyone | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">AI Inference + Agentic</span></div>
+<h1>Free Tokens for Everyone</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>William Morgan</dd></div>
+<div><dt>Track</dt><dd>AI Inference + Agentic</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=AI%20inference%20and%20serving#library">AI inference and serving</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=DZA-DF4ToMU">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1249814">Schedule</a></p>
+<section><h2>Talk summary</h2><p>William Morgan says running open-weight models on Kubernetes shifts inference costs from buying tokens to operating GPU capacity. He presents Kinference as a layer for defining tenant policy, tracking usage, and routing requests to local or external backends.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You run a Kubernetes platform and need to share inference capacity across teams without giving up visibility or control.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=DZA-DF4ToMU&amp;t=721s" aria-label="Watch at 12:01">12:01</a> Morgan explains that choosing an open-weight model variant depends on available memory, context length, and expected concurrency, not just the model family.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=DZA-DF4ToMU&amp;t=879s" aria-label="Watch at 14:39">14:39</a> Morgan frames shared GPU inference as a platform problem: teams want self-service and different levels of service while operators must keep finite capacity reliable.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=DZA-DF4ToMU&amp;t=1092s" aria-label="Watch at 18:12">18:12</a> Morgan describes putting a traffic enforcement gateway in front of model servers to handle multiple models and tenants with explicit policy.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=DZA-DF4ToMU&amp;t=1261s" aria-label="Watch at 21:01">21:01</a> Morgan says the gateway can export Prometheus-compatible metrics for existing dashboards and break out performance by model and tenant.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=DZA-DF4ToMU&amp;t=1427s" aria-label="Watch at 23:47">23:47</a> Morgan walks through policies that can choose a model, reject a request, or send it to an external provider using prompt, GPU, and tenant signals.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">Amazon Bedrock</span><span class="tag project-tag">AWS</span><span class="tag project-tag">Databricks</span><span class="tag project-tag">Grafana</span><span class="tag project-tag">Hugging Face</span><span class="tag project-tag">Kinference</span><span class="tag project-tag">Kubernetes</span><span class="tag project-tag">Linkerd</span><span class="tag project-tag">LiteLLM</span><span class="tag project-tag">NVIDIA TensorRT-LLM</span><span class="tag project-tag">Prometheus</span><span class="tag project-tag">Qwen</span><span class="tag project-tag">SGLang</span><span class="tag project-tag">vLLM</span></div><p><strong>Tools:</strong> Claude, NVIDIA Container Toolkit</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Code, Containers, and Clusters: The Next Chapter of Apple&#x27;s Container Framework | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-2">Keynote Sessions</span><span class="demo-badge">Demo</span></div>
+<h1>Code, Containers, and Clusters: The Next Chapter of Apple&#x27;s Container Framework</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Kathryn Baldauf, Vince Prignano</dd></div>
+<div><dt>Track</dt><dd>Keynote Sessions</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=mo3QtBOTP8A">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1353217">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Kathryn Baldauf and Vince Prignano of Apple walk through Apple container, which runs each Linux container in its own lightweight VM on a Mac, plus container machines for persistent Linux dev environments. They announce container cluster for local multi-node Kubernetes clusters and demo building a controller and deploying it to a three-node cluster with Cilium.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you develop for Kubernetes on a Mac and want a local multi-node cluster that uses your locally built images without pushing them.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=mo3QtBOTP8A&amp;t=72s" aria-label="Watch at 1:12">1:12</a> Vince Prignano says Apple bootstraps every cluster declaratively with Kubernetes Cluster API and ships a signed, continuously enforced bill of materials, and asks what it would take to bring that same bill of materials to the MacBook.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=mo3QtBOTP8A&amp;t=119s" aria-label="Watch at 1:59">1:59</a> Kathryn Baldauf says Apple container, written in Swift for Apple silicon, runs each Linux container in its own lightweight VM, shares only the files you choose, and boots in under a second.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=mo3QtBOTP8A&amp;t=168s" aria-label="Watch at 2:48">2:48</a> She introduces container machines: persistent Linux environments built from OCI images that share your Mac user and home folder, which she pitches as a good place for agent sessions.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=mo3QtBOTP8A&amp;t=246s" aria-label="Watch at 4:06">4:06</a> She announces container cluster, which creates a real Kubernetes cluster bootstrapped by kubeadm, with each node as its own VM and a default CNI or one you bring.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=mo3QtBOTP8A&amp;t=413s" aria-label="Watch at 6:53">6:53</a> Demo: Vince builds a controller image, creates a three-worker cluster with Cilium and the shared local image store, deploys with kubectl, then fixes a blocked app with a Cilium network policy.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">Kubernetes</span><span class="tag project-tag">Cluster API</span><span class="tag project-tag">kubeadm</span><span class="tag project-tag">Cilium</span><span class="tag project-tag">controller-runtime</span></div><p><strong>Tools:</strong> Apple container, container machine, container cluster, Apple Virtualization framework, kubectl</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Plug and Play Volumes, hold the Pod | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-3">Cloud Native Theater</span></div>
+<h1>Plug and Play Volumes, hold the Pod</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Piotr Prokop PL, Sreeja Varnam</dd></div>
+<div><dt>Track</dt><dd>Cloud Native Theater</dd></div>
+<div><dt>Topic</dt><dd>KubeVirt Summit</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Data%2C%20storage%20and%20state#library">Data, storage and state</a><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=ZgxxU3M9X5E">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1334851">Schedule</a></p>
+<section><h2>Talk summary</h2><p>The speakers explain why NVIDIA bypasses KubeVirt&#x27;s attachment pod to hotplug storage for cloud gaming sessions. They present a proposal to make volume delivery pluggable while keeping the default attachment path intact.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You need to hotplug storage into running KubeVirt VMs without the cost of an attachment pod.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=ZgxxU3M9X5E&amp;t=30s" aria-label="Watch at 0:30">0:30</a> The first speaker says GeForce NOW needs to expose storage to an application inside a running VM in under seven seconds and clean up automatically when something fails.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=ZgxxU3M9X5E&amp;t=117s" aria-label="Watch at 1:57">1:57</a> The first speaker walks through the default attachment pod and explains why scheduling and networking that pod adds work even when it only delivers a volume.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=ZgxxU3M9X5E&amp;t=251s" aria-label="Watch at 4:11">4:11</a> The first speaker reports that their direct path to the storage provider brought hotplug below four seconds in their tests, compared with eight to nine seconds and sometimes twenty before.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=ZgxxU3M9X5E&amp;t=403s" aria-label="Watch at 6:43">6:43</a> The second speaker introduces VEP-293, which proposes separating delivery, attach, and detach so an integration can replace one stage without changing the default behavior.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=ZgxxU3M9X5E&amp;t=779s" aria-label="Watch at 12:59">12:59</a> The second speaker describes node-local discovery: the provider publishes a file or block device, and KubeVirt handles the guest attachment instead of making the provider duplicate it.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">KubeVirt</span><span class="tag project-tag">Kubernetes</span><span class="tag project-tag">Kubernetes API server</span><span class="tag project-tag">libvirt</span><span class="tag project-tag">QEMU</span></div><p><strong>Tools:</strong> GeForce NOW</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

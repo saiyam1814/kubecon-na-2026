@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Governing and Scaling Agents in Heterogeneous Environments | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">AI Inference + Agentic</span><span class="demo-badge">Demo</span></div>
+<h1>Governing and Scaling Agents in Heterogeneous Environments</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Antonio Ojea, Tomás Tormo</dd></div>
+<div><dt>Track</dt><dd>AI Inference + Agentic</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a><a class="tag theme-tag" href="../index.html?theme=Security%2C%20identity%20and%20policy#library">Security, identity and policy</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=wB5-lqrDCbw">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1234729">Schedule</a> · <a href="https://sessionize.com/download/dnabqev~TS5U8jvdMGC3Q9Ux5tdSiu.pdf~kubecon-na-2026-governing-and-scaling-agents-in-heterogeneous-environments-agent-mesh-v0.2.0-1.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Antonio Ojea and Tomás Tormo say agents on phones, laptops, and in clusters need common identity and policy without forcing every workload into Kubernetes. They present Agent Mesh and demonstrate how node-level policy limits who can reach services in a simulated hospital workflow.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You need agents to discover services across devices and clouds without giving every node the same access.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=wB5-lqrDCbw&amp;t=246s" aria-label="Watch at 4:06">4:06</a> The speakers describe why the same connectivity layer needs to run as an edge gateway, inside an agent framework, or beside a workload in a Kubernetes pod.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=wB5-lqrDCbw&amp;t=537s" aria-label="Watch at 8:57">8:57</a> The speakers describe using libp2p for a distributed data plane with service discovery and cryptographic node identities.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=wB5-lqrDCbw&amp;t=904s" aria-label="Watch at 15:04">15:04</a> The speakers explain that Biscuit credentials can be checked offline and narrowed when a node delegates access to a sub-agent.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=wB5-lqrDCbw&amp;t=1091s" aria-label="Watch at 18:11">18:11</a> The speakers distinguish the control plane that enrolls nodes, the routers that keep the distributed network connected, and the nodes or SDKs used by agents.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=wB5-lqrDCbw&amp;t=1778s" aria-label="Watch at 29:38">29:38</a> In a simulated hospital workflow, the speakers recap how the mesh blocked traffic to an out-of-region agent and rejected requests from nodes without the required identity.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">Agent Mesh</span><span class="tag project-tag">Agent2Agent Protocol</span><span class="tag project-tag">Biscuit</span><span class="tag project-tag">Codex</span><span class="tag project-tag">DRA-Net</span><span class="tag project-tag">Gemini</span><span class="tag project-tag">GitHub</span><span class="tag project-tag">Istio</span><span class="tag project-tag">Kubernetes</span><span class="tag project-tag">libp2p</span><span class="tag project-tag">Model Context Protocol</span><span class="tag project-tag">SPIFFE</span></div><p><strong>Tools:</strong> BigQuery, Common Expression Language, Google Antigravity, Google Cloud Run</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

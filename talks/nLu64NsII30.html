@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Kubernetes Data Protection WG Intro &amp; Deep Dive | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">Maintainer Track</span></div>
+<h1>Kubernetes Data Protection WG Intro &amp; Deep Dive</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Xing Yang, Dave Smith-Uchida</dd></div>
+<div><dt>Track</dt><dd>Maintainer Track</dd></div>
+<div><dt>Topic</dt><dd>Data Protection</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Data%2C%20storage%20and%20state#library">Data, storage and state</a><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=nLu64NsII30">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1289726">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Xing Yang and Dave Smith-Uchida explain why the Kubernetes Data Protection Working Group formed and walk through the backup and restore building blocks it drives, including COSI, snapshot topology, changed block tracking and volume group snapshots. Smith-Uchida then presents two white papers in progress, on data protection best practices and on recovering from ransomware attacks.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>Watch this if you back up stateful workloads on Kubernetes or are planning how to recover from a ransomware attack.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=nLu64NsII30&amp;t=53s" aria-label="Watch at 0:53">0:53</a> Yang says GitOps can recreate manifests, but secrets and data in persistent volumes are not in Git, which is why the group builds Kubernetes-native data protection blocks.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=nLu64NsII30&amp;t=347s" aria-label="Watch at 5:47">5:47</a> Yang highlights COSI v1alpha2 support for one bucket access covering multiple buckets with read-write, write-only and read-only modes.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=nLu64NsII30&amp;t=520s" aria-label="Watch at 8:40">8:40</a> Yang explains changed block tracking, which lets backup vendors copy only the blocks that changed between two snapshots through a new CSI snapshot metadata service.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=nLu64NsII30&amp;t=848s" aria-label="Watch at 14:08">14:08</a> Smith-Uchida describes ransomware as an adversarial problem where the control plane and backups may be compromised and must be verified before restoring.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=nLu64NsII30&amp;t=952s" aria-label="Watch at 15:52">15:52</a> Smith-Uchida recommends immutable backups, such as S3 compliance mode, and moving backup tools from static API keys to short-lived tokens obtained via OIDC.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">Kubernetes</span><span class="tag project-tag">COSI</span><span class="tag project-tag">CSI</span><span class="tag project-tag">gRPC</span></div><p><strong>Tools:</strong> MySQL, Amazon S3, Azure Blob Storage, Google Cloud Storage, OIDC, Git, Slack</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

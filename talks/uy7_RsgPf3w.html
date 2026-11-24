@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Zero-Trust Telemetry: Stopping AI-Powered Poisoning Attacks on Observability Pipelines | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-7">Security</span></div>
+<h1>Zero-Trust Telemetry: Stopping AI-Powered Poisoning Attacks on Observability Pipelines</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Chad M. Crowell, Diana Todea</dd></div>
+<div><dt>Track</dt><dd>Security</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a><a class="tag theme-tag" href="../index.html?theme=Security%2C%20identity%20and%20policy#library">Security, identity and policy</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=uy7_RsgPf3w">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1230227">Schedule</a> · <a href="https://sessionize.com/download/ihcatzep~fksnWYSdGAoptmBe7k15Ci.pdf~zero-trust-telemetry-stopping-ai-powered-poisoning-attacks-diana-todea-and-chad-crowell.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Chad M. Crowell and Diana Todea describe why telemetry should be treated as untrusted input when it feeds automated decisions. They propose independent controls for transport, query access, and network policy, then discuss how to verify those controls in Kubernetes.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>Watch this if telemetry drives automated responses and you want to limit what each source and consumer can do.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=uy7_RsgPf3w&amp;t=817s" aria-label="Watch at 13:37">13:37</a> The speakers describe using mutual TLS between OpenTelemetry Collectors and backends, and explain that verifying the sender does not verify that the data is true.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=uy7_RsgPf3w&amp;t=1003s" aria-label="Watch at 16:43">16:43</a> They propose checking the identity and scope of human and agent queries with fine-grained role-based access, then logging those decisions for audit.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=uy7_RsgPf3w&amp;t=1202s" aria-label="Watch at 20:02">20:02</a> They recommend default-deny network policies for the telemetry namespace, with explicit allowances for the application-to-collector and collector-to-backend flows.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=uy7_RsgPf3w&amp;t=1362s" aria-label="Watch at 22:42">22:42</a> They describe using Falco with Kubernetes audit events to detect suspicious activity, complementing the communication limits from network policy.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=uy7_RsgPf3w&amp;t=1434s" aria-label="Watch at 23:54">23:54</a> They recommend validating which sources feed Prometheus federation and restricting who can reach federation endpoints and exporters.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">Kubernetes</span><span class="tag project-tag">OpenTelemetry</span><span class="tag project-tag">Prometheus</span><span class="tag project-tag">Grafana</span><span class="tag project-tag">Grafana Loki</span><span class="tag project-tag">cert-manager</span><span class="tag project-tag">Falco</span><span class="tag project-tag">Hubble</span></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

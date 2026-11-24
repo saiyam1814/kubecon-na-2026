@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>“Allowed but Unsupported”: When Platform Support Boundaries Meet Enterprise Reality | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-6">Platform Engineering Day</span></div>
+<h1>“Allowed but Unsupported”: When Platform Support Boundaries Meet Enterprise Reality</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Niranjan Shankar</dd></div>
+<div><dt>Track</dt><dd>Platform Engineering Day</dd></div>
+<div><dt>Topic</dt><dd>Platform Engineering Case Study</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Platform%20engineering%20and%20developer%20experience#library">Platform engineering and developer experience</a><a class="tag theme-tag" href="../index.html?theme=Security%2C%20identity%20and%20policy#library">Security, identity and policy</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=IEA6ApGALa0">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cncf-hosted-co-located-schedule/?id=1269252">Schedule</a> · <a href="https://sessionize.com/download/lvanvef~H2UbCyB6KMmM9NqyTbB5Cv.pdf~platform_engineering_day_na_2026_pdf.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Niranjan Shankar describes how the Azure Kubernetes Service team opened limited escape hatches for enterprise customers and what happened when support ownership was unclear. He uses packet loss at the boundary between a self-managed network plugin and a managed service mesh to show why teams need to name who owns the risk.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You need to give advanced platform users more control without leaving production support ownership ambiguous.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=IEA6ApGALa0&amp;t=278s" aria-label="Watch at 4:38">4:38</a> Shankar introduces the &#x27;Allowed but Unsupported&#x27; tier and uses Istio to show how a team can allow a few EnvoyFilter uses, support routine MeshConfig fields, and block higher-risk settings.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=IEA6ApGALa0&amp;t=699s" aria-label="Watch at 11:39">11:39</a> He uses packet loss with a self-managed CNI and a provider-managed service mesh to explain why the boundary between supported and unsupported parts is hard to diagnose during an incident.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=IEA6ApGALa0&amp;t=792s" aria-label="Watch at 13:12">13:12</a> He recalls customers having trouble migrating from self-managed Prometheus to the managed offering because it did not support a rule resource they used.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=IEA6ApGALa0&amp;t=1235s" aria-label="Watch at 20:35">20:35</a> He recommends giving unsupported features a signpost: a way to get best-effort help, an internal owner for production risk, and a path back to a supported option.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=IEA6ApGALa0&amp;t=1388s" aria-label="Watch at 23:08">23:08</a> He closes with criteria for deciding what to expose, including whether teams can isolate the security risk, find an owner, or offer a narrower subset instead of the entire API.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">Kubernetes</span><span class="tag project-tag">Istio</span><span class="tag project-tag">Envoy</span><span class="tag project-tag">Prometheus</span></div><p><strong>Tools:</strong> Azure Kubernetes Service (AKS), Google Kubernetes Engine (GKE), Amazon Elastic Kubernetes Service (EKS), Rego, Lua, Slack</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Hope Is Not a Rollout Strategy: Balancing (AI) Quality, Cost, and Risk Through Experimentation | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-3">Application Development + Delivery</span><span class="demo-badge">Demo</span></div>
+<h1>Hope Is Not a Rollout Strategy: Balancing (AI) Quality, Cost, and Risk Through Experimentation</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Todd Baert</dd></div>
+<div><dt>Track</dt><dd>Application Development + Delivery</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=AI%20inference%20and%20serving#library">AI inference and serving</a><a class="tag theme-tag" href="../index.html?theme=Delivery%2C%20GitOps%20and%20release%20safety#library">Delivery, GitOps and release safety</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=gAnlfFZ2M-M">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1250076">Schedule</a> · <a href="https://sessionize.com/download/ituksax~ErbDWpMTQkpMiFXhtjDdyV.pdf~hope-is-not-a-rollout-strategy.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Baert presents feature flags and telemetry as a way to manage AI rollouts without redeploying the application. He uses a calculator demo to show how he evaluates guardrails and model settings for different groups of users.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>Watch this if you want to test changes to AI models or guardrails on a small group before rolling them out to everyone.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=gAnlfFZ2M-M&amp;t=446s" aria-label="Watch at 7:26">7:26</a> Baert shows an application asking OpenFeature for a model name with a fallback and context, while leaving targeting decisions outside the application code.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=gAnlfFZ2M-M&amp;t=523s" aria-label="Watch at 8:43">8:43</a> He shows how the OpenFeature Operator represents flags as Kubernetes custom resources so their values can change without an application redeploy.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=gAnlfFZ2M-M&amp;t=594s" aria-label="Watch at 9:54">9:54</a> He introduces an LLM-powered calculator so he can compare generated answers against a known correct result.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=gAnlfFZ2M-M&amp;t=747s" aria-label="Watch at 12:27">12:27</a> He enables a guardrail through a flag and uses the dashboard to watch what changes after the rollout.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=gAnlfFZ2M-M&amp;t=1134s" aria-label="Watch at 18:54">18:54</a> He demonstrates assigning a zero-temperature variant to a quarter of trial users while the rest stay on the old setting.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">OpenFeature</span><span class="tag project-tag">flagd</span><span class="tag project-tag">OpenTelemetry</span><span class="tag project-tag">Kubernetes</span><span class="tag project-tag">kind</span><span class="tag project-tag">Ollama</span><span class="tag project-tag">Grafana</span></div><p><strong>Tools:</strong> OpenFeature Operator, Grafana LGTM, OpenTelemetry Collector, kubectl, curl</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

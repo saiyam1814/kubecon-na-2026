@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>SIG Storage Intro and Deep Dive | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">Maintainer Track</span></div>
+<h1>SIG Storage Intro and Deep Dive</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Xing Yang, Hemant Kumar, Michelle Au</dd></div>
+<div><dt>Track</dt><dd>Maintainer Track</dd></div>
+<div><dt>Topic</dt><dd>Storage</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Data%2C%20storage%20and%20state#library">Data, storage and state</a><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=yP_PSgt8YgE">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1289727">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Xing Yang, Hemant Kumar and Michelle Au explain what Kubernetes SIG Storage owns, from persistent volume APIs to CSI and COSI, and walk through recent storage features by category. They cover volume health, security changes, ephemeral volume updates, data protection, storage-aware scheduling and features still in design, then explain how to get involved.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>Watch this if you run stateful workloads on Kubernetes and want a tour of the storage features landing in recent releases.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=yP_PSgt8YgE&amp;t=169s" aria-label="Watch at 2:49">2:49</a> Kumar shows volume health reported on PVC and pod objects, plus a new alpha condition for the health of a whole storage subsystem on the CSINode object.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=yP_PSgt8YgE&amp;t=401s" aria-label="Watch at 6:41">6:41</a> Au explains that the gitRepo volume plugin was removed because kubelet ran git clone on the host, and recommends an init container or sidecar instead.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=yP_PSgt8YgE&amp;t=602s" aria-label="Watch at 10:02">10:02</a> Au introduces dynamic node-local ephemeral volumes, alpha in 1.38, which add and remove volumes from a running pod without recreating it.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=yP_PSgt8YgE&amp;t=895s" aria-label="Watch at 14:55">14:55</a> Yang describes volume group snapshots, GA in 1.36, and changed block tracking, beta in 1.36, which lets backup vendors fetch only the blocks that changed.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=yP_PSgt8YgE&amp;t=1198s" aria-label="Watch at 19:58">19:58</a> Kumar explains an opt-in CSIDriver setting that stops pods from being scheduled to nodes without the driver, and how it interacts with Cluster Autoscaler.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">Kubernetes</span><span class="tag project-tag">CSI</span><span class="tag project-tag">COSI</span><span class="tag project-tag">Cluster Autoscaler</span><span class="tag project-tag">Karpenter</span><span class="tag project-tag">kube-state-metrics</span></div><p><strong>Tools:</strong> NFS, iSCSI, SELinux, Git, Slack</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

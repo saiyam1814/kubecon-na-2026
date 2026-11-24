@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Filter, Transform, Route: Mastering OTTL in the OpenTelemetry Collector | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-3">Tutorials</span><span class="demo-badge">Demo</span></div>
+<h1>Filter, Transform, Route: Mastering OTTL in the OpenTelemetry Collector</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Evan Bradley, Edmo Vamerlatti Costa, Jamie Danielson, Tyler Helmuth</dd></div>
+<div><dt>Track</dt><dd>Tutorials</dd></div>
+<div><dt>Topic</dt><dd>Observability</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=1HyJGGQqIZQ">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1249896">Schedule</a> · <a href="https://sessionize.com/download/sowqaf~hHrkDMwUu8rms3kq9Kvcrc.pdf~filter-transform-route_-mastering-ottl-in-the-opentelemetry-collector.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Evan Bradley, Edmo Vamerlatti Costa, Jamie Danielson, and Tyler Helmuth teach how to filter, transform, and route telemetry with the OpenTelemetry Collector. They debug statements against sample data, work through a trace pipeline, and show how to build a Collector with a custom function.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You write Collector pipelines and want to debug a condition, normalize fields, or route a subset of spans without losing the original trace.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=1HyJGGQqIZQ&amp;t=254s" aria-label="Watch at 4:14">4:14</a> The presenters explain why the Collector moved from component-specific conditions to a shared transformation language.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=1HyJGGQqIZQ&amp;t=773s" aria-label="Watch at 12:53">12:53</a> The presenters compare three ways to debug a statement: inspecting emitted telemetry, tracing individual evaluations, and testing in the OTTL playground.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=1HyJGGQqIZQ&amp;t=1816s" aria-label="Watch at 30:16">30:16</a> The presenters use AI-related spans to show why processing order matters when some spans need a separate destination but the full trace also needs to be preserved.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=1HyJGGQqIZQ&amp;t=2221s" aria-label="Watch at 37:01">37:01</a> The presenters use the OpenTelemetry Collector Builder to scaffold a custom Collector and explain where a custom transform function fits.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=1HyJGGQqIZQ&amp;t=3216s" aria-label="Watch at 53:36">53:36</a> The presenters use ottl.run to demonstrate renaming legacy HTTP attributes to the current semantic-convention names.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">OpenTelemetry</span><span class="tag project-tag">Jaeger</span></div><p><strong>Tools:</strong> Go, OpenTelemetry Collector Builder, OpenTelemetry Transformation Language, ottl.run, YAML</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

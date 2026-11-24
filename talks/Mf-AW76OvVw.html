@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Making Environments Repeatable: From Tools to Platform Capabilities | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-6">Platform Engineering Day</span></div>
+<h1>Making Environments Repeatable: From Tools to Platform Capabilities</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Saiyam Pathak</dd></div>
+<div><dt>Track</dt><dd>Platform Engineering Day</dd></div>
+<div><dt>Topic</dt><dd>Sponsored</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Delivery%2C%20GitOps%20and%20release%20safety#library">Delivery, GitOps and release safety</a><a class="tag theme-tag" href="../index.html?theme=Platform%20engineering%20and%20developer%20experience#library">Platform engineering and developer experience</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=Mf-AW76OvVw">Watch the full talk on YouTube</a> · <a href="https://cncf-hosted-co-located-events-north-america-2026.sessionize.com/session/1312011">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Saiyam explains the hidden setup, configuration, and readiness work behind requests for repeatable environments, and presents vCluster Stacks as a way to encode that work once. He argues that readiness should mean a validated user outcome, illustrated by GPU scheduling and a CUDA smoke test, rather than merely running components.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>watch this if you are turning repeated environment provisioning steps into reusable platform capabilities.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=Mf-AW76OvVw&amp;t=13s" aria-label="Watch at 0:13">0:13</a> Saiyam says the simple request for an environment hides installation, service trust, configuration handoff, and readiness work that platform teams must complete first.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Mf-AW76OvVw&amp;t=53s" aria-label="Watch at 0:53">0:53</a> Saiyam argues that repeatedly glue-fixing environments team by team eventually loses track of tools, versions, and ownership.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Mf-AW76OvVw&amp;t=108s" aria-label="Watch at 1:48">1:48</a> Saiyam says reusable environment automation has to encode ordered setup steps, pass one step&#x27;s output into the next step, and prove readiness from the developer&#x27;s perspective.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Mf-AW76OvVw&amp;t=189s" aria-label="Watch at 3:09">3:09</a> Saiyam uses a CUDA GPU stack to argue that readiness requires scheduler visibility of the GPU and a successful smoke-test job, not only healthy operator components.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Mf-AW76OvVw&amp;t=261s" aria-label="Watch at 4:21">4:21</a> Saiyam closes by asking platform teams what belongs in a reusable stack, what proves an environment ready, and which repeated requests the platform should handle for users.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">Argo CD</span><span class="tag project-tag">Crossplane</span><span class="tag project-tag">Helm</span><span class="tag project-tag">vCluster</span><span class="tag project-tag">NVIDIA GPU Operator</span></div><p><strong>Tools:</strong> CUDA, Run:ai, Terraform</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

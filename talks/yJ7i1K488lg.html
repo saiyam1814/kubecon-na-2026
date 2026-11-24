@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Securing the Agentic Future: Distributing LLM Weights and Sandboxed AI Agents via Harbor | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-7">Security</span><span class="demo-badge">Demo</span></div>
+<h1>Securing the Agentic Future: Distributing LLM Weights and Sandboxed AI Agents via Harbor</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Chenyu Zhang, Yan Wang</dd></div>
+<div><dt>Track</dt><dd>Security</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a><a class="tag theme-tag" href="../index.html?theme=Security%2C%20identity%20and%20policy#library">Security, identity and policy</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=yJ7i1K488lg">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1246342">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Chenyu Zhang and Yan Wang present Harbor as a shared registry for model weights and sandboxed agent images, with different checks for the two supply chains. They demonstrate importing a model from Hugging Face and mounting it in Kubernetes, then discuss declaring an agent&#x27;s requested permissions alongside its image.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>Watch this if you want to distribute model weights through Harbor and review the permissions a sandboxed agent requests.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=yJ7i1K488lg&amp;t=405s" aria-label="Watch at 6:45">6:45</a> The speaker explains that ModelPack packages a model as an OCI artifact so a compliant registry can store it without tying distribution to a serving stack.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=yJ7i1K488lg&amp;t=752s" aria-label="Watch at 12:32">12:32</a> The speaker distinguishes model scanning from ordinary CVE scanning and describes signing model artifacts with Cosign as a separate supply-chain check.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=yJ7i1K488lg&amp;t=1053s" aria-label="Watch at 17:33">17:33</a> The speaker shows a Harbor sync policy for a Hugging Face model, previews the source file list, and inspects the model card and license after the sync.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=yJ7i1K488lg&amp;t=1183s" aria-label="Watch at 19:43">19:43</a> The speaker shows a Kubernetes deployment pointing at Harbor and says Kubernetes mounts the synced model files into the pod.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=yJ7i1K488lg&amp;t=1334s" aria-label="Watch at 22:14">22:14</a> The speaker describes the Docker Sandbox Kit Spec as a declaration attached to the agent image that lists the network destinations, credentials, and paths the agent asks to use.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">Cosign</span><span class="tag project-tag">Docker</span><span class="tag project-tag">Docker Sandbox Kit Spec</span><span class="tag project-tag">Dragonfly</span><span class="tag project-tag">Dynamic Resource Allocation</span><span class="tag project-tag">Gateway API</span><span class="tag project-tag">Harbor</span><span class="tag project-tag">Hugging Face</span><span class="tag project-tag">KitOps</span><span class="tag project-tag">Kubernetes</span><span class="tag project-tag">Kueue</span><span class="tag project-tag">ModelPack</span><span class="tag project-tag">Ollama</span></div><p><strong>Tools:</strong> modctl</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

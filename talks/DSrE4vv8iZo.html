@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>SIG API Machinery in the Era of AI: Updates | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">Maintainer Track</span></div>
+<h1>SIG API Machinery in the Era of AI: Updates</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Joe Betz</dd></div>
+<div><dt>Track</dt><dd>Maintainer Track</dd></div>
+<div><dt>Topic</dt><dd>API Machinery</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=DSrE4vv8iZo">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1289734">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Joe Betz reviews a year of work in Kubernetes SIG API Machinery, from contributor trends to API server performance, resilience and controller improvements. He covers the storage version migrator, internal type and protobuf cleanups, declarative validation with its linter, manifest-based admission policies and client library updates, then outlines what comes next.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>Watch this if you build Kubernetes APIs, CRDs or controllers and want to know what changed in the API machinery underneath them.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=DSrE4vv8iZo&amp;t=98s" aria-label="Watch at 1:38">1:38</a> Betz says PRs to the SIG rose about 50% this year, which he links to AI-assisted development, while reviewer capacity stayed roughly flat.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=DSrE4vv8iZo&amp;t=441s" aria-label="Watch at 7:21">7:21</a> Betz says the storage version migrator has finally landed, so CRD authors can migrate stored objects and eventually retire conversion webhooks.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=DSrE4vv8iZo&amp;t=734s" aria-label="Watch at 12:14">12:14</a> Betz explains that making internal types match the preferred serving version lets the Go compiler skip needless copies during conversion.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=DSrE4vv8iZo&amp;t=885s" aria-label="Watch at 14:45">14:45</a> Betz shows declarative validation, where tags on API types generate validation code, plus a linter that catches mistakes such as a field marked both required and optional.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=DSrE4vv8iZo&amp;t=1030s" aria-label="Watch at 17:10">17:10</a> Betz describes a tool to detect backward-incompatible CRD changes and manifest-based admission policies loaded at API server startup that users cannot bypass or modify.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">Kubernetes</span><span class="tag project-tag">etcd</span><span class="tag project-tag">controller-runtime</span><span class="tag project-tag">Kubebuilder</span><span class="tag project-tag">Kubeflow</span></div><p><strong>Tools:</strong> Go, Protocol Buffers, gogoprotobuf, Python, Slack</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

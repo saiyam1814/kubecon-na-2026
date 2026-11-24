@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Automated Resource Allocation Driven by Service Level Objectives | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-6">Platform Engineering Day</span></div>
+<h1>Automated Resource Allocation Driven by Service Level Objectives</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Pedro Célestin, Julia Furst Morgado</dd></div>
+<div><dt>Track</dt><dd>Platform Engineering Day</dd></div>
+<div><dt>Topic</dt><dd>Platform Engineering Case Study</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a><a class="tag theme-tag" href="../index.html?theme=Platform%20engineering%20and%20developer%20experience#library">Platform engineering and developer experience</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=6FzTYfz2Dx4">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cncf-hosted-co-located-schedule/?id=1249654">Schedule</a> · <a href="https://sessionize.com/download/ccapfelta~D3SskGLyLAXFiF3Jj2GUrs.pdf~automated-resource-allocation-driven-by-slos.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Pedro Célestin and Julia Furst Morgado present a case study in letting teams specify service objectives and using measured performance to test resource changes automatically. They describe using error budgets and production canaries to test proposed changes instead of letting an AI agent change allocation directly.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You want to turn service objectives into allocation decisions without handing an AI agent direct control of production.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=6FzTYfz2Dx4&amp;t=175s" aria-label="Watch at 2:55">2:55</a> The speakers translate an example latency goal into an error budget, then explain how budget burn could inform whether to add or reclaim resources.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=6FzTYfz2Dx4&amp;t=440s" aria-label="Watch at 7:20">7:20</a> They propose canarying a resource change, not just a new build. They explain that if more resources do not improve the service-level indicator, the cause may instead be a bad release.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=6FzTYfz2Dx4&amp;t=585s" aria-label="Watch at 9:45">9:45</a> They describe the division of work in their case study: developers set the service objective, while the platform tests its own allocation proposals and can keep or reverse a change based on measured results.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=6FzTYfz2Dx4&amp;t=688s" aria-label="Watch at 11:28">11:28</a> They say letting AI change production allocation directly did not work well for them, so they limited it to proposing changes that a production canary could verify.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=6FzTYfz2Dx4&amp;t=805s" aria-label="Watch at 13:25">13:25</a> They walk through their stack: Prometheus collects metrics, Argo CD deploys changes, Argo Rollouts runs canaries, and Knative is used in some cases rather than being required.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">Helm</span><span class="tag project-tag">KEDA</span><span class="tag project-tag">Prometheus</span><span class="tag project-tag">Argo CD</span><span class="tag project-tag">Argo Rollouts</span><span class="tag project-tag">Knative</span></div><p><strong>Tools:</strong> Slack</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

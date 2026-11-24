@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Pods Are Not Enough for AI Agents, Meet Agent-substrate | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">AI Inference + Agentic</span><span class="demo-badge">Demo</span></div>
+<h1>Pods Are Not Enough for AI Agents, Meet Agent-substrate</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Christian Posta</dd></div>
+<div><dt>Track</dt><dd>AI Inference + Agentic</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=gzga1kARmxI">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1250532">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Christian Posta says long-lived agent sessions need an identity and state that can outlast any one Kubernetes pod. He demonstrates how Agent Substrate suspends and resumes actors on shared workers and controls their access to outside services.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You need to run agents that pause and resume without keeping one Kubernetes pod per session.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=gzga1kARmxI&amp;t=496s" aria-label="Watch at 8:16">8:16</a> Posta says an actor&#x27;s identity and policy should be independent of the pod so the actor can keep its state when it isn&#x27;t running.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=gzga1kARmxI&amp;t=666s" aria-label="Watch at 11:06">11:06</a> Posta explains that an actor&#x27;s identity persists for the actor&#x27;s lifetime and that network calls from the sandbox require policy approval.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=gzga1kARmxI&amp;t=1102s" aria-label="Watch at 18:22">18:22</a> Posta suspends one actor in the demo, freeing enough capacity in the same worker for another actor to run.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=gzga1kARmxI&amp;t=1342s" aria-label="Watch at 22:22">22:22</a> Posta explains how agentgateway can check egress policy and attach a credential outside the sandbox instead of handing the secret to the actor.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=gzga1kARmxI&amp;t=1727s" aria-label="Watch at 28:47">28:47</a> Posta distinguishes Agent Substrate&#x27;s actor runtime from kagent, which can use conversation and user context to decide when to suspend or resume an actor.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">agentgateway</span><span class="tag project-tag">Agent Substrate</span><span class="tag project-tag">GitHub</span><span class="tag project-tag">gVisor</span><span class="tag project-tag">Helm</span><span class="tag project-tag">kagent</span><span class="tag project-tag">Kubernetes</span><span class="tag project-tag">Model Context Protocol</span></div><p><strong>Tools:</strong> Google Cloud Storage</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

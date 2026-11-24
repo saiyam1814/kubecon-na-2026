@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Progressive Delivery for Trust: How Agents Earn the Right to Merge | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-0">Platform Engineering</span></div>
+<h1>Progressive Delivery for Trust: How Agents Earn the Right to Merge</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Darian DeFalco</dd></div>
+<div><dt>Track</dt><dd>Platform Engineering</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a><a class="tag theme-tag" href="../index.html?theme=Delivery%2C%20GitOps%20and%20release%20safety#library">Delivery, GitOps and release safety</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=917gPchTrko">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1250982">Schedule</a> · <a href="https://sessionize.com/download/ydamqel~WrWYrVtXPJffc9FS1LdtWh.pdf~progressive-delivery-for-trust_-how-agents-earn-the-right-to-merge.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Darian DeFalco describes how Transfix applies progressive delivery to deciding when an automated pull request can merge. He explains how shadow evaluations, per-PR test environments, and narrow, reversible grants keep the decision separate from the permission to act.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You want to move from human review of every agent-written change to limited auto-merge based on observed outcomes.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=917gPchTrko&amp;t=507s" aria-label="Watch at 8:27">8:27</a> DeFalco describes how Transfix turns each task into a Kubernetes Job with a limited GitHub token and runs it only in staging.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=917gPchTrko&amp;t=657s" aria-label="Watch at 10:57">10:57</a> DeFalco explains that in shadow mode the agent opens a pull request and an evaluator logs what it would do without acting on the decision.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=917gPchTrko&amp;t=732s" aria-label="Watch at 12:12">12:12</a> DeFalco shows how Argo CD creates a staging namespace for a labeled pull request and removes it when the label is removed.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=917gPchTrko&amp;t=815s" aria-label="Watch at 13:35">13:35</a> DeFalco says a grant covers a narrow class of changes and each new pull request still needs a passing test for that exact commit.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=917gPchTrko&amp;t=982s" aria-label="Watch at 16:22">16:22</a> DeFalco describes how a reverted merge suspends automation for that repository and triggers a pull request to remove the grant.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">Argo CD</span><span class="tag project-tag">Argo Rollouts</span><span class="tag project-tag">Git</span><span class="tag project-tag">GitHub</span><span class="tag project-tag">goose</span><span class="tag project-tag">Grafana</span><span class="tag project-tag">Grafana Loki</span><span class="tag project-tag">Grafana Mimir</span><span class="tag project-tag">Kubernetes</span></div><p><strong>Tools:</strong> Cerebro, Claude Skills, GitHub CLI, Jira, Ripwire</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Hardening Kubernetes for GovCloud: A 3-Year Journey to FedRAMP Moderate Authorization | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-7">Security</span></div>
+<h1>Hardening Kubernetes for GovCloud: A 3-Year Journey to FedRAMP Moderate Authorization</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Artur Beznosyuk, Hanhong Gao</dd></div>
+<div><dt>Track</dt><dd>Security</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Security%2C%20identity%20and%20policy#library">Security, identity and policy</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=rG1Tu4npeWs">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1251004">Schedule</a> · <a href="https://sessionize.com/download/gmavdex~NFKkzpPF7CxgNpdRdU1F47.pdf~hardening-kubernetes-for-govcloud-kubecon-na-2026.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Artur Beznosyuk and Hanhong Gao describe Verkada’s path to FedRAMP Moderate authorization while running Kubernetes in AWS GovCloud. They explain what changed in node images, service-to-service encryption, vulnerability handling, and the deployment workflow.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You operate Kubernetes in a regulated environment and want an example of balancing audit requirements, patching, and developer workflows.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=rG1Tu4npeWs&amp;t=706s" aria-label="Watch at 11:46">11:46</a> The speakers explain why Verkada switched from stock Amazon EKS node images to custom hardened images that enable FIPS mode.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=rG1Tu4npeWs&amp;t=873s" aria-label="Watch at 14:33">14:33</a> The speakers describe moving from partial Istio use to mesh-wide encryption in GovCloud and sourcing FIPS builds of the Istio images.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=rG1Tu4npeWs&amp;t=1062s" aria-label="Watch at 17:42">17:42</a> The speakers use Argo CD and an Apache Airflow upgrade to illustrate how the team requested vulnerability exceptions when no patched image was available or an upgrade needed time.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=rG1Tu4npeWs&amp;t=1353s" aria-label="Watch at 22:33">22:33</a> The speakers describe using AWS CodeCommit as the source for Argo CD inside GovCloud while retaining GitHub for developer interaction and mirroring deployment changes between them.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=rG1Tu4npeWs&amp;t=1554s" aria-label="Watch at 25:54">25:54</a> The speakers describe bringing GovCloud deployments into the standard deployment system so the teams responsible for the services could review and approve the generated pull requests.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">Amazon EKS</span><span class="tag project-tag">Apache Airflow</span><span class="tag project-tag">Argo CD</span><span class="tag project-tag">AWS</span><span class="tag project-tag">GitHub</span><span class="tag project-tag">Go</span><span class="tag project-tag">Istio</span><span class="tag project-tag">Kubernetes</span><span class="tag project-tag">Python</span><span class="tag project-tag">Terraform</span></div><p><strong>Tools:</strong> AWS CodeCommit, AWS GovCloud (US), Azure Government, EC2 Image Builder</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

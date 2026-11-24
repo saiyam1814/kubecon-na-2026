@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Agent Substrate: Open Layers for Agentic Systems | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-2">Keynote Sessions</span><span class="demo-badge">Demo</span></div>
+<h1>Agent Substrate: Open Layers for Agentic Systems</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Jaana Dogan, Dmitry Berkovich, Tim Hockin, Eitan Yarmush, Luiz Scheidegger</dd></div>
+<div><dt>Track</dt><dd>Keynote Sessions</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=CC872qQ-eNQ">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1367757">Schedule</a></p>
+<section><h2>Talk summary</h2><p>The speakers describe Agent Substrate as a way to run many stateful agents on Kubernetes by snapshotting idle sandboxes and resuming them when work arrives. They introduce a bridge for Claude Managed Agents and show attendees sending agents on missions in a virtual KubeCon.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>Watch this if you want a live example of running many stateful agents on Kubernetes and waking them only when they have work.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=CC872qQ-eNQ&amp;t=89s" aria-label="Watch at 1:29">1:29</a> Dogan says the stateful, bursty nature of agent systems calls for workload resumption and security guardrails beyond what Google had in Borg and Kubernetes.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=CC872qQ-eNQ&amp;t=132s" aria-label="Watch at 2:12">2:12</a> Berkovich describes Agent Substrate&#x27;s design goals: isolated sandboxes with agent identity but no credentials, high density, and fast wake-ups that preserve state.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=CC872qQ-eNQ&amp;t=166s" aria-label="Watch at 2:46">2:46</a> The speakers explain how Agent Substrate snapshots memory and disk before suspending idle workloads and resumes them on custom workers when needed.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=CC872qQ-eNQ&amp;t=244s" aria-label="Watch at 4:04">4:04</a> Scheidegger announces the Agent Substrate Bridge for Claude Managed Agents, then shows a virtual KubeCon where attendees can send their agents on missions.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=CC872qQ-eNQ&amp;t=344s" aria-label="Watch at 5:44">5:44</a> Dogan says the live demo was running on a single Google Kubernetes Engine cluster with about 24 nodes and about 65 agents per node.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">Agent Substrate</span><span class="tag project-tag">Agent Substrate Bridge</span><span class="tag project-tag">Kubernetes</span></div><p><strong>Tools:</strong> Borg, Claude Managed Agents, Google Kubernetes Engine, Gemini, Google Workspace</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

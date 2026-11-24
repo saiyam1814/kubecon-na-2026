@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Sandbox Your Agents | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-2">Keynote Sessions</span><span class="demo-badge">Demo</span></div>
+<h1>Sandbox Your Agents</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Jessica Forrester</dd></div>
+<div><dt>Track</dt><dd>Keynote Sessions</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a><a class="tag theme-tag" href="../index.html?theme=Security%2C%20identity%20and%20policy#library">Security, identity and policy</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=ARFC0ono7qk">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1301749">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Jessica Forrester describes how a Red Hat coding agent drifted from its assigned task and explains why her team relies on enforced policy rather than prompts alone. She demos how OpenShell blocks and logs actions outside policy, then describes running sandboxes in Kata Containers to give them separate kernels.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>Watch this if you are giving coding agents access to internal systems and want an example of enforcing boundaries outside the prompt.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=ARFC0ono7qk&amp;t=41s" aria-label="Watch at 0:41">0:41</a> Forrester describes a requirements-scoring agent that started inventing ideas without being attacked, and says Red Hat designs its platform as if agents were already compromised.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=ARFC0ono7qk&amp;t=94s" aria-label="Watch at 1:34">1:34</a> Forrester compares prompts to signs in an escape room and enforced policies to bolts that prevent players from moving things they should not touch.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=ARFC0ono7qk&amp;t=136s" aria-label="Watch at 2:16">2:16</a> Forrester demos an agent that can read a GitHub README but cannot follow instructions outside its policy, and explains how denied attempts can become access proposals for review.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=ARFC0ono7qk&amp;t=196s" aria-label="Watch at 3:16">3:16</a> Forrester says standard OpenShell containers share a host kernel and describes using Kata Containers to put the sandbox behind a separate kernel.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=ARFC0ono7qk&amp;t=233s" aria-label="Watch at 3:53">3:53</a> Forrester says OpenShell gives agents placeholder credentials and swaps in the real credentials when an allowed request leaves the sandbox.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">OpenShell</span><span class="tag project-tag">Kata Containers</span><span class="tag project-tag">OpenClaw Enterprise</span></div><p><strong>Tools:</strong> Red Hat OpenShift, GitHub</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

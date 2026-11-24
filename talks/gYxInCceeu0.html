@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Four Resources, One Object: Surviving Gateway API After Ingress NGINX | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-0">Platform Engineering</span><span class="demo-badge">Demo</span></div>
+<h1>Four Resources, One Object: Surviving Gateway API After Ingress NGINX</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Sitesh Pattanaik</dd></div>
+<div><dt>Track</dt><dd>Platform Engineering</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Networking%20and%20connectivity#library">Networking and connectivity</a><a class="tag theme-tag" href="../index.html?theme=Platform%20engineering%20and%20developer%20experience#library">Platform engineering and developer experience</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=gYxInCceeu0">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1251205">Schedule</a> · <a href="https://sessionize.com/download/icbahyeb~T4sy3x772f1pL7KmSzib8r.pdf~four_resources_one_object_kubecon_na_2026.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Pattanaik demonstrates how replacing Ingress NGINX annotations with separate Gateway API and Envoy Gateway objects can leave route policies out of sync. He shows how his example uses a resource graph to manage those objects together and compares that approach with other ways to manage their lifecycle.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>Watch this if you are migrating from Ingress NGINX and need a way to keep routes and their policies from drifting apart.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=gYxInCceeu0&amp;t=379s" aria-label="Watch at 6:19">6:19</a> Pattanaik identifies the four resources in his example: an HTTPRoute plus security, backend traffic, and client traffic policies.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=gYxInCceeu0&amp;t=643s" aria-label="Watch at 10:43">10:43</a> He explains that a policy&#x27;s target reference does not tell the route about the policy or require it to share the route&#x27;s lifetime.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=gYxInCceeu0&amp;t=1247s" aria-label="Watch at 20:47">20:47</a> He describes the platform team owning a ResourceGraphDefinition while an application team supplies inputs such as the hostname.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=gYxInCceeu0&amp;t=1661s" aria-label="Watch at 27:41">27:41</a> He shows that the graph manages the route and its authorization policy together when he switches to a replacement resource.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=gYxInCceeu0&amp;t=1753s" aria-label="Watch at 29:13">29:13</a> He compares Helm, kro, Crossplane, and a custom operator, asking which component will manage the full resource graph as a unit.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">Kubernetes</span><span class="tag project-tag">Amazon EKS</span><span class="tag project-tag">ingress-nginx</span><span class="tag project-tag">Gateway API</span><span class="tag project-tag">Envoy Gateway</span><span class="tag project-tag">kro</span><span class="tag project-tag">Helm</span><span class="tag project-tag">Crossplane</span></div><p><strong>Tools:</strong> curl</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

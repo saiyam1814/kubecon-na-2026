@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Your CI&#x27;s Mistaken Identity | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-7">Security</span><span class="demo-badge">Demo</span></div>
+<h1>Your CI&#x27;s Mistaken Identity</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Andrew McNamara, Maia Iyer</dd></div>
+<div><dt>Track</dt><dd>Security</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Delivery%2C%20GitOps%20and%20release%20safety#library">Delivery, GitOps and release safety</a><a class="tag theme-tag" href="../index.html?theme=Security%2C%20identity%20and%20policy#library">Security, identity and policy</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=io9AdE2hbwo">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1248924">Schedule</a> · <a href="https://sessionize.com/download/itkakced~9itVw8du9VH5oPCKiAfkRY.pdf~kubecon-na-2026_your-ci-s-mistaken-identity-v2.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Andrew McNamara and Maia Iyer say a namespace and service account can tell you where a CI task runs without telling you what it should be allowed to do. They describe pairing per-task workload identities with admission-time policy and using those identities to authorize access and sign attestations.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You want to avoid giving every task in a Kubernetes CI pipeline the same privileges.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=io9AdE2hbwo&amp;t=270s" aria-label="Watch at 4:30">4:30</a> The speakers explain that SPIRE can use more than namespace and service account when assigning workload identities, so CI pods in the same namespace can have different roles.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=io9AdE2hbwo&amp;t=559s" aria-label="Watch at 9:19">9:19</a> The speakers explain that a Tekton bundle&#x27;s digest changes when its task definition changes, and show where Sigstore signatures and attestations can be stored.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=io9AdE2hbwo&amp;t=854s" aria-label="Watch at 14:14">14:14</a> The speakers describe using Kyverno admission policy to require extra verification before a task can get a production identity.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=io9AdE2hbwo&amp;t=1017s" aria-label="Watch at 16:57">16:57</a> In the live demo, the speakers show that an unsigned task from an untrusted catalog was blocked before a pod was scheduled.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=io9AdE2hbwo&amp;t=1341s" aria-label="Watch at 22:21">22:21</a> The speakers explain how task-scoped identities let a verification policy check not just for an attestation, but for the specific CI task expected to produce it.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">Kubernetes</span><span class="tag project-tag">Kyverno</span><span class="tag project-tag">Sigstore</span><span class="tag project-tag">SPIFFE</span><span class="tag project-tag">SPIRE</span><span class="tag project-tag">Tekton</span><span class="tag project-tag">zot</span></div><p><strong>Tools:</strong> Cosign, Fulcio, kind</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

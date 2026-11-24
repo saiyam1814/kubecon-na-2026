@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Groundhog Pod: Scaling AI Inference with Kata Pod Snapshots | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">AI Inference + Agentic</span><span class="demo-badge">Demo</span></div>
+<h1>Groundhog Pod: Scaling AI Inference with Kata Pod Snapshots</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>David Justice, Roaa Sakr</dd></div>
+<div><dt>Track</dt><dd>AI Inference + Agentic</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=AI%20inference%20and%20serving#library">AI inference and serving</a><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=4FzdSErl41M">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1250683">Schedule</a> · <a href="https://sessionize.com/download/fqattel~wd2UCYcWSbzKqKeTyvNRDr.pptx~groundhog-pod-kubecon-2026-rev2.pptx">Slides</a></p>
+<section><h2>Talk summary</h2><p>David Justice and Roaa Sakr describe a prototype that snapshots an initialized Kata pod VM along with its GPU state. They report a faster restore than cold start in their demo and discuss where hardware compatibility can limit reuse of a snapshot.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You are comparing pre-warmed GPU pods with restoring initialized workloads when inference demand spikes.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=4FzdSErl41M&amp;t=412s" aria-label="Watch at 6:52">6:52</a> The speakers say a VM snapshot may fail to restore on a different CPU microarchitecture and describe using virtual CPU profiles to define a compatible feature set.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=4FzdSErl41M&amp;t=527s" aria-label="Watch at 8:47">8:47</a> The speakers explain that CUDA checkpointing moves GPU state into the running application inside the VM, so the subsequent VM snapshot can capture that state too.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=4FzdSErl41M&amp;t=780s" aria-label="Watch at 13:00">13:00</a> In the inference demo, the speakers terminate the original pod and show another pod restoring from its snapshot and returning a response.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=4FzdSErl41M&amp;t=855s" aria-label="Watch at 14:15">14:15</a> For the demo on an NVIDIA Tesla T4, the speakers report about 34 seconds for the cold start and 11 seconds from a snapshot, which skipped the software and model loading steps.</li><li><a class="timestamp" href="https://www.youtube.com/watch?v=4FzdSErl41M&amp;t=1202s" aria-label="Watch at 20:02">20:02</a> In a second demo, the speakers plot the training loss and show it continuing from a restored snapshot after the training pod is interrupted.</li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <span class="tag project-tag">Cloud Hypervisor</span><span class="tag project-tag">containerd</span><span class="tag project-tag">Hugging Face</span><span class="tag project-tag">Kata Containers</span><span class="tag project-tag">Kubernetes</span><span class="tag project-tag">Python</span><span class="tag project-tag">PyTorch</span></div><p><strong>Tools:</strong> CUDA, VFIO</p></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>
