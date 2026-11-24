@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Kubernetes security | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-guide-page -->
+<a class="back-link" href="../guides.html">← All topic guides</a>
+<section class="guide-heading"><p class="eyebrow">GUIDED CATCH-UP · 4 STOPS</p>
+<h1>Kubernetes security</h1><p>For Platform engineer · SRE.</p>
+<p>Follow the numbered stops from foundations to deep dives, not a ranking. Reasons and moment descriptions are verbatim excerpts from the linked talk notes.</p>
+<a class="primary-link" href="#short-route">Only 30 minutes? Take the 25m 58s route ↓</a>
+<p><a href="#full-route">Or follow the full path</a></p></section>
+<section id="short-route" class="short-route" aria-labelledby="short-heading"><p class="eyebrow">THE SHORT VERSION</p>
+<h2 id="short-heading">25m 58s of selected moments</h2>
+<p class="muted">This budget adds the intervals below, not full recording lengths. YouTube opens at each start; stop at the shown boundary. Links do not auto-stop playback.</p>
+<ol class="short-stops"><li class="route-card"><p class="eyebrow">STOP 1 · 7m 49s</p>
+<h3><a href="#step-1">Open Policy Agent. (OPA) Intro &amp; Deep Dive</a></h3>
+<p class="clip-window"><a class="timestamp" href="https://www.youtube.com/watch?v=w0GSSfVjPYM&amp;t=53s">Start 0:53</a>
+<span>Stop at <strong>8:42</strong></span></p>
+<p data-note-video="w0GSSfVjPYM" data-note-seconds="53">Spaink describes the problem OPA targets: policy scattered across enforcement points owned by different teams, so nobody can easily answer what the policy is.</p></li><li class="route-card"><p class="eyebrow">STOP 2 · 2m 31s</p>
+<h3><a href="#step-2">RBAC as a Platform Capability: Applying Platform Engineering to Kubernetes Access</a></h3>
+<p class="clip-window"><a class="timestamp" href="https://www.youtube.com/watch?v=HSiElMCPZmA&amp;t=547s">Start 9:07</a>
+<span>Stop at <strong>11:38</strong></span></p>
+<p data-note-video="HSiElMCPZmA" data-note-seconds="547">The speakers distinguish the resource that declares namespace configuration from the resource that declares who should have access and what permissions they receive.</p></li><li class="route-card"><p class="eyebrow">STOP 3 · 12m 18s</p>
+<h3><a href="#step-3">Why Your Monitoring Stack is a Security Risk</a></h3>
+<p class="clip-window"><a class="timestamp" href="https://www.youtube.com/watch?v=L2HAZET3J9o&amp;t=255s">Start 4:15</a>
+<span>Stop at <strong>16:33</strong></span></p>
+<p data-note-video="L2HAZET3J9o" data-note-seconds="255">The speakers warn that a role granted for a simple health check can also authorize far more sensitive kubelet operations.</p></li><li class="route-card"><p class="eyebrow">STOP 4 · 3m 20s</p>
+<h3><a href="#step-4">Falco Never Flies Alone: Runtime Security as an Ecosystem</a></h3>
+<p class="clip-window"><a class="timestamp" href="https://www.youtube.com/watch?v=p0OmSLcJMqY&amp;t=995s">Start 16:35</a>
+<span>Stop at <strong>19:55</strong></span></p>
+<p data-note-video="p0OmSLcJMqY" data-note-seconds="995">Cannarella says Falco Operator 0.5 pulls artifacts from the registry once, serves them to every node, and checks rules against the Falco version before installing.</p></li></ol></section>
+<section id="full-route" class="full-route" aria-labelledby="full-heading"><p class="eyebrow">BUILD UP THE TOPIC</p>
+<h2 id="full-heading">The full path</h2><nav class="guide-jumps" aria-label="Learning path"><a href="#step-1">1. Start here</a><a href="#step-2">2. Next</a><a href="#step-3">3. Next</a><a href="#step-4">4. Go deeper</a></nav>
+<ol class="guide-stops"><li id="step-1" class="guide-stop"><p class="eyebrow">STEP 1 · START HERE</p>
+<h3><a href="../talks/w0GSSfVjPYM.html">Open Policy Agent. (OPA) Intro &amp; Deep Dive</a></h3><p class="muted">Sebastian Spaink, Johan Fylling</p>
+<div class="guide-why"><h4>Why this stop</h4><p class="guide-note" data-note-video="w0GSSfVjPYM" data-note-seconds="53"><a class="timestamp" href="https://www.youtube.com/watch?v=w0GSSfVjPYM&amp;t=53s" aria-label="Watch at 0:53">0:53</a> <span>Spaink describes the problem OPA targets: policy scattered across enforcement points owned by different teams, so nobody can easily answer what the policy is.</span></p></div>
+<h4>More moments to jump to</h4><p class="guide-note" data-note-video="w0GSSfVjPYM" data-note-seconds="522"><a class="timestamp" href="https://www.youtube.com/watch?v=w0GSSfVjPYM&amp;t=522s" aria-label="Watch at 8:42">8:42</a> <span>Fylling shows the new or keyword for inline disjunction, while still recommending helper rules to keep large logical expressions maintainable.</span></p><p class="guide-note" data-note-video="w0GSSfVjPYM" data-note-seconds="753"><a class="timestamp" href="https://www.youtube.com/watch?v=w0GSSfVjPYM&amp;t=753s" aria-label="Watch at 12:33">12:33</a> <span>Fylling explains the pitfall where a not expression over an undefined input value stopped the whole rule, and how the compiler now wraps negations in closures.</span></p><p class="guide-note" data-note-video="w0GSSfVjPYM" data-note-seconds="1034"><a class="timestamp" href="https://www.youtube.com/watch?v=w0GSSfVjPYM&amp;t=1034s" aria-label="Watch at 17:14">17:14</a> <span>Fylling says a Rego v2 import enables the new syntax per module, ahead of an OPA 2.0 release the team plans for next year.</span></p>
+<a href="../talks/w0GSSfVjPYM.html">All five moments and talk notes →</a></li><li id="step-2" class="guide-stop"><p class="eyebrow">STEP 2 · NEXT</p>
+<h3><a href="../talks/HSiElMCPZmA.html">RBAC as a Platform Capability: Applying Platform Engineering to Kubernetes Access</a></h3><p class="muted">Sean Corcoran, Erin Walter</p>
+<div class="guide-why"><h4>Why this stop</h4><p class="guide-note" data-note-video="HSiElMCPZmA" data-note-seconds="547"><a class="timestamp" href="https://www.youtube.com/watch?v=HSiElMCPZmA&amp;t=547s" aria-label="Watch at 9:07">9:07</a> <span>The speakers distinguish the resource that declares namespace configuration from the resource that declares who should have access and what permissions they receive.</span></p></div>
+<h4>More moments to jump to</h4><p class="guide-note" data-note-video="HSiElMCPZmA" data-note-seconds="368"><a class="timestamp" href="https://www.youtube.com/watch?v=HSiElMCPZmA&amp;t=368s" aria-label="Watch at 6:08">6:08</a> <span>The speakers describe how chained pull requests repeated validations and then waited for a scheduled job to apply each change.</span></p><p class="guide-note" data-note-video="HSiElMCPZmA" data-note-seconds="698"><a class="timestamp" href="https://www.youtube.com/watch?v=HSiElMCPZmA&amp;t=698s" aria-label="Watch at 11:38">11:38</a> <span>The speakers walk through how the controller resolves a namespace reference and creates the corresponding role binding in the target cluster.</span></p><p class="guide-note" data-note-video="HSiElMCPZmA" data-note-seconds="1147"><a class="timestamp" href="https://www.youtube.com/watch?v=HSiElMCPZmA&amp;t=1147s" aria-label="Watch at 19:07">19:07</a> <span>The speakers describe dry-run reconciliation that writes the generated manifest to resource status so they can inspect it before applying it downstream.</span></p>
+<a href="../talks/HSiElMCPZmA.html">All five moments and talk notes →</a></li><li id="step-3" class="guide-stop"><p class="eyebrow">STEP 3 · NEXT</p>
+<h3><a href="../talks/L2HAZET3J9o.html">Why Your Monitoring Stack is a Security Risk</a></h3><p class="muted">Vinayak Goyal, Graham Helton</p>
+<div class="guide-why"><h4>Why this stop</h4><p class="guide-note" data-note-video="L2HAZET3J9o" data-note-seconds="255"><a class="timestamp" href="https://www.youtube.com/watch?v=L2HAZET3J9o&amp;t=255s" aria-label="Watch at 4:15">4:15</a> <span>The speakers warn that a role granted for a simple health check can also authorize far more sensitive kubelet operations.</span></p></div>
+<h4>More moments to jump to</h4><p class="guide-note" data-note-video="L2HAZET3J9o" data-note-seconds="69"><a class="timestamp" href="https://www.youtube.com/watch?v=L2HAZET3J9o&amp;t=69s" aria-label="Watch at 1:09">1:09</a> <span>The speakers explain that the kubelet first establishes the caller&#x27;s identity and then asks the Kubernetes API server whether the caller may access the requested resource.</span></p><p class="guide-note" data-note-video="L2HAZET3J9o" data-note-seconds="570"><a class="timestamp" href="https://www.youtube.com/watch?v=L2HAZET3J9o&amp;t=570s" aria-label="Watch at 9:30">9:30</a> <span>The speakers say API server audit logs may show the authorization check for direct kubelet traffic without showing the underlying action.</span></p><p class="guide-note" data-note-video="L2HAZET3J9o" data-note-seconds="993"><a class="timestamp" href="https://www.youtube.com/watch?v=L2HAZET3J9o&amp;t=993s" aria-label="Watch at 16:33">16:33</a> <span>The speakers recommend reviewing roles for unnecessary proxy access, adopting narrower permissions or updated vendor charts, and considering network policies as another layer.</span></p>
+<a href="../talks/L2HAZET3J9o.html">All five moments and talk notes →</a></li><li id="step-4" class="guide-stop"><p class="eyebrow">STEP 4 · GO DEEPER</p>
+<h3><a href="../talks/p0OmSLcJMqY.html">Falco Never Flies Alone: Runtime Security as an Ecosystem</a></h3><p class="muted">Leonardo Grasso, Alessandro Cannarella</p>
+<div class="guide-why"><h4>Why this stop</h4><p class="guide-note" data-note-video="p0OmSLcJMqY" data-note-seconds="995"><a class="timestamp" href="https://www.youtube.com/watch?v=p0OmSLcJMqY&amp;t=995s" aria-label="Watch at 16:35">16:35</a> <span>Cannarella says Falco Operator 0.5 pulls artifacts from the registry once, serves them to every node, and checks rules against the Falco version before installing.</span></p></div>
+<h4>More moments to jump to</h4><p class="guide-note" data-note-video="p0OmSLcJMqY" data-note-seconds="51"><a class="timestamp" href="https://www.youtube.com/watch?v=p0OmSLcJMqY&amp;t=51s" aria-label="Watch at 0:51">0:51</a> <span>Grasso explains how Falco taps the Linux kernel with an eBPF probe or kernel module, enriches events with plugins, and matches them against YAML rules.</span></p><p class="guide-note" data-note-video="p0OmSLcJMqY" data-note-seconds="202"><a class="timestamp" href="https://www.youtube.com/watch?v=p0OmSLcJMqY&amp;t=202s" aria-label="Watch at 3:22">3:22</a> <span>Grasso lists core cleanups such as removing the legacy BPF probe and gVisor support, new list operators in the rule language, and an experimental GPU hijacking rule.</span></p><p class="guide-note" data-note-video="p0OmSLcJMqY" data-note-seconds="1195"><a class="timestamp" href="https://www.youtube.com/watch?v=p0OmSLcJMqY&amp;t=1195s" aria-label="Watch at 19:55">19:55</a> <span>Cannarella announces Falcosidekick version 3, rewritten with per-output pipelines, live config reloads, API and UI configuration, and a single binary.</span></p>
+<a href="../talks/p0OmSLcJMqY.html">All five moments and talk notes →</a></li></ol></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Knative talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Project</p><h1>Knative</h1>
+<p class="hero-copy">2 talks mention Knative.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/apache-airflow-63811e64beca.html">Apache Airflow</a> <span>1 shared talk</span></li><li><a href="../technologies/argo-cd-b9549e9e9e77.html">Argo CD</a> <span>1 shared talk</span></li><li><a href="../technologies/argo-rollouts-5caab7b8435d.html">Argo Rollouts</a> <span>1 shared talk</span></li><li><a href="../technologies/bigquery-764a51ba6de8.html">BigQuery</a> <span>1 shared talk</span></li><li><a href="../technologies/chef-f59ac0828b9a.html">Chef</a> <span>1 shared talk</span></li><li><a href="../technologies/cookiecutter-00d012f3e37c.html">Cookiecutter</a> <span>1 shared talk</span></li><li><a href="../technologies/docker-d548c5b83fa6.html">Docker</a> <span>1 shared talk</span></li><li><a href="../technologies/docker-compose-75ddf920195c.html">Docker Compose</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning Knative"><ul class="talk-list"><li class="talk-card" data-talk="6FzTYfz2Dx4" data-track="Platform Engineering Day"
+data-themes="[&quot;Observability and reliability&quot;, &quot;Platform engineering and developer experience&quot;]" data-search="Automated Resource Allocation Driven by Service Level Objectives Pedro Célestin Julia Furst Morgado Platform Engineering Day Platform Engineering Case Study Observability and reliability Platform engineering and developer experience Helm KEDA Prometheus Argo CD Argo Rollouts Knative Slack Argo CD Argo Rollouts Helm KEDA Knative Prometheus Slack ArgoCD argocd Pedro Célestin and Julia Furst Morgado present a case study in letting teams specify service objectives and using measured performance to test resource changes automatically. They describe using error budgets and production canaries to test proposed changes instead of letting an AI agent change allocation directly. You want to turn service objectives into allocation decisions without handing an AI agent direct control of production."
+data-technologies="[&quot;Argo CD&quot;, &quot;Argo Rollouts&quot;, &quot;Helm&quot;, &quot;KEDA&quot;, &quot;Knative&quot;, &quot;Prometheus&quot;, &quot;Slack&quot;]" data-demo="no"
+data-length="25" data-level="Advanced" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-6">Platform Engineering Day</span></div>
+<h3><a href="../talks/6FzTYfz2Dx4.html">Automated Resource Allocation Driven by Service Level Objectives</a></h3>
+<p class="speakers">Pedro Célestin, Julia Furst Morgado</p><p class="card-summary">Pedro Célestin and Julia Furst Morgado present a case study in letting teams specify service objectives and using measured performance to test resource changes automatically. They describe using error budgets and production canaries to test proposed changes instead of letting an AI agent change allocation directly.</p>
+<p class="schedule-summary">25 min slot · Advanced · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a><a class="tag theme-tag" href="../index.html?theme=Platform%20engineering%20and%20developer%20experience#library">Platform engineering and developer experience</a></div><p class="card-watch"><strong>Watch this if:</strong> You want to turn service objectives into allocation decisions without handing an AI agent direct control of production.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=6FzTYfz2Dx4&amp;t=175s" aria-label="Watch at 2:55">2:55</a> <span>The speakers translate an example latency goal into an error budget, then explain how budget burn could inform whether to add or reclaim resources.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=6FzTYfz2Dx4&amp;t=440s" aria-label="Watch at 7:20">7:20</a> <span>They propose canarying a resource change, not just a new build. They explain that if more resources do not improve the service-level indicator, the cause may instead be a bad release.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=6FzTYfz2Dx4&amp;t=585s" aria-label="Watch at 9:45">9:45</a> <span>They describe the division of work in their case study: developers set the service objective, while the platform tests its own allocation proposals and can keep or reverse a change based on measured results.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=6FzTYfz2Dx4&amp;t=688s" aria-label="Watch at 11:28">11:28</a> <span>They say letting AI change production allocation directly did not work well for them, so they limited it to proposing changes that a production canary could verify.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=6FzTYfz2Dx4&amp;t=805s" aria-label="Watch at 13:25">13:25</a> <span>They walk through their stack: Prometheus collects metrics, Argo CD deploys changes, Argo Rollouts runs canaries, and Knative is used in some cases rather than being required.</span></li></ol>
+<a class="card-link" href="../talks/6FzTYfz2Dx4.html" aria-label="Explore Automated Resource Allocation Driven by Service Level Objectives">Explore key moments <span aria-hidden="true">↗</span></a>
+</li><li class="talk-card" data-talk="0edEo-iWJiY" data-track="Application Development + Delivery"
+data-themes="[&quot;Delivery, GitOps and release safety&quot;, &quot;Platform engineering and developer experience&quot;]" data-search="Going Cloud Native in Baseball Matt Dering Long Nguyen Application Development + Delivery  Delivery, GitOps and release safety Platform engineering and developer experience Apache Airflow Docker FastAPI Google Kubernetes Engine Jupyter Notebook Knative Kubernetes MySQL PostgreSQL Python BigQuery Chef Cookiecutter Docker Compose Google Cloud Storage Apache Airflow BigQuery Chef Cookiecutter Docker Docker Compose FastAPI Google Cloud Storage Google Kubernetes Engine Jupyter Notebook Knative Kubernetes MySQL PostgreSQL Python Airflow GKE Jupyter Notebooks K8s k8s Postgres Matt Dering and Long Nguyen explain how the Phillies platform team supports baseball analysts without asking them to become infrastructure specialists. They describe workflows for containerized model jobs, typed inference APIs, and an event-driven approach to data processing with Knative. You support a small data science team that needs to run large jobs and ship inference services without managing Kubernetes directly."
+data-technologies="[&quot;Apache Airflow&quot;, &quot;BigQuery&quot;, &quot;Chef&quot;, &quot;Cookiecutter&quot;, &quot;Docker&quot;, &quot;Docker Compose&quot;, &quot;FastAPI&quot;, &quot;Google Cloud Storage&quot;, &quot;Google Kubernetes Engine&quot;, &quot;Jupyter Notebook&quot;, &quot;Knative&quot;, &quot;Kubernetes&quot;, &quot;MySQL&quot;, &quot;PostgreSQL&quot;, &quot;Python&quot;]" data-demo="no"
+data-length="30" data-level="Any Level" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-3">Application Development + Delivery</span></div>
+<h3><a href="../talks/0edEo-iWJiY.html">Going Cloud Native in Baseball</a></h3>
+<p class="speakers">Matt Dering, Long Nguyen</p><p class="card-summary">Matt Dering and Long Nguyen explain how the Phillies platform team supports baseball analysts without asking them to become infrastructure specialists. They describe workflows for containerized model jobs, typed inference APIs, and an event-driven approach to data processing with Knative.</p>
+<p class="schedule-summary">30 min slot · Any Level · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Delivery%2C%20GitOps%20and%20release%20safety#library">Delivery, GitOps and release safety</a><a class="tag theme-tag" href="../index.html?theme=Platform%20engineering%20and%20developer%20experience#library">Platform engineering and developer experience</a></div><p class="card-watch"><strong>Watch this if:</strong> You support a small data science team that needs to run large jobs and ship inference services without managing Kubernetes directly.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=0edEo-iWJiY&amp;t=266s" aria-label="Watch at 4:26">4:26</a> <span>The speakers trace model input and output through BigQuery and explain how selected outputs move into relational databases for the web app used by coaches and front-office staff.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=0edEo-iWJiY&amp;t=415s" aria-label="Watch at 6:55">6:55</a> <span>The speakers show how projects can share code while keeping separate dependencies and container definitions, with a template that works for local Docker Compose and Kubernetes.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=0edEo-iWJiY&amp;t=511s" aria-label="Watch at 8:31">8:31</a> <span>The speakers describe replacing hand-managed compute with templated Kubernetes Jobs that analysts can launch with their own image and command.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=0edEo-iWJiY&amp;t=815s" aria-label="Watch at 13:35">13:35</a> <span>The speakers describe turning familiar typed Python code into validated clients and FastAPI services, with automated checks for schema compatibility.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=0edEo-iWJiY&amp;t=1072s" aria-label="Watch at 17:52">17:52</a> <span>The speakers outline how Knative Functions, Eventing, and request-driven scaling fit their move from scheduled batch scripts toward event-driven processing.</span></li></ol>
+<a class="card-link" href="../talks/0edEo-iWJiY.html" aria-label="Explore Going Cloud Native in Baseball">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

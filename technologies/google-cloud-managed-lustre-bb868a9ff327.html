@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Google Cloud Managed Lustre talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>Google Cloud Managed Lustre</h1>
+<p class="hero-copy">1 talk mentions Google Cloud Managed Lustre.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/ibm-storage-scale-6d926b761068.html">IBM Storage Scale</a> <span>1 shared talk</span></li><li><a href="../technologies/llm-d-82cd4b3d57e4.html">llm-d</a> <span>1 shared talk</span></li><li><a href="../technologies/mooncake-2bdf59329255.html">Mooncake</a> <span>1 shared talk</span></li><li><a href="../technologies/nixl-a60df2e8608d.html">NIXL</a> <span>1 shared talk</span></li><li><a href="../technologies/prometheus-1809f7cd0c75.html">Prometheus</a> <span>1 shared talk</span></li><li><a href="../technologies/sglang-6c87e5496f59.html">SGLang</a> <span>1 shared talk</span></li><li><a href="../technologies/vllm-ec8207a3dde6.html">vLLM</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning Google Cloud Managed Lustre"><ul class="talk-list"><li class="talk-card" data-talk="gC7GfYxrZgI" data-track="Cloud Native Theater"
+data-themes="[&quot;AI inference and serving&quot;, &quot;Data, storage and state&quot;]" data-search="From GPU to Fleet. The llm-d KV Cache Hierarchy Vita Bortnikov Nishtha Jain Cloud Native Theater llm-d AI inference and serving Data, storage and state llm-d vLLM SGLang NIXL Mooncake Prometheus Google Cloud Managed Lustre IBM Storage Scale Google Cloud Managed Lustre IBM Storage Scale llm-d Mooncake NIXL Prometheus SGLang vLLM Vita Bortnikov and Nishtha Jain describe how llm-d and vLLM keep KV cache across GPU memory, CPU memory, local disks, network storage and peer-to-peer transfers between pods. They present benchmarks they say show storage offloading only holds up at scale when it is paired with storage-aware routing in the llm-d router. You run LLM inference on Kubernetes and want to understand KV cache offloading tiers and cache-aware routing."
+data-technologies="[&quot;Google Cloud Managed Lustre&quot;, &quot;IBM Storage Scale&quot;, &quot;llm-d&quot;, &quot;Mooncake&quot;, &quot;NIXL&quot;, &quot;Prometheus&quot;, &quot;SGLang&quot;, &quot;vLLM&quot;]" data-demo="no"
+data-length="20" data-level="" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-3">Cloud Native Theater</span></div>
+<h3><a href="../talks/gC7GfYxrZgI.html">From GPU to Fleet. The llm-d KV Cache Hierarchy</a></h3>
+<p class="speakers">Vita Bortnikov, Nishtha Jain</p><p class="card-summary">Vita Bortnikov and Nishtha Jain describe how llm-d and vLLM keep KV cache across GPU memory, CPU memory, local disks, network storage and peer-to-peer transfers between pods. They present benchmarks they say show storage offloading only holds up at scale when it is paired with storage-aware routing in the llm-d router.</p>
+<p class="schedule-summary">20 min slot · Level not listed · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=AI%20inference%20and%20serving#library">AI inference and serving</a><a class="tag theme-tag" href="../index.html?theme=Data%2C%20storage%20and%20state#library">Data, storage and state</a></div><p class="card-watch"><strong>Watch this if:</strong> You run LLM inference on Kubernetes and want to understand KV cache offloading tiers and cache-aware routing.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=gC7GfYxrZgI&amp;t=111s" aria-label="Watch at 1:51">1:51</a> <span>Vita Bortnikov says agentic workloads read far more than they write, with long inputs and short outputs, and cites up to 95% KV cache reuse.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=gC7GfYxrZgI&amp;t=284s" aria-label="Watch at 4:44">4:44</a> <span>She describes the offloading connector contributed upstream to vLLM, which tiers KV cache from GPU to CPU to storage, while llm-d handles orchestration and eviction.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=gC7GfYxrZgI&amp;t=435s" aria-label="Watch at 7:15">7:15</a> <span>She explains peer-to-peer KV cache transfer between nodes, used when the node holding a prefix is busy and for prefill/decode disaggregation.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=gC7GfYxrZgI&amp;t=735s" aria-label="Watch at 12:15">12:15</a> <span>Nishtha Jain introduces the third tier, shared network storage such as parallel file systems, which she says takes KV cache from gigabytes and terabytes to petabytes.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=gC7GfYxrZgI&amp;t=1158s" aria-label="Watch at 19:18">19:18</a> <span>She calls storage offloading without storage-aware routing a failure at scale, citing throughput falling from about 2,500 to 700 tokens per second at 800 users when the router&#x27;s storage index was off.</span></li></ol>
+<a class="card-link" href="../talks/gC7GfYxrZgI.html" aria-label="Explore From GPU to Fleet. The llm-d KV Cache Hierarchy">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

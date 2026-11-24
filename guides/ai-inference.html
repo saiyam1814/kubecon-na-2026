@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>AI inference on Kubernetes | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-guide-page -->
+<a class="back-link" href="../guides.html">← All topic guides</a>
+<section class="guide-heading"><p class="eyebrow">GUIDED CATCH-UP · 4 STOPS</p>
+<h1>AI inference on Kubernetes</h1><p>For AI infrastructure.</p>
+<p>Follow the numbered stops from foundations to deep dives, not a ranking. Reasons and moment descriptions are verbatim excerpts from the linked talk notes.</p>
+<a class="primary-link" href="#short-route">Only 30 minutes? Take the 24m 16s route ↓</a>
+<p><a href="#full-route">Or follow the full path</a></p></section>
+<section id="short-route" class="short-route" aria-labelledby="short-heading"><p class="eyebrow">THE SHORT VERSION</p>
+<h2 id="short-heading">24m 16s of selected moments</h2>
+<p class="muted">This budget adds the intervals below, not full recording lengths. YouTube opens at each start; stop at the shown boundary. Links do not auto-stop playback.</p>
+<ol class="short-stops"><li class="route-card"><p class="eyebrow">STOP 1 · 5m 03s</p>
+<h3><a href="#step-1">Choose Your Own Adventure: The Saga of Serving LLM Inference</a></h3>
+<p class="clip-window"><a class="timestamp" href="https://www.youtube.com/watch?v=gNAANhDs5cc&amp;t=698s">Start 11:38</a>
+<span>Stop at <strong>16:41</strong></span></p>
+<p data-note-video="gNAANhDs5cc" data-note-seconds="698">Lee explains how quantizing model weights can make a model fit on a GPU or leave more memory for the cache used by active conversations.</p></li><li class="route-card"><p class="eyebrow">STOP 2 · 11m 35s</p>
+<h3><a href="#step-2">llm-d 1.0 Production-Grade Inference for Cloud-Native AI</a></h3>
+<p class="clip-window"><a class="timestamp" href="https://www.youtube.com/watch?v=O4Et_Xk2Cg4&amp;t=104s">Start 1:44</a>
+<span>Stop at <strong>13:19</strong></span></p>
+<p data-note-video="O4Et_Xk2Cg4" data-note-seconds="104">The speakers frame inference scaling as an orchestration problem involving cache reuse, independent scaling of prefill and decode, and workloads spread across multiple pods.</p></li><li class="route-card"><p class="eyebrow">STOP 3 · 4m 33s</p>
+<h3><a href="#step-3">Cache Me If You Can: LLM Inference with llm-d (with fun drawings)</a></h3>
+<p class="clip-window"><a class="timestamp" href="https://www.youtube.com/watch?v=ixmKvIejJv4&amp;t=250s">Start 4:10</a>
+<span>Stop at <strong>8:43</strong></span></p>
+<p data-note-video="ixmKvIejJv4" data-note-seconds="250">Griffith walks one request through llm-d&#x27;s filter, score, and pick sequence, explaining how the router estimates which pods already hold a matching prefix.</p></li><li class="route-card"><p class="eyebrow">STOP 4 · 3m 05s</p>
+<h3><a href="#step-4">Observability for LLM Inference on Kubernetes</a></h3>
+<p class="clip-window"><a class="timestamp" href="https://www.youtube.com/watch?v=4T2887KV_WM&amp;t=839s">Start 13:59</a>
+<span>Stop at <strong>17:04</strong></span></p>
+<p data-note-video="4T2887KV_WM" data-note-seconds="839">The speakers use a Grafana dashboard to show why a busy GPU reading can be misleading when the inference server&#x27;s KV cache is far from full.</p></li></ol></section>
+<section id="full-route" class="full-route" aria-labelledby="full-heading"><p class="eyebrow">BUILD UP THE TOPIC</p>
+<h2 id="full-heading">The full path</h2><nav class="guide-jumps" aria-label="Learning path"><a href="#step-1">1. Start here</a><a href="#step-2">2. Next</a><a href="#step-3">3. Next</a><a href="#step-4">4. Go deeper</a></nav>
+<ol class="guide-stops"><li id="step-1" class="guide-stop"><p class="eyebrow">STEP 1 · START HERE</p>
+<h3><a href="../talks/gNAANhDs5cc.html">Choose Your Own Adventure: The Saga of Serving LLM Inference</a></h3><p class="muted">Whitney Lee, Viktor Farcic</p>
+<div class="guide-why"><h4>Why this stop</h4><p class="guide-note" data-note-video="gNAANhDs5cc" data-note-seconds="698"><a class="timestamp" href="https://www.youtube.com/watch?v=gNAANhDs5cc&amp;t=698s" aria-label="Watch at 11:38">11:38</a> <span>Lee explains how quantizing model weights can make a model fit on a GPU or leave more memory for the cache used by active conversations.</span></p></div>
+<h4>More moments to jump to</h4><p class="guide-note" data-note-video="gNAANhDs5cc" data-note-seconds="196"><a class="timestamp" href="https://www.youtube.com/watch?v=gNAANhDs5cc&amp;t=196s" aria-label="Watch at 3:16">3:16</a> <span>Farcic starts deploying both the audience&#x27;s configuration and the opposite choices so the two inference setups can be compared.</span></p><p class="guide-note" data-note-video="gNAANhDs5cc" data-note-seconds="1001"><a class="timestamp" href="https://www.youtube.com/watch?v=gNAANhDs5cc&amp;t=1001s" aria-label="Watch at 16:41">16:41</a> <span>Lee compares replicating the whole model on multiple GPUs with sharding it across GPUs and explains why separate replica caches affect routing.</span></p><p class="guide-note" data-note-video="gNAANhDs5cc" data-note-seconds="1446"><a class="timestamp" href="https://www.youtube.com/watch?v=gNAANhDs5cc&amp;t=1446s" aria-label="Watch at 24:06">24:06</a> <span>Lee explains how speculative decoding drafts several tokens ahead and how the model checks the guesses before accepting them.</span></p>
+<a href="../talks/gNAANhDs5cc.html">All five moments and talk notes →</a></li><li id="step-2" class="guide-stop"><p class="eyebrow">STEP 2 · NEXT</p>
+<h3><a href="../talks/O4Et_Xk2Cg4.html">llm-d 1.0 Production-Grade Inference for Cloud-Native AI</a></h3><p class="muted">Carlos Costa, Robert Shaw</p>
+<div class="guide-why"><h4>Why this stop</h4><p class="guide-note" data-note-video="O4Et_Xk2Cg4" data-note-seconds="104"><a class="timestamp" href="https://www.youtube.com/watch?v=O4Et_Xk2Cg4&amp;t=104s" aria-label="Watch at 1:44">1:44</a> <span>The speakers frame inference scaling as an orchestration problem involving cache reuse, independent scaling of prefill and decode, and workloads spread across multiple pods.</span></p></div>
+<h4>More moments to jump to</h4><p class="guide-note" data-note-video="O4Et_Xk2Cg4" data-note-seconds="191"><a class="timestamp" href="https://www.youtube.com/watch?v=O4Et_Xk2Cg4&amp;t=191s" aria-label="Watch at 3:11">3:11</a> <span>The speakers explain that llm-d builds on Kubernetes interfaces, using an inference gateway for cache-aware routing and LeaderWorkerSet for multi-pod workloads.</span></p><p class="guide-note" data-note-video="O4Et_Xk2Cg4" data-note-seconds="799"><a class="timestamp" href="https://www.youtube.com/watch?v=O4Et_Xk2Cg4&amp;t=799s" aria-label="Watch at 13:19">13:19</a> <span>The speakers describe llm-d version 1 as adding a stable API, priority and fairness for competing tenants, and a highly available router with coordinated prefill and decode rollouts.</span></p><p class="guide-note" data-note-video="O4Et_Xk2Cg4" data-note-seconds="1041"><a class="timestamp" href="https://www.youtube.com/watch?v=O4Et_Xk2Cg4&amp;t=1041s" aria-label="Watch at 17:21">17:21</a> <span>In the recorded demo, the speakers report nearly doubling throughput after enabling cache-aware routing, then show how enabling flow control splits traffic into three queues.</span></p>
+<a href="../talks/O4Et_Xk2Cg4.html">All five moments and talk notes →</a></li><li id="step-3" class="guide-stop"><p class="eyebrow">STEP 3 · NEXT</p>
+<h3><a href="../talks/ixmKvIejJv4.html">Cache Me If You Can: LLM Inference with llm-d (with fun drawings)</a></h3><p class="muted">Alexa Griffith</p>
+<div class="guide-why"><h4>Why this stop</h4><p class="guide-note" data-note-video="ixmKvIejJv4" data-note-seconds="250"><a class="timestamp" href="https://www.youtube.com/watch?v=ixmKvIejJv4&amp;t=250s" aria-label="Watch at 4:10">4:10</a> <span>Griffith walks one request through llm-d&#x27;s filter, score, and pick sequence, explaining how the router estimates which pods already hold a matching prefix.</span></p></div>
+<h4>More moments to jump to</h4><p class="guide-note" data-note-video="ixmKvIejJv4" data-note-seconds="523"><a class="timestamp" href="https://www.youtube.com/watch?v=ixmKvIejJv4&amp;t=523s" aria-label="Watch at 8:43">8:43</a> <span>Griffith says offloading the key-value cache to CPU memory can avoid recomputing it for long-lived requests, at the cost of slower access.</span></p><p class="guide-note" data-note-video="ixmKvIejJv4" data-note-seconds="553"><a class="timestamp" href="https://www.youtube.com/watch?v=ixmKvIejJv4&amp;t=553s" aria-label="Watch at 9:13">9:13</a> <span>Griffith describes splitting prompt processing from token generation and notes that the two stages then have to transfer cached state.</span></p><p class="guide-note" data-note-video="ixmKvIejJv4" data-note-seconds="847"><a class="timestamp" href="https://www.youtube.com/watch?v=ixmKvIejJv4&amp;t=847s" aria-label="Watch at 14:07">14:07</a> <span>Griffith explains how priority bands choose which class goes first and how separate fairness and ordering policies govern work within a band.</span></p>
+<a href="../talks/ixmKvIejJv4.html">All five moments and talk notes →</a></li><li id="step-4" class="guide-stop"><p class="eyebrow">STEP 4 · GO DEEPER</p>
+<h3><a href="../talks/4T2887KV_WM.html">Observability for LLM Inference on Kubernetes</a></h3><p class="muted">Oscar Castillo, Jeffry Hernández</p>
+<div class="guide-why"><h4>Why this stop</h4><p class="guide-note" data-note-video="4T2887KV_WM" data-note-seconds="839"><a class="timestamp" href="https://www.youtube.com/watch?v=4T2887KV_WM&amp;t=839s" aria-label="Watch at 13:59">13:59</a> <span>The speakers use a Grafana dashboard to show why a busy GPU reading can be misleading when the inference server&#x27;s KV cache is far from full.</span></p></div>
+<h4>More moments to jump to</h4><p class="guide-note" data-note-video="4T2887KV_WM" data-note-seconds="103"><a class="timestamp" href="https://www.youtube.com/watch?v=4T2887KV_WM&amp;t=103s" aria-label="Watch at 1:43">1:43</a> <span>The speakers distinguish prefill from iterative decode and introduce time to first token and time per output token as ways to observe those stages.</span></p><p class="guide-note" data-note-video="4T2887KV_WM" data-note-seconds="292"><a class="timestamp" href="https://www.youtube.com/watch?v=4T2887KV_WM&amp;t=292s" aria-label="Watch at 4:52">4:52</a> <span>The speakers compare their client-side timing with the provider dashboard and explain why network hops and client processing can make the end-to-end delay longer.</span></p><p class="guide-note" data-note-video="4T2887KV_WM" data-note-seconds="1024"><a class="timestamp" href="https://www.youtube.com/watch?v=4T2887KV_WM&amp;t=1024s" aria-label="Watch at 17:04">17:04</a> <span>The speakers inspect a failed trace from an empty model response and show how a trace ID can connect the request to logs from Envoy and the inference scheduler.</span></p>
+<a href="../talks/4T2887KV_WM.html">All five moments and talk notes →</a></li></ol></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

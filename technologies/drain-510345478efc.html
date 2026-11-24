@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Drain talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>Drain</h1>
+<p class="hero-copy">1 talk mentions Drain.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/dashboard-analyzer-20b82eeb4156.html">Dashboard Analyzer</a> <span>1 shared talk</span></li><li><a href="../technologies/go-4cd0e21a9a07.html">Go</a> <span>1 shared talk</span></li><li><a href="../technologies/gpt-3-5-cc7ab14c361d.html">GPT-3.5</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>1 shared talk</span></li><li><a href="../technologies/model-context-protocol-9c5da690faad.html">Model Context Protocol</a> <span>1 shared talk</span></li><li><a href="../technologies/python-11a4a60b518b.html">Python</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning Drain"><ul class="talk-list"><li class="talk-card" data-talk="J-etioEY_E4" data-track="Observability"
+data-themes="[&quot;AI agents and automation&quot;, &quot;Observability and reliability&quot;]" data-search="Edging Closer to AI Assisted Troubleshooting - AI Assisted Dashboard Analysis Vijay Samuel Observability  AI agents and automation Observability and reliability Model Context Protocol Go Python Kubernetes Dashboard Analyzer GPT-3.5 Drain Dashboard Analyzer Drain Go GPT-3.5 Kubernetes Model Context Protocol Python Golang K8s k8s MCP Vijay Samuel credits Jing Hu for much of the work on eBay&#x27;s dashboard analyzer and explains why his team moved away from feeding raw telemetry to a model. He describes how the analyzer computes statistics in code and links its hypotheses back to specific dashboard evidence. You want AI-assisted dashboard triage that keeps the math in code and gives on-call engineers evidence they can verify."
+data-technologies="[&quot;Dashboard Analyzer&quot;, &quot;Drain&quot;, &quot;Go&quot;, &quot;GPT-3.5&quot;, &quot;Kubernetes&quot;, &quot;Model Context Protocol&quot;, &quot;Python&quot;]" data-demo="no"
+data-length="30" data-level="Any Level" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-3">Observability</span></div>
+<h3><a href="../talks/J-etioEY_E4.html">Edging Closer to AI Assisted Troubleshooting - AI Assisted Dashboard Analysis</a></h3>
+<p class="speakers">Vijay Samuel</p><p class="card-summary">Vijay Samuel credits Jing Hu for much of the work on eBay&#x27;s dashboard analyzer and explains why his team moved away from feeding raw telemetry to a model. He describes how the analyzer computes statistics in code and links its hypotheses back to specific dashboard evidence.</p>
+<p class="schedule-summary">30 min slot · Any Level · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a></div><p class="card-watch"><strong>Watch this if:</strong> You want AI-assisted dashboard triage that keeps the math in code and gives on-call engineers evidence they can verify.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=J-etioEY_E4&amp;t=147s" aria-label="Watch at 2:27">2:27</a> <span>Samuel sketches a two-server MCP approach that sends dashboard metadata and raw results to a model, then explains why doing this for every panel can bury important facts in the context window.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=J-etioEY_E4&amp;t=368s" aria-label="Watch at 6:08">6:08</a> <span>Samuel describes the design rule he wants on-call engineers to take away: compute the telemetry statistics in code and let the model reason over the results rather than do the arithmetic.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=J-etioEY_E4&amp;t=398s" aria-label="Watch at 6:38">6:38</a> <span>Samuel explains how the analyzer links hypotheses to findings and then back to the exact dashboard panel and time range so an engineer can verify them.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=J-etioEY_E4&amp;t=602s" aria-label="Watch at 10:02">10:02</a> <span>Samuel walks through fetching dashboard metadata, making a plan, and handing different telemetry types to specialized subagents before combining their findings.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=J-etioEY_E4&amp;t=844s" aria-label="Watch at 14:04">14:04</a> <span>Samuel describes a metrics subagent that computes statistics in Go, detects anomalies in Python, and uses Largest Triangle Three Buckets to reduce the points it sends to the model.</span></li></ol>
+<a class="card-link" href="../talks/J-etioEY_E4.html" aria-label="Explore Edging Closer to AI Assisted Troubleshooting - AI Assisted Dashboard Analysis">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

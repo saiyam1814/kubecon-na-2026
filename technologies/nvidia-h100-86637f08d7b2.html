@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>NVIDIA H100 talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>NVIDIA H100</h1>
+<p class="hero-copy">1 talk mentions NVIDIA H100.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/blis-ba86294d8c6c.html">BLIS</a> <span>1 shared talk</span></li><li><a href="../technologies/llm-d-82cd4b3d57e4.html">llm-d</a> <span>1 shared talk</span></li><li><a href="../technologies/qwen-67f2d2251462.html">Qwen</a> <span>1 shared talk</span></li><li><a href="../technologies/vllm-ec8207a3dde6.html">vLLM</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning NVIDIA H100"><ul class="talk-list"><li class="talk-card" data-talk="UooQd0QU7go" data-track="AI Inference + Agentic"
+data-themes="[&quot;AI agents and automation&quot;, &quot;AI inference and serving&quot;]" data-search="Simulate, Evolve, Validate, Ship: AI-Discovered Algorithms for LLM Serving Stacks Jing Chen Mert Toslali AI Inference + Agentic  AI agents and automation AI inference and serving llm-d vLLM BLIS Qwen NVIDIA H100 BLIS llm-d NVIDIA H100 Qwen vLLM Jing Chen and Mert Toslali present a loop that uses agents and a CPU simulator to explore changes to llm-d, then tests candidates on GPUs before proposing them upstream. They describe a configuration mismatch that invalidated one benchmark run and report contributing three policies to the llm-d router. Watch this if you tune LLM inference and want a way to narrow policy candidates before testing them on GPUs."
+data-technologies="[&quot;BLIS&quot;, &quot;llm-d&quot;, &quot;NVIDIA H100&quot;, &quot;Qwen&quot;, &quot;vLLM&quot;]" data-demo="no"
+data-length="30" data-level="Beginner" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-1">AI Inference + Agentic</span></div>
+<h3><a href="../talks/UooQd0QU7go.html">Simulate, Evolve, Validate, Ship: AI-Discovered Algorithms for LLM Serving Stacks</a></h3>
+<p class="speakers">Jing Chen, Mert Toslali</p><p class="card-summary">Jing Chen and Mert Toslali present a loop that uses agents and a CPU simulator to explore changes to llm-d, then tests candidates on GPUs before proposing them upstream. They describe a configuration mismatch that invalidated one benchmark run and report contributing three policies to the llm-d router.</p>
+<p class="schedule-summary">30 min slot · Beginner · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a><a class="tag theme-tag" href="../index.html?theme=AI%20inference%20and%20serving#library">AI inference and serving</a></div><p class="card-watch"><strong>Watch this if:</strong> you tune LLM inference and want a way to narrow policy candidates before testing them on GPUs.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=UooQd0QU7go&amp;t=200s" aria-label="Watch at 3:20">3:20</a> <span>Toslali introduces BLIS as a CPU-based simulator for rapidly trying policies for distributed inference before spending GPU time.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=UooQd0QU7go&amp;t=249s" aria-label="Watch at 4:09">4:09</a> <span>He describes an agent harness that frames a hypothesis, designs experiments, and iterates on candidate algorithms in the simulator.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=UooQd0QU7go&amp;t=379s" aria-label="Watch at 6:19">6:19</a> <span>Chen explains that simulation can suggest the direction of a performance change, but that hardware tests are needed to measure its size.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=UooQd0QU7go&amp;t=543s" aria-label="Watch at 9:03">9:03</a> <span>She recalls finding that the simulator and llm-d used different time units for saturation detection, forcing the team to discard and rerun a benchmark.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=UooQd0QU7go&amp;t=716s" aria-label="Watch at 11:56">11:56</a> <span>The speakers report contributing three router policies upstream after taking them from simulator experiments to real-cluster validation.</span></li></ol>
+<a class="card-link" href="../talks/UooQd0QU7go.html" aria-label="Explore Simulate, Evolve, Validate, Ship: AI-Discovered Algorithms for LLM Serving Stacks">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

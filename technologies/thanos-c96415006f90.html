@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Thanos talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Project</p><h1>Thanos</h1>
+<p class="hero-copy">1 talk mentions Thanos.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/alertmanager-11e295cda8ce.html">Alertmanager</a> <span>1 shared talk</span></li><li><a href="../technologies/clusterloader2-818397c65757.html">ClusterLoader2</a> <span>1 shared talk</span></li><li><a href="../technologies/etcd-c38cbd92fce4.html">etcd</a> <span>1 shared talk</span></li><li><a href="../technologies/grafana-cace491b6955.html">Grafana</a> <span>1 shared talk</span></li><li><a href="../technologies/karmada-c42f8317fd35.html">Karmada</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>1 shared talk</span></li><li><a href="../technologies/kwok-1f60f69f9012.html">KWOK</a> <span>1 shared talk</span></li><li><a href="../technologies/prometheus-1809f7cd0c75.html">Prometheus</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning Thanos"><ul class="talk-list"><li class="talk-card" data-talk="8bWWmfk6QLE" data-track="Platform Engineering Day"
+data-themes="[&quot;Observability and reliability&quot;, &quot;Platform engineering and developer experience&quot;]" data-search="Zero-Ops Disaster Recovery: A Paved Path Through Multi-Cluster Orchestration Joe Nathan Abellard Li Zhuyu Platform Engineering Day Platform Engineering Case Study Observability and reliability Platform engineering and developer experience Karmada Kubernetes etcd Prometheus Thanos Grafana Alertmanager KWOK ClusterLoader2 Alertmanager ClusterLoader2 etcd Grafana Karmada Kubernetes KWOK Prometheus Thanos K8s k8s Joe Nathan Abellard and Li Zhuyu describe how Bloomberg runs Karmada as a managed, highly available multi-cluster orchestration layer across data centers. They cover the operator, observability, scale testing with KWOK and ClusterLoader2, and the scheduler changes they made for large fan-out workloads. Watch this if you run or plan a multi-cluster Kubernetes platform and want a detailed Karmada case study covering HA, observability and scheduler tuning."
+data-technologies="[&quot;Alertmanager&quot;, &quot;ClusterLoader2&quot;, &quot;etcd&quot;, &quot;Grafana&quot;, &quot;Karmada&quot;, &quot;Kubernetes&quot;, &quot;KWOK&quot;, &quot;Prometheus&quot;, &quot;Thanos&quot;]" data-demo="no"
+data-length="25" data-level="Intermediate" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-6">Platform Engineering Day</span></div>
+<h3><a href="../talks/8bWWmfk6QLE.html">Zero-Ops Disaster Recovery: A Paved Path Through Multi-Cluster Orchestration</a></h3>
+<p class="speakers">Joe Nathan Abellard, Li Zhuyu</p><p class="card-summary">Joe Nathan Abellard and Li Zhuyu describe how Bloomberg runs Karmada as a managed, highly available multi-cluster orchestration layer across data centers. They cover the operator, observability, scale testing with KWOK and ClusterLoader2, and the scheduler changes they made for large fan-out workloads.</p>
+<p class="schedule-summary">25 min slot · Intermediate · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a><a class="tag theme-tag" href="../index.html?theme=Platform%20engineering%20and%20developer%20experience#library">Platform engineering and developer experience</a></div><p class="card-watch"><strong>Watch this if:</strong> you run or plan a multi-cluster Kubernetes platform and want a detailed Karmada case study covering HA, observability and scheduler tuning.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=8bWWmfk6QLE&amp;t=131s" aria-label="Watch at 2:11">2:11</a> <span>The speakers say data center redundancy is a Bloomberg-wide mandate and that they chose Karmada, which has a standard kube API server, its own scheduler and placement driven by propagation policies.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=8bWWmfk6QLE&amp;t=486s" aria-label="Watch at 8:06">8:06</a> <span>They describe a managed Karmada operator they built that gives each tenant its own namespace and control planes, sets up ingress and registers member clusters automatically from a cluster inventory API.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=8bWWmfk6QLE&amp;t=614s" aria-label="Watch at 10:14">10:14</a> <span>They walk through an HA topology where every control plane runs on host clusters in several data centers, sharing a DNS endpoint and an etcd cluster spread over three data centers, and go through which failures it survives.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=8bWWmfk6QLE&amp;t=1188s" aria-label="Watch at 19:48">19:48</a> <span>For scale tests they say they use KWOK so only one of each cluster&#x27;s 1,000 nodes is real, drive load with ClusterLoader2 and measure end-to-end propagation latency with a sidecar controller.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=8bWWmfk6QLE&amp;t=1783s" aria-label="Watch at 29:43">29:43</a> <span>They report that a separate fan-out scheduler for duplicated workloads cut P99 propagation latency from over three minutes at 20 objects per second to under one second at 50 objects per second in their tests.</span></li></ol>
+<a class="card-link" href="../talks/8bWWmfk6QLE.html" aria-label="Explore Zero-Ops Disaster Recovery: A Paved Path Through Multi-Cluster Orchestration">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

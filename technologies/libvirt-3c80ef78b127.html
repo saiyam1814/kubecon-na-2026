@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>libvirt talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Project</p><h1>libvirt</h1>
+<p class="hero-copy">1 talk mentions libvirt.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/geforce-now-76749f0b23f5.html">GeForce NOW</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-api-server-73536e21b454.html">Kubernetes API server</a> <span>1 shared talk</span></li><li><a href="../technologies/kubevirt-22c1bccf4903.html">KubeVirt</a> <span>1 shared talk</span></li><li><a href="../technologies/qemu-4d09264a5878.html">QEMU</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning libvirt"><ul class="talk-list"><li class="talk-card" data-talk="ZgxxU3M9X5E" data-track="Cloud Native Theater"
+data-themes="[&quot;Data, storage and state&quot;, &quot;Kubernetes internals and runtimes&quot;]" data-search="Plug and Play Volumes, hold the Pod Piotr Prokop PL Sreeja Varnam Cloud Native Theater KubeVirt Summit Data, storage and state Kubernetes internals and runtimes KubeVirt Kubernetes Kubernetes API server libvirt QEMU GeForce NOW GeForce NOW Kubernetes Kubernetes API server KubeVirt libvirt QEMU K8s k8s kube-apiserver The speakers explain why NVIDIA bypasses KubeVirt&#x27;s attachment pod to hotplug storage for cloud gaming sessions. They present a proposal to make volume delivery pluggable while keeping the default attachment path intact. You need to hotplug storage into running KubeVirt VMs without the cost of an attachment pod."
+data-technologies="[&quot;GeForce NOW&quot;, &quot;Kubernetes&quot;, &quot;Kubernetes API server&quot;, &quot;KubeVirt&quot;, &quot;libvirt&quot;, &quot;QEMU&quot;]" data-demo="no"
+data-length="20" data-level="" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-3">Cloud Native Theater</span></div>
+<h3><a href="../talks/ZgxxU3M9X5E.html">Plug and Play Volumes, hold the Pod</a></h3>
+<p class="speakers">Piotr Prokop PL, Sreeja Varnam</p><p class="card-summary">The speakers explain why NVIDIA bypasses KubeVirt&#x27;s attachment pod to hotplug storage for cloud gaming sessions. They present a proposal to make volume delivery pluggable while keeping the default attachment path intact.</p>
+<p class="schedule-summary">20 min slot · Level not listed · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Data%2C%20storage%20and%20state#library">Data, storage and state</a><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></div><p class="card-watch"><strong>Watch this if:</strong> You need to hotplug storage into running KubeVirt VMs without the cost of an attachment pod.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=ZgxxU3M9X5E&amp;t=30s" aria-label="Watch at 0:30">0:30</a> <span>The first speaker says GeForce NOW needs to expose storage to an application inside a running VM in under seven seconds and clean up automatically when something fails.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=ZgxxU3M9X5E&amp;t=117s" aria-label="Watch at 1:57">1:57</a> <span>The first speaker walks through the default attachment pod and explains why scheduling and networking that pod adds work even when it only delivers a volume.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=ZgxxU3M9X5E&amp;t=251s" aria-label="Watch at 4:11">4:11</a> <span>The first speaker reports that their direct path to the storage provider brought hotplug below four seconds in their tests, compared with eight to nine seconds and sometimes twenty before.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=ZgxxU3M9X5E&amp;t=403s" aria-label="Watch at 6:43">6:43</a> <span>The second speaker introduces VEP-293, which proposes separating delivery, attach, and detach so an integration can replace one stage without changing the default behavior.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=ZgxxU3M9X5E&amp;t=779s" aria-label="Watch at 12:59">12:59</a> <span>The second speaker describes node-local discovery: the provider publishes a file or block device, and KubeVirt handles the guest attachment instead of making the provider duplicate it.</span></li></ol>
+<a class="card-link" href="../talks/ZgxxU3M9X5E.html" aria-label="Explore Plug and Play Volumes, hold the Pod">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

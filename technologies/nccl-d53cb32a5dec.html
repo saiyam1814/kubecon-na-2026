@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>NCCL talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>NCCL</h1>
+<p class="hero-copy">1 talk mentions NCCL.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/coreweave-kubernetes-service-deb75f478d29.html">CoreWeave Kubernetes Service</a> <span>1 shared talk</span></li><li><a href="../technologies/hpc-verification-cca8d2d6c26f.html">HPC Verification</a> <span>1 shared talk</span></li><li><a href="../technologies/infiniband-dccfea523f6a.html">InfiniBand</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>1 shared talk</span></li><li><a href="../technologies/kueue-5798625f00ad.html">Kueue</a> <span>1 shared talk</span></li><li><a href="../technologies/nvidia-nvlink-9c5fa81163e5.html">NVIDIA NVLink</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning NCCL"><ul class="talk-list"><li class="talk-card" data-talk="_njXLk28JT0" data-track="AI Inference + Agentic"
+data-themes="[&quot;Accelerators and workload scheduling&quot;]" data-search="Quota Isn&#x27;t Enough: Topology Aware Scheduling on Modern GPU Clusters Amy Chen JJ Jordan AI Inference + Agentic  Accelerators and workload scheduling CoreWeave Kubernetes Service Kubernetes Kueue HPC Verification InfiniBand NCCL NVLink CoreWeave Kubernetes Service HPC Verification InfiniBand Kubernetes Kueue NCCL NVIDIA NVLink K8s k8s NVLink Amy Chen and JJ Jordan explain why GPU quota alone does not tell you whether a training job can fit within the physical network layout. They walk through Kueue topology-aware admission and share operational examples involving node replacement, preemption, and fragmented capacity. You schedule distributed GPU training and need to reason about rack boundaries, queue delays, or stranded capacity."
+data-technologies="[&quot;CoreWeave Kubernetes Service&quot;, &quot;HPC Verification&quot;, &quot;InfiniBand&quot;, &quot;Kubernetes&quot;, &quot;Kueue&quot;, &quot;NCCL&quot;, &quot;NVIDIA NVLink&quot;]" data-demo="no"
+data-length="30" data-level="Advanced" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-1">AI Inference + Agentic</span></div>
+<h3><a href="../talks/_njXLk28JT0.html">Quota Isn&#x27;t Enough: Topology Aware Scheduling on Modern GPU Clusters</a></h3>
+<p class="speakers">Amy Chen, JJ Jordan</p><p class="card-summary">Amy Chen and JJ Jordan explain why GPU quota alone does not tell you whether a training job can fit within the physical network layout. They walk through Kueue topology-aware admission and share operational examples involving node replacement, preemption, and fragmented capacity.</p>
+<p class="schedule-summary">30 min slot · Advanced · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a></div><p class="card-watch"><strong>Watch this if:</strong> You schedule distributed GPU training and need to reason about rack boundaries, queue delays, or stranded capacity.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=_njXLk28JT0&amp;t=238s" aria-label="Watch at 3:58">3:58</a> <span>The speakers compare two placements with the same GPU count and explain why an uneven split across racks makes every all-reduce round wait on slower cross-rack transfers.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=_njXLk28JT0&amp;t=487s" aria-label="Watch at 8:07">8:07</a> <span>The speakers show how an example 128-GPU job asks Kueue for two 64-GPU slices and how admission checks both quota and rack-level fit.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=_njXLk28JT0&amp;t=811s" aria-label="Watch at 13:31">13:31</a> <span>The speakers compare unconstrained, preferred, and required placement, framing the choice as a trade-off between queue time and training speed.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=_njXLk28JT0&amp;t=997s" aria-label="Watch at 16:37">16:37</a> <span>The speakers describe replacing one unhealthy node within the same topology so a run can resume from a checkpoint without readmitting the whole workload.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=_njXLk28JT0&amp;t=1156s" aria-label="Watch at 19:16">19:16</a> <span>The speakers explain why Kueue can decline to preempt smaller jobs when evicting them still would not free a large enough contiguous placement.</span></li></ol>
+<a class="card-link" href="../talks/_njXLk28JT0.html" aria-label="Explore Quota Isn&#x27;t Enough: Topology Aware Scheduling on Modern GPU Clusters">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

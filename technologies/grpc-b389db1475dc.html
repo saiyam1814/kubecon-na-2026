@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>gRPC talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Project</p><h1>gRPC</h1>
+<p class="hero-copy">2 talks mention gRPC.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>2 shared talks</span></li><li><a href="../technologies/amazon-s3-ebf704baa88d.html">Amazon S3</a> <span>1 shared talk</span></li><li><a href="../technologies/azure-79f43c3b9c23.html">Azure</a> <span>1 shared talk</span></li><li><a href="../technologies/azure-blob-storage-4b5e13552789.html">Azure Blob Storage</a> <span>1 shared talk</span></li><li><a href="../technologies/claude-c857d09db23e.html">Claude</a> <span>1 shared talk</span></li><li><a href="../technologies/cosi-ef630161b15b.html">COSI</a> <span>1 shared talk</span></li><li><a href="../technologies/csi-c77286519885.html">CSI</a> <span>1 shared talk</span></li><li><a href="../technologies/envoy-84532b306f25.html">Envoy</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning gRPC"><ul class="talk-list"><li class="talk-card" data-talk="SerQWvNyI0M" data-track="AI Inference + Agentic"
+data-themes="[&quot;AI inference and serving&quot;, &quot;Networking and connectivity&quot;]" data-search="AI Gateways in Practice: Model Routing, Inference Scheduling, and MCP on Kubernetes Yuke Ning AI Inference + Agentic  AI inference and serving Networking and connectivity Kubernetes Higress Envoy Istio Gateway API Gateway API Inference Extension llm-d gRPC Model Context Protocol Helm OpenAI Azure Qwen Claude Gemini Azure Claude Envoy Gateway API Gateway API Inference Extension Gemini gRPC Helm Higress Istio Kubernetes llm-d Model Context Protocol OpenAI Qwen K8s k8s MCP Yuke Ning walks through how Higress handles hosted model routing, traffic to self-hosted inference, and requests from agents to tools. He discusses where fallback stops working, how an endpoint picker participates in routing, and how the gateway bridges MCP transports. Watch this if you run a gateway that must handle hosted models, your own inference workloads, and MCP tools."
+data-technologies="[&quot;Azure&quot;, &quot;Claude&quot;, &quot;Envoy&quot;, &quot;Gateway API&quot;, &quot;Gateway API Inference Extension&quot;, &quot;Gemini&quot;, &quot;gRPC&quot;, &quot;Helm&quot;, &quot;Higress&quot;, &quot;Istio&quot;, &quot;Kubernetes&quot;, &quot;llm-d&quot;, &quot;Model Context Protocol&quot;, &quot;OpenAI&quot;, &quot;Qwen&quot;]" data-demo="no"
+data-length="30" data-level="" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-1">AI Inference + Agentic</span></div>
+<h3><a href="../talks/SerQWvNyI0M.html">AI Gateways in Practice: Model Routing, Inference Scheduling, and MCP on Kubernetes</a></h3>
+<p class="speakers">Yuke Ning</p><p class="card-summary">Yuke Ning walks through how Higress handles hosted model routing, traffic to self-hosted inference, and requests from agents to tools. He discusses where fallback stops working, how an endpoint picker participates in routing, and how the gateway bridges MCP transports.</p>
+<p class="schedule-summary">30 min slot · Level not listed · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=AI%20inference%20and%20serving#library">AI inference and serving</a><a class="tag theme-tag" href="../index.html?theme=Networking%20and%20connectivity#library">Networking and connectivity</a></div><p class="card-watch"><strong>Watch this if:</strong> you run a gateway that must handle hosted models, your own inference workloads, and MCP tools.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=SerQWvNyI0M&amp;t=311s" aria-label="Watch at 5:11">5:11</a> <span>Ning shows a Higress route configured to try a backup model provider after selected error responses.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=SerQWvNyI0M&amp;t=467s" aria-label="Watch at 7:47">7:47</a> <span>He points out that status-based fallback cannot redirect a response once a successful stream has already started.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=SerQWvNyI0M&amp;t=596s" aria-label="Watch at 9:56">9:56</a> <span>He walks through the Gateway API Inference Extension ownership model, in which application teams own routes and serving teams own the inference pools those routes target.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=SerQWvNyI0M&amp;t=1090s" aria-label="Watch at 18:10">18:10</a> <span>He contrasts rejecting the request if an external endpoint picker fails with allowing the gateway to choose an endpoint another way.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=SerQWvNyI0M&amp;t=1346s" aria-label="Watch at 22:26">22:26</a> <span>He describes three MCP roles for the gateway: exposing REST APIs as tools, proxying existing MCP servers, and bridging differences between clients and servers.</span></li></ol>
+<a class="card-link" href="../talks/SerQWvNyI0M.html" aria-label="Explore AI Gateways in Practice: Model Routing, Inference Scheduling, and MCP on Kubernetes">Explore key moments <span aria-hidden="true">↗</span></a>
+</li><li class="talk-card" data-talk="nLu64NsII30" data-track="Maintainer Track"
+data-themes="[&quot;Data, storage and state&quot;, &quot;Kubernetes internals and runtimes&quot;]" data-search="Kubernetes Data Protection WG Intro &amp; Deep Dive Xing Yang Dave Smith-Uchida Maintainer Track Data Protection Data, storage and state Kubernetes internals and runtimes Kubernetes COSI CSI gRPC MySQL Amazon S3 Azure Blob Storage Google Cloud Storage OIDC Git Slack Amazon S3 Azure Blob Storage COSI CSI Git Google Cloud Storage gRPC Kubernetes MySQL OIDC Slack K8s k8s Xing Yang and Dave Smith-Uchida explain why the Kubernetes Data Protection Working Group formed and walk through the backup and restore building blocks it drives, including COSI, snapshot topology, changed block tracking and volume group snapshots. Smith-Uchida then presents two white papers in progress, on data protection best practices and on recovering from ransomware attacks. Watch this if you back up stateful workloads on Kubernetes or are planning how to recover from a ransomware attack."
+data-technologies="[&quot;Amazon S3&quot;, &quot;Azure Blob Storage&quot;, &quot;COSI&quot;, &quot;CSI&quot;, &quot;Git&quot;, &quot;Google Cloud Storage&quot;, &quot;gRPC&quot;, &quot;Kubernetes&quot;, &quot;MySQL&quot;, &quot;OIDC&quot;, &quot;Slack&quot;]" data-demo="no"
+data-length="30" data-level="" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-1">Maintainer Track</span></div>
+<h3><a href="../talks/nLu64NsII30.html">Kubernetes Data Protection WG Intro &amp; Deep Dive</a></h3>
+<p class="speakers">Xing Yang, Dave Smith-Uchida</p><p class="card-summary">Xing Yang and Dave Smith-Uchida explain why the Kubernetes Data Protection Working Group formed and walk through the backup and restore building blocks it drives, including COSI, snapshot topology, changed block tracking and volume group snapshots. Smith-Uchida then presents two white papers in progress, on data protection best practices and on recovering from ransomware attacks.</p>
+<p class="schedule-summary">30 min slot · Level not listed · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Data%2C%20storage%20and%20state#library">Data, storage and state</a><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></div><p class="card-watch"><strong>Watch this if:</strong> you back up stateful workloads on Kubernetes or are planning how to recover from a ransomware attack.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=nLu64NsII30&amp;t=53s" aria-label="Watch at 0:53">0:53</a> <span>Yang says GitOps can recreate manifests, but secrets and data in persistent volumes are not in Git, which is why the group builds Kubernetes-native data protection blocks.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=nLu64NsII30&amp;t=347s" aria-label="Watch at 5:47">5:47</a> <span>Yang highlights COSI v1alpha2 support for one bucket access covering multiple buckets with read-write, write-only and read-only modes.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=nLu64NsII30&amp;t=520s" aria-label="Watch at 8:40">8:40</a> <span>Yang explains changed block tracking, which lets backup vendors copy only the blocks that changed between two snapshots through a new CSI snapshot metadata service.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=nLu64NsII30&amp;t=848s" aria-label="Watch at 14:08">14:08</a> <span>Smith-Uchida describes ransomware as an adversarial problem where the control plane and backups may be compromised and must be verified before restoring.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=nLu64NsII30&amp;t=952s" aria-label="Watch at 15:52">15:52</a> <span>Smith-Uchida recommends immutable backups, such as S3 compliance mode, and moving backup tools from static API keys to short-lived tokens obtained via OIDC.</span></li></ol>
+<a class="card-link" href="../talks/nLu64NsII30.html" aria-label="Explore Kubernetes Data Protection WG Intro &amp; Deep Dive">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

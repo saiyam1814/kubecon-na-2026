@@ -67,6 +67,10 @@ small { color: var(--muted); font-size: .65em; font-weight: 450; white-space: no
 .section-heading h2 { margin-bottom: 0; }
 #result-count { font-size: .75rem; color: var(--muted); margin: 0; white-space: nowrap; }
 .browse-controls { margin: 1.6rem 0 1.8rem; }
+.decision-filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); gap: 1rem; margin-top: 1.4rem; }
+.decision-filters label { display: flex; flex-direction: column; gap: .45rem; min-width: 0; font-size: .8rem; font-weight: 650; }
+.decision-filters select { width: 100%; min-width: 0; min-height: 44px; padding: .6rem; border: 1px solid var(--line); border-radius: .35rem; background: var(--surface); color: var(--ink); font: inherit; }
+.filter-hint, .schedule-summary { color: var(--muted); font-size: .76rem; line-height: 1.6; }
 .search-label { font-size: .8rem; font-weight: 600; }
 .search-row { display: flex; gap: .6rem; margin: .4rem 0 1.2rem; }
 input[type="search"] { width: 100%; min-width: 0; border: 1px solid var(--line); border-radius: .45rem; background: var(--surface); padding: .85rem 1rem; font-size: 1rem; }
@@ -137,6 +141,26 @@ summary { color: var(--accent); font-size: .8rem; padding: 1rem 0; }
 .key-points li { display: grid; grid-template-columns: 5.5rem 1fr; align-items: baseline; gap: 1rem; padding: 1.2rem 0; border-bottom: 1px solid var(--line); }
 .timestamp { font-variant-numeric: tabular-nums; background: var(--accent-soft); color: var(--accent); text-decoration: none; border: 1px solid var(--line); border-radius: 2rem; padding: .4rem .65rem; text-align: center; font-size: .85rem; font-weight: 650; }
 .timestamp:hover { text-decoration: underline; border-color: var(--accent); }
+.technology-entry { margin: -1rem 0 2rem; font-size: .9rem; }
+.technology-grid { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: .8rem; }
+.technology-card { background: var(--surface); border: 1px solid var(--line); border-radius: .7rem; padding: 1.2rem; }
+.technology-card h2 { font-size: 1.15rem; margin-bottom: .4rem; }
+.technology-card h2 a { display: inline-block; padding-block: .5rem; }
+.technology-card p:last-child { color: var(--muted); font-size: .8rem; margin-bottom: 0; }
+.technology-heading { max-width: 56rem; }
+.related-technologies { border-block: 1px solid var(--line); padding-block: 1rem; margin-block: 2rem; }
+.related-technologies h2 { font-size: 1.1rem; }
+.related-technologies ul { display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; list-style: none; padding: 0; }
+.related-technologies li { font-size: .8rem; }
+.related-technologies span { color: var(--muted); display: block; font-size: .7rem; }
+.related-technologies a { display: inline-block; padding-block: .4rem; }
+.technology-talks .talk-list { align-items: start; }
+.technology-talks .card-summary { display: block; overflow: visible; }
+.technology-talks .tags { margin-top: 0; }
+.technology-talks .key-points { margin-block: .5rem; }
+.technology-talks .key-points li { padding-block: .8rem; gap: .7rem; grid-template-columns: 4.5rem 1fr; font-size: .8rem; }
+.card-watch { font-size: .8rem; margin-top: 1rem; }
+.project-tag:hover { text-decoration: underline; }
 footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; border-top: 1px solid var(--line); padding-block: 1.5rem 2rem; font-size: .7rem; color: var(--muted); }
 .disclaimer { flex-basis: 100%; max-width: 55rem; margin: 0; }
 .talk-map { margin-block: 0 4rem; }
@@ -175,6 +199,48 @@ footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1r
 .map-preview .eyebrow { max-width: 85%; }
 .map-preview a { display: inline-block; padding-block: .5rem; font-size: .85rem; font-weight: 650; }
 #preview-close { position: absolute; top: .25rem; right: .25rem; width: 44px; height: 44px; border: 0; border-radius: .4rem; background: none; font-size: 1.5rem; }
+.start-here { margin-block: 0 3rem; scroll-margin-top: 1rem; }
+.role-routes, .topic-guides, .short-stops { display: grid; gap: 1rem; margin-block: 1.4rem; }
+.role-routes { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.topic-guides, .short-stops { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.route-card { min-width: 0; padding: 1.5rem; border: 1px solid var(--line); border-radius: .7rem; background: var(--surface); }
+.route-card h2, .route-card h3 { margin-top: 0; }
+.route-card h2 { font-size: 1.4rem; }
+.route-card h2 a, .route-card h3 a { color: var(--ink); }
+.route-card p { font-size: .9rem; }
+.role-routes .route-card p { font-size: .75rem; }
+.role-routes .route-card .eyebrow { font-size: .65rem; }
+.topic-routes { display: flex; align-items: center; flex-wrap: wrap; gap: .6rem; }
+.topic-routes .tag { padding: .6rem .8rem; }
+.guide-heading { max-width: 60rem; margin-block: 1.5rem 3rem; }
+.guide-heading h1 { font-size: clamp(2.2rem, 4.5vw, 3.7rem); }
+.guide-heading > p { max-width: 52rem; }
+.guide-heading .primary-link { flex-wrap: wrap; gap: .4rem; }
+.short-route, .full-route, .guide-stop { scroll-margin-top: 1.5rem; }
+.short-route { margin-block: 2rem 3.5rem; }
+.short-stops, .guide-stops { list-style: none; padding: 0; }
+.clip-window { display: flex; align-items: center; flex-wrap: wrap; gap: .8rem; }
+.clip-window .timestamp { min-width: 7rem; padding: .6rem; }
+.guide-stops { display: grid; gap: 2rem; max-width: 65rem; margin-top: 2rem; }
+.guide-stop { border: 1px solid var(--line); border-radius: .8rem; background: var(--surface); padding: 2rem; }
+.guide-stop h3 { font-size: 1.6rem; margin-top: .4rem; }
+.guide-stop h4 { margin-block: 1.3rem .5rem; }
+.guide-why { border-left: 3px solid var(--accent); padding-left: 1rem; }
+.guide-note { display: grid; grid-template-columns: 4.7rem minmax(0, 1fr); align-items: start; gap: .8rem; }
+.guide-note .timestamp { padding-block: .5rem; }
+.guide-jumps { gap: .6rem; }
+.guide-jumps a { border: 1px solid var(--line); border-radius: 2rem; padding: .6rem 1rem; }
+@media (max-width: 900px) {
+  .role-routes { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .topic-guides, .short-stops { grid-template-columns: minmax(0, 1fr); }
+  .start-here .section-heading { flex-direction: column; align-items: start; }
+  .guide-stop, .route-card { padding: 1.2rem; }
+  .guide-note { grid-template-columns: minmax(0, 1fr); gap: .4rem; }
+  .guide-note .timestamp { justify-self: start; }
+  .guide-stop h3 { font-size: 1.3rem; }
+}
 @media (max-width: 1100px) {
   .shell { width: calc(100% - 3rem); }
   .site-header { flex-wrap: wrap; padding-block: 1.2rem; gap: 1rem; }
