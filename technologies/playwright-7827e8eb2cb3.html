@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Playwright talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Project</p><h1>Playwright</h1>
+<p class="hero-copy">2 talks mention Playwright.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/claude-code-a625159d18da.html">Claude Code</a> <span>2 shared talks</span></li><li><a href="../technologies/agent-sandbox-2d1964313b00.html">Agent Sandbox</a> <span>1 shared talk</span></li><li><a href="../technologies/agent-substrate-1067f1a4b76d.html">Agent Substrate</a> <span>1 shared talk</span></li><li><a href="../technologies/chromium-ddf8d310d216.html">Chromium</a> <span>1 shared talk</span></li><li><a href="../technologies/dapr-agents-a632cd03d221.html">Dapr Agents</a> <span>1 shared talk</span></li><li><a href="../technologies/dev-containers-6a8adf5bf83c.html">Dev Containers</a> <span>1 shared talk</span></li><li><a href="../technologies/drasi-dac01fdc4f67.html">Drasi</a> <span>1 shared talk</span></li><li><a href="../technologies/gemini-cli-59c16d1a90ae.html">Gemini CLI</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning Playwright"><ul class="talk-list"><li class="talk-card" data-talk="gDLFk6_To34" data-track="AI Inference + Agentic"
+data-themes="[&quot;AI agents and automation&quot;, &quot;Security, identity and policy&quot;]" data-search="Running Secure Agents at Scale Carlos Sanchez AI Inference + Agentic  AI agents and automation Security, identity and policy Agent Sandbox Agent Substrate Chromium Claude Code gVisor KARS Kata Containers Kubernetes Model Context Protocol OpenClaw OpenShell Playwright Agent Sandbox Agent Substrate Chromium Claude Code gVisor KARS Kata Containers Kubernetes Model Context Protocol OpenClaw OpenShell Playwright Kubernetes Agent Sandbox K8s k8s MCP Carlos Sanchez describes how Adobe runs browser workloads for AI agents without running those browsers in the agent pods. He compares Kubernetes sandboxing options and walks through how Adobe uses Agent Sandbox to allocate, reuse, and retire remote Playwright environments. You run AI agents on Kubernetes and want to isolate remote browsers without changing how clients use Playwright."
+data-technologies="[&quot;Agent Sandbox&quot;, &quot;Agent Substrate&quot;, &quot;Chromium&quot;, &quot;Claude Code&quot;, &quot;gVisor&quot;, &quot;KARS&quot;, &quot;Kata Containers&quot;, &quot;Kubernetes&quot;, &quot;Model Context Protocol&quot;, &quot;OpenClaw&quot;, &quot;OpenShell&quot;, &quot;Playwright&quot;]" data-demo="no"
+data-length="30" data-level="Advanced" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-1">AI Inference + Agentic</span></div>
+<h3><a href="../talks/gDLFk6_To34.html">Running Secure Agents at Scale</a></h3>
+<p class="speakers">Carlos Sanchez</p><p class="card-summary">Carlos Sanchez describes how Adobe runs browser workloads for AI agents without running those browsers in the agent pods. He compares Kubernetes sandboxing options and walks through how Adobe uses Agent Sandbox to allocate, reuse, and retire remote Playwright environments.</p>
+<p class="schedule-summary">30 min slot · Advanced · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a><a class="tag theme-tag" href="../index.html?theme=Security%2C%20identity%20and%20policy#library">Security, identity and policy</a></div><p class="card-watch"><strong>Watch this if:</strong> You run AI agents on Kubernetes and want to isolate remote browsers without changing how clients use Playwright.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=gDLFk6_To34&amp;t=230s" aria-label="Watch at 3:50">3:50</a> <span>Sanchez describes how single-writer persistent volumes can make rollouts interrupt an agent session while a replacement Kubernetes pod waits for the old one.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=gDLFk6_To34&amp;t=567s" aria-label="Watch at 9:27">9:27</a> <span>Sanchez names the sandboxing options he evaluated for Playwright, including Agent Sandbox, OpenShell, and Agent Substrate.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=gDLFk6_To34&amp;t=788s" aria-label="Watch at 13:08">13:08</a> <span>Sanchez shows the application design: the agent sends Playwright traffic to a proxy that decides whether to reuse or allocate a browser sandbox.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=gDLFk6_To34&amp;t=976s" aria-label="Watch at 16:16">16:16</a> <span>Sanchez explains how the controller uses a template, a warm pool, and a claim to give a caller a sandbox.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=gDLFk6_To34&amp;t=1460s" aria-label="Watch at 24:20">24:20</a> <span>Sanchez describes keeping three Chromium and Playwright instances warm to reduce the wait when an agent requests a browser.</span></li></ol>
+<a class="card-link" href="../talks/gDLFk6_To34.html" aria-label="Explore Running Secure Agents at Scale">Explore key moments <span aria-hidden="true">↗</span></a>
+</li><li class="talk-card" data-talk="3eM2toDIVGs" data-track="Lightning Talks"
+data-themes="[&quot;AI agents and automation&quot;, &quot;Platform engineering and developer experience&quot;]" data-search="Your Quickstart is Broken – AI Agents as Synthetic New Users Aman Singh Lightning Talks Application Development + Delivery AI agents and automation Platform engineering and developer experience Drasi Dapr Agents Radius GitHub Actions Claude Code Visual Studio Code GitHub Copilot CLI Dev Containers Playwright GitHub Codespaces Gemini CLI Claude Code Dapr Agents Dev Containers Drasi Gemini CLI GitHub Actions GitHub Codespaces GitHub Copilot CLI Playwright Radius Visual Studio Code Codespaces VS Code VSCode Aman Singh describes how the Drasi maintainers use an AI agent as a synthetic new user that follows their tutorials exactly and reports where the docs and the real output differ. He walks through the setup with Dev Containers, GitHub Actions, GitHub Copilot CLI and Playwright, and shows bugs it found in Drasi, Dapr Agents and Radius tutorials. you maintain a project&#x27;s tutorials and want them tested automatically the way a new user would follow them."
+data-technologies="[&quot;Claude Code&quot;, &quot;Dapr Agents&quot;, &quot;Dev Containers&quot;, &quot;Drasi&quot;, &quot;Gemini CLI&quot;, &quot;GitHub Actions&quot;, &quot;GitHub Codespaces&quot;, &quot;GitHub Copilot CLI&quot;, &quot;Playwright&quot;, &quot;Radius&quot;, &quot;Visual Studio Code&quot;]" data-demo="no"
+data-length="5" data-level="Any Level" data-type="Lightning Talk">
+<div class="card-eyebrow"><span class="tag track-tag track-5">Lightning Talks</span></div>
+<h3><a href="../talks/3eM2toDIVGs.html">Your Quickstart is Broken – AI Agents as Synthetic New Users</a></h3>
+<p class="speakers">Aman Singh</p><p class="card-summary">Aman Singh describes how the Drasi maintainers use an AI agent as a synthetic new user that follows their tutorials exactly and reports where the docs and the real output differ. He walks through the setup with Dev Containers, GitHub Actions, GitHub Copilot CLI and Playwright, and shows bugs it found in Drasi, Dapr Agents and Radius tutorials.</p>
+<p class="schedule-summary">5 min slot · Any Level · Lightning Talk</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a><a class="tag theme-tag" href="../index.html?theme=Platform%20engineering%20and%20developer%20experience#library">Platform engineering and developer experience</a></div><p class="card-watch"><strong>Watch this if:</strong> you maintain a project&#x27;s tutorials and want them tested automatically the way a new user would follow them.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=3eM2toDIVGs&amp;t=32s" aria-label="Watch at 0:32">0:32</a> <span>Aman Singh says a broken quickstart could be a user&#x27;s first and last interaction with a young project like Drasi, which he helps maintain.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=3eM2toDIVGs&amp;t=75s" aria-label="Watch at 1:15">1:15</a> <span>He describes giving the job to an AI agent acting as a beginner, with one key instruction: do not fix anything, report the gap instead of hiding it.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=3eM2toDIVGs&amp;t=134s" aria-label="Watch at 2:14">2:14</a> <span>He explains the setup: the tutorial&#x27;s Dev Container runs in a weekly GitHub Actions workflow with GitHub Copilot CLI and Playwright, and a failing run files a GitHub issue with the evidence.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=3eM2toDIVGs&amp;t=200s" aria-label="Watch at 3:20">3:20</a> <span>He shows a tutorial where every command succeeded and CI was green, but the output was missing a name because the query read the wrong field.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=3eM2toDIVGs&amp;t=249s" aria-label="Watch at 4:09">4:09</a> <span>He says the same prompt and workflow, with minimal changes, found gaps in the Dapr Agents and Radius getting started guides.</span></li></ol>
+<a class="card-link" href="../talks/3eM2toDIVGs.html" aria-label="Explore Your Quickstart is Broken – AI Agents as Synthetic New Users">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

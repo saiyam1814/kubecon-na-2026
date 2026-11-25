@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>NodeWright talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Project</p><h1>NodeWright</h1>
+<p class="hero-copy">1 talk mentions NodeWright.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/kubectl-7a7f09de08e3.html">kubectl</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>1 shared talk</span></li><li><a href="../technologies/rmmod-191769f490d8.html">rmmod</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning NodeWright"><ul class="talk-list"><li class="talk-card" data-talk="eLycKsWtKQc" data-track="Lightning Talks"
+data-themes="[&quot;Accelerators and workload scheduling&quot;, &quot;Delivery, GitOps and release safety&quot;]" data-search="5,000 Nodes in Minutes, Twice in a Week: A Pattern for Fleet-Wide Node Changes Alex Yuskauskas Lightning Talks Operations + Performance Accelerators and workload scheduling Delivery, GitOps and release safety NodeWright Kubernetes kubectl rmmod kubectl Kubernetes NodeWright rmmod K8s k8s Alex Yuskauskas describes patching the Copy-Fail and Dirty Frag kernel CVEs across NVIDIA&#x27;s fleet with NodeWright, a controller he maintains for changing node operating systems. His main point is to ship every node change together with a check that fails when the change did not work, declared as a Kubernetes resource so kubectl shows the rollout status. you need to roll out a kernel or OS change to every node and prove it actually took effect."
+data-technologies="[&quot;kubectl&quot;, &quot;Kubernetes&quot;, &quot;NodeWright&quot;, &quot;rmmod&quot;]" data-demo="no"
+data-length="5" data-level="Advanced" data-type="Lightning Talk">
+<div class="card-eyebrow"><span class="tag track-tag track-5">Lightning Talks</span></div>
+<h3><a href="../talks/eLycKsWtKQc.html">5,000 Nodes in Minutes, Twice in a Week: A Pattern for Fleet-Wide Node Changes</a></h3>
+<p class="speakers">Alex Yuskauskas</p><p class="card-summary">Alex Yuskauskas describes patching the Copy-Fail and Dirty Frag kernel CVEs across NVIDIA&#x27;s fleet with NodeWright, a controller he maintains for changing node operating systems. His main point is to ship every node change together with a check that fails when the change did not work, declared as a Kubernetes resource so kubectl shows the rollout status.</p>
+<p class="schedule-summary">5 min slot · Advanced · Lightning Talk</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a><a class="tag theme-tag" href="../index.html?theme=Delivery%2C%20GitOps%20and%20release%20safety#library">Delivery, GitOps and release safety</a></div><p class="card-watch"><strong>Watch this if:</strong> you need to roll out a kernel or OS change to every node and prove it actually took effect.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=eLycKsWtKQc&amp;t=18s" aria-label="Watch at 0:18">0:18</a> <span>Alex Yuskauskas recounts the Copy-Fail CVE workaround: a one-line modprobe drop-in file plus unloading the module with rmmod.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=eLycKsWtKQc&amp;t=45s" aria-label="Watch at 0:45">0:45</a> <span>He explains the catch: if the module is in use, rmmod silently leaves it loaded, so nodes look fixed but are not until they reboot.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=eLycKsWtKQc&amp;t=80s" aria-label="Watch at 1:20">1:20</a> <span>He says the NodeWright package ships the change and its check in the same image, and the check only passes once the module is gone from /proc/modules.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=eLycKsWtKQc&amp;t=146s" aria-label="Watch at 2:26">2:26</a> <span>He describes rollout status as a fixed set of values (complete, in progress, erroring, blocked), which let the SRE team write an agent skill that stops and asks a human when a cluster does not complete.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=eLycKsWtKQc&amp;t=185s" aria-label="Watch at 3:05">3:05</a> <span>He says they ran it across 16 clusters with thousands of nodes in half an hour, then folded Dirty Frag into the same package so the next CVE is a YAML change.</span></li></ol>
+<a class="card-link" href="../talks/eLycKsWtKQc.html" aria-label="Explore 5,000 Nodes in Minutes, Twice in a Week: A Pattern for Fleet-Wide Node Changes">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

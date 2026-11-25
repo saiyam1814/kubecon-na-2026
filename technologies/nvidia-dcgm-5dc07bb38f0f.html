@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>NVIDIA DCGM talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>NVIDIA DCGM</h1>
+<p class="hero-copy">2 talks mention NVIDIA DCGM.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p><p class="muted">Also indexed as: Data Center GPU Manager, DCGM.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>2 shared talks</span></li><li><a href="../technologies/sglang-6c87e5496f59.html">SGLang</a> <span>2 shared talks</span></li><li><a href="../technologies/vllm-ec8207a3dde6.html">vLLM</a> <span>2 shared talks</span></li><li><a href="../technologies/azure-kubernetes-service-394f8f8f7ed2.html">Azure Kubernetes Service</a> <span>1 shared talk</span></li><li><a href="../technologies/cadvisor-041a2bd7d0ac.html">cAdvisor</a> <span>1 shared talk</span></li><li><a href="../technologies/focus-c51faa148557.html">FOCUS</a> <span>1 shared talk</span></li><li><a href="../technologies/github-c0b0109d9439.html">GitHub</a> <span>1 shared talk</span></li><li><a href="../technologies/grafana-cace491b6955.html">Grafana</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning NVIDIA DCGM"><ul class="talk-list"><li class="talk-card" data-talk="v0qNmkJSJ8A" data-track="Observability"
+data-themes="[&quot;AI inference and serving&quot;, &quot;Observability and reliability&quot;]" data-search="Clueless About The Cost of AI Model Usage? OpenCost+llm-d = first of a kind inference cost tracking Alexander Meijer Observability  AI inference and serving Observability and reliability OpenCost llm-d vLLM SGLang Kubernetes Prometheus Model Context Protocol NVIDIA DCGM cAdvisor FOCUS cAdvisor FOCUS Kubernetes llm-d Model Context Protocol NVIDIA DCGM OpenCost Prometheus SGLang vLLM K8s k8s MCP DCGM Data Center GPU Manager Alexander Meijer, presenting alone because Sima Nadler could not attend, describes an integration where OpenCost reads llm-d and vLLM token metrics and combines them with GPU and provider pricing to report inference costs such as cost per token. He demos the APIs and dashboard live against an IBM Research cluster, comparing allocation and usage costs to find idle models, and outlines a roadmap for deeper GPU metrics. you self-host LLMs on Kubernetes and want to know what each model and token actually costs."
+data-technologies="[&quot;cAdvisor&quot;, &quot;FOCUS&quot;, &quot;Kubernetes&quot;, &quot;llm-d&quot;, &quot;Model Context Protocol&quot;, &quot;NVIDIA DCGM&quot;, &quot;OpenCost&quot;, &quot;Prometheus&quot;, &quot;SGLang&quot;, &quot;vLLM&quot;]" data-demo="yes"
+data-length="30" data-level="Any Level" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-3">Observability</span><span class="demo-badge">Demo</span></div>
+<h3><a href="../talks/v0qNmkJSJ8A.html">Clueless About The Cost of AI Model Usage? OpenCost+llm-d = first of a kind inference cost tracking</a></h3>
+<p class="speakers">Alexander Meijer</p><p class="card-summary">Alexander Meijer, presenting alone because Sima Nadler could not attend, describes an integration where OpenCost reads llm-d and vLLM token metrics and combines them with GPU and provider pricing to report inference costs such as cost per token. He demos the APIs and dashboard live against an IBM Research cluster, comparing allocation and usage costs to find idle models, and outlines a roadmap for deeper GPU metrics.</p>
+<p class="schedule-summary">30 min slot · Any Level · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=AI%20inference%20and%20serving#library">AI inference and serving</a><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a></div><p class="card-watch"><strong>Watch this if:</strong> you self-host LLMs on Kubernetes and want to know what each model and token actually costs.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=v0qNmkJSJ8A&amp;t=106s" aria-label="Watch at 1:46">1:46</a> <span>Alexander Meijer says self-hosted models are generally cheaper than hosted ones, but that this only delays the cost problem.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=v0qNmkJSJ8A&amp;t=400s" aria-label="Watch at 6:40">6:40</a> <span>He draws the line of responsibility: llm-d handles token counts, routing and scheduling, while OpenCost handles hardware metrics, pricing and cloud provider connections.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=v0qNmkJSJ8A&amp;t=747s" aria-label="Watch at 12:27">12:27</a> <span>He explains the two cost bases: allocation, the max of request and usage, which he calls the production metric, and usage, which he calls the R&amp;D metric.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=v0qNmkJSJ8A&amp;t=1001s" aria-label="Watch at 16:41">16:41</a> <span>His worked example divides a $15 deployment cost by 150 processed tokens to get $0.10 per token.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=v0qNmkJSJ8A&amp;t=1254s" aria-label="Watch at 20:54">20:54</a> <span>In the live demo, comparing $246 allocation cost with $22 usage cost shows one model was idle about 90 percent of the time, which he flags as a right-sizing target.</span></li></ol>
+<a class="card-link" href="../talks/v0qNmkJSJ8A.html" aria-label="Explore Clueless About The Cost of AI Model Usage? OpenCost+llm-d = first of a kind inference cost tracking">Explore key moments <span aria-hidden="true">↗</span></a>
+</li><li class="talk-card" data-talk="-K-WIJVoYpM" data-track="Tutorials"
+data-themes="[&quot;AI inference and serving&quot;]" data-search="Minting Your Own Tokens: The Server Side of the Token Economy Suraj Deshmukh Nilekh Chaudhari Tutorials AI Inference + Agentic AI inference and serving Kubernetes vLLM SGLang NVIDIA TensorRT-LLM LeaderWorkerSet Qwen Muse Glimmer Grafana Istio Azure Kubernetes Service GitHub Hugging Face kubectl NVIDIA DCGM NVIDIA NVLink nvidia-smi OpenAI API YAML Azure Kubernetes Service GitHub Grafana Hugging Face Istio kubectl Kubernetes LeaderWorkerSet Muse Glimmer NVIDIA DCGM NVIDIA NVLink NVIDIA TensorRT-LLM nvidia-smi OpenAI API Qwen SGLang vLLM YAML AKS K8s k8s LWS DCGM Data Center GPU Manager NVLink TensorRT-LLM Suraj Deshmukh and Nilekh Chaudhari walk through vLLM deployments on Kubernetes, from a single GPU to a model split across two nodes. They compare throughput and first-token latency and explain how GPU memory and interconnects influence the deployment choices. You want to deploy a model with vLLM and understand what changes when it no longer fits on one GPU."
+data-technologies="[&quot;Azure Kubernetes Service&quot;, &quot;GitHub&quot;, &quot;Grafana&quot;, &quot;Hugging Face&quot;, &quot;Istio&quot;, &quot;kubectl&quot;, &quot;Kubernetes&quot;, &quot;LeaderWorkerSet&quot;, &quot;Muse Glimmer&quot;, &quot;NVIDIA DCGM&quot;, &quot;NVIDIA NVLink&quot;, &quot;NVIDIA TensorRT-LLM&quot;, &quot;nvidia-smi&quot;, &quot;OpenAI API&quot;, &quot;Qwen&quot;, &quot;SGLang&quot;, &quot;vLLM&quot;, &quot;YAML&quot;]" data-demo="yes"
+data-length="80" data-level="Beginner" data-type="Tutorial">
+<div class="card-eyebrow"><span class="tag track-tag track-3">Tutorials</span><span class="demo-badge">Demo</span></div>
+<h3><a href="../talks/-K-WIJVoYpM.html">Minting Your Own Tokens: The Server Side of the Token Economy</a></h3>
+<p class="speakers">Suraj Deshmukh, Nilekh Chaudhari</p><p class="card-summary">Suraj Deshmukh and Nilekh Chaudhari walk through vLLM deployments on Kubernetes, from a single GPU to a model split across two nodes. They compare throughput and first-token latency and explain how GPU memory and interconnects influence the deployment choices.</p>
+<p class="schedule-summary">80 min slot · Beginner · Tutorial</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=AI%20inference%20and%20serving#library">AI inference and serving</a></div><p class="card-watch"><strong>Watch this if:</strong> You want to deploy a model with vLLM and understand what changes when it no longer fits on one GPU.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=-K-WIJVoYpM&amp;t=918s" aria-label="Watch at 15:18">15:18</a> <span>The presenters inspect the running single-GPU deployment and show where the GPU request is specified in the vLLM configuration.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=-K-WIJVoYpM&amp;t=1327s" aria-label="Watch at 22:07">22:07</a> <span>The presenters explain the difference between prefill, which processes the prompt and produces the first token, and decode, which generates the rest of the reply.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=-K-WIJVoYpM&amp;t=2279s" aria-label="Watch at 37:59">37:59</a> <span>The presenters raise benchmark concurrency from one request to four and discuss why higher aggregate token throughput need not mean a shorter wait for each user.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=-K-WIJVoYpM&amp;t=3201s" aria-label="Watch at 53:21">53:21</a> <span>The presenters animate how tensor-parallel workers exchange partial results at each layer and discuss why GPU interconnect speed matters.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=-K-WIJVoYpM&amp;t=4021s" aria-label="Watch at 1:07:01">1:07:01</a> <span>The presenters introduce LeaderWorkerSet&#x27;s leader and worker pattern before showing how they configure pipeline parallelism across two nodes.</span></li></ol>
+<a class="card-link" href="../talks/-K-WIJVoYpM.html" aria-label="Explore Minting Your Own Tokens: The Server Side of the Token Economy">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

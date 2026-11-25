@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>tcpdump talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>tcpdump</h1>
+<p class="hero-copy">2 talks mention tcpdump.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/calico-7993bbce88ec.html">Calico</a> <span>2 shared talks</span></li><li><a href="../technologies/cilium-887318495291.html">Cilium</a> <span>2 shared talks</span></li><li><a href="../technologies/cni-df08d57eecf3.html">CNI</a> <span>2 shared talks</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>2 shared talks</span></li><li><a href="../technologies/claude-c857d09db23e.html">Claude</a> <span>1 shared talk</span></li><li><a href="../technologies/conntrack-8791d2e0069a.html">conntrack</a> <span>1 shared talk</span></li><li><a href="../technologies/containerd-2397d068a8d1.html">containerd</a> <span>1 shared talk</span></li><li><a href="../technologies/cri-o-ae1b0acb9af5.html">CRI-O</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning tcpdump"><ul class="talk-list"><li class="talk-card" data-talk="rQY8--37GYk" data-track="Cloud Native Novice"
+data-themes="[&quot;Kubernetes internals and runtimes&quot;, &quot;Networking and connectivity&quot;]" data-search="From Pod Creation to First Packet Surya Seetharaman Cloud Native Novice  Kubernetes internals and runtimes Networking and connectivity Kubernetes Kubernetes API server CNI containerd CRI-O Calico Cilium OVN-Kubernetes kind kindnet crictl kubectl tcpdump Calico Cilium CNI containerd CRI-O crictl kind kindnet kubectl Kubernetes Kubernetes API server OVN-Kubernetes tcpdump Project Calico Container Network Interface Kubernetes in Docker K8s k8s kube-apiserver Surya Seetharaman traces pod networking from Kubernetes creating a sandbox to sending its first packet. She uses a kind cluster to show the network namespace, CNI setup, address assignment, and packet capture. You want a practical way to trace a pod startup networking failure from its sandbox to its first outbound packet."
+data-technologies="[&quot;Calico&quot;, &quot;Cilium&quot;, &quot;CNI&quot;, &quot;containerd&quot;, &quot;CRI-O&quot;, &quot;crictl&quot;, &quot;kind&quot;, &quot;kindnet&quot;, &quot;kubectl&quot;, &quot;Kubernetes&quot;, &quot;Kubernetes API server&quot;, &quot;OVN-Kubernetes&quot;, &quot;tcpdump&quot;]" data-demo="yes"
+data-length="30" data-level="Beginner" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-7">Cloud Native Novice</span><span class="demo-badge">Demo</span></div>
+<h3><a href="../talks/rQY8--37GYk.html">From Pod Creation to First Packet</a></h3>
+<p class="speakers">Surya Seetharaman</p><p class="card-summary">Surya Seetharaman traces pod networking from Kubernetes creating a sandbox to sending its first packet. She uses a kind cluster to show the network namespace, CNI setup, address assignment, and packet capture.</p>
+<p class="schedule-summary">30 min slot · Beginner · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a><a class="tag theme-tag" href="../index.html?theme=Networking%20and%20connectivity#library">Networking and connectivity</a></div><p class="card-watch"><strong>Watch this if:</strong> You want a practical way to trace a pod startup networking failure from its sandbox to its first outbound packet.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=rQY8--37GYk&amp;t=386s" aria-label="Watch at 6:26">6:26</a> <span>Seetharaman describes when the runtime creates the pause container and network namespace after the kubelet receives a pod.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=rQY8--37GYk&amp;t=486s" aria-label="Watch at 8:06">8:06</a> <span>Seetharaman uses crictl to identify a running pod&#x27;s sandbox and explains why the pause container is not listed like an application container.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=rQY8--37GYk&amp;t=793s" aria-label="Watch at 13:13">13:13</a> <span>Seetharaman distinguishes the loopback setup from the primary CNI plugin and identifies kindnet as the plugin used in her demo.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=rQY8--37GYk&amp;t=1211s" aria-label="Watch at 20:11">20:11</a> <span>Seetharaman explains how kindnet uses host-local IP address management to allocate a pod address from a configured range.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=rQY8--37GYk&amp;t=1449s" aria-label="Watch at 24:09">24:09</a> <span>Seetharaman clears the ARP cache and captures traffic during a ping to show the address resolution and packets leaving the pod.</span></li></ol>
+<a class="card-link" href="../talks/rQY8--37GYk.html" aria-label="Explore From Pod Creation to First Packet">Explore key moments <span aria-hidden="true">↗</span></a>
+</li><li class="talk-card" data-talk="LOFgJj5DZ40" data-track="Platform Engineering Day"
+data-themes="[&quot;Networking and connectivity&quot;, &quot;Platform engineering and developer experience&quot;]" data-search="The Missing Layer of Platform Maturity: Kubernetes Networking Faseela Kundattil Christophe Sauthier Chad M. Crowell Marino Wijay James Spurin Platform Engineering Day Platform Team Composition Networking and connectivity Platform engineering and developer experience Cilium Gateway API Istio Kubernetes eBPF kagent Calico Hubble K8sGPT OpenDaylight CNI Claude conntrack iptables nftables tcpdump Calico Cilium Claude CNI conntrack eBPF Gateway API Hubble iptables Istio K8sGPT kagent Kubernetes nftables OpenDaylight tcpdump Project Calico Container Network Interface K8s k8s The panel explains why Kubernetes networking remains a maturity gap despite higher-level abstractions, using incidents and observability workflows to show why engineers still need mental models of the underlying stack. The panelists describe the hands-on CKNE exam as a vendor-flexible way to validate networking skills while arguing that AI should assist rather than replace engineering judgment. watch this if your platform team owns Kubernetes networking troubleshooting or is evaluating the CKNE curriculum."
+data-technologies="[&quot;Calico&quot;, &quot;Cilium&quot;, &quot;Claude&quot;, &quot;CNI&quot;, &quot;conntrack&quot;, &quot;eBPF&quot;, &quot;Gateway API&quot;, &quot;Hubble&quot;, &quot;iptables&quot;, &quot;Istio&quot;, &quot;K8sGPT&quot;, &quot;kagent&quot;, &quot;Kubernetes&quot;, &quot;nftables&quot;, &quot;OpenDaylight&quot;, &quot;tcpdump&quot;]" data-demo="no"
+data-length="35" data-level="Any Level" data-type="Panel">
+<div class="card-eyebrow"><span class="tag track-tag track-6">Platform Engineering Day</span></div>
+<h3><a href="../talks/LOFgJj5DZ40.html">The Missing Layer of Platform Maturity: Kubernetes Networking</a></h3>
+<p class="speakers">Faseela Kundattil, Christophe Sauthier, Chad M. Crowell, Marino Wijay, James Spurin</p><p class="card-summary">The panel explains why Kubernetes networking remains a maturity gap despite higher-level abstractions, using incidents and observability workflows to show why engineers still need mental models of the underlying stack. The panelists describe the hands-on CKNE exam as a vendor-flexible way to validate networking skills while arguing that AI should assist rather than replace engineering judgment.</p>
+<p class="schedule-summary">35 min slot · Any Level · Panel</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Networking%20and%20connectivity#library">Networking and connectivity</a><a class="tag theme-tag" href="../index.html?theme=Platform%20engineering%20and%20developer%20experience#library">Platform engineering and developer experience</a></div><p class="card-watch"><strong>Watch this if:</strong> your platform team owns Kubernetes networking troubleshooting or is evaluating the CKNE curriculum.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=LOFgJj5DZ40&amp;t=101s" aria-label="Watch at 1:41">1:41</a> <span>The panel argues that Kubernetes networking is a missing layer of platform maturity because usable abstractions still require underlying troubleshooting knowledge when failures occur.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=LOFgJj5DZ40&amp;t=608s" aria-label="Watch at 10:08">10:08</a> <span>Chad uses a 504 ingress incident to argue for peeling back the network path locally, from pod logs and events through service endpoints to ingress routing and host-header behavior.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=LOFgJj5DZ40&amp;t=921s" aria-label="Watch at 15:21">15:21</a> <span>James argues that engineers should learn enough iptables, nftables, conntrack, and eBPF to understand failures and judge AI-suggested fixes rather than treating AI as the authority.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=LOFgJj5DZ40&amp;t=1055s" aria-label="Watch at 17:35">17:35</a> <span>Chad argues that knowing where in the networking stack a problem lives matters more than loyalty to a toolset, with observability used to narrow environment and namespace before deep packet inspection.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=LOFgJj5DZ40&amp;t=1411s" aria-label="Watch at 23:31">23:31</a> <span>Christophe says SMEs from varied projects designed the hands-on CKNE exam so candidates can answer with different tools rather than being forced into one stack.</span></li></ol>
+<a class="card-link" href="../talks/LOFgJj5DZ40.html" aria-label="Explore The Missing Layer of Platform Maturity: Kubernetes Networking">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

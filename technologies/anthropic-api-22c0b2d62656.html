@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Anthropic API talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>Anthropic API</h1>
+<p class="hero-copy">1 talk mentions Anthropic API.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/dash0-3e55ccf4e492.html">Dash0</a> <span>1 shared talk</span></li><li><a href="../technologies/envoy-84532b306f25.html">Envoy</a> <span>1 shared talk</span></li><li><a href="../technologies/grafana-cace491b6955.html">Grafana</a> <span>1 shared talk</span></li><li><a href="../technologies/grafana-loki-40091af519cc.html">Grafana Loki</a> <span>1 shared talk</span></li><li><a href="../technologies/grafana-tempo-d56b0f783c25.html">Grafana Tempo</a> <span>1 shared talk</span></li><li><a href="../technologies/kserve-c54d3f6d2054.html">KServe</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>1 shared talk</span></li><li><a href="../technologies/llm-d-82cd4b3d57e4.html">llm-d</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning Anthropic API"><ul class="talk-list"><li class="talk-card" data-talk="4T2887KV_WM" data-track="Observability"
+data-themes="[&quot;AI inference and serving&quot;, &quot;Observability and reliability&quot;]" data-search="Observability for LLM Inference on Kubernetes Oscar Castillo Jeffry Hernández Observability  AI inference and serving Observability and reliability Kubernetes OpenTelemetry KServe vLLM llm-d Grafana Envoy Prometheus Grafana Tempo Grafana Loki OpenAI API Anthropic API Dash0 Anthropic API Dash0 Envoy Grafana Grafana Loki Grafana Tempo KServe Kubernetes llm-d OpenAI API OpenTelemetry Prometheus vLLM Loki Tempo K8s k8s OTel The speakers explain which signals they use to observe inference from the client through the model server to the GPU. They demonstrate how they correlate traces, logs, and metrics for a passport-data extraction app using synthetic inputs. You need to see where inference latency or errors originate instead of stopping at a single GPU dashboard."
+data-technologies="[&quot;Anthropic API&quot;, &quot;Dash0&quot;, &quot;Envoy&quot;, &quot;Grafana&quot;, &quot;Grafana Loki&quot;, &quot;Grafana Tempo&quot;, &quot;KServe&quot;, &quot;Kubernetes&quot;, &quot;llm-d&quot;, &quot;OpenAI API&quot;, &quot;OpenTelemetry&quot;, &quot;Prometheus&quot;, &quot;vLLM&quot;]" data-demo="yes"
+data-length="30" data-level="Any Level" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-3">Observability</span><span class="demo-badge">Demo</span></div>
+<h3><a href="../talks/4T2887KV_WM.html">Observability for LLM Inference on Kubernetes</a></h3>
+<p class="speakers">Oscar Castillo, Jeffry Hernández</p><p class="card-summary">The speakers explain which signals they use to observe inference from the client through the model server to the GPU. They demonstrate how they correlate traces, logs, and metrics for a passport-data extraction app using synthetic inputs.</p>
+<p class="schedule-summary">30 min slot · Any Level · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=AI%20inference%20and%20serving#library">AI inference and serving</a><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a></div><p class="card-watch"><strong>Watch this if:</strong> You need to see where inference latency or errors originate instead of stopping at a single GPU dashboard.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=4T2887KV_WM&amp;t=103s" aria-label="Watch at 1:43">1:43</a> <span>The speakers distinguish prefill from iterative decode and introduce time to first token and time per output token as ways to observe those stages.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=4T2887KV_WM&amp;t=292s" aria-label="Watch at 4:52">4:52</a> <span>The speakers compare their client-side timing with the provider dashboard and explain why network hops and client processing can make the end-to-end delay longer.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=4T2887KV_WM&amp;t=560s" aria-label="Watch at 9:20">9:20</a> <span>The speakers show a synthetic passport image going through an instrumented OCR application that returns extracted data and token counts.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=4T2887KV_WM&amp;t=839s" aria-label="Watch at 13:59">13:59</a> <span>The speakers use a Grafana dashboard to show why a busy GPU reading can be misleading when the inference server&#x27;s KV cache is far from full.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=4T2887KV_WM&amp;t=1024s" aria-label="Watch at 17:04">17:04</a> <span>The speakers inspect a failed trace from an empty model response and show how a trace ID can connect the request to logs from Envoy and the inference scheduler.</span></li></ol>
+<a class="card-link" href="../talks/4T2887KV_WM.html" aria-label="Explore Observability for LLM Inference on Kubernetes">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

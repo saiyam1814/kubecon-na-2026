@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Optimized Switchover Timing for Live Migration of Memory-Intensive Workloads | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">KubeVirt Summit</span></div>
+<h1>Optimized Switchover Timing for Live Migration of Memory-Intensive Workloads</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Aseef Imran</dd></div>
+<div><dt>Track</dt><dd>KubeVirt Summit</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Unclassified#library">Unclassified</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>20 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=El5TiGjqpWU">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1334855">Schedule</a></p>
+<section><h2>Talk summary</h2><p>The speaker explains why live migrations of write-heavy virtual machines can stall and why timeouts and downtime ramps choose the switchover moment poorly. He presents a stall-detection approach that waits for a low point in the remaining data before switching over, which he says was merged as alpha in KubeVirt 1.9.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You run memory-heavy virtual machines and want to understand how switchover timing affects live migration downtime.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=El5TiGjqpWU&amp;t=217s" aria-label="Watch at 3:37">3:37</a> <span>The speaker says the standard approach waits for a target downtime, and that write-heavy workloads sometimes never reach it.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=El5TiGjqpWU&amp;t=506s" aria-label="Watch at 8:26">8:26</a> <span>The speaker says downtime ramps work well only when tuned for the workload, with low-level parameters an end user should not have to set.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=El5TiGjqpWU&amp;t=615s" aria-label="Watch at 10:15">10:15</a> <span>The speaker describes the key observation that stalled migrations fluctuate around a point, so switchover can be timed for a low point.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=El5TiGjqpWU&amp;t=899s" aria-label="Watch at 14:59">14:59</a> <span>The speaker explains his definition of a stalled migration, which compares current remaining bytes with the smallest record outside a progress timeout window.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=El5TiGjqpWU&amp;t=1166s" aria-label="Watch at 19:26">19:26</a> <span>The speaker reports a Redis benchmark where average downtime went from about 5,000 to about 1,000 milliseconds, and another workload with no meaningful difference.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/kubevirt-22c1bccf4903.html">KubeVirt</a><a class="tag project-tag" href="../technologies/redis-34fb46c847bb.html">Redis</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

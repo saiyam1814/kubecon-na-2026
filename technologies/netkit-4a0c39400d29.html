@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>netkit talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>netkit</h1>
+<p class="hero-copy">1 talk mentions netkit.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/cilium-887318495291.html">Cilium</a> <span>1 shared talk</span></li><li><a href="../technologies/cni-df08d57eecf3.html">CNI</a> <span>1 shared talk</span></li><li><a href="../technologies/containerd-2397d068a8d1.html">containerd</a> <span>1 shared talk</span></li><li><a href="../technologies/dra-net-6d262602a1a6.html">DRA-Net</a> <span>1 shared talk</span></li><li><a href="../technologies/dynamic-resource-allocation-d7775471dc59.html">Dynamic Resource Allocation</a> <span>1 shared talk</span></li><li><a href="../technologies/ebpf-942d8abc75dd.html">eBPF</a> <span>1 shared talk</span></li><li><a href="../technologies/ethtool-c6bfc8d71984.html">ethtool</a> <span>1 shared talk</span></li><li><a href="../technologies/io-uring-62c68673efc9.html">io_uring</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning netkit"><ul class="talk-list"><li class="talk-card" data-talk="0Jt75OfvFBw" data-track="Connectivity"
+data-themes="[&quot;Accelerators and workload scheduling&quot;, &quot;Networking and connectivity&quot;]" data-search="Here be DRAgons: Bringing native zero-copy networking to Pods with Cilium and netkit Daniel Borkmann Aaron Campbell Connectivity  Accelerators and workload scheduling Networking and connectivity Cilium Linux Kubernetes Dynamic Resource Allocation DRA-Net eBPF CNI containerd netkit io_uring ethtool kubelet kube-scheduler Cilium CNI containerd DRA-Net Dynamic Resource Allocation eBPF ethtool io_uring kube-scheduler kubelet Kubernetes Linux netkit Container Network Interface DRA K8s k8s The speakers compare two Cilium network drivers for Kubernetes Dynamic Resource Allocation, one using SR-IOV and the other using netkit with queue leasing. They demonstrate how a pod can use a leased hardware receive queue and explain how zero-copy receive works with the kernel networking stack. Watch this if you are evaluating hardware-accelerated pod networking and want to understand what Cilium queue leasing requires."
+data-technologies="[&quot;Cilium&quot;, &quot;CNI&quot;, &quot;containerd&quot;, &quot;DRA-Net&quot;, &quot;Dynamic Resource Allocation&quot;, &quot;eBPF&quot;, &quot;ethtool&quot;, &quot;io_uring&quot;, &quot;kube-scheduler&quot;, &quot;kubelet&quot;, &quot;Kubernetes&quot;, &quot;Linux&quot;, &quot;netkit&quot;]" data-demo="yes"
+data-length="30" data-level="Advanced" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-5">Connectivity</span><span class="demo-badge">Demo</span></div>
+<h3><a href="../talks/0Jt75OfvFBw.html">Here be DRAgons: Bringing native zero-copy networking to Pods with Cilium and netkit</a></h3>
+<p class="speakers">Daniel Borkmann, Aaron Campbell</p><p class="card-summary">The speakers compare two Cilium network drivers for Kubernetes Dynamic Resource Allocation, one using SR-IOV and the other using netkit with queue leasing. They demonstrate how a pod can use a leased hardware receive queue and explain how zero-copy receive works with the kernel networking stack.</p>
+<p class="schedule-summary">30 min slot · Advanced · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a><a class="tag theme-tag" href="../index.html?theme=Networking%20and%20connectivity#library">Networking and connectivity</a></div><p class="card-watch"><strong>Watch this if:</strong> you are evaluating hardware-accelerated pod networking and want to understand what Cilium queue leasing requires.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=0Jt75OfvFBw&amp;t=517s" aria-label="Watch at 8:37">8:37</a> <span>Borkmann explains how running BPF in the netkit device driver reduces the queue traversals seen with virtual Ethernet devices.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=0Jt75OfvFBw&amp;t=873s" aria-label="Watch at 14:33">14:33</a> <span>He introduces Cilium&#x27;s two DRA driver options, SR-IOV and netkit queue leasing, and describes how the agent integrates with the node.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=0Jt75OfvFBw&amp;t=1194s" aria-label="Watch at 19:54">19:54</a> <span>He explains how Linux queue leasing removes selected receive queues from the default set and binds them to a netkit device in a pod.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=0Jt75OfvFBw&amp;t=1333s" aria-label="Watch at 22:13">22:13</a> <span>Campbell begins the demo by showing the operator&#x27;s view of queue leasing and identifying the required hardware receive-queue capabilities.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=0Jt75OfvFBw&amp;t=1822s" aria-label="Watch at 30:22">30:22</a> <span>He explains how packet headers stay in kernel memory while io_uring enables payload delivery directly to user space.</span></li></ol>
+<a class="card-link" href="../talks/0Jt75OfvFBw.html" aria-label="Explore Here be DRAgons: Bringing native zero-copy networking to Pods with Cilium and netkit">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

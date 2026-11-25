@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Breaking the O(n²) Wall: Pub/Sub Federation for Istio Multicluster Service Discovery | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-3">Istio Day</span></div>
+<h1>Breaking the O(n²) Wall: Pub/Sub Federation for Istio Multicluster Service Discovery</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Jack Ma, Zhewei Hu</dd></div>
+<div><dt>Track</dt><dd>Istio Day</dd></div>
+<div><dt>Topic</dt><dd>Multicluster</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Unclassified#library">Unclassified</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>Not listed</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Not listed</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=GVZBlDMM9bg">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1336101">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Two engineers from the Azure Kubernetes Service team describe replacing Istio&#x27;s cross-cluster API server watches with a shared pub/sub broker for ambient multicluster service discovery. They present scale tests up to 100 clusters in which they say propagation latency stayed similar while istiod memory use dropped sharply.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You run or plan an Istio ambient mesh across many clusters and worry about remote secrets and istiod memory.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=GVZBlDMM9bg&amp;t=203s" aria-label="Watch at 3:23">3:23</a> <span>Jack Ma says 100 clusters need 10,000 remote watches under the current model, and that each istiod also carries memory overhead for the other clusters.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=GVZBlDMM9bg&amp;t=319s" aria-label="Watch at 5:19">5:19</a> <span>Zhewei Hu presents the alternative, in which each istiod talks only to its own API server, publishes global services and network gateways to a shared pub/sub broker, and subscribes to the others.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=GVZBlDMM9bg&amp;t=418s" aria-label="Watch at 6:58">6:58</a> <span>He describes scale tests at 10, 30, 60 and 100 clusters, each with 100 global services, and says median service creation and deletion latency showed no clear difference between the two approaches.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=GVZBlDMM9bg&amp;t=643s" aria-label="Watch at 10:43">10:43</a> <span>He says that at 100 clusters istiod used under 1 gigabyte of memory with pub/sub federation against almost 2.5 gigabytes with remote watches.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=GVZBlDMM9bg&amp;t=1117s" aria-label="Watch at 18:37">18:37</a> <span>Answering a question about dropped messages, Jack Ma says the design sends incremental changes plus a full snapshot of global services every minute.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/istio-82d979a24d74.html">Istio</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>
