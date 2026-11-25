@@ -173,6 +173,11 @@ footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1r
 .map-legend > span { font-size: .6rem; font-weight: 700; letter-spacing: .12em; color: var(--muted); }
 .map-legend ul { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; padding: 0; margin: .6rem 0 0; }
 .map-legend li { display: flex; gap: .4rem; align-items: center; font-size: .64rem; }
+.legend-dot, .map-dot { --dot-color: var(--dot-light); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-color-mode="light"]) :is(.legend-dot, .map-dot) { --dot-color: var(--dot-dark); }
+}
+:root[data-color-mode="dark"] :is(.legend-dot, .map-dot) { --dot-color: var(--dot-dark); }
 .legend-dot { width: .55rem; height: .55rem; border-radius: 50%; flex: 0 0 auto; background: var(--dot-color); }
 .map-status { color: var(--muted); font-size: .74rem; margin-block: 1rem 0; }
 .map-regions { position: relative; isolation: isolate; overflow: hidden; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .4rem; padding: .5rem; border: 1px solid var(--shore); border-radius: 1rem; background: var(--water); }

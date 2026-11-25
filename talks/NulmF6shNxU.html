@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>AI-Aware Traffic Management: Scaling Inference with Istio Ambient Mesh | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-3">Istio Day</span></div>
+<h1>AI-Aware Traffic Management: Scaling Inference with Istio Ambient Mesh</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Hannah Olukoye, Mofesola Babalola</dd></div>
+<div><dt>Track</dt><dd>Istio Day</dd></div>
+<div><dt>Topic</dt><dd>AI inference</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Unclassified#library">Unclassified</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>Not listed</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Not listed</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=NulmF6shNxU">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1336097">Schedule</a></p>
+<section><h2>Talk summary</h2><p>An engineering manager and an engineer describe how they would run AI inference traffic through Istio ambient mesh while keeping GPU spend and security under control. They say an endpoint picker that knows which backend holds a cached prompt beats plain load balancing from the second turn onward, and they report a bug they hit when combining it with ambient mTLS.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You plan to put LLM inference behind Istio ambient mesh and care about cache-aware routing and per-team token tracking.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=NulmF6shNxU&amp;t=52s" aria-label="Watch at 0:52">0:52</a> <span>Hannah Olukoye says load balancing that treats every request alike regardless of token count is a core problem for inference traffic.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=NulmF6shNxU&amp;t=85s" aria-label="Watch at 1:25">1:25</a> <span>She compares a per-pod Envoy sidecar at about 135 megabytes of memory with ztunnel in ambient mode, which she says stays at about seven megabytes for the whole node.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=NulmF6shNxU&amp;t=292s" aria-label="Watch at 4:52">4:52</a> <span>Mofesola Babalola says AI repeats the old layer 7 load-balancing problem, because routing should account for which pod holds the context, GPU capacity and KV cache state.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=NulmF6shNxU&amp;t=346s" aria-label="Watch at 5:46">5:46</a> <span>He shows test results comparing Istio with and without the endpoint picker and says the difference appears from the second turn, once a backend has the prompt cached.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=NulmF6shNxU&amp;t=399s" aria-label="Watch at 6:39">6:39</a> <span>He says the endpoint picker expects a pod IP and port but received a mesh address under ambient mTLS and fell back to round robin, so he opened pull requests to Envoy and Istio.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/envoy-84532b306f25.html">Envoy</a><a class="tag project-tag" href="../technologies/gateway-api-inference-extension-e298372a7bc8.html">Gateway API Inference Extension</a><a class="tag project-tag" href="../technologies/istio-82d979a24d74.html">Istio</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/vllm-ec8207a3dde6.html">vLLM</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>
