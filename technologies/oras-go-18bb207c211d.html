@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>oras-go talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>oras-go</h1>
+<p class="hero-copy">1 talk mentions oras-go.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/buildah-3355e071ea5a.html">Buildah</a> <span>1 shared talk</span></li><li><a href="../technologies/docker-d548c5b83fa6.html">Docker</a> <span>1 shared talk</span></li><li><a href="../technologies/harbor-c1d64b2d4cb3.html">Harbor</a> <span>1 shared talk</span></li><li><a href="../technologies/helm-ab14d3faa25e.html">Helm</a> <span>1 shared talk</span></li><li><a href="../technologies/oras-f3cc87384ba6.html">ORAS</a> <span>1 shared talk</span></li><li><a href="../technologies/podman-2f259bab93aa.html">Podman</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning oras-go"><ul class="talk-list"><li class="talk-card" data-talk="lzcrf1lmz0I" data-track="Project Lightning Talks"
+data-themes="[&quot;Delivery, GitOps and release safety&quot;, &quot;Platform engineering and developer experience&quot;]" data-search="ORAS Go v3: Batteries-Included Registry SDK Terry Howe Project Lightning Talks  Delivery, GitOps and release safety Platform engineering and developer experience ORAS Helm Podman Harbor Docker oras-go Buildah Buildah Docker Harbor Helm ORAS oras-go Podman Terry Howe, an ORAS and Helm maintainer, says oras-go v3 loads the same registry configuration files that Podman uses, so TLS, mirrors and policy no longer need to be wired by hand as in v2. He also describes a client builder, a changed token flow, namespace-scoped credentials, streaming without writing to disk and a new module path. Watch this if you build Go tools that push or pull OCI artifacts and are deciding whether to move from oras-go v2 to v3."
+data-technologies="[&quot;Buildah&quot;, &quot;Docker&quot;, &quot;Harbor&quot;, &quot;Helm&quot;, &quot;ORAS&quot;, &quot;oras-go&quot;, &quot;Podman&quot;]" data-demo="no"
+data-length="5" data-level="" data-type="Lightning Talk">
+<div class="card-eyebrow"><span class="tag track-tag track-6">Project Lightning Talks</span></div>
+<h3><a href="../talks/lzcrf1lmz0I.html">ORAS Go v3: Batteries-Included Registry SDK</a></h3>
+<p class="speakers">Terry Howe</p><p class="card-summary">Terry Howe, an ORAS and Helm maintainer, says oras-go v3 loads the same registry configuration files that Podman uses, so TLS, mirrors and policy no longer need to be wired by hand as in v2. He also describes a client builder, a changed token flow, namespace-scoped credentials, streaming without writing to disk and a new module path.</p>
+<p class="schedule-summary">5 min slot · Level not listed · Lightning Talk</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Delivery%2C%20GitOps%20and%20release%20safety#library">Delivery, GitOps and release safety</a><a class="tag theme-tag" href="../index.html?theme=Platform%20engineering%20and%20developer%20experience#library">Platform engineering and developer experience</a></div><p class="card-watch"><strong>Watch this if:</strong> you build Go tools that push or pull OCI artifacts and are deciding whether to move from oras-go v2 to v3.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=lzcrf1lmz0I&amp;t=56s" aria-label="Watch at 0:56">0:56</a> <span>Howe says a single convenience function loads the Docker config, auth.json, registries.conf, policy.json, registries.d and certs.d files, following mostly the same priority as Podman.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lzcrf1lmz0I&amp;t=189s" aria-label="Watch at 3:09">3:09</a> <span>Howe says v3 brings mirror support for air-gapped setups, policy support to allow or deny registries, and a token flow that tries OAuth2 first and falls back to the distribution token flow.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lzcrf1lmz0I&amp;t=231s" aria-label="Watch at 3:51">3:51</a> <span>Howe says reading auth.json adds namespace-scoped credentials, which he says makes it possible to copy between Harbor projects that each have their own credentials.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lzcrf1lmz0I&amp;t=269s" aria-label="Watch at 4:29">4:29</a> <span>Howe says v3 can stream data directly so large artifacts move without being written to disk.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lzcrf1lmz0I&amp;t=287s" aria-label="Watch at 4:47">4:47</a> <span>Howe says the module path now points at GitHub after an outage made the earlier module path unavailable, and that 70 new contributors joined since v3 branched from v2.</span></li></ol>
+<a class="card-link" href="../talks/lzcrf1lmz0I.html" aria-label="Explore ORAS Go v3: Batteries-Included Registry SDK">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

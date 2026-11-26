@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Atlantis: What&#x27;s New in IaC Orchestration | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-6">Project Lightning Talks</span></div>
+<h1>Atlantis: What&#x27;s New in IaC Orchestration</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>PePe Amengual</dd></div>
+<div><dt>Track</dt><dd>Project Lightning Talks</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Delivery%2C%20GitOps%20and%20release%20safety#library">Delivery, GitOps and release safety</a><a class="tag theme-tag" href="../index.html?theme=Platform%20engineering%20and%20developer%20experience#library">Platform engineering and developer experience</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>5 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Lightning Talk</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=cFkXVLFuMGc">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1289907">Schedule</a> · <a href="https://sessionize.com/download/uhraqze~QWgYZtYZ5nmeZQA7AnpE9t.pdf~kubecon-cloudnativecon-2026-presentation.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>PePe Amengual, an Atlantis maintainer, introduces the tool as a self-hosted Go binary that runs Terraform and OpenTofu plans and applies from pull request comments, and walks through recent additions and security fixes. He describes the road to Atlantis 1.0, with new features landing behind an experiments flag and work on durable storage for high availability.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you run Atlantis for Terraform or OpenTofu pull requests and want to know what changed recently and what 1.0 will bring.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=cFkXVLFuMGc&amp;t=13s" aria-label="Watch at 0:13">0:13</a> <span>Amengual describes Atlantis as a GitOps workflow tool for Terraform that listens for VCS webhooks or API calls and runs plan and apply when you comment on a pull request.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=cFkXVLFuMGc&amp;t=134s" aria-label="Watch at 2:14">2:14</a> <span>Amengual lists recent additions: first-class OpenTofu support, an alpha drift detection API, plan storage on S3, and Redis cluster support for the locking database.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=cFkXVLFuMGc&amp;t=160s" aria-label="Watch at 2:40">2:40</a> <span>Amengual says the team removed the Terraform and OpenTofu binaries from the images because of security scan findings, so images are lighter and the configured version is downloaded instead.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=cFkXVLFuMGc&amp;t=188s" aria-label="Watch at 3:08">3:08</a> <span>Amengual says the project is publishing 15 security advisories, one of them critical, covering issues such as symlink path traversal and approval bypasses, with the fixes already in main.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=cFkXVLFuMGc&amp;t=249s" aria-label="Watch at 4:09">4:09</a> <span>Amengual says new features will arrive behind an experiments flag and be promoted to regular flags once stable, and that a storage plugin design aims at horizontally scaled high availability.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/amazon-s3-ebf704baa88d.html">Amazon S3</a><a class="tag project-tag" href="../technologies/atlantis-009dba7e5404.html">Atlantis</a><a class="tag project-tag" href="../technologies/helm-ab14d3faa25e.html">Helm</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/opentofu-73b2c1a72609.html">OpenTofu</a><a class="tag project-tag" href="../technologies/postgresql-a478b4566be5.html">PostgreSQL</a><a class="tag project-tag" href="../technologies/redis-34fb46c847bb.html">Redis</a><a class="tag project-tag" href="../technologies/terraform-94dc3ea57721.html">Terraform</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/env0-486d681eae6e.html">env0</a><a class="tag project-tag" href="../technologies/google-cloud-run-d8cb577f8794.html">Google Cloud Run</a><a class="tag project-tag" href="../technologies/scalr-1286dd4fcbea.html">Scalr</a><a class="tag project-tag" href="../technologies/spacelift-4da3b294816f.html">Spacelift</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

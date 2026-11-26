@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>KAI Scheduler: What&#x27;s New &amp; What&#x27;s Next in AI Workload Orchestration | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-6">Project Lightning Talks</span></div>
+<h1>KAI Scheduler: What&#x27;s New &amp; What&#x27;s Next in AI Workload Orchestration</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Omri Cohen</dd></div>
+<div><dt>Track</dt><dd>Project Lightning Talks</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a><a class="tag theme-tag" href="../index.html?theme=AI%20inference%20and%20serving#library">AI inference and serving</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>5 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Lightning Talk</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=Le8Mjf4jYOI">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1374348">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Omri Cohen, a KAI Scheduler maintainer, explains why he thinks shared AI clusters need a dedicated scheduler and describes how KAI divides resources between teams with hierarchical queues. He covers gang scheduling, topology awareness and GPU fractions, then lists roadmap items such as reservations, backfill and cluster defragmentation.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>several teams share GPUs in one Kubernetes cluster and you are evaluating schedulers for AI workloads.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=Le8Mjf4jYOI&amp;t=60s" aria-label="Watch at 1:00">1:00</a> <span>Cohen says KAI is a Kubernetes scheduler that workloads opt into by setting the scheduler name in the pod spec, and that it respects the existing Kubernetes APIs.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Le8Mjf4jYOI&amp;t=83s" aria-label="Watch at 1:23">1:23</a> <span>Cohen says KAI supports hierarchical queues that can model an organization, with guaranteed resources, weighted allocation or strict priority, and lets queues borrow idle resources.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Le8Mjf4jYOI&amp;t=129s" aria-label="Watch at 2:09">2:09</a> <span>Cohen says KAI supports hierarchical gangs for workloads such as disaggregated inference, and both strict and preferred network topology constraints.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Le8Mjf4jYOI&amp;t=160s" aria-label="Watch at 2:40">2:40</a> <span>Cohen says KAI supports GPU fractions through the existing HAMi integration and newly released NVIDIA GPU fractions, plus NUMA awareness and bin packing.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Le8Mjf4jYOI&amp;t=185s" aria-label="Watch at 3:05">3:05</a> <span>Cohen lists roadmap items: time limits, reservation and backfill, GPU compute fractions, advanced topology placement, more defragmentation, and assigning nodes to queues.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/hami-ab87e616aa3b.html">HAMi</a><a class="tag project-tag" href="../technologies/kai-scheduler-26252352a8ed.html">KAI Scheduler</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

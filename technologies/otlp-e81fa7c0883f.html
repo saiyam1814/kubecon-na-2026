@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>OTLP talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>OTLP</h1>
+<p class="hero-copy">1 talk mentions OTLP.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/jaeger-c0bbec68cf41.html">Jaeger</a> <span>1 shared talk</span></li><li><a href="../technologies/java-38a0963a6364.html">Java</a> <span>1 shared talk</span></li><li><a href="../technologies/openfeature-3ff22182ddaa.html">OpenFeature</a> <span>1 shared talk</span></li><li><a href="../technologies/opentelemetry-15646ccfc423.html">OpenTelemetry</a> <span>1 shared talk</span></li><li><a href="../technologies/opentelemetry-collector-64b757c33a41.html">OpenTelemetry Collector</a> <span>1 shared talk</span></li><li><a href="../technologies/opentelemetry-demo-fd730607355e.html">OpenTelemetry Demo</a> <span>1 shared talk</span></li><li><a href="../technologies/python-11a4a60b518b.html">Python</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning OTLP"><ul class="talk-list"><li class="talk-card" data-talk="tvc7MmpJ82Y" data-track="Observability"
+data-themes="[&quot;Observability and reliability&quot;, &quot;Delivery, GitOps and release safety&quot;]" data-search="OpenFeature as a Control Plane for OpenTelemetry Simon Schrottner Juliano Costa Observability  Observability and reliability Delivery, GitOps and release safety OpenTelemetry OpenFeature OpenTelemetry Demo OpenTelemetry Collector Jaeger Python Java OTLP Jaeger Java OpenFeature OpenTelemetry OpenTelemetry Collector OpenTelemetry Demo OTLP Python OTel OTel Collector OTel Demo Simon Schrottner and Juliano Costa present a proof of concept that uses OpenFeature flags to change at runtime which spans a service creates and how much it samples, without restarting the service or the collector. They say it is an experiment for Python and Java with no reliable performance numbers yet, and ask the community whether it should continue and where it should live. Watch this if you pay for more telemetry than you read and want to see feature flags switching span detail and sampling per service at runtime."
+data-technologies="[&quot;Jaeger&quot;, &quot;Java&quot;, &quot;OpenFeature&quot;, &quot;OpenTelemetry&quot;, &quot;OpenTelemetry Collector&quot;, &quot;OpenTelemetry Demo&quot;, &quot;OTLP&quot;, &quot;Python&quot;]" data-demo="yes"
+data-length="30" data-level="Advanced" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-3">Observability</span><span class="demo-badge">Demo</span></div>
+<h3><a href="../talks/tvc7MmpJ82Y.html">OpenFeature as a Control Plane for OpenTelemetry</a></h3>
+<p class="speakers">Simon Schrottner, Juliano Costa</p><p class="card-summary">Simon Schrottner and Juliano Costa present a proof of concept that uses OpenFeature flags to change at runtime which spans a service creates and how much it samples, without restarting the service or the collector. They say it is an experiment for Python and Java with no reliable performance numbers yet, and ask the community whether it should continue and where it should live.</p>
+<p class="schedule-summary">30 min slot · Advanced · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a><a class="tag theme-tag" href="../index.html?theme=Delivery%2C%20GitOps%20and%20release%20safety#library">Delivery, GitOps and release safety</a></div><p class="card-watch"><strong>Watch this if:</strong> you pay for more telemetry than you read and want to see feature flags switching span detail and sampling per service at runtime.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=tvc7MmpJ82Y&amp;t=376s" aria-label="Watch at 6:16">6:16</a> <span>Costa reports that a flag limiting export to incoming requests and outgoing calls gave about 55% fewer spans stored and 31% fewer trace bytes received in their demo, traces only.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=tvc7MmpJ82Y&amp;t=473s" aria-label="Watch at 7:53">7:53</a> <span>Schrottner uses the OpenFeature evaluation context with OpenTelemetry semantic convention attributes (service name, span kind, URL path) to write a rule that drops health-check spans at runtime.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=tvc7MmpJ82Y&amp;t=633s" aria-label="Watch at 10:33">10:33</a> <span>They set sampling rates through flag rules, 50% for one production service, 10% for the rest of production and 100% for staging, and show the ingestion chart splitting per service and environment.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=tvc7MmpJ82Y&amp;t=819s" aria-label="Watch at 13:39">13:39</a> <span>Costa argues that dropping telemetry in the collector still spends application CPU, memory and network egress on producing it, and both say they would keep the collector&#x27;s sampling as a safety net.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=tvc7MmpJ82Y&amp;t=1100s" aria-label="Watch at 18:20">18:20</a> <span>Schrottner says they saw no big performance impact when switching flags but calls these not reliable benchmarks, and Costa adds they have not compared their instrumentation against stock OpenTelemetry instrumentation.</span></li></ol>
+<a class="card-link" href="../talks/tvc7MmpJ82Y.html" aria-label="Explore OpenFeature as a Control Plane for OpenTelemetry">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

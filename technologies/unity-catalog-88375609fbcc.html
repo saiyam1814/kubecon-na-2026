@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Unity Catalog talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Project</p><h1>Unity Catalog</h1>
+<p class="hero-copy">1 talk mentions Unity Catalog.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/apache-spark-fc9560c0c055.html">Apache Spark</a> <span>1 shared talk</span></li><li><a href="../technologies/aws-7d1507284a57.html">AWS</a> <span>1 shared talk</span></li><li><a href="../technologies/cilium-887318495291.html">Cilium</a> <span>1 shared talk</span></li><li><a href="../technologies/cilium-cluster-mesh-d8c6242441dc.html">Cilium Cluster Mesh</a> <span>1 shared talk</span></li><li><a href="../technologies/delta-lake-c63a9876a150.html">Delta Lake</a> <span>1 shared talk</span></li><li><a href="../technologies/etcd-c38cbd92fce4.html">etcd</a> <span>1 shared talk</span></li><li><a href="../technologies/google-cloud-d9b1d7819af9.html">Google Cloud</a> <span>1 shared talk</span></li><li><a href="../technologies/grpc-b389db1475dc.html">gRPC</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning Unity Catalog"><ul class="talk-list"><li class="talk-card" data-talk="7GnsK9ZPFCQ" data-track="Connectivity"
+data-themes="[&quot;Networking and connectivity&quot;]" data-search="From Load Balancer Sprawl to Multicluster Service Discovery Gaurav Nanda Vincent Cheng Connectivity  Networking and connectivity Kubernetes Cilium etcd gRPC Apache Spark Delta Lake MLflow Unity Catalog AWS Cilium Cluster Mesh xDS VXLAN Microsoft Azure Google Cloud Apache Spark AWS Cilium Cilium Cluster Mesh Delta Lake etcd Google Cloud gRPC Kubernetes Microsoft Azure MLflow Unity Catalog VXLAN xDS Spark Amazon Web Services K8s k8s Gaurav Nanda and Vincent Cheng describe how Databricks moved cross-cluster service calls from per-service cloud load balancers and a shared proxy to direct pod-to-pod routing. They say Cilium Cluster Mesh provides the connectivity while their own xDS-based endpoint discovery service, EDS, shares pod endpoints between clusters in a region by subscribing to its peers. Watch this if cross-cluster calls in your fleet go through a load balancer per service and you want to see a route to direct pod routing without adopting a full service mesh."
+data-technologies="[&quot;Apache Spark&quot;, &quot;AWS&quot;, &quot;Cilium&quot;, &quot;Cilium Cluster Mesh&quot;, &quot;Delta Lake&quot;, &quot;etcd&quot;, &quot;Google Cloud&quot;, &quot;gRPC&quot;, &quot;Kubernetes&quot;, &quot;Microsoft Azure&quot;, &quot;MLflow&quot;, &quot;Unity Catalog&quot;, &quot;VXLAN&quot;, &quot;xDS&quot;]" data-demo="no"
+data-length="30" data-level="Advanced" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-5">Connectivity</span></div>
+<h3><a href="../talks/7GnsK9ZPFCQ.html">From Load Balancer Sprawl to Multicluster Service Discovery</a></h3>
+<p class="speakers">Gaurav Nanda, Vincent Cheng</p><p class="card-summary">Gaurav Nanda and Vincent Cheng describe how Databricks moved cross-cluster service calls from per-service cloud load balancers and a shared proxy to direct pod-to-pod routing. They say Cilium Cluster Mesh provides the connectivity while their own xDS-based endpoint discovery service, EDS, shares pod endpoints between clusters in a region by subscribing to its peers.</p>
+<p class="schedule-summary">30 min slot · Advanced · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Networking%20and%20connectivity#library">Networking and connectivity</a></div><p class="card-watch"><strong>Watch this if:</strong> cross-cluster calls in your fleet go through a load balancer per service and you want to see a route to direct pod routing without adopting a full service mesh.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=7GnsK9ZPFCQ&amp;t=219s" aria-label="Watch at 3:39">3:39</a> <span>Nanda says per-service load balancers multiplied configuration and access rules until cloud quotas became a constraint, and that the shared proxy built next added an extra hop, a shared fleet to manage and a shared failure risk.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=7GnsK9ZPFCQ&amp;t=376s" aria-label="Watch at 6:16">6:16</a> <span>He explains what direct pod reachability gives their RPC clients inside one cluster: per-request load balancing, soft zone affinity and adaptive routing, driven by pod metadata from EDS over xDS.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=7GnsK9ZPFCQ&amp;t=966s" aria-label="Watch at 16:06">16:06</a> <span>Cheng says Cilium global services met the connectivity goals but balance per connection like Kubernetes services and did not fit their client libraries, so they could not match in-cluster behavior.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=7GnsK9ZPFCQ&amp;t=1091s" aria-label="Watch at 18:11">18:11</a> <span>He describes a second attempt where EDS read the Cluster Mesh etcd, and says a stale or empty etcd replica could then turn a partial connectivity failure into a wider discovery failure.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=7GnsK9ZPFCQ&amp;t=1469s" aria-label="Watch at 24:29">24:29</a> <span>He says the final design, EDS instances subscribing to each other with incremental xDS updates, showed a P99 of at most 20 ms and a P99.9 of at most 200 ms in a test with 5 million endpoints, 100 clusters and 500 changes per second.</span></li></ol>
+<a class="card-link" href="../talks/7GnsK9ZPFCQ.html" aria-label="Explore From Load Balancer Sprawl to Multicluster Service Discovery">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

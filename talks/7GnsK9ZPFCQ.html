@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>From Load Balancer Sprawl to Multicluster Service Discovery | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-5">Connectivity</span></div>
+<h1>From Load Balancer Sprawl to Multicluster Service Discovery</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Gaurav Nanda, Vincent Cheng</dd></div>
+<div><dt>Track</dt><dd>Connectivity</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Networking%20and%20connectivity#library">Networking and connectivity</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Advanced</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=7GnsK9ZPFCQ">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1248779">Schedule</a> · <a href="https://sessionize.com/download/cvaswel~Bcdax4KXMDL3SyTmqicSnD.pdf~from-load-balancer-sprawl-to-multicluster-service-discovery.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Gaurav Nanda and Vincent Cheng describe how Databricks moved cross-cluster service calls from per-service cloud load balancers and a shared proxy to direct pod-to-pod routing. They say Cilium Cluster Mesh provides the connectivity while their own xDS-based endpoint discovery service, EDS, shares pod endpoints between clusters in a region by subscribing to its peers.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>cross-cluster calls in your fleet go through a load balancer per service and you want to see a route to direct pod routing without adopting a full service mesh.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=7GnsK9ZPFCQ&amp;t=219s" aria-label="Watch at 3:39">3:39</a> <span>Nanda says per-service load balancers multiplied configuration and access rules until cloud quotas became a constraint, and that the shared proxy built next added an extra hop, a shared fleet to manage and a shared failure risk.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=7GnsK9ZPFCQ&amp;t=376s" aria-label="Watch at 6:16">6:16</a> <span>He explains what direct pod reachability gives their RPC clients inside one cluster: per-request load balancing, soft zone affinity and adaptive routing, driven by pod metadata from EDS over xDS.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=7GnsK9ZPFCQ&amp;t=966s" aria-label="Watch at 16:06">16:06</a> <span>Cheng says Cilium global services met the connectivity goals but balance per connection like Kubernetes services and did not fit their client libraries, so they could not match in-cluster behavior.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=7GnsK9ZPFCQ&amp;t=1091s" aria-label="Watch at 18:11">18:11</a> <span>He describes a second attempt where EDS read the Cluster Mesh etcd, and says a stale or empty etcd replica could then turn a partial connectivity failure into a wider discovery failure.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=7GnsK9ZPFCQ&amp;t=1469s" aria-label="Watch at 24:29">24:29</a> <span>He says the final design, EDS instances subscribing to each other with incremental xDS updates, showed a P99 of at most 20 ms and a P99.9 of at most 200 ms in a test with 5 million endpoints, 100 clusters and 500 changes per second.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/apache-spark-fc9560c0c055.html">Apache Spark</a><a class="tag project-tag" href="../technologies/aws-7d1507284a57.html">AWS</a><a class="tag project-tag" href="../technologies/cilium-887318495291.html">Cilium</a><a class="tag project-tag" href="../technologies/delta-lake-c63a9876a150.html">Delta Lake</a><a class="tag project-tag" href="../technologies/etcd-c38cbd92fce4.html">etcd</a><a class="tag project-tag" href="../technologies/grpc-b389db1475dc.html">gRPC</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/mlflow-b1a8f0a4d2aa.html">MLflow</a><a class="tag project-tag" href="../technologies/unity-catalog-88375609fbcc.html">Unity Catalog</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/cilium-cluster-mesh-d8c6242441dc.html">Cilium Cluster Mesh</a><a class="tag project-tag" href="../technologies/google-cloud-d9b1d7819af9.html">Google Cloud</a><a class="tag project-tag" href="../technologies/microsoft-azure-dbb9cded2e5e.html">Microsoft Azure</a><a class="tag project-tag" href="../technologies/vxlan-4b04463ed778.html">VXLAN</a><a class="tag project-tag" href="../technologies/xds-3e2ef76298b1.html">xDS</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

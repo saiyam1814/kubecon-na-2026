@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Why We Bet the Data Platform on Kubernetes - And How AI Is Changing How We Operate It | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-7">Data Processing + Storage</span></div>
+<h1>Why We Bet the Data Platform on Kubernetes - And How AI Is Changing How We Operate It</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Vara Bonthu, Damon Cortesi, Padma Aradhyula, Rainie Li, Ying Xiong</dd></div>
+<div><dt>Track</dt><dd>Data Processing + Storage</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Data%2C%20storage%20and%20state#library">Data, storage and state</a><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Beginner</dd></div>
+<div><dt>Session type</dt><dd>Panel</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=hWYFEAjVTic">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1227395">Schedule</a> · <a href="https://sessionize.com/download/iyibras~Mg4JfCQVtfPLiyyprteXPK.pdf~kubecon_na_2026_data_platform_panel.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Moderator Vara Bonthu asks panelists from Airbnb, Salesforce, Pinterest and Apple Maps why they moved Spark and other data workloads from Hadoop-style clusters to Kubernetes and what was hard about it. The panelists describe pod churn, scheduling choices among YuniKorn, Volcano and Kueue, and the AI agents and skills they say they now use for troubleshooting and upgrades.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you are weighing a move of Spark or other data workloads from Hadoop to Kubernetes and want to hear what four large operators ran into.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=hWYFEAjVTic&amp;t=330s" aria-label="Watch at 5:30">5:30</a> <span>Damon Cortesi says Airbnb reached 100% Spark on Kubernetes a couple of weeks earlier, shut down its last Hadoop cluster, and runs about 4 million Spark jobs a week.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=hWYFEAjVTic&amp;t=586s" aria-label="Watch at 9:46">9:46</a> <span>Padma Aradhyula says Salesforce Data Cloud runs thousands of small near-real-time Spark jobs lasting two to five minutes, and that the resulting pod churn puts heavy pressure on the API server.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=hWYFEAjVTic&amp;t=698s" aria-label="Watch at 11:38">11:38</a> <span>Rainie Li describes Pinterest&#x27;s Moka platform with Apache YuniKorn and a remote shuffle service, and reports a 10% job performance improvement and over 10% annual infrastructure savings.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=hWYFEAjVTic&amp;t=885s" aria-label="Watch at 14:45">14:45</a> <span>Ying Xiong says the hardest start at Apple Maps was convincing people to try Kubernetes without data locality, followed by scalability issues from huge jobs and from users submitting thousands of jobs an hour.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=hWYFEAjVTic&amp;t=1306s" aria-label="Watch at 21:46">21:46</a> <span>Rainie describes a multi-agent setup where sub-agents reach platform components through MCP servers and search past incidents, and says it now helps fix over 50% of troubleshooting issues.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/apache-cassandra-52264ab7d060.html">Apache Cassandra</a><a class="tag project-tag" href="../technologies/apache-celeborn-b9f677b89ef2.html">Apache Celeborn</a><a class="tag project-tag" href="../technologies/apache-datafusion-comet-7c925b890b89.html">Apache DataFusion Comet</a><a class="tag project-tag" href="../technologies/apache-flink-03be4f85fe43.html">Apache Flink</a><a class="tag project-tag" href="../technologies/apache-gluten-54ffc3188cd2.html">Apache Gluten</a><a class="tag project-tag" href="../technologies/apache-hadoop-6b4aceeb25ef.html">Apache Hadoop</a><a class="tag project-tag" href="../technologies/apache-iceberg-123aad3c99fc.html">Apache Iceberg</a><a class="tag project-tag" href="../technologies/apache-spark-fc9560c0c055.html">Apache Spark</a><a class="tag project-tag" href="../technologies/apache-yunikorn-f309c3bd3305.html">Apache YuniKorn</a><a class="tag project-tag" href="../technologies/karpenter-5648b3be51b2.html">Karpenter</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/kueue-5798625f00ad.html">Kueue</a><a class="tag project-tag" href="../technologies/lance-929df7fc8cdf.html">Lance</a><a class="tag project-tag" href="../technologies/model-context-protocol-9c5da690faad.html">Model Context Protocol</a><a class="tag project-tag" href="../technologies/mysql-430005175c4c.html">MySQL</a><a class="tag project-tag" href="../technologies/postgresql-a478b4566be5.html">PostgreSQL</a><a class="tag project-tag" href="../technologies/pytorch-e8795e623be8.html">PyTorch</a><a class="tag project-tag" href="../technologies/ray-c04bc270f965.html">Ray</a><a class="tag project-tag" href="../technologies/starrocks-87da3b6aefc0.html">StarRocks</a><a class="tag project-tag" href="../technologies/trino-b612467da047.html">Trino</a><a class="tag project-tag" href="../technologies/volcano-06612c283234.html">Volcano</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/amazon-eks-d1b0dcc4b268.html">Amazon EKS</a><a class="tag project-tag" href="../technologies/amazon-emr-b6fd829e9eb2.html">Amazon EMR</a><a class="tag project-tag" href="../technologies/amazon-rds-961451ce0a13.html">Amazon RDS</a><a class="tag project-tag" href="../technologies/amazon-s3-ebf704baa88d.html">Amazon S3</a><a class="tag project-tag" href="../technologies/pagerduty-1c6cda31110c.html">PagerDuty</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

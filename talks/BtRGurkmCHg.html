@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Velero: Faster Backups, Consistent Snapshots, Incremental Everything | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-6">Project Lightning Talks</span></div>
+<h1>Velero: Faster Backups, Consistent Snapshots, Incremental Everything</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Shubham Dilip Pampattiwar</dd></div>
+<div><dt>Track</dt><dd>Project Lightning Talks</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Data%2C%20storage%20and%20state#library">Data, storage and state</a><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>5 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Lightning Talk</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=BtRGurkmCHg">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1289913">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Shubham Dilip Pampattiwar, a Velero maintainer, says users reported backups that were slow, inconsistent across volumes and wasteful, and describes three features meant to address those problems. He also says Velero was accepted into the CNCF Sandbox this year and asks users to register as adopters to support an incubation application.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you back up Kubernetes clusters with Velero and have long backup windows or multi-volume applications.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=BtRGurkmCHg&amp;t=50s" aria-label="Watch at 0:50">0:50</a> <span>Pampattiwar says Velero has more than 750 million image pulls, over 10,000 GitHub stars and more than 400 contributors.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=BtRGurkmCHg&amp;t=132s" aria-label="Watch at 2:12">2:12</a> <span>Pampattiwar says that before 1.18 Velero ran one backup at a time, and that a server flag now lets backups run in parallel while two backups touching the same namespaces never run together.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=BtRGurkmCHg&amp;t=194s" aria-label="Watch at 3:14">3:14</a> <span>Pampattiwar says volume group snapshot support captures all of an application&#x27;s volumes at the same instant for a crash-consistent backup, enabled by labeling the volumes to group.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=BtRGurkmCHg&amp;t=225s" aria-label="Watch at 3:45">3:45</a> <span>Pampattiwar says a new block-level data mover in 1.19 uses Kubernetes changed block tracking to back up only changed blocks, and that the team tested it with Ceph and vSphere.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=BtRGurkmCHg&amp;t=255s" aria-label="Watch at 4:15">4:15</a> <span>Pampattiwar says Velero was accepted into the CNCF Sandbox this year and is working toward incubation, which needs documented adopters.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/ceph-bbbd1d8e85df.html">Ceph</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/velero-86990cd7180b.html">Velero</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/container-storage-interface-43634ceadaa4.html">Container Storage Interface</a><a class="tag project-tag" href="../technologies/vmware-vsphere-8002d7dbc7df.html">VMware vSphere</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>
