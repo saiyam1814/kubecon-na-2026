@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>KubeVirt&#x27;s Architectural Leap: Pluggability, AI Hardware, and Maturing Governance | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">Maintainer Track</span></div>
+<h1>KubeVirt&#x27;s Architectural Leap: Pluggability, AI Hardware, and Maturing Governance</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Vladik Romanovsky, Itamar Holder</dd></div>
+<div><dt>Track</dt><dd>Maintainer Track</dd></div>
+<div><dt>Topic</dt><dd>KubeVirt</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a><a class="tag theme-tag" href="../index.html?theme=Community%20and%20open%20source%20adoption#library">Community and open source adoption</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=EXtRLFlAqmk">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1289648">Schedule</a></p>
+<section><h2>Talk summary</h2><p>KubeVirt maintainers Vladik Romanovsky and Itamar Holder mark the project&#x27;s tenth year and its CNCF graduation by reviewing its pod-based architecture, its adoption of an enhancement proposal process, and this year&#x27;s work on confidential VMs, NVIDIA hardware support and Dynamic Resource Allocation. Holder then explains the plugin framework from enhancement proposal 190, which is meant to let features be built out of tree, along with early work on supporting hypervisors beyond QEMU/KVM and the idea of using KubeVirt as an isolation backend for agent sandboxes.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you run or extend KubeVirt and want to know how the plugin framework will replace sidecar hooks.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=EXtRLFlAqmk&amp;t=62s" aria-label="Watch at 1:02">1:02</a> <span>Vladik Romanovsky recalls early doubts about the project and explains the choice to tie a virtual machine&#x27;s life cycle to a pod and run the virtualization stack inside it, which he says let KubeVirt reuse the Kubernetes security model, CNI, CSI and device plugins.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=EXtRLFlAqmk&amp;t=408s" aria-label="Watch at 6:48">6:48</a> <span>He says the last cycle had more than 100 open enhancement proposals, and that the project built a per-release tracker plus an AI agent that gathers related pull requests and estimates how likely each piece of work is to land by the freeze.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=EXtRLFlAqmk&amp;t=563s" aria-label="Watch at 9:23">9:23</a> <span>He describes building support for NVIDIA&#x27;s newest hardware in a fork with Red Hat and NVIDIA engineers before bringing it back upstream, keeping the virt-launcher unprivileged by moving privileged operations into a device plugin.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=EXtRLFlAqmk&amp;t=879s" aria-label="Watch at 14:39">14:39</a> <span>Itamar Holder lists drawbacks of the existing sidecar hook: it edits the libvirt domain XML as a raw string, has no node access, and can only be enabled for everyone through one feature gate.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=EXtRLFlAqmk&amp;t=1004s" aria-label="Watch at 16:44">16:44</a> <span>He walks through the new plugin model&#x27;s three levels: a CEL expression that mutates the domain XML, a sidecar that works on a structured libvirt object with new pre-boot and pre-migration hooks, and node hooks answered by a plugin author&#x27;s own DaemonSet.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/agent-sandbox-2d1964313b00.html">Agent Sandbox</a><a class="tag project-tag" href="../technologies/cluster-api-9af21ad5b6d4.html">Cluster API</a><a class="tag project-tag" href="../technologies/common-expression-language-087472d4b6a1.html">Common Expression Language</a><a class="tag project-tag" href="../technologies/dynamic-resource-allocation-d7775471dc59.html">Dynamic Resource Allocation</a><a class="tag project-tag" href="../technologies/flight-control-194c9970dfa3.html">Flight Control</a><a class="tag project-tag" href="../technologies/grpc-b389db1475dc.html">gRPC</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/kubevirt-22c1bccf4903.html">KubeVirt</a><a class="tag project-tag" href="../technologies/kvm-7386dca777a7.html">KVM</a><a class="tag project-tag" href="../technologies/libvirt-3c80ef78b127.html">libvirt</a><a class="tag project-tag" href="../technologies/podman-2f259bab93aa.html">Podman</a><a class="tag project-tag" href="../technologies/qemu-4d09264a5878.html">QEMU</a><a class="tag project-tag" href="../technologies/tekton-ebf66cb40b85.html">Tekton</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/docker-compose-75ddf920195c.html">Docker Compose</a><a class="tag project-tag" href="../technologies/mshv-31e5f8506f90.html">MSHV</a><a class="tag project-tag" href="../technologies/nvidia-blackwell-6ce585ced7da.html">NVIDIA Blackwell</a><a class="tag project-tag" href="../technologies/nvidia-grace-hopper-7198b576753c.html">NVIDIA Grace Hopper</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

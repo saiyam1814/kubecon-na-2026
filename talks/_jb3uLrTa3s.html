@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Dropping LLM Inference Cost by Two-Thirds with Open Weights and Kubernetes | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">AI Inference + Agentic</span></div>
+<h1>Dropping LLM Inference Cost by Two-Thirds with Open Weights and Kubernetes</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Omisha Gupta</dd></div>
+<div><dt>Track</dt><dd>AI Inference + Agentic</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=AI%20inference%20and%20serving#library">AI inference and serving</a><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Any Level</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=_jb3uLrTa3s">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1249410">Schedule</a> · <a href="https://sessionize.com/download/kmajhey~3EByMvZRCRe8VgXj2rthZK.pdf~dropping-llm-inference-cost-by-two-thirds.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>The speaker describes replacing a general-purpose LLM API with a fine-tuned, quantized Qwen model served by vLLM on Kubernetes for a multi-label classification workload. She reports her own accuracy, throughput, and cost numbers, and explains how a traffic surge test failed until she shortened GPU node startup.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you run a narrow, high-volume LLM task on a paid API and want one practitioner&#x27;s account of moving it to a small fine-tuned model with autoscaled GPUs.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=_jb3uLrTa3s&amp;t=105s" aria-label="Watch at 1:45">1:45</a> <span>The speaker says newer model versions from both API providers scored lower on her task, and one broke her JSON output format 18% of the time.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=_jb3uLrTa3s&amp;t=368s" aria-label="Watch at 6:08">6:08</a> <span>The speaker reports exact-match results on her classification task: 56% with the tuned API prompt, 12% with the base 8B model, and 91% after fine-tuning it on her labeled data.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=_jb3uLrTa3s&amp;t=889s" aria-label="Watch at 14:49">14:49</a> <span>The speaker says AWQ 4-bit quantization shrank the model from 16 GB to 5.7 GB, and that the payoff was GPU memory left for the KV cache.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=_jb3uLrTa3s&amp;t=1252s" aria-label="Watch at 20:52">20:52</a> <span>The speaker describes her surge test: KEDA asked for ten replicas but only one arrived in time, and she says only 18% of requests were served.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=_jb3uLrTa3s&amp;t=1309s" aria-label="Watch at 21:49">21:49</a> <span>The speaker says compressing the container image and baking it into the node image brought a new GPU node to about four minutes from being useful.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/amazon-eks-d1b0dcc4b268.html">Amazon EKS</a><a class="tag project-tag" href="../technologies/hugging-face-e3ce9cc5efa9.html">Hugging Face</a><a class="tag project-tag" href="../technologies/karpenter-5648b3be51b2.html">Karpenter</a><a class="tag project-tag" href="../technologies/keda-308c477e9c54.html">KEDA</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/nvidia-device-plugin-for-kubernetes-99afcf2c9521.html">NVIDIA Device Plugin for Kubernetes</a><a class="tag project-tag" href="../technologies/prometheus-1809f7cd0c75.html">Prometheus</a><a class="tag project-tag" href="../technologies/qwen-67f2d2251462.html">Qwen</a><a class="tag project-tag" href="../technologies/unsloth-92e96a480708.html">Unsloth</a><a class="tag project-tag" href="../technologies/vllm-ec8207a3dde6.html">vLLM</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/amazon-s3-ebf704baa88d.html">Amazon S3</a><a class="tag project-tag" href="../technologies/zstandard-5c4a59db52b7.html">Zstandard</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

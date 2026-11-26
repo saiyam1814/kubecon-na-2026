@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Fixing GPU Time-Slicing on Kubernetes: Dynamic, Memory-Safe Sharing for AI Inference | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">AI Inference + Agentic</span><span class="demo-badge">Demo</span></div>
+<h1>Fixing GPU Time-Slicing on Kubernetes: Dynamic, Memory-Safe Sharing for AI Inference</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Julien Semaan</dd></div>
+<div><dt>Track</dt><dd>AI Inference + Agentic</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a><a class="tag theme-tag" href="../index.html?theme=AI%20inference%20and%20serving#library">AI inference and serving</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Any Level</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=Vw7DTM1SV60">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1241974">Schedule</a> · <a href="https://sessionize.com/download/dgaqzeh~XcbiESxL1FwbeReDwsC4J3.pdf~fixing-gpu-time-slicing-on-kubernetes-julien-semaan.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>The speaker shows a recorded demo in which a leaking workload on a time-sliced GPU causes an out-of-memory error in a neighboring LLM pod. He then combines KAI Scheduler fractions with HAMi-core memory enforcement and replays the scenario, where the misbehaving pod is the one that fails.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you share GPUs with time-slicing and want to see one way to stop a noisy neighbor from taking other pods&#x27; GPU memory.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=Vw7DTM1SV60&amp;t=100s" aria-label="Watch at 1:40">1:40</a> <span>The speaker explains that time-slicing with the NVIDIA device plugin makes the scheduler think there are more GPUs than physically exist.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Vw7DTM1SV60&amp;t=343s" aria-label="Watch at 5:43">5:43</a> <span>In the first recorded demo, the speaker shows the CUDA out-of-memory error landing in an LLM pod rather than in the classifier that was leaking memory.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Vw7DTM1SV60&amp;t=632s" aria-label="Watch at 10:32">10:32</a> <span>The speaker says a KAI Scheduler GPU fraction guides placement like a Kubernetes request and is not enforced at runtime.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Vw7DTM1SV60&amp;t=777s" aria-label="Watch at 12:57">12:57</a> <span>The speaker describes HAMi-core as a library between the CUDA runtime and the driver that rejects allocations beyond the configured memory limit.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Vw7DTM1SV60&amp;t=1040s" aria-label="Watch at 17:20">17:20</a> <span>Replaying the scenario with KAI and HAMi-core, the speaker shows the misbehaving classifier pod hitting the error and restarting while both LLMs keep responding.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/dynamic-resource-allocation-d7775471dc59.html">Dynamic Resource Allocation</a><a class="tag project-tag" href="../technologies/hami-ab87e616aa3b.html">HAMi</a><a class="tag project-tag" href="../technologies/kai-scheduler-26252352a8ed.html">KAI Scheduler</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/nvidia-device-plugin-for-kubernetes-99afcf2c9521.html">NVIDIA Device Plugin for Kubernetes</a><a class="tag project-tag" href="../technologies/nvidia-mig-b2e1ae752f07.html">NVIDIA MIG</a><a class="tag project-tag" href="../technologies/nvidia-smi-e648941e2c03.html">nvidia-smi</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/cuda-e636c973d999.html">CUDA</a><a class="tag project-tag" href="../technologies/curl-427e4b79b1f0.html">curl</a><a class="tag project-tag" href="../technologies/nvidia-mps-6d9734c0cbaa.html">NVIDIA MPS</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

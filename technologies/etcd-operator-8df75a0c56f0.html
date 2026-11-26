@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>etcd-operator talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Project</p><h1>etcd-operator</h1>
+<p class="hero-copy">2 talks mention etcd-operator.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p><p class="muted">Also indexed as: etcd operator.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/etcd-c38cbd92fce4.html">etcd</a> <span>2 shared talks</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>2 shared talks</span></li><li><a href="../technologies/gofail-50ce1a3c1d0d.html">gofail</a> <span>1 shared talk</span></li><li><a href="../technologies/grpc-b389db1475dc.html">gRPC</a> <span>1 shared talk</span></li><li><a href="../technologies/gzip-c8d77bf4d8b1.html">gzip</a> <span>1 shared talk</span></li><li><a href="../technologies/protocol-buffers-92daa62a67c4.html">Protocol Buffers</a> <span>1 shared talk</span></li><li><a href="../technologies/snappy-a48a707eb53f.html">Snappy</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning etcd-operator"><ul class="talk-list"><li class="talk-card" data-talk="urK5g5jspZs" data-track="Maintainer Track"
+data-themes="[&quot;Kubernetes internals and runtimes&quot;, &quot;Data, storage and state&quot;, &quot;Observability and reliability&quot;]" data-search="etcd from 3.7 to 3.8 and Beyond Siyuan Zhang Marek Siarkowicz Ivan Valdes Castillo Nont Thanonchai W Jeffrey Ying Maintainer Track  Kubernetes internals and runtimes Data, storage and state Observability and reliability etcd Kubernetes etcd-operator gRPC Protocol Buffers gofail Snappy gzip etcd etcd-operator gofail gRPC gzip Kubernetes Protocol Buffers Snappy etcd operator K8s k8s The SIG etcd maintainers give project updates, describe the RangeStream feature and dependency cleanup in etcd 3.7, and outline performance work planned for 3.8 such as non-blocking defragmentation, an index rewrite and compression. They also report on the etcd-operator&#x27;s move away from StatefulSets and take audience questions about operator maturity and compression. Watch this if you run etcd or large Kubernetes control planes and want to hear from the maintainers what 3.7 changed and what 3.8 is aiming for."
+data-technologies="[&quot;etcd&quot;, &quot;etcd-operator&quot;, &quot;gofail&quot;, &quot;gRPC&quot;, &quot;gzip&quot;, &quot;Kubernetes&quot;, &quot;Protocol Buffers&quot;, &quot;Snappy&quot;]" data-demo="no"
+data-length="30" data-level="" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-1">Maintainer Track</span></div>
+<h3><a href="../talks/urK5g5jspZs.html">etcd from 3.7 to 3.8 and Beyond</a></h3>
+<p class="speakers">Siyuan Zhang, Marek Siarkowicz, Ivan Valdes Castillo, Nont Thanonchai W, Jeffrey Ying</p><p class="card-summary">The SIG etcd maintainers give project updates, describe the RangeStream feature and dependency cleanup in etcd 3.7, and outline performance work planned for 3.8 such as non-blocking defragmentation, an index rewrite and compression. They also report on the etcd-operator&#x27;s move away from StatefulSets and take audience questions about operator maturity and compression.</p>
+<p class="schedule-summary">30 min slot · Level not listed · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a><a class="tag theme-tag" href="../index.html?theme=Data%2C%20storage%20and%20state#library">Data, storage and state</a><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a></div><p class="card-watch"><strong>Watch this if:</strong> you run etcd or large Kubernetes control planes and want to hear from the maintainers what 3.7 changed and what 3.8 is aiming for.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=urK5g5jspZs&amp;t=154s" aria-label="Watch at 2:34">2:34</a> <span>Ivan Valdes Castillo says the project aims to support at least the latest three minor versions and gives the current patch levels of 3.5, 3.6 and 3.7.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=urK5g5jspZs&amp;t=388s" aria-label="Watch at 6:28">6:28</a> <span>Jeffrey Ying explains that RangeStream splits a very large range request into chunks sized by bytes instead of key count, which he says keeps etcd memory use more consistent.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=urK5g5jspZs&amp;t=546s" aria-label="Watch at 9:06">9:06</a> <span>Ying says RangeStream with concurrent decoding gave about two to three times the throughput for watch cache initialization, and that both are on by default in Kubernetes 1.37 and etcd 3.7.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=urK5g5jspZs&amp;t=933s" aria-label="Watch at 15:33">15:33</a> <span>Marek Siarkowicz says non-blocking defragmentation has landed for 3.8 and does most of its work in the background instead of locking the database for tens of seconds.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=urK5g5jspZs&amp;t=1090s" aria-label="Watch at 18:10">18:10</a> <span>Nont says the etcd-operator stopped using StatefulSets and now manages pods directly, because StatefulSets got in the way of recovering from partial and full cluster failures.</span></li></ol>
+<a class="card-link" href="../talks/urK5g5jspZs.html" aria-label="Explore etcd from 3.7 to 3.8 and Beyond">Explore key moments <span aria-hidden="true">↗</span></a>
+</li><li class="talk-card" data-talk="EXD3lipOa8A" data-track="Project Lightning Talks"
+data-themes="[&quot;Kubernetes internals and runtimes&quot;, &quot;Data, storage and state&quot;, &quot;Observability and reliability&quot;]" data-search="etcd Operator, Rebuilt and Ready Arka Saha Project Lightning Talks  Kubernetes internals and runtimes Data, storage and state Observability and reliability etcd etcd-operator Kubernetes etcd etcd-operator Kubernetes etcd operator K8s k8s Arka Saha, an etcd-operator contributor, recaps the operator&#x27;s releases and explains why version 0.3 replaced StatefulSets with a custom controller. He describes how the new design replaces a corrupted member, a new option to pause reconciliation, and what is planned next. you operate etcd clusters on Kubernetes and want to know how the official operator now handles failed members."
+data-technologies="[&quot;etcd&quot;, &quot;etcd-operator&quot;, &quot;Kubernetes&quot;]" data-demo="no"
+data-length="5" data-level="" data-type="Lightning Talk">
+<div class="card-eyebrow"><span class="tag track-tag track-6">Project Lightning Talks</span></div>
+<h3><a href="../talks/EXD3lipOa8A.html">etcd Operator, Rebuilt and Ready</a></h3>
+<p class="speakers">Arka Saha</p><p class="card-summary">Arka Saha, an etcd-operator contributor, recaps the operator&#x27;s releases and explains why version 0.3 replaced StatefulSets with a custom controller. He describes how the new design replaces a corrupted member, a new option to pause reconciliation, and what is planned next.</p>
+<p class="schedule-summary">5 min slot · Level not listed · Lightning Talk</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a><a class="tag theme-tag" href="../index.html?theme=Data%2C%20storage%20and%20state#library">Data, storage and state</a><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a></div><p class="card-watch"><strong>Watch this if:</strong> you operate etcd clusters on Kubernetes and want to know how the official operator now handles failed members.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=EXD3lipOa8A&amp;t=20s" aria-label="Watch at 0:20">0:20</a> <span>Arka Saha recaps the releases: 0.1 could create and scale an etcd cluster, 0.2 added TLS support, and 0.3 replaced the StatefulSet with the project&#x27;s own custom controller.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=EXD3lipOa8A&amp;t=71s" aria-label="Watch at 1:11">1:11</a> <span>He explains the StatefulSet problem: replacing a corrupted second member of a three-member cluster would mean scaling down, which he says also removes a healthy member.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=EXD3lipOa8A&amp;t=149s" aria-label="Watch at 2:29">2:29</a> <span>He describes the new design as two CRDs: the etcd cluster the user defines, which manages etcd member resources that in turn manage the pods and PVCs.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=EXD3lipOa8A&amp;t=174s" aria-label="Watch at 2:54">2:54</a> <span>He walks through recovery of a corrupted member: remove the member, delete its pod and PVC, start a new pod with a fresh PVC, add it as a learner and wait for it to become a voter.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=EXD3lipOa8A&amp;t=222s" aria-label="Watch at 3:42">3:42</a> <span>He says users can now pause reconciliation to fix a stuck upgrade by hand, and names alarm-driven reconciliation, repair, and backup and restore in 0.4 as upcoming work.</span></li></ol>
+<a class="card-link" href="../talks/EXD3lipOa8A.html" aria-label="Explore etcd Operator, Rebuilt and Ready">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

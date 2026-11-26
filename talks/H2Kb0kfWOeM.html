@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Scaling Across the Horizon: Dynamic Hardware Composability for Distributed LLM Inference via CoHDI | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-6">Project Lightning Talks</span></div>
+<h1>Scaling Across the Horizon: Dynamic Hardware Composability for Distributed LLM Inference via CoHDI</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Hidetsugu Sugiyama</dd></div>
+<div><dt>Track</dt><dd>Project Lightning Talks</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a><a class="tag theme-tag" href="../index.html?theme=AI%20inference%20and%20serving#library">AI inference and serving</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>5 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Lightning Talk</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=H2Kb0kfWOeM">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1289878">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Hidetsugu Sugiyama, a CoHDI maintainer, describes how the project composes GPUs and CXL memory from shared pools onto Kubernetes hosts and how he plans to use it for LLM inference spread across sites. He outlines running prefill and decode at different sites linked by an all-photonics optical network, and using pooled CXL memory to run decode nodes with fewer GPUs.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you plan GPU and memory capacity for LLM inference and are curious about composable hardware and splitting prefill and decode across sites.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=H2Kb0kfWOeM&amp;t=12s" aria-label="Watch at 0:12">0:12</a> <span>Hidetsugu Sugiyama says CoHDI stands for Composable Hardware in Disaggregated Infrastructure and that it now supports CXL memory as well as GPUs.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=H2Kb0kfWOeM&amp;t=25s" aria-label="Watch at 0:25">0:25</a> <span>He names three components, a composable DRA driver, a dynamic device scaler and a composable resource operator, which he says compose devices from GPU and CXL memory pools through a Redfish API.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=H2Kb0kfWOeM&amp;t=56s" aria-label="Watch at 0:56">0:56</a> <span>He says large-scale LLM inference suffers from resource imbalance and over-provisioning because hardware configurations are fixed, and presents CoHDI as designed for that problem.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=H2Kb0kfWOeM&amp;t=132s" aria-label="Watch at 2:12">2:12</a> <span>He describes transferring KV cache between a prefill site and a decode site over an open APN optical network, combining GPU-direct RDMA with the network so that, in his words, two distant sites operate as if next to each other.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=H2Kb0kfWOeM&amp;t=227s" aria-label="Watch at 3:47">3:47</a> <span>He says decode nodes can be deployed with fewer GPUs and large CXL memory, which he says reduces GPU cost and power consumption at the decode site.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/cohdi-8308d2881261.html">CoHDI</a><a class="tag project-tag" href="../technologies/dynamic-resource-allocation-d7775471dc59.html">Dynamic Resource Allocation</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/vllm-ec8207a3dde6.html">vLLM</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/cxl-memory-b83b9f7c117d.html">CXL memory</a><a class="tag project-tag" href="../technologies/iown-all-photonics-network-f2de29f2fbce.html">IOWN All-Photonics Network</a><a class="tag project-tag" href="../technologies/rdma-c05bd102491b.html">RDMA</a><a class="tag project-tag" href="../technologies/redfish-api-0bea7bc57b0e.html">Redfish API</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>
