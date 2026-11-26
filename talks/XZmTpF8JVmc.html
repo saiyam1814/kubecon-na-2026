@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>CoHDI: Bridging Kubernetes and Disaggregated Memory for Memory-Aware LLM Inference | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-2">Emerging + Advanced</span></div>
+<h1>CoHDI: Bridging Kubernetes and Disaggregated Memory for Memory-Aware LLM Inference</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Naoki Oguchi, Hidetsugu Sugiyama</dd></div>
+<div><dt>Track</dt><dd>Emerging + Advanced</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Data%2C%20storage%20and%20state#library">Data, storage and state</a><a class="tag theme-tag" href="../index.html?theme=AI%20inference%20and%20serving#library">AI inference and serving</a><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Advanced</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=XZmTpF8JVmc">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1248422">Schedule</a> · <a href="https://sessionize.com/download/hhasdeb~GBLRYAw3h4dkcp9pAJea7p.pdf~rh-fujitsu-kubeconna26_cohdi2.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Naoki Oguchi and Hidetsugu Sugiyama present CoHDI, a CNCF Sandbox project they describe as letting Kubernetes attach pooled CXL memory and GPUs to worker nodes on demand, with a focus on giving LLM inference more room for KV cache. They walk through the allocation sequence for an LMCache pod, share early measurements, and outline plans to split prefill and decode across sites connected by an optical network.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you run LLM inference on Kubernetes and want to see how pooled CXL memory could be attached to nodes as an extra KV cache tier.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=XZmTpF8JVmc&amp;t=170s" aria-label="Watch at 2:50">2:50</a> <span>Oguchi says KV cache capacity needs to scale independently from GPU compute, after listing the drawbacks he sees in adding GPUs, adding local DRAM, or evicting the cache to storage.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=XZmTpF8JVmc&amp;t=407s" aria-label="Watch at 6:47">6:47</a> <span>Oguchi explains the CoHDI flow: a scheduled pod triggers composition, the Dynamic Device Scaler evaluates the GPU and CXL memory needed, and the Composable Resource Operator requests them from the pool and attaches them to the worker node.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=XZmTpF8JVmc&amp;t=712s" aria-label="Watch at 11:52">11:52</a> <span>Oguchi shows cache metrics where resubmitting the first prompt raises the blocks read from the second tier from 105 to 135, which he reads as KV cache kept in CXL memory being reused.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=XZmTpF8JVmc&amp;t=764s" aria-label="Watch at 12:44">12:44</a> <span>Oguchi reports first-stage results in which attached CXL memory was 10 times faster than SSD for random reads and 18 times faster for writes, and says LMCache still needs optimization for CXL access.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=XZmTpF8JVmc&amp;t=1107s" aria-label="Watch at 18:27">18:27</a> <span>Sugiyama says GPU overprovisioning at the decode site remains a problem and describes decode nodes with few GPUs and large CXL memory pools composed by CoHDI as his answer.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/cohdi-8308d2881261.html">CoHDI</a><a class="tag project-tag" href="../technologies/dynamic-resource-allocation-d7775471dc59.html">Dynamic Resource Allocation</a><a class="tag project-tag" href="../technologies/kepler-633928652af2.html">Kepler</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/llm-d-82cd4b3d57e4.html">llm-d</a><a class="tag project-tag" href="../technologies/lmcache-8a1c9d1ff7b9.html">LMCache</a><a class="tag project-tag" href="../technologies/nixl-a60df2e8608d.html">NIXL</a><a class="tag project-tag" href="../technologies/red-hat-openshift-890de5217999.html">Red Hat OpenShift</a><a class="tag project-tag" href="../technologies/vllm-ec8207a3dde6.html">vLLM</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/cxl-ea2a7ac2f86b.html">CXL</a><a class="tag project-tag" href="../technologies/iown-all-photonics-network-f2de29f2fbce.html">IOWN All-Photonics Network</a><a class="tag project-tag" href="../technologies/rdma-c05bd102491b.html">RDMA</a><a class="tag project-tag" href="../technologies/redfish-95f33aca8723.html">Redfish</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

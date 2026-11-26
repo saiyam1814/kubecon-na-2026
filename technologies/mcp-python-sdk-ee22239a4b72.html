@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>MCP Python SDK talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>MCP Python SDK</h1>
+<p class="hero-copy">1 talk mentions MCP Python SDK.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/grafana-mimir-c090ac15b5c5.html">Grafana Mimir</a> <span>1 shared talk</span></li><li><a href="../technologies/jaeger-c0bbec68cf41.html">Jaeger</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>1 shared talk</span></li><li><a href="../technologies/model-context-protocol-9c5da690faad.html">Model Context Protocol</a> <span>1 shared talk</span></li><li><a href="../technologies/opentelemetry-15646ccfc423.html">OpenTelemetry</a> <span>1 shared talk</span></li><li><a href="../technologies/prometheus-1809f7cd0c75.html">Prometheus</a> <span>1 shared talk</span></li><li><a href="../technologies/promql-2f37bf644d8b.html">PromQL</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning MCP Python SDK"><ul class="talk-list"><li class="talk-card" data-talk="lIbzmHEwazM" data-track="Observability"
+data-themes="[&quot;Observability and reliability&quot;, &quot;AI agents and automation&quot;]" data-search="Beyond Dashboards: A Semantic Layer for AI-Driven Observability in Kubernetes Pronnoy Goswami Observability  Observability and reliability AI agents and automation OpenTelemetry Prometheus Grafana Mimir Jaeger Model Context Protocol Kubernetes MCP Python SDK PromQL Grafana Mimir Jaeger Kubernetes MCP Python SDK Model Context Protocol OpenTelemetry Prometheus PromQL Mimir K8s k8s MCP OTel Pronnoy Goswami argues that pasting raw logs and traces into an LLM gives unreliable answers, and presents a four-layer design that uses OpenTelemetry for consistent context and an MCP server that exposes typed, bounded, summarized tools instead of raw query access. He shows a recorded local demo with synthetic data and shares lessons on cardinality, latency and when he thinks the approach reduces MTTR. Watch this if you are wiring an AI agent to your metrics and traces and want a bounded design for it."
+data-technologies="[&quot;Grafana Mimir&quot;, &quot;Jaeger&quot;, &quot;Kubernetes&quot;, &quot;MCP Python SDK&quot;, &quot;Model Context Protocol&quot;, &quot;OpenTelemetry&quot;, &quot;Prometheus&quot;, &quot;PromQL&quot;]" data-demo="yes"
+data-length="30" data-level="Any Level" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-3">Observability</span><span class="demo-badge">Demo</span></div>
+<h3><a href="../talks/lIbzmHEwazM.html">Beyond Dashboards: A Semantic Layer for AI-Driven Observability in Kubernetes</a></h3>
+<p class="speakers">Pronnoy Goswami</p><p class="card-summary">Pronnoy Goswami argues that pasting raw logs and traces into an LLM gives unreliable answers, and presents a four-layer design that uses OpenTelemetry for consistent context and an MCP server that exposes typed, bounded, summarized tools instead of raw query access. He shows a recorded local demo with synthetic data and shares lessons on cardinality, latency and when he thinks the approach reduces MTTR.</p>
+<p class="schedule-summary">30 min slot · Any Level · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a></div><p class="card-watch"><strong>Watch this if:</strong> you are wiring an AI agent to your metrics and traces and want a bounded design for it.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=lIbzmHEwazM&amp;t=112s" aria-label="Watch at 1:52">1:52</a> <span>Pronnoy lists four ways he says raw telemetry in a prompt fails: volume, no schema, unbounded queries and no provenance.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lIbzmHEwazM&amp;t=260s" aria-label="Watch at 4:20">4:20</a> <span>He outlines the four layers: instrument with OpenTelemetry semantic conventions, collect and store, an MCP semantic query layer, and agents with human approval.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lIbzmHEwazM&amp;t=561s" aria-label="Watch at 9:21">9:21</a> <span>He says MCP tools should be designed for how an on-call engineer thinks rather than wrapping the Prometheus API, and should be typed, discoverable, summarized and cited.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lIbzmHEwazM&amp;t=780s" aria-label="Watch at 13:00">13:00</a> <span>In a recorded demo with a fault injected into a payments API, the tool reports spikes in the checkout API&#x27;s error ratio and p99 latency and in the payments API&#x27;s p99 latency as the top three signals.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lIbzmHEwazM&amp;t=1052s" aria-label="Watch at 17:32">17:32</a> <span>He shares production lessons: never offer a free-form group by, back the catalog with recording rules, set per-tool timeouts and budgets, cache, and summarize inside the server.</span></li></ol>
+<a class="card-link" href="../talks/lIbzmHEwazM.html" aria-label="Explore Beyond Dashboards: A Semantic Layer for AI-Driven Observability in Kubernetes">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Guardrails, Not Gatekeepers: Envoy Gateway in the Enterprise | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-0">EnvoyCon</span></div>
+<h1>Guardrails, Not Gatekeepers: Envoy Gateway in the Enterprise</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Matthew Slater</dd></div>
+<div><dt>Track</dt><dd>EnvoyCon</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Networking%20and%20connectivity#library">Networking and connectivity</a><a class="tag theme-tag" href="../index.html?theme=Security%2C%20identity%20and%20policy#library">Security, identity and policy</a><a class="tag theme-tag" href="../index.html?theme=Platform%20engineering%20and%20developer%20experience#library">Platform engineering and developer experience</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>10 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=o9iMPx_dI7k">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1334796">Schedule</a></p>
+<section><h2>Talk summary</h2><p>The speaker, from the Kubernetes platform engineering team at JPMorgan Chase, describes bringing Envoy Gateway and Gateway API to application teams in a regulated enterprise after the ingress-nginx retirement. He covers which parts of the API his team blocks, how policy denials explain the fix, and workarounds for load balancers and enterprise identity providers.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You are a platform engineer moving teams from ingress-nginx to Gateway API in a company with strict security and cloud rules.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=o9iMPx_dI7k&amp;t=248s" aria-label="Watch at 4:08">4:08</a> <span>He recommends blocking users from creating roles that grant themselves access to EnvoyPatchPolicy and EnvoyExtensionPolicy, since patching xDS directly would bypass every other rule.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=o9iMPx_dI7k&amp;t=296s" aria-label="Watch at 4:56">4:56</a> <span>He says every rule in their shared Gatekeeper policy library must carry a message and a remedy, so a denied user sees why and how to fix it.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=o9iMPx_dI7k&amp;t=429s" aria-label="Watch at 7:09">7:09</a> <span>He describes separating load balancing from the Envoy deployment: the Envoy service is set to NodePort and Terraform-managed load balancers map target groups to those ports.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=o9iMPx_dI7k&amp;t=537s" aria-label="Watch at 8:57">8:57</a> <span>He shares identity provider workarounds: append extra request parameters to the authorization endpoint, use the resources field for ADFS, and use a private client with a secret because public clients did not work.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=o9iMPx_dI7k&amp;t=710s" aria-label="Watch at 11:50">11:50</a> <span>He sums up five things to copy: write constraints down first, map roles onto the four-tier RBAC model, bring security in as a design input, ship safe defaults teams can change, and budget for teaching.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/amazon-eks-d1b0dcc4b268.html">Amazon EKS</a><a class="tag project-tag" href="../technologies/envoy-84532b306f25.html">Envoy</a><a class="tag project-tag" href="../technologies/envoy-gateway-e441e6aaf66b.html">Envoy Gateway</a><a class="tag project-tag" href="../technologies/gatekeeper-9ce00b27299c.html">Gatekeeper</a><a class="tag project-tag" href="../technologies/gateway-api-2929f65596ea.html">Gateway API</a><a class="tag project-tag" href="../technologies/helm-ab14d3faa25e.html">Helm</a><a class="tag project-tag" href="../technologies/ingress-nginx-34f2b6a43f67.html">ingress-nginx</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/terraform-94dc3ea57721.html">Terraform</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

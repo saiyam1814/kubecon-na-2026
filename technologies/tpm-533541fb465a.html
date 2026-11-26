@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>TPM talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>TPM</h1>
+<p class="hero-copy">2 talks mention TPM.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>2 shared talks</span></li><li><a href="../technologies/aws-7d1507284a57.html">AWS</a> <span>1 shared talk</span></li><li><a href="../technologies/bootc-c849269db7b3.html">bootc</a> <span>1 shared talk</span></li><li><a href="../technologies/cedar-0c2746399367.html">Cedar</a> <span>1 shared talk</span></li><li><a href="../technologies/cert-manager-e6bb20df7151.html">cert-manager</a> <span>1 shared talk</span></li><li><a href="../technologies/common-expression-language-087472d4b6a1.html">Common Expression Language</a> <span>1 shared talk</span></li><li><a href="../technologies/edk-ii-562147e554b5.html">EDK II</a> <span>1 shared talk</span></li><li><a href="../technologies/gatekeeper-9ce00b27299c.html">Gatekeeper</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning TPM"><ul class="talk-list"><li class="talk-card" data-talk="lIVHcjLrCs4" data-track="Maintainer Track"
+data-themes="[&quot;Security, identity and policy&quot;, &quot;Kubernetes internals and runtimes&quot;]" data-search="Authorized? It Depends. Rita Zhang David Eads Micah Hausler Ben Petersen Stanislav Láznička Maintainer Track Auth Security, identity and policy Kubernetes internals and runtimes Kubernetes Cedar Secrets Store CSI Driver ingress-nginx Gatekeeper cert-manager Istio SPIFFE Common Expression Language AWS TPM YubiKey AWS Cedar cert-manager Common Expression Language Gatekeeper ingress-nginx Istio Kubernetes Secrets Store CSI Driver SPIFFE TPM YubiKey Amazon Web Services OPA Gatekeeper K8s k8s Kubernetes SIG Auth maintainers give a deep dive on conditional authorization, which lets an authorizer answer with conditions that are enforced later at admission, tracing the idea from a Cedar-based prototype to the interface now in the API server. They also cover a proposal to use the certificate APIs inside the platform, fixes to the Secrets Store CSI Driver and its sync controller, a proposal for authenticating requests to admission webhooks, and a proposal for signed requests to the API server. Watch this if you write Kubernetes authorizers, admission webhooks or platform extensions and want to know what SIG Auth is changing."
+data-technologies="[&quot;AWS&quot;, &quot;Cedar&quot;, &quot;cert-manager&quot;, &quot;Common Expression Language&quot;, &quot;Gatekeeper&quot;, &quot;ingress-nginx&quot;, &quot;Istio&quot;, &quot;Kubernetes&quot;, &quot;Secrets Store CSI Driver&quot;, &quot;SPIFFE&quot;, &quot;TPM&quot;, &quot;YubiKey&quot;]" data-demo="no"
+data-length="30" data-level="" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-1">Maintainer Track</span></div>
+<h3><a href="../talks/lIVHcjLrCs4.html">Authorized? It Depends.</a></h3>
+<p class="speakers">Rita Zhang, David Eads, Micah Hausler, Ben Petersen, Stanislav Láznička</p><p class="card-summary">Kubernetes SIG Auth maintainers give a deep dive on conditional authorization, which lets an authorizer answer with conditions that are enforced later at admission, tracing the idea from a Cedar-based prototype to the interface now in the API server. They also cover a proposal to use the certificate APIs inside the platform, fixes to the Secrets Store CSI Driver and its sync controller, a proposal for authenticating requests to admission webhooks, and a proposal for signed requests to the API server.</p>
+<p class="schedule-summary">30 min slot · Level not listed · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Security%2C%20identity%20and%20policy#library">Security, identity and policy</a><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></div><p class="card-watch"><strong>Watch this if:</strong> you write Kubernetes authorizers, admission webhooks or platform extensions and want to know what SIG Auth is changing.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=lIVHcjLrCs4&amp;t=156s" aria-label="Watch at 2:36">2:36</a> <span>Rita Zhang gives the motivating case for conditional authorization: a controller that may update a pod but should only touch its own finalizer currently needs one access rule split across authorization and admission, which must be kept aligned.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lIVHcjLrCs4&amp;t=565s" aria-label="Watch at 9:25">9:25</a> <span>David Eads describes the new conditional authorizer interface, in which an authorizer that answers maybe stores its conditions in the request context so admission can evaluate them once the object is available, and results are downgraded if the admission plugin is turned off.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lIVHcjLrCs4&amp;t=969s" aria-label="Watch at 16:09">16:09</a> <span>He says the project does not yet know what the user-facing API on top of this mechanism should look like, and invites people to bring prototypes to the SIG Auth meeting.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lIVHcjLrCs4&amp;t=1125s" aria-label="Watch at 18:45">18:45</a> <span>Stanislav Láznička describes a proposal that adds a serving certificate signer for services and pods, so webhooks and aggregated API servers would no longer need to mint their own certificates.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lIVHcjLrCs4&amp;t=1910s" aria-label="Watch at 31:50">31:50</a> <span>Micah Hausler argues that most Kubernetes credentials can be replayed if logged or intercepted, and describes a proposal for clients to sign requests to the API server so that a captured request cannot be reused.</span></li></ol>
+<a class="card-link" href="../talks/lIVHcjLrCs4.html" aria-label="Explore Authorized? It Depends.">Explore key moments <span aria-hidden="true">↗</span></a>
+</li><li class="talk-card" data-talk="l6JX3l1APWo" data-track="Emerging + Advanced"
+data-themes="[&quot;Kubernetes internals and runtimes&quot;]" data-search="Legacy-Free, Zero-Maintenance Bare Metal Kubernetes Clusters With RISC-V and Immutable Linux Felicitas Pojtinger Emerging + Advanced  Kubernetes internals and runtimes RISC-V K3s Kubernetes bootc systemd Valkey Model Context Protocol QEMU SpacemiT K3 systemd-sysupdate TPM EDK II OpenSBI bootc EDK II K3s Kubernetes Model Context Protocol OpenSBI QEMU RISC-V SpacemiT K3 systemd systemd-sysupdate TPM Valkey K8s k8s MCP Felicitas Pojtinger of LiveKit argues that operators should be able to own every layer of their stack, and builds one on a SpacemiT K3 RISC-V board from open firmware up to a K3s cluster. Recorded demos show an AI agent flashing and debugging the board through a hardware harness, signed image updates with systemd-sysupdate, TPM-backed remote attestation and an attested process migration between nodes. Watch this if you want to see how far a fully open bare-metal stack on RISC-V can go, from firmware and signed images to attestation and a running cluster."
+data-technologies="[&quot;bootc&quot;, &quot;EDK II&quot;, &quot;K3s&quot;, &quot;Kubernetes&quot;, &quot;Model Context Protocol&quot;, &quot;OpenSBI&quot;, &quot;QEMU&quot;, &quot;RISC-V&quot;, &quot;SpacemiT K3&quot;, &quot;systemd&quot;, &quot;systemd-sysupdate&quot;, &quot;TPM&quot;, &quot;Valkey&quot;]" data-demo="yes"
+data-length="30" data-level="Advanced" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-2">Emerging + Advanced</span><span class="demo-badge">Demo</span></div>
+<h3><a href="../talks/l6JX3l1APWo.html">Legacy-Free, Zero-Maintenance Bare Metal Kubernetes Clusters With RISC-V and Immutable Linux</a></h3>
+<p class="speakers">Felicitas Pojtinger</p><p class="card-summary">Felicitas Pojtinger of LiveKit argues that operators should be able to own every layer of their stack, and builds one on a SpacemiT K3 RISC-V board from open firmware up to a K3s cluster. Recorded demos show an AI agent flashing and debugging the board through a hardware harness, signed image updates with systemd-sysupdate, TPM-backed remote attestation and an attested process migration between nodes.</p>
+<p class="schedule-summary">30 min slot · Advanced · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></div><p class="card-watch"><strong>Watch this if:</strong> you want to see how far a fully open bare-metal stack on RISC-V can go, from firmware and signed images to attestation and a running cluster.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=l6JX3l1APWo&amp;t=105s" aria-label="Watch at 1:45">1:45</a> <span>Pojtinger says x86 and Arm carry expensive licences and firmware blobs that cannot be inspected or replaced, which is her reason for building on RISC-V.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=l6JX3l1APWo&amp;t=751s" aria-label="Watch at 12:31">12:31</a> <span>A recorded demo shows solenoids pressing the board&#x27;s buttons to enter flash mode while an MCP server flashes the images, so an agent can then check the result over KVM, UART and JTAG.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=l6JX3l1APWo&amp;t=1128s" aria-label="Watch at 18:48">18:48</a> <span>She explains choosing systemd-sysupdate over bootc, with signed system and configuration extensions overlaid on an immutable /usr.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=l6JX3l1APWo&amp;t=1355s" aria-label="Watch at 22:35">22:35</a> <span>She describes measuring every boot stage into TPM platform configuration registers so the booted image can be compared with predicted values.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=l6JX3l1APWo&amp;t=1692s" aria-label="Watch at 28:12">28:12</a> <span>In a recorded demo she enables a signed K3s system extension on the board and runs Valkey, then shows the system refusing a tampered extension.</span></li></ol>
+<a class="card-link" href="../talks/l6JX3l1APWo.html" aria-label="Explore Legacy-Free, Zero-Maintenance Bare Metal Kubernetes Clusters With RISC-V and Immutable Linux">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>VMware vSphere talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>VMware vSphere</h1>
+<p class="hero-copy">2 talks mention VMware vSphere.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>2 shared talks</span></li><li><a href="../technologies/busybox-9d75f0d7c398.html">BusyBox</a> <span>1 shared talk</span></li><li><a href="../technologies/ceph-bbbd1d8e85df.html">Ceph</a> <span>1 shared talk</span></li><li><a href="../technologies/container-storage-interface-43634ceadaa4.html">Container Storage Interface</a> <span>1 shared talk</span></li><li><a href="../technologies/etcd-c38cbd92fce4.html">etcd</a> <span>1 shared talk</span></li><li><a href="../technologies/kubectl-7a7f09de08e3.html">kubectl</a> <span>1 shared talk</span></li><li><a href="../technologies/velero-86990cd7180b.html">Velero</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning VMware vSphere"><ul class="talk-list"><li class="talk-card" data-talk="BtRGurkmCHg" data-track="Project Lightning Talks"
+data-themes="[&quot;Data, storage and state&quot;, &quot;Observability and reliability&quot;]" data-search="Velero: Faster Backups, Consistent Snapshots, Incremental Everything Shubham Dilip Pampattiwar Project Lightning Talks  Data, storage and state Observability and reliability Velero Kubernetes Ceph Container Storage Interface VMware vSphere Ceph Container Storage Interface Kubernetes Velero VMware vSphere K8s k8s Shubham Dilip Pampattiwar, a Velero maintainer, says users reported backups that were slow, inconsistent across volumes and wasteful, and describes three features meant to address those problems. He also says Velero was accepted into the CNCF Sandbox this year and asks users to register as adopters to support an incubation application. Watch this if you back up Kubernetes clusters with Velero and have long backup windows or multi-volume applications."
+data-technologies="[&quot;Ceph&quot;, &quot;Container Storage Interface&quot;, &quot;Kubernetes&quot;, &quot;Velero&quot;, &quot;VMware vSphere&quot;]" data-demo="no"
+data-length="5" data-level="" data-type="Lightning Talk">
+<div class="card-eyebrow"><span class="tag track-tag track-6">Project Lightning Talks</span></div>
+<h3><a href="../talks/BtRGurkmCHg.html">Velero: Faster Backups, Consistent Snapshots, Incremental Everything</a></h3>
+<p class="speakers">Shubham Dilip Pampattiwar</p><p class="card-summary">Shubham Dilip Pampattiwar, a Velero maintainer, says users reported backups that were slow, inconsistent across volumes and wasteful, and describes three features meant to address those problems. He also says Velero was accepted into the CNCF Sandbox this year and asks users to register as adopters to support an incubation application.</p>
+<p class="schedule-summary">5 min slot · Level not listed · Lightning Talk</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Data%2C%20storage%20and%20state#library">Data, storage and state</a><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a></div><p class="card-watch"><strong>Watch this if:</strong> you back up Kubernetes clusters with Velero and have long backup windows or multi-volume applications.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=BtRGurkmCHg&amp;t=50s" aria-label="Watch at 0:50">0:50</a> <span>Pampattiwar says Velero has more than 750 million image pulls, over 10,000 GitHub stars and more than 400 contributors.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=BtRGurkmCHg&amp;t=132s" aria-label="Watch at 2:12">2:12</a> <span>Pampattiwar says that before 1.18 Velero ran one backup at a time, and that a server flag now lets backups run in parallel while two backups touching the same namespaces never run together.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=BtRGurkmCHg&amp;t=194s" aria-label="Watch at 3:14">3:14</a> <span>Pampattiwar says volume group snapshot support captures all of an application&#x27;s volumes at the same instant for a crash-consistent backup, enabled by labeling the volumes to group.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=BtRGurkmCHg&amp;t=225s" aria-label="Watch at 3:45">3:45</a> <span>Pampattiwar says a new block-level data mover in 1.19 uses Kubernetes changed block tracking to back up only changed blocks, and that the team tested it with Ceph and vSphere.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=BtRGurkmCHg&amp;t=255s" aria-label="Watch at 4:15">4:15</a> <span>Pampattiwar says Velero was accepted into the CNCF Sandbox this year and is working toward incubation, which needs documented adopters.</span></li></ol>
+<a class="card-link" href="../talks/BtRGurkmCHg.html" aria-label="Explore Velero: Faster Backups, Consistent Snapshots, Incremental Everything">Explore key moments <span aria-hidden="true">↗</span></a>
+</li><li class="talk-card" data-talk="xupkw07ru-E" data-track="Platform Engineering"
+data-themes="[&quot;Kubernetes internals and runtimes&quot;, &quot;Data, storage and state&quot;]" data-search="Why Quotas Are Hard in Kubernetes: Lessons from Building a Production-Grade Quota System Deepak Kinni Xing Yang Platform Engineering  Kubernetes internals and runtimes Data, storage and state Kubernetes etcd VMware vSphere kubectl BusyBox BusyBox etcd kubectl Kubernetes VMware vSphere K8s k8s Xing Yang explains how Kubernetes ResourceQuota is enforced at admission, including optimistic updates, a lookaside cache, per-namespace batching and a controller that corrects drift, and where races still reject valid requests. Deepak Kinni then describes the webhook-based storage quota system Broadcom built for vSphere, with policy-level and hierarchical limits and usage tracking for snapshots, and demos it rejecting a claim that exceeds its limit. Watch this if you run multi-tenant clusters and want to understand how ResourceQuota behaves under concurrency, or are designing your own quota system."
+data-technologies="[&quot;BusyBox&quot;, &quot;etcd&quot;, &quot;kubectl&quot;, &quot;Kubernetes&quot;, &quot;VMware vSphere&quot;]" data-demo="yes"
+data-length="30" data-level="Any Level" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-0">Platform Engineering</span><span class="demo-badge">Demo</span></div>
+<h3><a href="../talks/xupkw07ru-E.html">Why Quotas Are Hard in Kubernetes: Lessons from Building a Production-Grade Quota System</a></h3>
+<p class="speakers">Deepak Kinni, Xing Yang</p><p class="card-summary">Xing Yang explains how Kubernetes ResourceQuota is enforced at admission, including optimistic updates, a lookaside cache, per-namespace batching and a controller that corrects drift, and where races still reject valid requests. Deepak Kinni then describes the webhook-based storage quota system Broadcom built for vSphere, with policy-level and hierarchical limits and usage tracking for snapshots, and demos it rejecting a claim that exceeds its limit.</p>
+<p class="schedule-summary">30 min slot · Any Level · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a><a class="tag theme-tag" href="../index.html?theme=Data%2C%20storage%20and%20state#library">Data, storage and state</a></div><p class="card-watch"><strong>Watch this if:</strong> you run multi-tenant clusters and want to understand how ResourceQuota behaves under concurrency, or are designing your own quota system.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=xupkw07ru-E&amp;t=465s" aria-label="Watch at 7:45">7:45</a> <span>Yang says a request can be rejected after reaching the maximum number of update retries even though quota is still available.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=xupkw07ru-E&amp;t=636s" aria-label="Watch at 10:36">10:36</a> <span>Kinni lists why ResourceQuota was not enough for vSphere, including usage tracking, policy-level limits and snapshots whose size is known only after they complete.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=xupkw07ru-E&amp;t=846s" aria-label="Watch at 14:06">14:06</a> <span>Kinni says the biggest design challenge is that webhooks are unordered, so a later webhook can reject a request after quota was reserved, leaving phantom reservations.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=xupkw07ru-E&amp;t=922s" aria-label="Watch at 15:22">15:22</a> <span>Kinni says the system always writes parent quotas first, so a partial failure leaves it over-reserved and never under-reserved.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=xupkw07ru-E&amp;t=1319s" aria-label="Watch at 21:59">21:59</a> <span>In the demo, the webhook denies a 50 GB claim for insufficient storage quota and the reserved and used values do not change.</span></li></ol>
+<a class="card-link" href="../talks/xupkw07ru-E.html" aria-label="Explore Why Quotas Are Hard in Kubernetes: Lessons from Building a Production-Grade Quota System">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

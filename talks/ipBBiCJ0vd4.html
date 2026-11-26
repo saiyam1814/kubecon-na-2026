@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Multi-Cluster Orchestration System: Karmada Updates and Use Cases | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">Maintainer Track</span></div>
+<h1>Multi-Cluster Orchestration System: Karmada Updates and Use Cases</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Joe Nathan Abellard, Hongcai Ren</dd></div>
+<div><dt>Track</dt><dd>Maintainer Track</dd></div>
+<div><dt>Topic</dt><dd>Karmada</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a><a class="tag theme-tag" href="../index.html?theme=Platform%20engineering%20and%20developer%20experience#library">Platform engineering and developer experience</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=ipBBiCJ0vd4">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1289702">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Joe Nathan Abellard of Bloomberg, a Karmada maintainer presenting alone because Hongcai Ren could not attend, explains how Karmada propagates workloads across clusters and which recent features target AI workloads. He then describes the managed multi-cluster platform Bloomberg built on Karmada, including its observability and scale-testing setup and a fan-out scheduler he says cut propagation latency, and closes with the 2026 roadmap.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you run or plan a multi-cluster platform and want to see how one company operates Karmada as a managed service and tunes its scheduler under load.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=ipBBiCJ0vd4&amp;t=219s" aria-label="Watch at 3:39">3:39</a> <span>Abellard walks through the propagation pipeline: a propagation policy matches a workload, the resource detector creates a resource binding, the scheduler assigns clusters, and work objects are applied to each member cluster.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=ipBBiCJ0vd4&amp;t=404s" aria-label="Watch at 6:44">6:44</a> <span>He lists recent features aimed at AI workloads: multi-component scheduling for workloads such as Ray jobs, priority-based scheduling, federated resource quotas, and overflow cluster affinities that use on-prem GPUs before cloud ones.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=ipBBiCJ0vd4&amp;t=682s" aria-label="Watch at 11:22">11:22</a> <span>He describes Bloomberg&#x27;s high-availability topology, where each Karmada control plane is stretched across host clusters in several data centers so the managed service can survive the loss of a whole data center.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=ipBBiCJ0vd4&amp;t=1123s" aria-label="Watch at 18:43">18:43</a> <span>For scale tests he says they simulate 50 member clusters of 1,000 nodes each with KWOK, with one real node per cluster, and drive load with ClusterLoader2 while a sidecar measures end-to-end propagation latency.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=ipBBiCJ0vd4&amp;t=1572s" aria-label="Watch at 26:12">26:12</a> <span>He explains the fan-out scheduler built for duplicated placements, which only checks feasibility and so can run many workers; he reports P99 propagation latency under 1 second at 50 objects per second, against about 3 minutes 45 seconds at 20 with the default scheduler.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/alertmanager-11e295cda8ce.html">Alertmanager</a><a class="tag project-tag" href="../technologies/apache-flink-03be4f85fe43.html">Apache Flink</a><a class="tag project-tag" href="../technologies/apache-spark-fc9560c0c055.html">Apache Spark</a><a class="tag project-tag" href="../technologies/clusterloader2-818397c65757.html">ClusterLoader2</a><a class="tag project-tag" href="../technologies/dynamic-resource-allocation-d7775471dc59.html">Dynamic Resource Allocation</a><a class="tag project-tag" href="../technologies/etcd-c38cbd92fce4.html">etcd</a><a class="tag project-tag" href="../technologies/grafana-cace491b6955.html">Grafana</a><a class="tag project-tag" href="../technologies/karmada-c42f8317fd35.html">Karmada</a><a class="tag project-tag" href="../technologies/kubeflow-22db977b4caf.html">Kubeflow</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/kwok-1f60f69f9012.html">KWOK</a><a class="tag project-tag" href="../technologies/prometheus-1809f7cd0c75.html">Prometheus</a><a class="tag project-tag" href="../technologies/ray-c04bc270f965.html">Ray</a><a class="tag project-tag" href="../technologies/terraform-94dc3ea57721.html">Terraform</a><a class="tag project-tag" href="../technologies/thanos-c96415006f90.html">Thanos</a><a class="tag project-tag" href="../technologies/volcano-06612c283234.html">Volcano</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/lua-dc436b329f4d.html">Lua</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

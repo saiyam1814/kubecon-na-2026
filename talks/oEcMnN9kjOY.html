@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>From Traceroute to OTel Traces: Modeling Network Paths with OpenTelemetry | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-3">Observability</span><span class="demo-badge">Demo</span></div>
+<h1>From Traceroute to OTel Traces: Modeling Network Paths with OpenTelemetry</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Antonio Jimenez Martinez</dd></div>
+<div><dt>Track</dt><dd>Observability</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a><a class="tag theme-tag" href="../index.html?theme=Networking%20and%20connectivity#library">Networking and connectivity</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Advanced</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=oEcMnN9kjOY">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1243292">Schedule</a> · <a href="https://sessionize.com/download/ipwaobu~B1NrjBHm4cpcFiiK9xqdeb.pdf~from-traceroute-to-otel-traces-kubecon-na-2026.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Antonio Jimenez Martinez describes how ThousandEyes converts traceroute results into OpenTelemetry traces, with each hop-to-hop edge modeled as a client span and a server span, enriched with host name, AS number, prefix and location. He shows recorded demos of these traces as waterfalls and service maps in Splunk, proposes span links to tie network path traces to application traces, and describes the OpenTelemetry network group working on shared semantic conventions.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you debug latency across networks and want traceroute data in the same tracing backend as your application traces.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=oEcMnN9kjOY&amp;t=219s" aria-label="Watch at 3:39">3:39</a> <span>Jimenez Martinez says hops that do not reply are kept as unknown hops, and an unreached target gets an extra span marked as not reached or loss.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=oEcMnN9kjOY&amp;t=499s" aria-label="Watch at 8:19">8:19</a> <span>He explains that traceroute gives only round trip time, so spans cannot have real start and end times and carry the delay as an attribute instead.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=oEcMnN9kjOY&amp;t=956s" aria-label="Watch at 15:56">15:56</a> <span>In the demo of an unreachable target, he shows the last hop spans in Splunk with an error status and error type loss.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=oEcMnN9kjOY&amp;t=1122s" aria-label="Watch at 18:42">18:42</a> <span>He proposes joining network and application data with a span link, since the application trace ID is known in advance when the request is sent with the traceroute.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=oEcMnN9kjOY&amp;t=1536s" aria-label="Watch at 25:36">25:36</a> <span>He proposes a scope name such as network path model, instead of a new span kind, so backends can tell a network path from service-to-service calls.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/grafana-cace491b6955.html">Grafana</a><a class="tag project-tag" href="../technologies/opentelemetry-15646ccfc423.html">OpenTelemetry</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/dynatrace-9e1d80b47a17.html">Dynatrace</a><a class="tag project-tag" href="../technologies/splunk-101e21bef69a.html">Splunk</a><a class="tag project-tag" href="../technologies/thousandeyes-8550a3043580.html">ThousandEyes</a><a class="tag project-tag" href="../technologies/traceroute-261063ce089e.html">traceroute</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

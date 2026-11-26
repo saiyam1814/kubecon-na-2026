@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Linkerd, The Service Mesh for Everyone: gRPC Load Balancing &amp; More | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">Maintainer Track</span></div>
+<h1>Linkerd, The Service Mesh for Everyone: gRPC Load Balancing &amp; More</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Joe Fuller</dd></div>
+<div><dt>Track</dt><dd>Maintainer Track</dd></div>
+<div><dt>Topic</dt><dd>Linkerd</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Networking%20and%20connectivity#library">Networking and connectivity</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=LHt9SofedVE">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1289692">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Joe Fuller of Buoyant explains why gRPC over a single HTTP/2 connection defeats connection-level load balancing on Kubernetes and presents a benchmark he says Buoyant ran comparing Linkerd with Istio and Cilium. He then covers what Linkerd 2.20 adds, mainly rate-limit-aware load balancing and a new circuit breaking mode, both alpha and opt-in, and what has shipped in edge releases for 2.21.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you run gRPC services on Kubernetes and want to understand per-request load balancing, or you are deciding whether to turn on the new Linkerd 2.20 overload features.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=LHt9SofedVE&amp;t=261s" aria-label="Watch at 4:21">4:21</a> <span>Joe Fuller explains the gRPC problem: a client opens one HTTP/2 connection, every request lands on one pod, and scaling up does not help because new pods get none of the existing connections.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=LHt9SofedVE&amp;t=418s" aria-label="Watch at 6:58">6:58</a> <span>He describes a benchmark he says Buoyant&#x27;s engineers ran on EKS against Istio in ambient and sidecar mode and Cilium in L7 mode, and reports Linkerd at about 92% of no-mesh throughput.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=LHt9SofedVE&amp;t=651s" aria-label="Watch at 10:51">10:51</a> <span>He describes the failure mode 2.20 targets: an overloaded pod that rejects requests quickly with 429 or RESOURCE_EXHAUSTED looks like the fastest endpoint to a latency-based balancer and gets more traffic.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=LHt9SofedVE&amp;t=731s" aria-label="Watch at 12:11">12:11</a> <span>He explains rate-limit-aware load balancing: the client proxy records a penalty of five seconds by default, or the server&#x27;s back-off hint, instead of the fast rejection, so traffic shifts away and then returns as the penalty decays.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=LHt9SofedVE&amp;t=1206s" aria-label="Watch at 20:06">20:06</a> <span>He says the destination controller no longer keeps a per-subscriber endpoint snapshot, which he says cut control plane memory by about 84% in load tests, and that native sidecars are GA and on by default.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/amazon-eks-d1b0dcc4b268.html">Amazon EKS</a><a class="tag project-tag" href="../technologies/cilium-887318495291.html">Cilium</a><a class="tag project-tag" href="../technologies/envoy-84532b306f25.html">Envoy</a><a class="tag project-tag" href="../technologies/gateway-api-2929f65596ea.html">Gateway API</a><a class="tag project-tag" href="../technologies/grpc-b389db1475dc.html">gRPC</a><a class="tag project-tag" href="../technologies/istio-82d979a24d74.html">Istio</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/linkerd-3a58ad1390ab.html">Linkerd</a><a class="tag project-tag" href="../technologies/opentelemetry-15646ccfc423.html">OpenTelemetry</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/rust-521fe5c9ece1.html">Rust</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

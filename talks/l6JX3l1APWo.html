@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Legacy-Free, Zero-Maintenance Bare Metal Kubernetes Clusters With RISC-V and Immutable Linux | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-2">Emerging + Advanced</span><span class="demo-badge">Demo</span></div>
+<h1>Legacy-Free, Zero-Maintenance Bare Metal Kubernetes Clusters With RISC-V and Immutable Linux</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Felicitas Pojtinger</dd></div>
+<div><dt>Track</dt><dd>Emerging + Advanced</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Advanced</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=l6JX3l1APWo">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1243680">Schedule</a> · <a href="https://sessionize.com/download/ihvasneb~XpnSYj7qfcSkzhcRTvtRv2.pdf~slides.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Felicitas Pojtinger of LiveKit argues that operators should be able to own every layer of their stack, and builds one on a SpacemiT K3 RISC-V board from open firmware up to a K3s cluster. Recorded demos show an AI agent flashing and debugging the board through a hardware harness, signed image updates with systemd-sysupdate, TPM-backed remote attestation and an attested process migration between nodes.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you want to see how far a fully open bare-metal stack on RISC-V can go, from firmware and signed images to attestation and a running cluster.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=l6JX3l1APWo&amp;t=105s" aria-label="Watch at 1:45">1:45</a> <span>Pojtinger says x86 and Arm carry expensive licences and firmware blobs that cannot be inspected or replaced, which is her reason for building on RISC-V.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=l6JX3l1APWo&amp;t=751s" aria-label="Watch at 12:31">12:31</a> <span>A recorded demo shows solenoids pressing the board&#x27;s buttons to enter flash mode while an MCP server flashes the images, so an agent can then check the result over KVM, UART and JTAG.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=l6JX3l1APWo&amp;t=1128s" aria-label="Watch at 18:48">18:48</a> <span>She explains choosing systemd-sysupdate over bootc, with signed system and configuration extensions overlaid on an immutable /usr.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=l6JX3l1APWo&amp;t=1355s" aria-label="Watch at 22:35">22:35</a> <span>She describes measuring every boot stage into TPM platform configuration registers so the booted image can be compared with predicted values.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=l6JX3l1APWo&amp;t=1692s" aria-label="Watch at 28:12">28:12</a> <span>In a recorded demo she enables a signed K3s system extension on the board and runs Valkey, then shows the system refusing a tampered extension.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/bootc-c849269db7b3.html">bootc</a><a class="tag project-tag" href="../technologies/k3s-86bd33ebf64e.html">K3s</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/model-context-protocol-9c5da690faad.html">Model Context Protocol</a><a class="tag project-tag" href="../technologies/qemu-4d09264a5878.html">QEMU</a><a class="tag project-tag" href="../technologies/risc-v-088dddab142b.html">RISC-V</a><a class="tag project-tag" href="../technologies/systemd-e0031c189e34.html">systemd</a><a class="tag project-tag" href="../technologies/valkey-36c0c6b32a5c.html">Valkey</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/edk-ii-562147e554b5.html">EDK II</a><a class="tag project-tag" href="../technologies/opensbi-6f5aa8768d18.html">OpenSBI</a><a class="tag project-tag" href="../technologies/spacemit-k3-fc0aa1660d4f.html">SpacemiT K3</a><a class="tag project-tag" href="../technologies/systemd-sysupdate-7434122d4380.html">systemd-sysupdate</a><a class="tag project-tag" href="../technologies/tpm-533541fb465a.html">TPM</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

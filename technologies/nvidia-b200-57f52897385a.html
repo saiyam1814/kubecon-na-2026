@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>NVIDIA B200 talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>NVIDIA B200</h1>
+<p class="hero-copy">1 talk mentions NVIDIA B200.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/amazon-eks-d1b0dcc4b268.html">Amazon EKS</a> <span>1 shared talk</span></li><li><a href="../technologies/amazon-fsx-for-lustre-248fdb743e48.html">Amazon FSx for Lustre</a> <span>1 shared talk</span></li><li><a href="../technologies/amazon-s3-ebf704baa88d.html">Amazon S3</a> <span>1 shared talk</span></li><li><a href="../technologies/elastic-fabric-adapter-ec5aee5cb4cc.html">Elastic Fabric Adapter</a> <span>1 shared talk</span></li><li><a href="../technologies/grafana-cace491b6955.html">Grafana</a> <span>1 shared talk</span></li><li><a href="../technologies/keda-308c477e9c54.html">KEDA</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>1 shared talk</span></li><li><a href="../technologies/libfabric-22f5e76f4e0f.html">libfabric</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning NVIDIA B200"><ul class="talk-list"><li class="talk-card" data-talk="Pf3Us20bfow" data-track="Emerging + Advanced"
+data-themes="[&quot;Accelerators and workload scheduling&quot;]" data-search="Fine-Tuning a Vision Language Model Across Hundreds of GPUs on Kubernetes Phelipe Fabres Emerging + Advanced  Accelerators and workload scheduling Kubernetes Amazon EKS KEDA Grafana Elastic Fabric Adapter Amazon S3 NCCL libfabric Amazon FSx for Lustre NVIDIA B200 Amazon EKS Amazon FSx for Lustre Amazon S3 Elastic Fabric Adapter Grafana KEDA Kubernetes libfabric NCCL NVIDIA B200 EKS S3 EFA K8s k8s Phelipe Fabres, an AWS solutions architect presenting without the customer co-speaker he says could not attend, tells how a Brazilian legal-tech startup fine-tuned a vision language model for messy legal documents on 32 nodes with 256 GPUs on Amazon EKS. He organizes the story as four patterns he says they learned, starting every worker together, moving data fast between nodes, keeping every GPU fed and recovering from failures, with two escalations as examples. Watch this if you plan multi-node GPU training on Kubernetes and want to hear what stalled one team&#x27;s jobs and the patterns they adopted in response."
+data-technologies="[&quot;Amazon EKS&quot;, &quot;Amazon FSx for Lustre&quot;, &quot;Amazon S3&quot;, &quot;Elastic Fabric Adapter&quot;, &quot;Grafana&quot;, &quot;KEDA&quot;, &quot;Kubernetes&quot;, &quot;libfabric&quot;, &quot;NCCL&quot;, &quot;NVIDIA B200&quot;]" data-demo="no"
+data-length="30" data-level="Advanced" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-2">Emerging + Advanced</span></div>
+<h3><a href="../talks/Pf3Us20bfow.html">Fine-Tuning a Vision Language Model Across Hundreds of GPUs on Kubernetes</a></h3>
+<p class="speakers">Phelipe Fabres</p><p class="card-summary">Phelipe Fabres, an AWS solutions architect presenting without the customer co-speaker he says could not attend, tells how a Brazilian legal-tech startup fine-tuned a vision language model for messy legal documents on 32 nodes with 256 GPUs on Amazon EKS. He organizes the story as four patterns he says they learned, starting every worker together, moving data fast between nodes, keeping every GPU fed and recovering from failures, with two escalations as examples.</p>
+<p class="schedule-summary">30 min slot · Advanced · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a></div><p class="card-watch"><strong>Watch this if:</strong> you plan multi-node GPU training on Kubernetes and want to hear what stalled one team&#x27;s jobs and the patterns they adopted in response.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=Pf3Us20bfow&amp;t=124s" aria-label="Watch at 2:04">2:04</a> <span>Fabres opens with an escalation where instance checks on all 32 nodes passed, yet one overheating GPU stalled the whole distributed training job.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Pf3Us20bfow&amp;t=896s" aria-label="Watch at 14:56">14:56</a> <span>He describes gang admission, a pre-job that verifies every node is healthy before the job is submitted, because he says each hour of waiting costs GPU time across all 32 nodes.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Pf3Us20bfow&amp;t=1066s" aria-label="Watch at 17:46">17:46</a> <span>He recounts a networking escalation in which performance dropped at batch transfers of 128 to 256 MB, traced to the NCCL, libfabric and Elastic Fabric Adapter layers inside the pod, and says tuning restored the same throughput at every size.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Pf3Us20bfow&amp;t=1383s" aria-label="Watch at 23:03">23:03</a> <span>He explains the two data layers, object storage in Amazon S3 for prepared data and FSx for Lustre for checkpoints, copying only what each job needs to limit cost.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Pf3Us20bfow&amp;t=1605s" aria-label="Watch at 26:45">26:45</a> <span>He outlines the recovery pattern: watch device health trends, block the node from new placements, wait for a compatible replacement and restart, and says the recovery job later grew into an agent.</span></li></ol>
+<a class="card-link" href="../talks/Pf3Us20bfow.html" aria-label="Explore Fine-Tuning a Vision Language Model Across Hundreds of GPUs on Kubernetes">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Dapr talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Project</p><h1>Dapr</h1>
+<p class="hero-copy">1 talk mentions Dapr.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>1 shared talk</span></li><li><a href="../technologies/langgraph-ad3fc2c95760.html">LangGraph</a> <span>1 shared talk</span></li><li><a href="../technologies/nats-8aba625add8c.html">NATS</a> <span>1 shared talk</span></li><li><a href="../technologies/opentelemetry-15646ccfc423.html">OpenTelemetry</a> <span>1 shared talk</span></li><li><a href="../technologies/redis-34fb46c847bb.html">Redis</a> <span>1 shared talk</span></li><li><a href="../technologies/spring-boot-9c3c0544259a.html">Spring Boot</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning Dapr"><ul class="talk-list"><li class="talk-card" data-talk="Zz6LaPEYRFE" data-track="AI Inference + Agentic"
+data-themes="[&quot;AI agents and automation&quot;, &quot;Platform engineering and developer experience&quot;]" data-search="Your Agent Needs a Platform: Cloud Native Infrastructure for Multi-Agent AI Systems Soham Ghadge AI Inference + Agentic  AI agents and automation Platform engineering and developer experience Kubernetes Dapr NATS OpenTelemetry LangGraph Redis Spring Boot Dapr Kubernetes LangGraph NATS OpenTelemetry Redis Spring Boot K8s k8s OTel Soham Ghadge describes problems he met running AI agents in production, such as crashes midway through a task, rate limits, repeated model calls and poor visibility, and maps each one to existing cloud native tools. He proposes defining agents as Kubernetes custom resources, saving each model call as a Dapr workflow step, queueing tasks through NATS JetStream and tracing with OpenTelemetry. Watch this if you are building multi-agent systems and want a short overview of which cloud native tools cover crash recovery, queueing and tracing."
+data-technologies="[&quot;Dapr&quot;, &quot;Kubernetes&quot;, &quot;LangGraph&quot;, &quot;NATS&quot;, &quot;OpenTelemetry&quot;, &quot;Redis&quot;, &quot;Spring Boot&quot;]" data-demo="no"
+data-length="30" data-level="Advanced" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-1">AI Inference + Agentic</span></div>
+<h3><a href="../talks/Zz6LaPEYRFE.html">Your Agent Needs a Platform: Cloud Native Infrastructure for Multi-Agent AI Systems</a></h3>
+<p class="speakers">Soham Ghadge</p><p class="card-summary">Soham Ghadge describes problems he met running AI agents in production, such as crashes midway through a task, rate limits, repeated model calls and poor visibility, and maps each one to existing cloud native tools. He proposes defining agents as Kubernetes custom resources, saving each model call as a Dapr workflow step, queueing tasks through NATS JetStream and tracing with OpenTelemetry.</p>
+<p class="schedule-summary">30 min slot · Advanced · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a><a class="tag theme-tag" href="../index.html?theme=Platform%20engineering%20and%20developer%20experience#library">Platform engineering and developer experience</a></div><p class="card-watch"><strong>Watch this if:</strong> you are building multi-agent systems and want a short overview of which cloud native tools cover crash recovery, queueing and tracing.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=Zz6LaPEYRFE&amp;t=155s" aria-label="Watch at 2:35">2:35</a> <span>Ghadge lists his mapping of agent problems to tools, starting with describing each agent as a Kubernetes object through a CRD.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Zz6LaPEYRFE&amp;t=218s" aria-label="Watch at 3:38">3:38</a> <span>Ghadge shows a simplified agent definition as a Kubernetes object, with replicas, maximum tasks per copy and what the agent reads from and writes to.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Zz6LaPEYRFE&amp;t=420s" aria-label="Watch at 7:00">7:00</a> <span>Ghadge says to put every AI model call inside a saved step so that after a restart Dapr reuses the saved answer instead of paying for the call again.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Zz6LaPEYRFE&amp;t=459s" aria-label="Watch at 7:39">7:39</a> <span>Ghadge describes an agent queue, which he compares to a Redis queue, so agents do not handle every request directly.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Zz6LaPEYRFE&amp;t=588s" aria-label="Watch at 9:48">9:48</a> <span>Ghadge&#x27;s conclusion is to treat an agentic system like a distributed system and agents like microservices.</span></li></ol>
+<a class="card-link" href="../talks/Zz6LaPEYRFE.html" aria-label="Explore Your Agent Needs a Platform: Cloud Native Infrastructure for Multi-Agent AI Systems">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>K9s talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Project</p><h1>K9s</h1>
+<p class="hero-copy">1 talk mentions K9s.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/agent-substrate-1067f1a4b76d.html">Agent Substrate</a> <span>1 shared talk</span></li><li><a href="../technologies/agent2agent-protocol-fb1ce646ada6.html">Agent2Agent Protocol</a> <span>1 shared talk</span></li><li><a href="../technologies/amazon-dynamodb-f6fce77d4a6f.html">Amazon DynamoDB</a> <span>1 shared talk</span></li><li><a href="../technologies/aws-lambda-37c8906f4374.html">AWS Lambda</a> <span>1 shared talk</span></li><li><a href="../technologies/coros-2969b70a428f.html">Coros</a> <span>1 shared talk</span></li><li><a href="../technologies/glm-2bf548d80560.html">GLM</a> <span>1 shared talk</span></li><li><a href="../technologies/kagent-4690e9665ffd.html">kagent</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning K9s"><ul class="talk-list"><li class="talk-card" data-talk="vc5k3GFRBoY" data-track="AI Inference + Agentic"
+data-themes="[&quot;AI agents and automation&quot;]" data-search="I Built an AI Running Coach: A Personal kagent Agent in Production Adam Gordon Bell AI Inference + Agentic  AI agents and automation kagent Kubernetes Pulumi Model Context Protocol Agent2Agent Protocol PostgreSQL AWS Lambda Amazon DynamoDB OpenRouter Slack Agent Substrate K9s GLM Strava Peloton Coros OVHcloud Agent Substrate Agent2Agent Protocol Amazon DynamoDB AWS Lambda Coros GLM K9s kagent Kubernetes Model Context Protocol OpenRouter OVHcloud Peloton PostgreSQL Pulumi Slack Strava A2A DynamoDB Lambda K8s k8s MCP Postgres Adam Gordon Bell of Pulumi tells how he built a personal AI running coach that messages him in Slack, first as a Lambda function and then as a single long-running kagent session on a small Kubernetes cluster, to train for a trail race against a friend. He describes the design choices he says worked for him, shows his own training graphs from the year, and encourages the audience to build small agents for their own needs. Watch this if you want a small, concrete example of a long-running personal agent on Kubernetes, told as a story with the design choices that kept it simple."
+data-technologies="[&quot;Agent Substrate&quot;, &quot;Agent2Agent Protocol&quot;, &quot;Amazon DynamoDB&quot;, &quot;AWS Lambda&quot;, &quot;Coros&quot;, &quot;GLM&quot;, &quot;K9s&quot;, &quot;kagent&quot;, &quot;Kubernetes&quot;, &quot;Model Context Protocol&quot;, &quot;OpenRouter&quot;, &quot;OVHcloud&quot;, &quot;Peloton&quot;, &quot;PostgreSQL&quot;, &quot;Pulumi&quot;, &quot;Slack&quot;, &quot;Strava&quot;]" data-demo="yes"
+data-length="30" data-level="Any Level" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-1">AI Inference + Agentic</span><span class="demo-badge">Demo</span></div>
+<h3><a href="../talks/vc5k3GFRBoY.html">I Built an AI Running Coach: A Personal kagent Agent in Production</a></h3>
+<p class="speakers">Adam Gordon Bell</p><p class="card-summary">Adam Gordon Bell of Pulumi tells how he built a personal AI running coach that messages him in Slack, first as a Lambda function and then as a single long-running kagent session on a small Kubernetes cluster, to train for a trail race against a friend. He describes the design choices he says worked for him, shows his own training graphs from the year, and encourages the audience to build small agents for their own needs.</p>
+<p class="schedule-summary">30 min slot · Any Level · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a></div><p class="card-watch"><strong>Watch this if:</strong> you want a small, concrete example of a long-running personal agent on Kubernetes, told as a story with the design choices that kept it simple.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=vc5k3GFRBoY&amp;t=555s" aria-label="Watch at 9:15">9:15</a> <span>Bell describes his first version: an AWS Lambda called by a Strava webhook, a scraper for his Peloton treadmill data, a morning cron job, DynamoDB for storage and one LLM call that posted to Slack.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=vc5k3GFRBoY&amp;t=742s" aria-label="Watch at 12:22">12:22</a> <span>He shows the kagent version, an agent defined as one Kubernetes resource deployed with Pulumi, where the Strava hook, the Peloton sync and a morning cron all post messages into the running session over the agent-to-agent protocol.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=vc5k3GFRBoY&amp;t=834s" aria-label="Watch at 13:54">13:54</a> <span>His main lesson is to use deterministic code wherever possible: the MCP tool parses raw run data and hands the agent only the date, duration, incline and heart rate zones.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=vc5k3GFRBoY&amp;t=925s" aria-label="Watch at 15:25">15:25</a> <span>He keeps one session going indefinitely and handles memory with a custom compaction rule under fixed headings, plus tools that let the agent write to a plan file and an athlete file.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=vc5k3GFRBoY&amp;t=1667s" aria-label="Watch at 27:47">27:47</a> <span>He reports finishing the 30K race in 4:30 against his friend&#x27;s 4:41 from the previous year, after a year in which he says his weeks with three or more runs almost doubled.</span></li></ol>
+<a class="card-link" href="../talks/vc5k3GFRBoY.html" aria-label="Explore I Built an AI Running Coach: A Personal kagent Agent in Production">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

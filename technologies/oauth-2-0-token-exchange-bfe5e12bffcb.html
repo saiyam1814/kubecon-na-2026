@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>OAuth 2.0 Token Exchange talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>OAuth 2.0 Token Exchange</h1>
+<p class="hero-copy">1 talk mentions OAuth 2.0 Token Exchange.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/backstage-c28ad2ec1128.html">Backstage</a> <span>1 shared talk</span></li><li><a href="../technologies/keycloak-d63f4a0cdaab.html">Keycloak</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>1 shared talk</span></li><li><a href="../technologies/model-context-protocol-9c5da690faad.html">Model Context Protocol</a> <span>1 shared talk</span></li><li><a href="../technologies/spiffe-10aca797a724.html">SPIFFE</a> <span>1 shared talk</span></li><li><a href="../technologies/spire-8aa27f40201f.html">SPIRE</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning OAuth 2.0 Token Exchange"><ul class="talk-list"><li class="talk-card" data-talk="4T8Sy76WppM" data-track="Platform Engineering"
+data-themes="[&quot;Security, identity and policy&quot;, &quot;AI agents and automation&quot;, &quot;Platform engineering and developer experience&quot;]" data-search="Least-Privilege by Default: Standardizing Identity-Aware AI Agent Access into a Golden Path Masato Kozuka Platform Engineering  Security, identity and policy AI agents and automation Platform engineering and developer experience Keycloak SPIFFE SPIRE Backstage Kubernetes Model Context Protocol OAuth 2.0 Token Exchange Backstage Keycloak Kubernetes Model Context Protocol OAuth 2.0 Token Exchange SPIFFE SPIRE K8s k8s MCP Masato Kozuka of Hitachi lays out a security model for AI agents that act for a user, in which every call to an MCP server carries both the user&#x27;s and the agent&#x27;s identity and is allowed only if both may do it. He then shows how he would have a platform team make that the default for every team, using Keycloak, SPIRE and Backstage templates, and plays a recorded demo of an attack being stopped. Watch this if your teams connect AI agents to internal tools over MCP and you want one standard way to enforce least privilege for all of them."
+data-technologies="[&quot;Backstage&quot;, &quot;Keycloak&quot;, &quot;Kubernetes&quot;, &quot;Model Context Protocol&quot;, &quot;OAuth 2.0 Token Exchange&quot;, &quot;SPIFFE&quot;, &quot;SPIRE&quot;]" data-demo="yes"
+data-length="30" data-level="Advanced" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-0">Platform Engineering</span><span class="demo-badge">Demo</span></div>
+<h3><a href="../talks/4T8Sy76WppM.html">Least-Privilege by Default: Standardizing Identity-Aware AI Agent Access into a Golden Path</a></h3>
+<p class="speakers">Masato Kozuka</p><p class="card-summary">Masato Kozuka of Hitachi lays out a security model for AI agents that act for a user, in which every call to an MCP server carries both the user&#x27;s and the agent&#x27;s identity and is allowed only if both may do it. He then shows how he would have a platform team make that the default for every team, using Keycloak, SPIRE and Backstage templates, and plays a recorded demo of an attack being stopped.</p>
+<p class="schedule-summary">30 min slot · Advanced · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Security%2C%20identity%20and%20policy#library">Security, identity and policy</a><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a><a class="tag theme-tag" href="../index.html?theme=Platform%20engineering%20and%20developer%20experience#library">Platform engineering and developer experience</a></div><p class="card-watch"><strong>Watch this if:</strong> your teams connect AI agents to internal tools over MCP and you want one standard way to enforce least privilege for all of them.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=4T8Sy76WppM&amp;t=296s" aria-label="Watch at 4:56">4:56</a> <span>Kozuka explains exchanging the token at every hop with OAuth token exchange, so each token is valid for one MCP server only while the sub claim stays the user.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=4T8Sy76WppM&amp;t=340s" aria-label="Watch at 5:40">5:40</a> <span>He calls letting the agent log in as itself with the client credentials grant a confused deputy, and says they disable agent service accounts and reject any token without a user.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=4T8Sy76WppM&amp;t=432s" aria-label="Watch at 7:12">7:12</a> <span>He describes proving the agent&#x27;s identity with SPIFFE: the pod&#x27;s namespace and image digest are checked before it gets a short-lived ID, in place of a static key anyone could copy.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=4T8Sy76WppM&amp;t=839s" aria-label="Watch at 13:59">13:59</a> <span>He splits the seven rules: three are enforced in Keycloak and SPIRE where no agent can skip them, and four ship in the sidecar and server middleware that Backstage templates generate.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=4T8Sy76WppM&amp;t=1506s" aria-label="Watch at 25:06">25:06</a> <span>In the recorded demo a receipt with a hidden instruction sends the agent after payroll data, and Kozuka shows Keycloak refusing a token for the payroll server because it was never approved.</span></li></ol>
+<a class="card-link" href="../talks/4T8Sy76WppM.html" aria-label="Explore Least-Privilege by Default: Standardizing Identity-Aware AI Agent Access into a Golden Path">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

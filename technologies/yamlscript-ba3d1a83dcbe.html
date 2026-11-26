@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>YAMLScript talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>YAMLScript</h1>
+<p class="hero-copy">1 talk mentions YAMLScript.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/glojure-6844c61dc865.html">Glojure</a> <span>1 shared talk</span></li><li><a href="../technologies/go-yaml-aba9b5bd0e3f.html">go-yaml</a> <span>1 shared talk</span></li><li><a href="../technologies/helm-ab14d3faa25e.html">Helm</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>1 shared talk</span></li><li><a href="../technologies/yaml-9831daaaa0a9.html">YAML</a> <span>1 shared talk</span></li><li><a href="../technologies/yaml-schema-8062edc2ea61.html">YAML Schema</a> <span>1 shared talk</span></li><li><a href="../technologies/yamlstar-04712bff3635.html">YAMLStar</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning YAMLScript"><ul class="talk-list"><li class="talk-card" data-talk="M39Zh90Lh4A" data-track="Platform Engineering"
+data-themes="[&quot;Platform engineering and developer experience&quot;]" data-search="Introducing go-yaml&#x27;s New Plugin System Ingy döt Net Platform Engineering  Platform engineering and developer experience Kubernetes Helm YAML go-yaml YAMLScript YAMLStar YAML Schema Glojure Glojure go-yaml Helm Kubernetes YAML YAML Schema YAMLScript YAMLStar K8s k8s Ingy döt Net, a co-creator of YAML who now leads maintenance of go-yaml, shows the plugin system in go-yaml v4, which he says lets an application change how YAML is loaded without changing the spec. He runs live examples of plugins for importing files, aliases across documents and tab indentation, and also tours his related projects YAMLScript, YAML Schema and YAMLStar. Watch this if you maintain Go software that reads YAML and have wanted imports, custom tags or other behavior the standard loader does not give you."
+data-technologies="[&quot;Glojure&quot;, &quot;go-yaml&quot;, &quot;Helm&quot;, &quot;Kubernetes&quot;, &quot;YAML&quot;, &quot;YAML Schema&quot;, &quot;YAMLScript&quot;, &quot;YAMLStar&quot;]" data-demo="yes"
+data-length="30" data-level="Any Level" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-0">Platform Engineering</span><span class="demo-badge">Demo</span></div>
+<h3><a href="../talks/M39Zh90Lh4A.html">Introducing go-yaml&#x27;s New Plugin System</a></h3>
+<p class="speakers">Ingy döt Net</p><p class="card-summary">Ingy döt Net, a co-creator of YAML who now leads maintenance of go-yaml, shows the plugin system in go-yaml v4, which he says lets an application change how YAML is loaded without changing the spec. He runs live examples of plugins for importing files, aliases across documents and tab indentation, and also tours his related projects YAMLScript, YAML Schema and YAMLStar.</p>
+<p class="schedule-summary">30 min slot · Any Level · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Platform%20engineering%20and%20developer%20experience#library">Platform engineering and developer experience</a></div><p class="card-watch"><strong>Watch this if:</strong> you maintain Go software that reads YAML and have wanted imports, custom tags or other behavior the standard loader does not give you.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=M39Zh90Lh4A&amp;t=219s" aria-label="Watch at 3:39">3:39</a> <span>He runs go-yaml v4&#x27;s alias data and function tag plugins live: an import tag loads a separate vars file into an anchor, so shared values no longer have to appear in the output document.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=M39Zh90Lh4A&amp;t=389s" aria-label="Watch at 6:29">6:29</a> <span>He walks through the loader&#x27;s phases (read, scan, parse, compose, resolve, construct) and shows that the resolver gives every untagged node a tag, which is what the plugins hook into.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=M39Zh90Lh4A&amp;t=833s" aria-label="Watch at 13:53">13:53</a> <span>He tells how the widely used go-yaml/yaml was archived in 2025 and how, working with Dims, the Kubernetes fork&#x27;s patches were folded into the new yaml/go-yaml, which he says Kubernetes now uses.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=M39Zh90Lh4A&amp;t=1018s" aria-label="Watch at 16:58">16:58</a> <span>He defines a plugin as a piece of the library that people want different behavior from, moved behind an API, and says it lets the core team try ideas before they go into the spec.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=M39Zh90Lh4A&amp;t=1503s" aria-label="Watch at 25:03">25:03</a> <span>He demos tab-indented YAML loading through a plugin, then says the parser itself can be swapped and shows a CSV parser he wrote in YAMLScript.</span></li></ol>
+<a class="card-link" href="../talks/M39Zh90Lh4A.html" aria-label="Explore Introducing go-yaml&#x27;s New Plugin System">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

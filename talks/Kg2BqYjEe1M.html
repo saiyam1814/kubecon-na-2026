@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Autoscaling at Scale with KEDA | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-0">Operations + Performance</span></div>
+<h1>Autoscaling at Scale with KEDA</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Ali Aqel</dd></div>
+<div><dt>Track</dt><dd>Operations + Performance</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a><a class="tag theme-tag" href="../index.html?theme=Delivery%2C%20GitOps%20and%20release%20safety#library">Delivery, GitOps and release safety</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Any Level</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=Kg2BqYjEe1M">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1247103">Schedule</a> · <a href="https://sessionize.com/download/igxajket~npgdVYdG7M5sPh9B29pDrM.pdf~autoscaling-at-scale-with-keda.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Ali Aqel, a Stripe engineer and KEDA contributor, describes how Stripe&#x27;s Kubernetes team runs workload autoscaling with KEDA across its clusters, organized around four principles: safe, stable, scalable and simple. He covers rollout protection, break-glass locks, canaries for every scaler, tuning and per-cluster Prometheus workspaces, and walks through two hypothetical incidents.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you run KEDA or HPA on large clusters and want one company&#x27;s guardrails, locks and canaries.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=Kg2BqYjEe1M&amp;t=189s" aria-label="Watch at 3:09">3:09</a> <span>Ali gives Stripe&#x27;s numbers: more than 90 self-managed clusters, about 84,000 deployments and 180,000 application pods for over 8,600 services, run by about a dozen Kubernetes engineers.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Kg2BqYjEe1M&amp;t=603s" aria-label="Watch at 10:03">10:03</a> <span>He says Stripe built a pod deletion cost controller that annotates pods so scale-downs keep the spread across availability zones.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Kg2BqYjEe1M&amp;t=662s" aria-label="Watch at 11:02">11:02</a> <span>He describes scale-down and scale-up locks, from one service up to global, built on KEDA&#x27;s pause annotation and annotations he says Stripe upstreamed, including force activation.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Kg2BqYjEe1M&amp;t=797s" aria-label="Watch at 13:17">13:17</a> <span>He says a canary for every supported scaler pages the team when degraded, and that these canaries found Prometheus rate limiting and a DNS problem.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Kg2BqYjEe1M&amp;t=1005s" aria-label="Watch at 16:45">16:45</a> <span>He says scaling on Prometheus broke Amazon Managed Prometheus rate limits, which led through caching and sync period changes to one autoscaling workspace per cluster.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/argo-rollouts-5caab7b8435d.html">Argo Rollouts</a><a class="tag project-tag" href="../technologies/headlamp-c93c38c6a55e.html">Headlamp</a><a class="tag project-tag" href="../technologies/karpenter-5648b3be51b2.html">Karpenter</a><a class="tag project-tag" href="../technologies/keda-308c477e9c54.html">KEDA</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/prometheus-1809f7cd0c75.html">Prometheus</a><a class="tag project-tag" href="../technologies/temporal-e4540a7c8404.html">Temporal</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/amazon-managed-service-for-prometheus-388f09dffbd0.html">Amazon Managed Service for Prometheus</a><a class="tag project-tag" href="../technologies/aws-7d1507284a57.html">AWS</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

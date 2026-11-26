@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Datomic talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>Datomic</h1>
+<p class="hero-copy">1 talk mentions Datomic.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/amazon-dynamodb-f6fce77d4a6f.html">Amazon DynamoDB</a> <span>1 shared talk</span></li><li><a href="../technologies/amazon-s3-ebf704baa88d.html">Amazon S3</a> <span>1 shared talk</span></li><li><a href="../technologies/amazon-sqs-0ad8c3795bf9.html">Amazon SQS</a> <span>1 shared talk</span></li><li><a href="../technologies/apache-kafka-8bcf11933046.html">Apache Kafka</a> <span>1 shared talk</span></li><li><a href="../technologies/aws-7d1507284a57.html">AWS</a> <span>1 shared talk</span></li><li><a href="../technologies/clojure-4f3ea34e0a3a.html">Clojure</a> <span>1 shared talk</span></li><li><a href="../technologies/honeycomb-dd0cf4ed95b6.html">Honeycomb</a> <span>1 shared talk</span></li><li><a href="../technologies/honeycomb-refinery-7aa09b8e46c2.html">Honeycomb Refinery</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning Datomic"><ul class="talk-list"><li class="talk-card" data-talk="lxXoNNwmgIc" data-track="Observability"
+data-themes="[&quot;Observability and reliability&quot;]" data-search="Tracing at Scale: Running a 16 Billion Spans/Hour Pipeline at Nubank Felipe Araujo Kaynan Coelho Observability  Observability and reliability OpenTelemetry OpenTelemetry Collector KEDA Amazon S3 Apache Kafka AWS Honeycomb Honeycomb Refinery Amazon SQS Datomic Amazon DynamoDB Clojure Amazon DynamoDB Amazon S3 Amazon SQS Apache Kafka AWS Clojure Datomic Honeycomb Honeycomb Refinery KEDA OpenTelemetry OpenTelemetry Collector DynamoDB S3 Kafka Amazon Web Services OTel OTel Collector The speakers describe how Nubank built its distributed tracing pipeline, from instrumenting a handful of shared libraries to an ingestion platform built around the OpenTelemetry Collector, micro-batches on S3 and queues, KEDA scaling and tail sampling with Refinery before data goes to Honeycomb. They share the sampling rules they settled on, cases where traces helped them cut latency and storage, and advice for teams building something similar. You are scaling distributed tracing past what head sampling and a single vendor pipeline handle and want one bank&#x27;s architecture and sampling choices."
+data-technologies="[&quot;Amazon DynamoDB&quot;, &quot;Amazon S3&quot;, &quot;Amazon SQS&quot;, &quot;Apache Kafka&quot;, &quot;AWS&quot;, &quot;Clojure&quot;, &quot;Datomic&quot;, &quot;Honeycomb&quot;, &quot;Honeycomb Refinery&quot;, &quot;KEDA&quot;, &quot;OpenTelemetry&quot;, &quot;OpenTelemetry Collector&quot;]" data-demo="no"
+data-length="30" data-level="Any Level" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-3">Observability</span></div>
+<h3><a href="../talks/lxXoNNwmgIc.html">Tracing at Scale: Running a 16 Billion Spans/Hour Pipeline at Nubank</a></h3>
+<p class="speakers">Felipe Araujo, Kaynan Coelho</p><p class="card-summary">The speakers describe how Nubank built its distributed tracing pipeline, from instrumenting a handful of shared libraries to an ingestion platform built around the OpenTelemetry Collector, micro-batches on S3 and queues, KEDA scaling and tail sampling with Refinery before data goes to Honeycomb. They share the sampling rules they settled on, cases where traces helped them cut latency and storage, and advice for teams building something similar.</p>
+<p class="schedule-summary">30 min slot · Any Level · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a></div><p class="card-watch"><strong>Watch this if:</strong> You are scaling distributed tracing past what head sampling and a single vendor pipeline handle and want one bank&#x27;s architecture and sampling choices.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=lxXoNNwmgIc&amp;t=94s" aria-label="Watch at 1:34">1:34</a> <span>Kaynan Coelho says the pipeline now receives more than 23 billion spans per hour, over 700 terabytes of data a day, and that five engineers work on it full time.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lxXoNNwmgIc&amp;t=241s" aria-label="Watch at 4:01">4:01</a> <span>Coelho explains that because most Nubank services share the same Clojure template and libraries, they instrumented six core libraries instead of more than 4,000 services.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lxXoNNwmgIc&amp;t=501s" aria-label="Watch at 8:21">8:21</a> <span>Felipe Araujo says streaming was too expensive and large batches too slow, so the collector writes roughly 10-second micro-batches to S3 and a queue notification tells the next application to pick them up, a pattern he identifies as claim check.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lxXoNNwmgIc&amp;t=726s" aria-label="Watch at 12:06">12:06</a> <span>Araujo says percentage-based tail sampling hid rare critical paths, so they moved to dynamic rules that keep slow requests and all 500 errors and reduce fast, common successes.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lxXoNNwmgIc&amp;t=863s" aria-label="Watch at 14:23">14:23</a> <span>Coelho describes using traces to find that some app requests waited on more than 30 content providers, and says the fixes brought latency in those transactions down to about 200 milliseconds.</span></li></ol>
+<a class="card-link" href="../talks/lxXoNNwmgIc.html" aria-label="Explore Tracing at Scale: Running a 16 Billion Spans/Hour Pipeline at Nubank">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

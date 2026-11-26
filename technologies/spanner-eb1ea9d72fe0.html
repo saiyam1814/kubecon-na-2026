@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Spanner talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>Spanner</h1>
+<p class="hero-copy">1 talk mentions Spanner.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/amazon-eks-d1b0dcc4b268.html">Amazon EKS</a> <span>1 shared talk</span></li><li><a href="../technologies/api-priority-and-fairness-496b87253121.html">API Priority and Fairness</a> <span>1 shared talk</span></li><li><a href="../technologies/cilium-887318495291.html">Cilium</a> <span>1 shared talk</span></li><li><a href="../technologies/coredns-8a32e516d741.html">CoreDNS</a> <span>1 shared talk</span></li><li><a href="../technologies/etcd-c38cbd92fce4.html">etcd</a> <span>1 shared talk</span></li><li><a href="../technologies/google-kubernetes-engine-eda631ccae23.html">Google Kubernetes Engine</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-api-server-73536e21b454.html">Kubernetes API server</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning Spanner"><ul class="talk-list"><li class="talk-card" data-talk="QuoQlCSXQbA" data-track="Operations + Performance"
+data-themes="[&quot;Observability and reliability&quot;, &quot;Kubernetes internals and runtimes&quot;]" data-search="How Anthropic Almost Melted GKE (And the PRs That Saved It) Maciek Różacki Jian Cheung Operations + Performance  Observability and reliability Kubernetes internals and runtimes Kubernetes Google Kubernetes Engine Kubernetes API server etcd Cilium CoreDNS Vertical Pod Autoscaler Amazon EKS Spanner API Priority and Fairness Amazon EKS API Priority and Fairness Cilium CoreDNS etcd Google Kubernetes Engine Kubernetes Kubernetes API server Spanner Vertical Pod Autoscaler EKS GKE K8s k8s kube-apiserver VPA Maciek Różacki and Jian Cheung walk through six incidents from about two years of running very large GKE clusters for Anthropic, covering API server overload, a stuck StatefulSet controller, and a restart storm. For each one they describe what they saw, the short-term mitigation, and the upstream Kubernetes change they say followed. Watch this if you run large or high-churn clusters and want concrete failure stories about list requests, watch caches, startup probes and staged recovery."
+data-technologies="[&quot;Amazon EKS&quot;, &quot;API Priority and Fairness&quot;, &quot;Cilium&quot;, &quot;CoreDNS&quot;, &quot;etcd&quot;, &quot;Google Kubernetes Engine&quot;, &quot;Kubernetes&quot;, &quot;Kubernetes API server&quot;, &quot;Spanner&quot;, &quot;Vertical Pod Autoscaler&quot;]" data-demo="no"
+data-length="30" data-level="Advanced" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-0">Operations + Performance</span></div>
+<h3><a href="../talks/QuoQlCSXQbA.html">How Anthropic Almost Melted GKE (And the PRs That Saved It)</a></h3>
+<p class="speakers">Maciek Różacki, Jian Cheung</p><p class="card-summary">Maciek Różacki and Jian Cheung walk through six incidents from about two years of running very large GKE clusters for Anthropic, covering API server overload, a stuck StatefulSet controller, and a restart storm. For each one they describe what they saw, the short-term mitigation, and the upstream Kubernetes change they say followed.</p>
+<p class="schedule-summary">30 min slot · Advanced · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></div><p class="card-watch"><strong>Watch this if:</strong> you run large or high-churn clusters and want concrete failure stories about list requests, watch caches, startup probes and staged recovery.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=QuoQlCSXQbA&amp;t=206s" aria-label="Watch at 3:26">3:26</a> <span>Różacki describes how API Priority and Fairness underestimated the cost of large pod lists, leading to API server replicas running out of memory in a loop, and names the watch cache and list pricing changes that followed.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=QuoQlCSXQbA&amp;t=440s" aria-label="Watch at 7:20">7:20</a> <span>Cheung describes a per-node add-on whose consistent reads fell through to a full storage scan when one replica&#x27;s watch cache lagged, and says a one-line change to read from the cache resolved it that night.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=QuoQlCSXQbA&amp;t=808s" aria-label="Watch at 13:28">13:28</a> <span>Cheung explains how a 404 on a pod delete made the StatefulSet controller abort its whole sync during scale-down, and advises operator authors to treat not-found on delete as success.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=QuoQlCSXQbA&amp;t=1012s" aria-label="Watch at 16:52">16:52</a> <span>Cheung walks through the restart loop in which the 210-second startup probe budget the kubelet allowed was shorter than the roughly 276 seconds the CNI agent needed to become ready at that cluster size.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=QuoQlCSXQbA&amp;t=1141s" aria-label="Watch at 19:01">19:01</a> <span>The speakers describe recovering by blocking node traffic at the firewall so the control plane could warm up, then letting nodes back in one address range at a time.</span></li></ol>
+<a class="card-link" href="../talks/QuoQlCSXQbA.html" aria-label="Explore How Anthropic Almost Melted GKE (And the PRs That Saved It)">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

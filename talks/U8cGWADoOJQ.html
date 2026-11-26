@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Mythos vs Maintainers: Drowning in the Vulnerability Tsunami | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-7">Security</span></div>
+<h1>Mythos vs Maintainers: Drowning in the Vulnerability Tsunami</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Fabian Kammel, John Kjell</dd></div>
+<div><dt>Track</dt><dd>Security</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Security%2C%20identity%20and%20policy#library">Security, identity and policy</a><a class="tag theme-tag" href="../index.html?theme=Community%20and%20open%20source%20adoption#library">Community and open source adoption</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Any Level</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=U8cGWADoOJQ">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1247249">Schedule</a> · <a href="https://sessionize.com/download/iugotha~986CKKA4SVewC33eCco1kR.pdf~kubecon-na-2026_-mythos-vs-maintainers.pptx.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Fabian Kammel, speaking as a security researcher, and John Kjell, speaking as a maintainer of in-toto&#x27;s Witness, walk through finding, reporting, triaging, fixing and following up on a vulnerability at a time when they say AI models let anyone file reports that are hard to tell from real ones. They give recommendations for each side in three levels, from steps to adopt today to actions meant to help the wider ecosystem, and ask for empathy toward maintainers, whom they call the bottleneck.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you maintain an open source project or report vulnerabilities to one and want both sides&#x27; concrete steps for handling AI-assisted security reports.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=U8cGWADoOJQ&amp;t=225s" aria-label="Watch at 3:45">3:45</a> <span>Kjell says AI-generated reports were easy to spot and close a year ago, but that newer models let novices submit reports that look real and take a lot of effort to verify, and that curl and bug bounty programs have pulled back as a result.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=U8cGWADoOJQ&amp;t=505s" aria-label="Watch at 8:25">8:25</a> <span>Kammel says the first thing he does for AI-assisted research is build a sandbox, preferring micro VMs over sandboxes that share the host kernel, and that researchers should understand and reproduce a model&#x27;s finding before reporting it.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=U8cGWADoOJQ&amp;t=640s" aria-label="Watch at 10:40">10:40</a> <span>Kjell advises maintainers to turn on GitHub&#x27;s private vulnerability reporting and publish a security policy with a response time frame, report expectations, supported versions, scope and a threat model in the repository.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=U8cGWADoOJQ&amp;t=874s" aria-label="Watch at 14:34">14:34</a> <span>Kammel lists what a researcher&#x27;s report should do: follow the project&#x27;s security policy, check for duplicates, cut the model&#x27;s text down, and propose a severity score, affected versions and a weakness type.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=U8cGWADoOJQ&amp;t=1493s" aria-label="Watch at 24:53">24:53</a> <span>Kjell shows that a GitHub temporary private fork has no Actions tab, and says the Witness maintainers keep their own detached fork so that fixes can run through CI before release.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/archivista-1b11b411f0e1.html">Archivista</a><a class="tag project-tag" href="../technologies/curl-427e4b79b1f0.html">curl</a><a class="tag project-tag" href="../technologies/etcd-c38cbd92fce4.html">etcd</a><a class="tag project-tag" href="../technologies/github-c0b0109d9439.html">GitHub</a><a class="tag project-tag" href="../technologies/github-actions-dce316af5efc.html">GitHub Actions</a><a class="tag project-tag" href="../technologies/gvisor-1f6d325084c7.html">gVisor</a><a class="tag project-tag" href="../technologies/helm-ab14d3faa25e.html">Helm</a><a class="tag project-tag" href="../technologies/in-toto-218b19e828c1.html">in-toto</a><a class="tag project-tag" href="../technologies/openssf-8e0708ea2b6d.html">OpenSSF</a><a class="tag project-tag" href="../technologies/witness-ba1c566a4bad.html">Witness</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/claude-c857d09db23e.html">Claude</a><a class="tag project-tag" href="../technologies/codeql-134326bba1c7.html">CodeQL</a><a class="tag project-tag" href="../technologies/codex-57de4cf40144.html">Codex</a><a class="tag project-tag" href="../technologies/cvss-19fa8262617c.html">CVSS</a><a class="tag project-tag" href="../technologies/cwe-226a30c38d81.html">CWE</a><a class="tag project-tag" href="../technologies/docker-sandboxes-63d2adea4147.html">Docker Sandboxes</a><a class="tag project-tag" href="../technologies/gosec-73ed8eaa3f90.html">gosec</a><a class="tag project-tag" href="../technologies/nono-e127b3ec8c4e.html">nono</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

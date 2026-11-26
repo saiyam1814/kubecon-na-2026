@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>KEP-4330 talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>KEP-4330</h1>
+<p class="hero-copy">1 talk mentions KEP-4330.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/amazon-eks-d1b0dcc4b268.html">Amazon EKS</a> <span>1 shared talk</span></li><li><a href="../technologies/etcd-c38cbd92fce4.html">etcd</a> <span>1 shared talk</span></li><li><a href="../technologies/google-kubernetes-engine-eda631ccae23.html">Google Kubernetes Engine</a> <span>1 shared talk</span></li><li><a href="../technologies/kube-controller-manager-4a994d4ab83b.html">kube-controller-manager</a> <span>1 shared talk</span></li><li><a href="../technologies/kube-scheduler-a6fbf422f675.html">kube-scheduler</a> <span>1 shared talk</span></li><li><a href="../technologies/kubelet-1ca4bc7eb9b3.html">kubelet</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-api-server-73536e21b454.html">Kubernetes API server</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning KEP-4330"><ul class="talk-list"><li class="talk-card" data-talk="HS_gEo7shLA" data-track="Operations + Performance"
+data-themes="[&quot;Delivery, GitOps and release safety&quot;, &quot;Kubernetes internals and runtimes&quot;]" data-search="Binary Version Is Not Behavior: Skip-Level Kubernetes Control Plane Upgrades With KEP-4330 Sameer Marulkar Operations + Performance  Delivery, GitOps and release safety Kubernetes internals and runtimes Kubernetes Kubernetes API server etcd Google Kubernetes Engine Amazon EKS kube-scheduler KEP-4330 kubelet kube-controller-manager Amazon EKS etcd Google Kubernetes Engine KEP-4330 kube-controller-manager kube-scheduler kubelet Kubernetes Kubernetes API server EKS GKE K8s k8s kube-apiserver Sameer Marulkar of LinkedIn&#x27;s compute infrastructure team describes how his team moved the control planes of more than 250 on-prem clusters from Kubernetes 1.31 to 1.34 in one binary rollout by pinning the emulated version from KEP-4330 to 1.31 and promoting it later. He says this cut the upgrade from about 40 business days to under seven, and he lists the traps they hit and the metrics they used to verify what behavior was live. Watch this if you run your own Kubernetes control planes, are several minor versions behind, and want an upgrade path with a rollback step."
+data-technologies="[&quot;Amazon EKS&quot;, &quot;etcd&quot;, &quot;Google Kubernetes Engine&quot;, &quot;KEP-4330&quot;, &quot;kube-controller-manager&quot;, &quot;kube-scheduler&quot;, &quot;kubelet&quot;, &quot;Kubernetes&quot;, &quot;Kubernetes API server&quot;]" data-demo="no"
+data-length="30" data-level="Advanced" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-0">Operations + Performance</span></div>
+<h3><a href="../talks/HS_gEo7shLA.html">Binary Version Is Not Behavior: Skip-Level Kubernetes Control Plane Upgrades With KEP-4330</a></h3>
+<p class="speakers">Sameer Marulkar</p><p class="card-summary">Sameer Marulkar of LinkedIn&#x27;s compute infrastructure team describes how his team moved the control planes of more than 250 on-prem clusters from Kubernetes 1.31 to 1.34 in one binary rollout by pinning the emulated version from KEP-4330 to 1.31 and promoting it later. He says this cut the upgrade from about 40 business days to under seven, and he lists the traps they hit and the metrics they used to verify what behavior was live.</p>
+<p class="schedule-summary">30 min slot · Advanced · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Delivery%2C%20GitOps%20and%20release%20safety#library">Delivery, GitOps and release safety</a><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></div><p class="card-watch"><strong>Watch this if:</strong> you run your own Kubernetes control planes, are several minor versions behind, and want an upgrade path with a rollback step.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=HS_gEo7shLA&amp;t=95s" aria-label="Watch at 1:35">1:35</a> <span>Marulkar states the result: instead of six fleet rollouts going one minor at a time, they shipped the 1.34 binary while it still behaved like 1.31, then did a single promotion, taking about seven business days instead of 40.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=HS_gEo7shLA&amp;t=384s" aria-label="Watch at 6:24">6:24</a> <span>He explains the emulated version flag from KEP-4330: roll out the new binary with the flag pinned to the release you run today as the deploy step, then raise it later as the release step.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=HS_gEo7shLA&amp;t=570s" aria-label="Watch at 9:30">9:30</a> <span>He lists the traps: the new code still needs a canary, a feature gate removed by 1.34 stops the binary from starting so gates must be pruned first, and kubelet skew is measured against the emulated version.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=HS_gEo7shLA&amp;t=713s" aria-label="Watch at 11:53">11:53</a> <span>To verify emulation is on he says not to trust the build info, which only reports the binary, and to check the version info metric and the feature enabled metric instead.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=HS_gEo7shLA&amp;t=951s" aria-label="Watch at 15:51">15:51</a> <span>At promotion he warns of two things that are easy to miss: removed APIs keep being served during the soak and break only when the emulated version is raised, and alpha features are not covered by emulation.</span></li></ol>
+<a class="card-link" href="../talks/HS_gEo7shLA.html" aria-label="Explore Binary Version Is Not Behavior: Skip-Level Kubernetes Control Plane Upgrades With KEP-4330">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

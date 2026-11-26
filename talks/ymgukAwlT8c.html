@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Who Ran Up the Inference Bill? AI Traffic Control with KServe and Gateway API Inference Extensions | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">AI Inference + Agentic</span><span class="demo-badge">Demo</span></div>
+<h1>Who Ran Up the Inference Bill? AI Traffic Control with KServe and Gateway API Inference Extensions</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Lasse Vierow</dd></div>
+<div><dt>Track</dt><dd>AI Inference + Agentic</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=AI%20inference%20and%20serving#library">AI inference and serving</a><a class="tag theme-tag" href="../index.html?theme=Networking%20and%20connectivity#library">Networking and connectivity</a><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a><a class="tag theme-tag" href="../index.html?theme=Security%2C%20identity%20and%20policy#library">Security, identity and policy</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Beginner</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=ymgukAwlT8c">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1248185">Schedule</a> · <a href="https://sessionize.com/download/pxarqew~fo4C8khSDPVbpCryouTqT7.pdf~ai-traffic-control-with-kserve-and-gateway-api-inference-extensions.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Lasse Vierow describes why inference bills are hard to attribute, since one request can use 70 tokens and another 7,000, and proposes metering tokens per team at a gateway in front of KServe models. In a live demo on a kind cluster he shows token counts in agentgateway logs, per-team usage, a guardrail blocking a credit card number, a token budget returning 429, and failover to a cloud model.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you run shared model serving on Kubernetes and want a beginner walkthrough of splitting token spend by team at the gateway.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=ymgukAwlT8c&amp;t=157s" aria-label="Watch at 2:37">2:37</a> <span>Vierow says a request count does not explain cost because one request could consume 70 tokens and another 7,000.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=ymgukAwlT8c&amp;t=358s" aria-label="Watch at 5:58">5:58</a> <span>Vierow describes the inference extension&#x27;s endpoint picker choosing a pod by looking at KV cache, prefix and LoRA adapters instead of round robin.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=ymgukAwlT8c&amp;t=654s" aria-label="Watch at 10:54">10:54</a> <span>In the demo, Vierow shows gateway logs that now include the model that answered and the input and output token counts.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=ymgukAwlT8c&amp;t=731s" aria-label="Watch at 12:11">12:11</a> <span>Vierow shows that the mock ML research team sent only three requests but used the most tokens.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=ymgukAwlT8c&amp;t=791s" aria-label="Watch at 13:11">13:11</a> <span>Vierow shows a team that passes its 60,000 token budget getting 429 responses while another team still gets 200.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/agentgateway-56e57ada05a8.html">agentgateway</a><a class="tag project-tag" href="../technologies/cert-manager-e6bb20df7151.html">cert-manager</a><a class="tag project-tag" href="../technologies/gateway-api-2929f65596ea.html">Gateway API</a><a class="tag project-tag" href="../technologies/gateway-api-inference-extension-e298372a7bc8.html">Gateway API Inference Extension</a><a class="tag project-tag" href="../technologies/kind-0b27c158feb3.html">kind</a><a class="tag project-tag" href="../technologies/kserve-c54d3f6d2054.html">KServe</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/curl-427e4b79b1f0.html">curl</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Butane talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Project</p><h1>Butane</h1>
+<p class="hero-copy">2 talks mention Butane.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/docker-d548c5b83fa6.html">Docker</a> <span>2 shared talks</span></li><li><a href="../technologies/flatcar-container-linux-1e5710f83c80.html">Flatcar Container Linux</a> <span>2 shared talks</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>2 shared talks</span></li><li><a href="../technologies/systemd-e0031c189e34.html">systemd</a> <span>2 shared talks</span></li><li><a href="../technologies/ansible-0cb87f727f31.html">Ansible</a> <span>1 shared talk</span></li><li><a href="../technologies/aws-7d1507284a57.html">AWS</a> <span>1 shared talk</span></li><li><a href="../technologies/dm-verity-39cf48c94cb3.html">dm-verity</a> <span>1 shared talk</span></li><li><a href="../technologies/fedora-coreos-6df6f9947e80.html">Fedora CoreOS</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning Butane"><ul class="talk-list"><li class="talk-card" data-talk="YeQADbSDP2w" data-track="Project Lightning Talks"
+data-themes="[&quot;Kubernetes internals and runtimes&quot;, &quot;Delivery, GitOps and release safety&quot;]" data-search="Extending the Immutable OS: Adding Tools to Flatcar with Systemd-Sysext Jan Bronicki Project Lightning Talks  Kubernetes internals and runtimes Delivery, GitOps and release safety Flatcar Container Linux systemd Kubernetes Docker Butane systemd-sysext Butane Docker Flatcar Container Linux Kubernetes systemd systemd-sysext Flatcar K8s k8s Jan Bronicki, a Flatcar Container Linux maintainer, explains that an immutable OS has no package manager for adding software to the read-only /usr. He describes systemd-sysext as a signed, verifiable overlay on /usr for things like GPU drivers or Kubernetes binaries, and shows how it is declared in Butane. You run or are considering an immutable node OS and wonder how to add drivers or debugging tools to it."
+data-technologies="[&quot;Butane&quot;, &quot;Docker&quot;, &quot;Flatcar Container Linux&quot;, &quot;Kubernetes&quot;, &quot;systemd&quot;, &quot;systemd-sysext&quot;]" data-demo="no"
+data-length="5" data-level="" data-type="Lightning Talk">
+<div class="card-eyebrow"><span class="tag track-tag track-6">Project Lightning Talks</span></div>
+<h3><a href="../talks/YeQADbSDP2w.html">Extending the Immutable OS: Adding Tools to Flatcar with Systemd-Sysext</a></h3>
+<p class="speakers">Jan Bronicki</p><p class="card-summary">Jan Bronicki, a Flatcar Container Linux maintainer, explains that an immutable OS has no package manager for adding software to the read-only /usr. He describes systemd-sysext as a signed, verifiable overlay on /usr for things like GPU drivers or Kubernetes binaries, and shows how it is declared in Butane.</p>
+<p class="schedule-summary">5 min slot · Level not listed · Lightning Talk</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a><a class="tag theme-tag" href="../index.html?theme=Delivery%2C%20GitOps%20and%20release%20safety#library">Delivery, GitOps and release safety</a></div><p class="card-watch"><strong>Watch this if:</strong> You run or are considering an immutable node OS and wonder how to add drivers or debugging tools to it.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=YeQADbSDP2w&amp;t=46s" aria-label="Watch at 0:46">0:46</a> <span>Jan Bronicki says the core of an immutable OS, such as /usr, cannot be changed and is verifiable, meaning the kernel can check whether someone tampered with it.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=YeQADbSDP2w&amp;t=79s" aria-label="Watch at 1:19">1:19</a> <span>He says package managers such as apt or dnf do not exist on such a system, which raises the question of how to get your software onto it.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=YeQADbSDP2w&amp;t=108s" aria-label="Watch at 1:48">1:48</a> <span>He says systemd-sysext creates an overlay on top of /usr to add a particular runtime version, a GPU driver or anything else needed.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=YeQADbSDP2w&amp;t=168s" aria-label="Watch at 2:48">2:48</a> <span>He says the key part is that a sysext is not a random blob of binaries: it plugs into the immutability and verification system, so tampering would not go unnoticed.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=YeQADbSDP2w&amp;t=193s" aria-label="Watch at 3:13">3:13</a> <span>He shows a Butane config that declares which sysext version to fetch from where, says offline sources work, and says the binary is linked into /usr at boot.</span></li></ol>
+<a class="card-link" href="../talks/YeQADbSDP2w.html" aria-label="Explore Extending the Immutable OS: Adding Tools to Flatcar with Systemd-Sysext">Explore key moments <span aria-hidden="true">↗</span></a>
+</li><li class="talk-card" data-talk="_rEiDokooU8" data-track="Maintainer Track"
+data-themes="[&quot;Kubernetes internals and runtimes&quot;, &quot;Accelerators and workload scheduling&quot;]" data-search="Your GPU Nodes Deserve Better: Flatcar Container Linux for AI Workloads Jan Bronicki Sayan Chowdhury Maintainer Track Flatcar Container Linux Kubernetes internals and runtimes Accelerators and workload scheduling Flatcar Container Linux Kubernetes systemd Ignition Butane NVIDIA GPU Operator Fedora CoreOS Docker NGINX QEMU kubeadm kubectl nvidia-smi AWS Ansible dm-verity Ansible AWS Butane dm-verity Docker Fedora CoreOS Flatcar Container Linux Ignition kubeadm kubectl Kubernetes NGINX NVIDIA GPU Operator nvidia-smi QEMU systemd Amazon Web Services Flatcar K8s k8s Flatcar maintainers Jan Bronicki and Sayan Chowdhury introduce Flatcar Container Linux as an immutable, image-based operating system provisioned from a Butane configuration, and explain its read-only /usr partition, A/B updates and release channels. In recorded demos they provision a VM, add Kubernetes as a systemd system extension, bring up GPU nodes with NVIDIA drivers shipped as an extension, and switch driver versions with a config change and a reboot. Watch this if you run GPU nodes on Kubernetes and want to see how an immutable host OS handles NVIDIA driver updates and rollbacks."
+data-technologies="[&quot;Ansible&quot;, &quot;AWS&quot;, &quot;Butane&quot;, &quot;dm-verity&quot;, &quot;Docker&quot;, &quot;Fedora CoreOS&quot;, &quot;Flatcar Container Linux&quot;, &quot;Ignition&quot;, &quot;kubeadm&quot;, &quot;kubectl&quot;, &quot;Kubernetes&quot;, &quot;NGINX&quot;, &quot;NVIDIA GPU Operator&quot;, &quot;nvidia-smi&quot;, &quot;QEMU&quot;, &quot;systemd&quot;]" data-demo="yes"
+data-length="30" data-level="" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-1">Maintainer Track</span><span class="demo-badge">Demo</span></div>
+<h3><a href="../talks/_rEiDokooU8.html">Your GPU Nodes Deserve Better: Flatcar Container Linux for AI Workloads</a></h3>
+<p class="speakers">Jan Bronicki, Sayan Chowdhury</p><p class="card-summary">Flatcar maintainers Jan Bronicki and Sayan Chowdhury introduce Flatcar Container Linux as an immutable, image-based operating system provisioned from a Butane configuration, and explain its read-only /usr partition, A/B updates and release channels. In recorded demos they provision a VM, add Kubernetes as a systemd system extension, bring up GPU nodes with NVIDIA drivers shipped as an extension, and switch driver versions with a config change and a reboot.</p>
+<p class="schedule-summary">30 min slot · Level not listed · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a></div><p class="card-watch"><strong>Watch this if:</strong> you run GPU nodes on Kubernetes and want to see how an immutable host OS handles NVIDIA driver updates and rollbacks.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=_rEiDokooU8&amp;t=312s" aria-label="Watch at 5:12">5:12</a> <span>Jan Bronicki presents the idea of the operating system as code: Flatcar is provisioned rather than installed, from one Butane YAML file applied at first boot, and the whole OS updates atomically so machines do not drift.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=_rEiDokooU8&amp;t=722s" aria-label="Watch at 12:02">12:02</a> <span>Sayan Chowdhury explains A/B partition updates, in which a new version is staged to the inactive /usr partition and becomes active after a successful boot, with automatic rollback to the previous version if the boot fails.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=_rEiDokooU8&amp;t=1122s" aria-label="Watch at 18:42">18:42</a> <span>In a recorded demo, Jan Bronicki adds Kubernetes to a Flatcar VM as a systemd system extension declared in Butane, and shows kubeadm and kubectl available under the read-only /usr.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=_rEiDokooU8&amp;t=1338s" aria-label="Watch at 22:18">22:18</a> <span>He explains that NVIDIA drivers are packaged as a system extension pinned to the kernel and Flatcar release, so they update and roll back with the OS, then shows nvidia-smi working on a Flatcar GPU node.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=_rEiDokooU8&amp;t=1582s" aria-label="Watch at 26:22">26:22</a> <span>Sayan Chowdhury shows a recorded driver change on an AWS instance, editing the extension configuration from the 570 driver to 580 and rebooting to load the newer driver.</span></li></ol>
+<a class="card-link" href="../talks/_rEiDokooU8.html" aria-label="Explore Your GPU Nodes Deserve Better: Flatcar Container Linux for AI Workloads">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

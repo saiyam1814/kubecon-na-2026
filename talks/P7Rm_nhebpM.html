@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>When Infrastructure Breaks in Production: How EarnIn Brought Testing to the Full CNCF Stack | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-0">Platform Engineering</span><span class="demo-badge">Demo</span></div>
+<h1>When Infrastructure Breaks in Production: How EarnIn Brought Testing to the Full CNCF Stack</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Priya Namasivayam</dd></div>
+<div><dt>Track</dt><dd>Platform Engineering</dd></div>
+<div><dt>Topic</dt><dd>End User Talk</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Delivery%2C%20GitOps%20and%20release%20safety#library">Delivery, GitOps and release safety</a><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Any Level</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=P7Rm_nhebpM">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1246033">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Priya Namasivayam of EarnIn describes a cert-manager upgrade that looked healthy but broke Linkerd certificates and customer logins, and says the team responded by running infrastructure tests as Kubernetes resources with Testkube, triggered by Flux reconciliation. A co-presenter from Testkube runs a live demo on a kind cluster in which an operator upgrade passes health checks but fails a test workflow.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you upgrade cluster add-ons through GitOps and want to catch breakage that pod health checks do not show.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=P7Rm_nhebpM&amp;t=228s" aria-label="Watch at 3:48">3:48</a> <span>The speaker explains the incident: she says cert-manager 1.18 began rotating private keys on renewal instead of extending them, which broke certificates for Linkerd while everything looked green.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=P7Rm_nhebpM&amp;t=326s" aria-label="Watch at 5:26">5:26</a> <span>The speaker describes the fix as a Kubernetes-native testing setup built on Testkube, where tests and triggers are CRDs and a Git commit that starts Flux reconciliation also starts the tests.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=P7Rm_nhebpM&amp;t=635s" aria-label="Watch at 10:35">10:35</a> <span>The co-presenter starts the live demo by bringing up a kind cluster with Flux, CloudNativePG, cert-manager and a sample to-do application.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=P7Rm_nhebpM&amp;t=762s" aria-label="Watch at 12:42">12:42</a> <span>The co-presenter shows a Testkube test workflow for cert-manager that checks certificates are still valid after an upgrade.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=P7Rm_nhebpM&amp;t=1249s" aria-label="Watch at 20:49">20:49</a> <span>After the simulated upgrade the test workflow fails, and the co-presenter explains that the operator is running but a breaking change stops the ServiceMonitor from working.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/argo-cd-b9549e9e9e77.html">Argo CD</a><a class="tag project-tag" href="../technologies/cert-manager-e6bb20df7151.html">cert-manager</a><a class="tag project-tag" href="../technologies/cloudnativepg-92386da207cb.html">CloudNativePG</a><a class="tag project-tag" href="../technologies/docker-d548c5b83fa6.html">Docker</a><a class="tag project-tag" href="../technologies/flux-a2e10207c7be.html">Flux</a><a class="tag project-tag" href="../technologies/github-c0b0109d9439.html">GitHub</a><a class="tag project-tag" href="../technologies/kind-0b27c158feb3.html">kind</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/kyverno-6900ead2739f.html">Kyverno</a><a class="tag project-tag" href="../technologies/linkerd-3a58ad1390ab.html">Linkerd</a><a class="tag project-tag" href="../technologies/pagerduty-1c6cda31110c.html">PagerDuty</a><a class="tag project-tag" href="../technologies/podman-2f259bab93aa.html">Podman</a><a class="tag project-tag" href="../technologies/slack-877c3aec832c.html">Slack</a><a class="tag project-tag" href="../technologies/testkube-92d494d7bee7.html">Testkube</a><a class="tag project-tag" href="../technologies/trust-manager-79b77c06f7d3.html">trust-manager</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

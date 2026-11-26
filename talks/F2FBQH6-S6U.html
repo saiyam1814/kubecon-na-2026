@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Surviving the Churn: Read Replicas and Controllers for Busy Kubernetes Clusters | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-0">Operations + Performance</span></div>
+<h1>Surviving the Churn: Read Replicas and Controllers for Busy Kubernetes Clusters</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Ryan Brewster</dd></div>
+<div><dt>Track</dt><dd>Operations + Performance</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Advanced</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=F2FBQH6-S6U">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1249997">Schedule</a> · <a href="https://sessionize.com/download/ipcaxtep~WnRxBpGVL9Geck4gJDe9aP.pdf~surviving-the-churn.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>The speaker, who works at Anthropic, argues that large Kubernetes clusters stay stable only while every component stays on its watch stream, and that falling off it under churn can set off failures that load tests do not show. He explains where lock contention in controllers and the API server causes this, and describes structural isolation measures such as lock-free snapshots in controllers and caching read proxies in front of the API server.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You operate large, high-churn Kubernetes clusters and want to understand why watch streams and lock contention decide whether the control plane survives a bad minute.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=F2FBQH6-S6U&amp;t=194s" aria-label="Watch at 3:14">3:14</a> <span>The speaker gives an example of metastability: a list of pods on a node is served from the API server&#x27;s watch cache until the cache falls more than three seconds behind, then falls through to the storage layer and can knock it over.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=F2FBQH6-S6U&amp;t=724s" aria-label="Watch at 12:04">12:04</a> <span>He explains that any controller in the kube-controller-manager holding an informer read lock too long stalls event processing, so controllers act on stale state, and some then create duplicate pods and add more churn.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=F2FBQH6-S6U&amp;t=917s" aria-label="Watch at 15:17">15:17</a> <span>The speaker proposes copy-on-write snapshots in controllers so readers never take a lock, and says the roughly 10x slower data structure is worth it because synchronization, not map speed, is the bottleneck.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=F2FBQH6-S6U&amp;t=1259s" aria-label="Watch at 20:59">20:59</a> <span>He describes putting caching proxies in front of the API servers to take heavy reads off them, at the cost of a few milliseconds of delay and another distributed component to operate.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=F2FBQH6-S6U&amp;t=1620s" aria-label="Watch at 27:00">27:00</a> <span>The speaker says a slow watch client should be allowed to stall and catch up from the watch cache&#x27;s shared history instead of being kicked off, and points to a Kubernetes enhancement proposal he hopes lands in 1.38.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/client-go-8a2a2228162e.html">client-go</a><a class="tag project-tag" href="../technologies/etcd-c38cbd92fce4.html">etcd</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/kubernetes-api-server-73536e21b454.html">Kubernetes API server</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/api-priority-and-fairness-496b87253121.html">API Priority and Fairness</a><a class="tag project-tag" href="../technologies/kube-controller-manager-4a994d4ab83b.html">kube-controller-manager</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

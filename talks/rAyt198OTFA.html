@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Lessons Learned Sandboxing Agents with kagent | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">AI Inference + Agentic</span><span class="demo-badge">Demo</span></div>
+<h1>Lessons Learned Sandboxing Agents with kagent</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Peter Jausovec, Nina Polshakova, Eitan Yarmush</dd></div>
+<div><dt>Track</dt><dd>AI Inference + Agentic</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Security%2C%20identity%20and%20policy#library">Security, identity and policy</a><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Any Level</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=rAyt198OTFA">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1247753">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Peter Jausovec and Eitan Yarmush of Solo.io, the two speakers heard in the recording, walk through the sandboxing approaches they tried for kagent and say each one still kept an idle agent&#x27;s pod running or tied identity to the pod. They explain why kagent 1.0 was rebuilt on Agent Substrate, list five lessons from that work, and demo Claude Managed Agents sessions running in sandboxes on their own cluster.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you are choosing how to sandbox AI agents on Kubernetes and want to hear what one team found lacking in pod-per-agent setups.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=rAyt198OTFA&amp;t=220s" aria-label="Watch at 3:40">3:40</a> <span>Jausovec says they tried four things before Agent Substrate: their own pod-per-agent runtime, Anthropic&#x27;s Sandbox Runtime, Agent Sandbox and NVIDIA&#x27;s OpenShell, and that each solved only part of the problem.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=rAyt198OTFA&amp;t=548s" aria-label="Watch at 9:08">9:08</a> <span>Jausovec gives the reasons for Agent Substrate: idle agents are snapshotted to object storage and hold no compute, the Kubernetes API is off the hot path, restores take milliseconds, and actors are sandboxed with default-deny networking.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=rAyt198OTFA&amp;t=604s" aria-label="Watch at 10:04">10:04</a> <span>Yarmush tells how Solo started building an internal sandbox layer called Moat, then joined Google&#x27;s Agent Substrate work instead, and says kagent 1.0 is now based entirely on Agent Substrate.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=rAyt198OTFA&amp;t=1062s" aria-label="Watch at 17:42">17:42</a> <span>Yarmush starts the takeaways: isolation is table stakes and pause and resume is the hard part, every control must sit outside the agent, identity follows the actor, a suspended agent is stored data, and the sandbox runtime becomes a data format.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=rAyt198OTFA&amp;t=1376s" aria-label="Watch at 22:56">22:56</a> <span>Demo: Jausovec creates two Claude Managed Agents sessions whose sandboxes run on his cluster, shows that one session cannot read the other&#x27;s file, and shows a blocked request succeed after he applies an egress policy.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/agent-sandbox-2d1964313b00.html">Agent Sandbox</a><a class="tag project-tag" href="../technologies/agent-substrate-1067f1a4b76d.html">Agent Substrate</a><a class="tag project-tag" href="../technologies/agent2agent-protocol-fb1ce646ada6.html">Agent2Agent Protocol</a><a class="tag project-tag" href="../technologies/bubblewrap-66844b85008d.html">bubblewrap</a><a class="tag project-tag" href="../technologies/claude-code-a625159d18da.html">Claude Code</a><a class="tag project-tag" href="../technologies/claude-managed-agents-9c8b085466a8.html">Claude Managed Agents</a><a class="tag project-tag" href="../technologies/grpc-b389db1475dc.html">gRPC</a><a class="tag project-tag" href="../technologies/gvisor-1f6d325084c7.html">gVisor</a><a class="tag project-tag" href="../technologies/kagent-4690e9665ffd.html">kagent</a><a class="tag project-tag" href="../technologies/kata-containers-1a987ab98658.html">Kata Containers</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/model-context-protocol-9c5da690faad.html">Model Context Protocol</a><a class="tag project-tag" href="../technologies/openshell-dc5cbc21a452.html">OpenShell</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/anthropic-sandbox-runtime-61951e322955.html">Anthropic Sandbox Runtime</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

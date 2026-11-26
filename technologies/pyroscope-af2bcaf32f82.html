@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Pyroscope talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Project</p><h1>Pyroscope</h1>
+<p class="hero-copy">1 talk mentions Pyroscope.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p><p class="muted">Also indexed as: Grafana Pyroscope.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/azure-kubernetes-service-394f8f8f7ed2.html">Azure Kubernetes Service</a> <span>1 shared talk</span></li><li><a href="../technologies/cuda-e636c973d999.html">CUDA</a> <span>1 shared talk</span></li><li><a href="../technologies/ebpf-942d8abc75dd.html">eBPF</a> <span>1 shared talk</span></li><li><a href="../technologies/grafana-cace491b6955.html">Grafana</a> <span>1 shared talk</span></li><li><a href="../technologies/helm-ab14d3faa25e.html">Helm</a> <span>1 shared talk</span></li><li><a href="../technologies/inspektor-gadget-44d2960b6381.html">Inspektor Gadget</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>1 shared talk</span></li><li><a href="../technologies/nvml-e41f6a9c0923.html">NVML</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning Pyroscope"><ul class="talk-list"><li class="talk-card" data-talk="F1_mt2wx8LA" data-track="Emerging + Advanced"
+data-themes="[&quot;Observability and reliability&quot;, &quot;Accelerators and workload scheduling&quot;]" data-search="GPU Observability with eBPF: From Kernel Hooks to Kubernetes Metrics Qasim Sarfraz Michael Friese Emerging + Advanced  Observability and reliability Accelerators and workload scheduling Inspektor Gadget eBPF Kubernetes vLLM Prometheus Grafana Pyroscope OpenTelemetry Helm WebAssembly Azure Kubernetes Service CUDA NVML uprobes Azure Kubernetes Service CUDA eBPF Grafana Helm Inspektor Gadget Kubernetes NVML OpenTelemetry Prometheus Pyroscope uprobes vLLM WebAssembly AKS K8s k8s OTel Grafana Pyroscope Wasm Inspektor Gadget maintainers Qasim Sarfraz and Michael Friese of Microsoft show how eBPF probes on CUDA libraries can report GPU memory allocations per pod and trace them back to application code without changing the application. They demo allocation profiles and a Grafana dashboard for a vLLM workload, then explain how gadgets are packaged as OCI images and installed with one Helm chart. Watch this if you run GPU inference on Kubernetes and want per-pod GPU memory metrics and allocation profiles without changing application code."
+data-technologies="[&quot;Azure Kubernetes Service&quot;, &quot;CUDA&quot;, &quot;eBPF&quot;, &quot;Grafana&quot;, &quot;Helm&quot;, &quot;Inspektor Gadget&quot;, &quot;Kubernetes&quot;, &quot;NVML&quot;, &quot;OpenTelemetry&quot;, &quot;Prometheus&quot;, &quot;Pyroscope&quot;, &quot;uprobes&quot;, &quot;vLLM&quot;, &quot;WebAssembly&quot;]" data-demo="yes"
+data-length="30" data-level="Advanced" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-2">Emerging + Advanced</span><span class="demo-badge">Demo</span></div>
+<h3><a href="../talks/F1_mt2wx8LA.html">GPU Observability with eBPF: From Kernel Hooks to Kubernetes Metrics</a></h3>
+<p class="speakers">Qasim Sarfraz, Michael Friese</p><p class="card-summary">Inspektor Gadget maintainers Qasim Sarfraz and Michael Friese of Microsoft show how eBPF probes on CUDA libraries can report GPU memory allocations per pod and trace them back to application code without changing the application. They demo allocation profiles and a Grafana dashboard for a vLLM workload, then explain how gadgets are packaged as OCI images and installed with one Helm chart.</p>
+<p class="schedule-summary">30 min slot · Advanced · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a></div><p class="card-watch"><strong>Watch this if:</strong> you run GPU inference on Kubernetes and want per-pod GPU memory metrics and allocation profiles without changing application code.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=F1_mt2wx8LA&amp;t=133s" aria-label="Watch at 2:13">2:13</a> <span>Sarfraz explains attaching uprobes and uretprobes to CUDA allocation and free functions and recording each call in BPF maps, which the framework enriches with pod and namespace and exposes to Prometheus.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=F1_mt2wx8LA&amp;t=345s" aria-label="Watch at 5:45">5:45</a> <span>In a demo he reads an allocation profile for a vLLM workload and uses it to raise the GPU memory utilization setting, which he says yields about 3 GB more allocation.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=F1_mt2wx8LA&amp;t=591s" aria-label="Watch at 9:51">9:51</a> <span>He says device state such as memory held and utilization comes from NVIDIA&#x27;s NVML library, not from eBPF probes, and is joined with the eBPF data per workload.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=F1_mt2wx8LA&amp;t=756s" aria-label="Watch at 12:36">12:36</a> <span>Friese describes a gadget as an OCI image holding eBPF programs, optional WebAssembly modules, metadata YAML and BTF information, with signatures verified by default.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=F1_mt2wx8LA&amp;t=996s" aria-label="Watch at 16:36">16:36</a> <span>He lists four official GPU gadgets covering allocation activity, allocation call stacks, per-GPU state and per-pod state, and says profiles can go to Pyroscope or any OpenTelemetry endpoint.</span></li></ol>
+<a class="card-link" href="../talks/F1_mt2wx8LA.html" aria-label="Explore GPU Observability with eBPF: From Kernel Hooks to Kubernetes Metrics">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

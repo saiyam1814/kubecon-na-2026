@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Simplifying Distributed LLM Serving: What&#x27;s New in KServe | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-6">Project Lightning Talks</span></div>
+<h1>Simplifying Distributed LLM Serving: What&#x27;s New in KServe</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Gavrish Prabhu</dd></div>
+<div><dt>Track</dt><dd>Project Lightning Talks</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=AI%20inference%20and%20serving#library">AI inference and serving</a><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>5 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Lightning Talk</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=FI-31YtwBKE">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1289836">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Gavrish Prabhu, a KServe maintainer, says plain vLLM pods are not enough for production LLM serving, which also needs routers, proxies and KV cache management. He introduces KServe&#x27;s LLMInferenceService custom resource for generative AI workloads and outlines its model, router and template components.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You serve LLMs on Kubernetes and want a short introduction to KServe&#x27;s LLMInferenceService resource.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=FI-31YtwBKE&amp;t=28s" aria-label="Watch at 0:28">0:28</a> <span>Gavrish Prabhu says KServe started with predictive AI as part of the Kubeflow project and that moving to LLMs was a normal transition.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=FI-31YtwBKE&amp;t=50s" aria-label="Watch at 0:50">0:50</a> <span>He says running plain vLLM pods does not help in production-grade systems, which need routers, proxies, KV cache management and more.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=FI-31YtwBKE&amp;t=67s" aria-label="Watch at 1:07">1:07</a> <span>He says the long-standing InferenceService CRD is battle tested but not meant for generative AI use cases, which need more templates and worker nodes.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=FI-31YtwBKE&amp;t=91s" aria-label="Watch at 1:31">1:31</a> <span>He says the new LLMInferenceService CRD is specific to generative AI and can manage single-node and multi-node setups, prefill and decode pods, KV cache routing and gateway configuration.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=FI-31YtwBKE&amp;t=124s" aria-label="Watch at 2:04">2:04</a> <span>He says LLMInferenceService has three main parts: a model component, a router component for routing, gateway and schedulers, and a template for workers and runtime.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/kserve-c54d3f6d2054.html">KServe</a><a class="tag project-tag" href="../technologies/kubeflow-22db977b4caf.html">Kubeflow</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/llm-d-82cd4b3d57e4.html">llm-d</a><a class="tag project-tag" href="../technologies/vllm-ec8207a3dde6.html">vLLM</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

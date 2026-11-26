@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Splitting the Monolith at Cloudera - Building Fault-Tolerant Workflows with Cadence | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-3">Application Development + Delivery</span></div>
+<h1>Splitting the Monolith at Cloudera - Building Fault-Tolerant Workflows with Cadence</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Soma Koltai, Ender Demirkaya</dd></div>
+<div><dt>Track</dt><dd>Application Development + Delivery</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a><a class="tag theme-tag" href="../index.html?theme=Data%2C%20storage%20and%20state#library">Data, storage and state</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Advanced</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=OU128AzulIM">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1247100">Schedule</a> · <a href="https://sessionize.com/download/ikbajjet~hEpXM8hc2t4R1aW9PaprvY.pdf~splitting-the-monolith-at-cloudera-building-fault-tolerant-workflows-with-cadence.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Soma Koltai of Cloudera describes moving the Cloudera Data Warehouse control service from a single Go binary to Cadence workflows, using a small bridging layer shaped like the Cadence client API and a lease service on PostgreSQL so the refactoring could start before Cadence was integrated. Ender Demirkaya of the Cadence project explains how workflows and activities recover state, and says the Cadence team built distributed semaphores after hearing about Cloudera&#x27;s use.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you are breaking up a stateful monolith with long-running operations and want a staged way to adopt a workflow engine.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=OU128AzulIM&amp;t=107s" aria-label="Watch at 1:47">1:47</a> <span>Koltai says provisioning a cluster and restoring workloads can take a whole hour, and under the previous architecture a failure meant the whole process was retried.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=OU128AzulIM&amp;t=336s" aria-label="Watch at 5:36">5:36</a> <span>Demirkaya explains that developers annotate one function as a workflow and its external calls as activities, and if everything crashes another worker continues where it left off.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=OU128AzulIM&amp;t=588s" aria-label="Watch at 9:48">9:48</a> <span>Koltai describes the Async Executor, a bridging layer modeled on the Cadence client API that he says took about 600 lines and two weeks, and let them reuse every activity handler when they switched to Cadence.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=OU128AzulIM&amp;t=752s" aria-label="Watch at 12:32">12:32</a> <span>For locking, Koltai says they chose leases, locks with a time to live, behind a three-method interface, implemented with essentially one insert call on the PostgreSQL database they already had.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=OU128AzulIM&amp;t=1134s" aria-label="Watch at 18:54">18:54</a> <span>Koltai tells of a memory leak that went unnoticed because Karpenter rescheduled the pod before it hit its memory limit, and says restarts after the migration no longer caused workflow failures or pages.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/apache-hive-d64ffc476887.html">Apache Hive</a><a class="tag project-tag" href="../technologies/apache-impala-15bfa64254fa.html">Apache Impala</a><a class="tag project-tag" href="../technologies/cadence-4f6b9e1c24d9.html">Cadence</a><a class="tag project-tag" href="../technologies/helm-ab14d3faa25e.html">Helm</a><a class="tag project-tag" href="../technologies/karpenter-5648b3be51b2.html">Karpenter</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/postgresql-a478b4566be5.html">PostgreSQL</a><a class="tag project-tag" href="../technologies/red-hat-openshift-890de5217999.html">Red Hat OpenShift</a><a class="tag project-tag" href="../technologies/rke-9f8a9d66ab54.html">RKE</a><a class="tag project-tag" href="../technologies/trino-b612467da047.html">Trino</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/redlock-74bac307325a.html">Redlock</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

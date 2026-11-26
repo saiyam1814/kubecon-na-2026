@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>The Prompt Layer: What Platform Engineering Has to Own Next | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-0">Platform Engineering</span><span class="demo-badge">Demo</span></div>
+<h1>The Prompt Layer: What Platform Engineering Has to Own Next</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Atulpriya Sharma</dd></div>
+<div><dt>Track</dt><dd>Platform Engineering</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Platform%20engineering%20and%20developer%20experience#library">Platform engineering and developer experience</a><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Any Level</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=vZ64Kfk-f0U">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1243089">Schedule</a></p>
+<section><h2>Talk summary</h2><p>The speaker argues that developers still decide alone which model to use, what to send to it and how much to spend, and that platform teams should own these decisions. He describes a prompt layer of five components built from existing tools and shows a recorded demo where an allow list keeps a secret file out of a prompt.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You run a platform team and developers in your organization each choose their own AI models, context and budgets.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=vZ64Kfk-f0U&amp;t=711s" aria-label="Watch at 11:51">11:51</a> <span>The speaker says platforms already cover running and serving models, but developers still carry the load of choosing a model for each task and deciding what is safe to paste.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=vZ64Kfk-f0U&amp;t=849s" aria-label="Watch at 14:09">14:09</a> <span>The speaker says an AI gateway enforces whatever you give it, including nothing, and quotes a line he attributes to the Platform Capability Factors paper that tooling can enforce a standard but cannot decide it.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=vZ64Kfk-f0U&amp;t=995s" aria-label="Watch at 16:35">16:35</a> <span>The speaker lists the five components of the prompt layer: capability interface, context templates, token governance, agent permissions and observability.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=vZ64Kfk-f0U&amp;t=1224s" aria-label="Watch at 20:24">20:24</a> <span>The speaker says budgets should be assigned to a capability such as code review, not to a key or a person, and suggests falling back to a cheaper model at the limit.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=vZ64Kfk-f0U&amp;t=1652s" aria-label="Watch at 27:32">27:32</a> <span>In the recorded demo, the assistant with the prompt layer does the code review but cannot read the secret file, which the speaker says was dropped before the prompt reached the LLM.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/backstage-c28ad2ec1128.html">Backstage</a><a class="tag project-tag" href="../technologies/claude-code-a625159d18da.html">Claude Code</a><a class="tag project-tag" href="../technologies/jaeger-c0bbec68cf41.html">Jaeger</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/kyverno-6900ead2739f.html">Kyverno</a><a class="tag project-tag" href="../technologies/litellm-dcc8d7506b63.html">LiteLLM</a><a class="tag project-tag" href="../technologies/model-context-protocol-9c5da690faad.html">Model Context Protocol</a><a class="tag project-tag" href="../technologies/opentelemetry-15646ccfc423.html">OpenTelemetry</a><a class="tag project-tag" href="../technologies/platform-capability-factors-dbc64aa127c8.html">Platform Capability Factors</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/stack-overflow-developer-survey-9287d4b1b93b.html">Stack Overflow Developer Survey</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

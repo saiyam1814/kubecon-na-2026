@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>EROFS talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Project</p><h1>EROFS</h1>
+<p class="hero-copy">2 talks mention EROFS.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/containerd-2397d068a8d1.html">containerd</a> <span>2 shared talks</span></li><li><a href="../technologies/gzip-c8d77bf4d8b1.html">gzip</a> <span>2 shared talks</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>2 shared talks</span></li><li><a href="../technologies/apache-flink-03be4f85fe43.html">Apache Flink</a> <span>1 shared talk</span></li><li><a href="../technologies/curl-427e4b79b1f0.html">curl</a> <span>1 shared talk</span></li><li><a href="../technologies/fluent-bit-5d9bc164b0dc.html">Fluent Bit</a> <span>1 shared talk</span></li><li><a href="../technologies/github-c0b0109d9439.html">GitHub</a> <span>1 shared talk</span></li><li><a href="../technologies/gvisor-1f6d325084c7.html">gVisor</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning EROFS"><ul class="talk-list"><li class="talk-card" data-talk="FHucrnYRW9o" data-track="Maintainer Track"
+data-themes="[&quot;Kubernetes internals and runtimes&quot;]" data-search="Containerd: Project Update and Deep Dive Wei Fu Samuel Karp Maintainer Track  Kubernetes internals and runtimes containerd EROFS GitHub gVisor Kubernetes Node Problem Detector Node Resource Interface OpenTelemetry gzip overlayfs runc containerd EROFS GitHub gVisor gzip Kubernetes Node Problem Detector Node Resource Interface OpenTelemetry overlayfs runc K8s k8s NPD NRI OTel Maintainers Samuel Karp and Wei Fu describe containerd&#x27;s move to a four-month release cadence aligned with Kubernetes, a yearly long-term support release, and the features they shipped in 2.4 and propose for 2.5. Karp then explains how a surge of AI-assisted security reports in 2026 changed the project&#x27;s triage and patching process. Watch this if you run containerd under Kubernetes and want to plan upgrades around the new release and LTS schedule, or you maintain a project facing a flood of AI-generated security reports."
+data-technologies="[&quot;containerd&quot;, &quot;EROFS&quot;, &quot;GitHub&quot;, &quot;gVisor&quot;, &quot;gzip&quot;, &quot;Kubernetes&quot;, &quot;Node Problem Detector&quot;, &quot;Node Resource Interface&quot;, &quot;OpenTelemetry&quot;, &quot;overlayfs&quot;, &quot;runc&quot;]" data-demo="no"
+data-length="30" data-level="" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-1">Maintainer Track</span></div>
+<h3><a href="../talks/FHucrnYRW9o.html">Containerd: Project Update and Deep Dive</a></h3>
+<p class="speakers">Wei Fu, Samuel Karp</p><p class="card-summary">Maintainers Samuel Karp and Wei Fu describe containerd&#x27;s move to a four-month release cadence aligned with Kubernetes, a yearly long-term support release, and the features they shipped in 2.4 and propose for 2.5. Karp then explains how a surge of AI-assisted security reports in 2026 changed the project&#x27;s triage and patching process.</p>
+<p class="schedule-summary">30 min slot · Level not listed · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></div><p class="card-watch"><strong>Watch this if:</strong> you run containerd under Kubernetes and want to plan upgrades around the new release and LTS schedule, or you maintain a project facing a flood of AI-generated security reports.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=FHucrnYRW9o&amp;t=76s" aria-label="Watch at 1:16">1:16</a> <span>Karp says containerd moved to a four-month release cadence timed with Kubernetes so that features depending on the container runtime arrive in both projects at about the same time.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=FHucrnYRW9o&amp;t=153s" aria-label="Watch at 2:33">2:33</a> <span>Karp describes a long-term support release that comes out once a year and is supported for two years, giving a year of overlap between LTS releases.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=FHucrnYRW9o&amp;t=877s" aria-label="Watch at 14:37">14:37</a> <span>Fu explains that direct unpack for overlayfs removed the implicit flush on unmount, so a crash could leave a committed snapshot without its data, and says a single EROFS layer file is easier to fsync.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=FHucrnYRW9o&amp;t=1123s" aria-label="Watch at 18:43">18:43</a> <span>Fu presents a proposed 2.5 feature, a sandboxed runc shim that handles the sandbox API, with the goal of removing the pause container that he calls a waste of resources for most pods.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=FHucrnYRW9o&amp;t=1311s" aria-label="Watch at 21:51">21:51</a> <span>Karp reports 156 incoming security reports in 2026 against 36 from 2020 to 2025, with 14 CVEs issued this year, and attributes the rise to LLM-assisted bug hunting.</span></li></ol>
+<a class="card-link" href="../talks/FHucrnYRW9o.html" aria-label="Explore Containerd: Project Update and Deep Dive">Explore key moments <span aria-hidden="true">↗</span></a>
+</li><li class="talk-card" data-talk="DZgRiIrii40" data-track="Operations + Performance"
+data-themes="[&quot;Kubernetes internals and runtimes&quot;, &quot;Observability and reliability&quot;]" data-search="Hidden Pod Startup Latency: Container Image Pull Omer Oz Operations + Performance  Kubernetes internals and runtimes Observability and reliability Kubernetes containerd Apache Flink EROFS Zstandard Linux PyTorch Fluent Bit curl gzip Apache Flink containerd curl EROFS Fluent Bit gzip Kubernetes Linux PyTorch Zstandard Flink K8s k8s zstd Omer Oz describes how LinkedIn investigated slow pod startups on its bare-metal fleet and traced most of the time to unpacking container image layers, not downloading them. He walks through the kubelet and containerd settings his team changed, the results he reports, and further options such as zstd compression, the EROFS snapshotter and peer-to-peer caching. Watch this if large container images slow your pod startups and you want a mental model of the pull path plus settings to try."
+data-technologies="[&quot;Apache Flink&quot;, &quot;containerd&quot;, &quot;curl&quot;, &quot;EROFS&quot;, &quot;Fluent Bit&quot;, &quot;gzip&quot;, &quot;Kubernetes&quot;, &quot;Linux&quot;, &quot;PyTorch&quot;, &quot;Zstandard&quot;]" data-demo="yes"
+data-length="30" data-level="Advanced" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-0">Operations + Performance</span><span class="demo-badge">Demo</span></div>
+<h3><a href="../talks/DZgRiIrii40.html">Hidden Pod Startup Latency: Container Image Pull</a></h3>
+<p class="speakers">Omer Oz</p><p class="card-summary">Omer Oz describes how LinkedIn investigated slow pod startups on its bare-metal fleet and traced most of the time to unpacking container image layers, not downloading them. He walks through the kubelet and containerd settings his team changed, the results he reports, and further options such as zstd compression, the EROFS snapshotter and peer-to-peer caching.</p>
+<p class="schedule-summary">30 min slot · Advanced · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a></div><p class="card-watch"><strong>Watch this if:</strong> large container images slow your pod startups and you want a mental model of the pull path plus settings to try.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=DZgRiIrii40&amp;t=552s" aria-label="Watch at 9:12">9:12</a> <span>Oz describes the trigger: Flink apps shipping about 28 GB of images against a 20-minute pod startup SLO, which he says caused a series of incidents at LinkedIn.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=DZgRiIrii40&amp;t=886s" aria-label="Watch at 14:46">14:46</a> <span>Oz walks through an image pull timeline and says the download finishes early while most time goes to unpacking, which containerd does one layer at a time by default.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=DZgRiIrii40&amp;t=926s" aria-label="Watch at 15:26">15:26</a> <span>Oz explains LinkedIn&#x27;s fix of raising the kubelet&#x27;s parallel image pulls to three and lowering containerd&#x27;s download concurrency, then shows the latency results he measured.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=DZgRiIrii40&amp;t=1306s" aria-label="Watch at 21:46">21:46</a> <span>Oz presents the EROFS snapshotter for containerd, which he says skips eager unpacking and cut unpack time to under 0.4 seconds in his tests.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=DZgRiIrii40&amp;t=1437s" aria-label="Watch at 23:57">23:57</a> <span>Oz describes a serialization point he found in containerd that capped total download throughput, and points to his pull request removing it.</span></li></ol>
+<a class="card-link" href="../talks/DZgRiIrii40.html" aria-label="Explore Hidden Pod Startup Latency: Container Image Pull">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

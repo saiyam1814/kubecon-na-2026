@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>CRI-O: Plug It, Tune It, Share It — Extending and Accelerating Your Runtime | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">Maintainer Track</span></div>
+<h1>CRI-O: Plug It, Tune It, Share It — Extending and Accelerating Your Runtime</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Sohan Kunkerkar, Ayato Tokubi</dd></div>
+<div><dt>Track</dt><dd>Maintainer Track</dd></div>
+<div><dt>Topic</dt><dd>CRI-O</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=XWG91W_Nr18">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1289675">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Ayato Tokubi gives a CRI-O project update, explains how Node Resource Interface plugins adjust containers at creation with examples for ulimits, topology, devices and networking, and lists upstream enhancement proposals that touch container runtimes. Sohan Kunkerkar then walks through the Kubernetes memory QoS work, including why throttling and protection became opt-in, a proposal to have the Vertical Pod Autoscaler react to memory pressure, and progress on kubelet memory use and peer-to-peer image sharing.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you operate Kubernetes nodes and want to know what NRI plugins can change, and where the memory QoS work in SIG Node is heading.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=XWG91W_Nr18&amp;t=159s" aria-label="Watch at 2:39">2:39</a> <span>Ayato Tokubi introduces the Node Resource Interface as a pluggable way to add custom logic to container runtimes such as containerd and CRI-O, and walks through a ulimit adjuster plugin that changes the OCI spec before a container is created.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=XWG91W_Nr18&amp;t=565s" aria-label="Watch at 9:25">9:25</a> <span>He advises starting with standard Kubernetes APIs and using NRI only for domain-specific needs, and says plugins are powerful enough to break a cluster, so operators should trust the plugins, restrict the NRI socket and plan for plugin failures.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=XWG91W_Nr18&amp;t=881s" aria-label="Watch at 14:41">14:41</a> <span>Sohan Kunkerkar explains the memory QoS feature, in which the kubelet sets memory.min or memory.low to protect requests and memory.high to throttle a container before it reaches its limit.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=XWG91W_Nr18&amp;t=1072s" aria-label="Watch at 17:52">17:52</a> <span>He walks through an example where a container above memory.high on a node without swap is throttled so hard that throughput collapses, which he gives as the reason both memory QoS settings are now opt-in.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=XWG91W_Nr18&amp;t=1413s" aria-label="Watch at 23:33">23:33</a> <span>He says SIG Node concluded the kubelet is not the right place to react to memory.high throttling, and describes a proposal still in design for the Vertical Pod Autoscaler to treat a memory stall like an OOM kill and resize the pod in place.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/confidential-containers-f51f010ab6ec.html">Confidential Containers</a><a class="tag project-tag" href="../technologies/conmon-bab5c4d7552b.html">conmon</a><a class="tag project-tag" href="../technologies/conmon-rs-ba76cef8d58d.html">conmon-rs</a><a class="tag project-tag" href="../technologies/container-device-interface-5d444eeca62a.html">Container Device Interface</a><a class="tag project-tag" href="../technologies/containerd-2397d068a8d1.html">containerd</a><a class="tag project-tag" href="../technologies/cri-o-ae1b0acb9af5.html">CRI-O</a><a class="tag project-tag" href="../technologies/dra-net-6d262602a1a6.html">DRA-Net</a><a class="tag project-tag" href="../technologies/dynamic-resource-allocation-d7775471dc59.html">Dynamic Resource Allocation</a><a class="tag project-tag" href="../technologies/kata-containers-1a987ab98658.html">Kata Containers</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/node-resource-interface-eb67c07c3428.html">Node Resource Interface</a><a class="tag project-tag" href="../technologies/podman-2f259bab93aa.html">Podman</a><a class="tag project-tag" href="../technologies/spegel-a7b8976b06bc.html">Spegel</a><a class="tag project-tag" href="../technologies/vertical-pod-autoscaler-a51059ab306e.html">Vertical Pod Autoscaler</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/cgroups-v2-931dcc0bdd5a.html">cgroups v2</a><a class="tag project-tag" href="../technologies/kubelet-1ca4bc7eb9b3.html">kubelet</a><a class="tag project-tag" href="../technologies/seccomp-b10f708e6941.html">seccomp</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

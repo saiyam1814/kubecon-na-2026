@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>kpt talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Project</p><h1>kpt</h1>
+<p class="hero-copy">1 talk mentions kpt.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/argo-cd-b9549e9e9e77.html">Argo CD</a> <span>1 shared talk</span></li><li><a href="../technologies/flux-a2e10207c7be.html">Flux</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>1 shared talk</span></li><li><a href="../technologies/starlark-d9cc69bcce68.html">Starlark</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning kpt"><ul class="talk-list"><li class="talk-card" data-talk="s03DB_4Jnpo" data-track="Project Lightning Talks"
+data-themes="[&quot;Delivery, GitOps and release safety&quot;, &quot;Platform engineering and developer experience&quot;]" data-search="Stop Templating YAML: Build Configuration Supply Chains with kpt and Porch Liam Fallon Project Lightning Talks kpt Delivery, GitOps and release safety Platform engineering and developer experience kpt Kubernetes Argo CD Flux Starlark Argo CD Flux kpt Kubernetes Starlark ArgoCD argocd FluxCD K8s k8s Liam Fallon introduces kpt as a tool built on the configuration-as-data principle, where a package is a directory of Kubernetes resource YAML that functions change in place instead of through templates. He says Ericsson uses kpt packages as blueprints for edge deployments that are pushed out through GitOps tools, and he skips the planned demo because of the hour. Watch this if you manage Kubernetes configuration with templates and want a five-minute introduction to how kpt treats configuration as data."
+data-technologies="[&quot;Argo CD&quot;, &quot;Flux&quot;, &quot;kpt&quot;, &quot;Kubernetes&quot;, &quot;Starlark&quot;]" data-demo="no"
+data-length="5" data-level="" data-type="Lightning Talk">
+<div class="card-eyebrow"><span class="tag track-tag track-6">Project Lightning Talks</span></div>
+<h3><a href="../talks/s03DB_4Jnpo.html">Stop Templating YAML: Build Configuration Supply Chains with kpt and Porch</a></h3>
+<p class="speakers">Liam Fallon</p><p class="card-summary">Liam Fallon introduces kpt as a tool built on the configuration-as-data principle, where a package is a directory of Kubernetes resource YAML that functions change in place instead of through templates. He says Ericsson uses kpt packages as blueprints for edge deployments that are pushed out through GitOps tools, and he skips the planned demo because of the hour.</p>
+<p class="schedule-summary">5 min slot · Level not listed · Lightning Talk</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Delivery%2C%20GitOps%20and%20release%20safety#library">Delivery, GitOps and release safety</a><a class="tag theme-tag" href="../index.html?theme=Platform%20engineering%20and%20developer%20experience#library">Platform engineering and developer experience</a></div><p class="card-watch"><strong>Watch this if:</strong> you manage Kubernetes configuration with templates and want a five-minute introduction to how kpt treats configuration as data.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=s03DB_4Jnpo&amp;t=42s" aria-label="Watch at 0:42">0:42</a> <span>Fallon describes a kpt package as a directory of Kubernetes resources in YAML files, possibly nested, plus a Kptfile that defines what configuration to inject.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=s03DB_4Jnpo&amp;t=64s" aria-label="Watch at 1:04">1:04</a> <span>He says kpt changes the resources in place with no embedded templating, which in his view makes modifications and updates easier because no directives in the YAML go out of date.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=s03DB_4Jnpo&amp;t=105s" aria-label="Watch at 1:45">1:45</a> <span>He explains that the Kptfile lists a series of mutations, compared to pipes in Linux, and that kpt reads the package&#x27;s YAML, passes it from one KRM function to the next and writes the result back to the file system.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=s03DB_4Jnpo&amp;t=170s" aria-label="Watch at 2:50">2:50</a> <span>He says there is a standard library of KRM functions such as search and replace, set namespace and annotations, and that custom functions can be written with an SDK or scripted in Starlark.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=s03DB_4Jnpo&amp;t=191s" aria-label="Watch at 3:11">3:11</a> <span>Fallon says what makes kpt powerful for Ericsson is that packages can spawn other packages and be orchestrated, so blueprints for edge deployments are pushed to GitOps frameworks such as Argo or Flux and deployed to thousands of edge nodes.</span></li></ol>
+<a class="card-link" href="../talks/s03DB_4Jnpo.html" aria-label="Explore Stop Templating YAML: Build Configuration Supply Chains with kpt and Porch">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

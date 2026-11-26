@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Vitess Operator talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>Vitess Operator</h1>
+<p class="hero-copy">1 talk mentions Vitess Operator.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/airbyte-a169ac3cb579.html">Airbyte</a> <span>1 shared talk</span></li><li><a href="../technologies/amazon-rds-961451ce0a13.html">Amazon RDS</a> <span>1 shared talk</span></li><li><a href="../technologies/debezium-142d37856ef8.html">Debezium</a> <span>1 shared talk</span></li><li><a href="../technologies/fivetran-b35a1639496c.html">Fivetran</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>1 shared talk</span></li><li><a href="../technologies/mysql-430005175c4c.html">MySQL</a> <span>1 shared talk</span></li><li><a href="../technologies/vitess-df8e31275a84.html">Vitess</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning Vitess Operator"><ul class="talk-list"><li class="talk-card" data-talk="F4B6bckiio0" data-track="Maintainer Track"
+data-themes="[&quot;Data, storage and state&quot;]" data-search="Horizontally Scale MySQL on Kubernetes Matt Lord Florent Poinsard Maintainer Track Vitess Data, storage and state Vitess MySQL Kubernetes Vitess Operator Amazon RDS Debezium Airbyte Fivetran Airbyte Amazon RDS Debezium Fivetran Kubernetes MySQL Vitess Vitess Operator RDS K8s k8s Matt Lord introduces Vitess as a way to spread a MySQL workload across many servers while applications still see a single MySQL server, and walks through its components. Florent Poinsard then explains the MoveTables and Reshard workflows and runs a live demo that splits one shard into two under load on Kubernetes. Watch this if your MySQL database is outgrowing a single instance and you want to see what sharding it with Vitess on Kubernetes looks like."
+data-technologies="[&quot;Airbyte&quot;, &quot;Amazon RDS&quot;, &quot;Debezium&quot;, &quot;Fivetran&quot;, &quot;Kubernetes&quot;, &quot;MySQL&quot;, &quot;Vitess&quot;, &quot;Vitess Operator&quot;]" data-demo="yes"
+data-length="30" data-level="" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-1">Maintainer Track</span><span class="demo-badge">Demo</span></div>
+<h3><a href="../talks/F4B6bckiio0.html">Horizontally Scale MySQL on Kubernetes</a></h3>
+<p class="speakers">Matt Lord, Florent Poinsard</p><p class="card-summary">Matt Lord introduces Vitess as a way to spread a MySQL workload across many servers while applications still see a single MySQL server, and walks through its components. Florent Poinsard then explains the MoveTables and Reshard workflows and runs a live demo that splits one shard into two under load on Kubernetes.</p>
+<p class="schedule-summary">30 min slot · Level not listed · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Data%2C%20storage%20and%20state#library">Data, storage and state</a></div><p class="card-watch"><strong>Watch this if:</strong> your MySQL database is outgrowing a single instance and you want to see what sharding it with Vitess on Kubernetes looks like.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=F4B6bckiio0&amp;t=166s" aria-label="Watch at 2:46">2:46</a> <span>Matt Lord says Vitess lets you distribute the workload of one MySQL instance across hundreds or thousands of MySQL servers while users still see a single server.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=F4B6bckiio0&amp;t=412s" aria-label="Watch at 6:52">6:52</a> <span>Matt Lord walks through the architecture: stateless VTGates that speak the MySQL protocol, VTTablets in front of each mysqld, the topology server, vtctld and VTOrc.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=F4B6bckiio0&amp;t=969s" aria-label="Watch at 16:09">16:09</a> <span>Florent Poinsard explains the MoveTables workflow: copy the data, keep streaming changes, switch reads and writes, and revert through reverse replication if needed.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=F4B6bckiio0&amp;t=1262s" aria-label="Watch at 21:02">21:02</a> <span>Florent Poinsard starts the demo: a Vitess cluster on Kubernetes with the open source Vitess Operator on his laptop, with load pushing the single shard&#x27;s CPU to 100%.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=F4B6bckiio0&amp;t=1512s" aria-label="Watch at 25:12">25:12</a> <span>After completing the Reshard workflow, Florent Poinsard reports the demo going from about 7 to 8K QPS to 10 to 11K, with latency moving from about three milliseconds to two.</span></li></ol>
+<a class="card-link" href="../talks/F4B6bckiio0.html" aria-label="Explore Horizontally Scale MySQL on Kubernetes">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

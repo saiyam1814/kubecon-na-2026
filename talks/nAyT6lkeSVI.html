@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Triaging 4,700 Alerts/Month at $0.33 Each: Verkada&#x27;s MCP Agent on Nine Production Clusters | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">AI Inference + Agentic</span></div>
+<h1>Triaging 4,700 Alerts/Month at $0.33 Each: Verkada&#x27;s MCP Agent on Nine Production Clusters</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Adrian Ng, Rohan Sood</dd></div>
+<div><dt>Track</dt><dd>AI Inference + Agentic</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Any Level</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=nAyT6lkeSVI">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1244963">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Adrian Ng explains why alert fatigue grew at Verkada and shows the in-house SRE agent that replies to alerts in Slack with a root cause analysis and next steps. Rohan Sood details how it works across nine clusters, how they evaluate it, the incident mode they are building, and what they say keeps the cost near 33 cents per investigation.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you are thinking of building your own alert-triage agent and want one team&#x27;s design, evaluation approach and cost levers.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=nAyT6lkeSVI&amp;t=389s" aria-label="Watch at 6:29">6:29</a> <span>Adrian says the agent handles about 4,700 alerts a month at roughly 30 cents each with a mean time to triage of about two minutes.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=nAyT6lkeSVI&amp;t=441s" aria-label="Watch at 7:21">7:21</a> <span>Rohan describes a serverless router that decides whether a Slack message is an alert and which of nine clusters owns it, then queues it for pods running an agent container, MCP sidecars and more than 80 tools.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=nAyT6lkeSVI&amp;t=817s" aria-label="Watch at 13:37">13:37</a> <span>Rohan says each team&#x27;s Slack channel adds its own prompt to the base system prompt, so teams tune triage for their service by editing a markdown file.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=nAyT6lkeSVI&amp;t=900s" aria-label="Watch at 15:00">15:00</a> <span>Rohan says feedback buttons gave only about 100 clicks since April, so they run a sampled nightly replay eval that reruns alerts with a more powerful model plus live A/B tests of candidate builds.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=nAyT6lkeSVI&amp;t=1545s" aria-label="Watch at 25:45">25:45</a> <span>Answering a cost question, Rohan says they keep a byte-stable prompt prefix of system prompt, channel prompt and tool schemas so most input tokens come from the cache.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/claude-opus-3872adf6b361.html">Claude Opus</a><a class="tag project-tag" href="../technologies/grafana-cace491b6955.html">Grafana</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/model-context-protocol-9c5da690faad.html">Model Context Protocol</a><a class="tag project-tag" href="../technologies/prometheus-1809f7cd0c75.html">Prometheus</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/datadog-4d8bd97f0310.html">Datadog</a><a class="tag project-tag" href="../technologies/opsgenie-b1f74b4e2bd0.html">Opsgenie</a><a class="tag project-tag" href="../technologies/slack-877c3aec832c.html">Slack</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>
