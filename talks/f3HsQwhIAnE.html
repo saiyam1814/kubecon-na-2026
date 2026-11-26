@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Fireside Chat: Future of Kubernetes and Agents with Tim Hockin and Kelsey Hightower | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-3">Cloud Native Theater</span></div>
+<h1>Fireside Chat: Future of Kubernetes and Agents with Tim Hockin and Kelsey Hightower</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Tim Hockin, Kelsey Hightower, Savannah Peterson</dd></div>
+<div><dt>Track</dt><dd>Cloud Native Theater</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Fireside Chat</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=f3HsQwhIAnE">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1372858">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Tim Hockin explains why he thinks agents are a different kind of workload for Kubernetes and how Agent Substrate approaches sandboxing, idleness, and identity. Kelsey Hightower compares agents to earlier automation and advises the audience to work out whether a task needs an agent before choosing a platform for it.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you are deciding how to run agents on Kubernetes and want to hear the reasoning behind Agent Substrate from Tim Hockin alongside Kelsey Hightower&#x27;s caution.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=f3HsQwhIAnE&amp;t=246s" aria-label="Watch at 4:06">4:06</a> <span>Tim Hockin says agents are untrusted, mostly idle, and single tenant, which he says leads to either slow startups or single-digit CPU utilization.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=f3HsQwhIAnE&amp;t=501s" aria-label="Watch at 8:21">8:21</a> <span>Tim Hockin says a few seconds of container startup does not fit an agent that runs for half a second and goes back to sleep.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=f3HsQwhIAnE&amp;t=725s" aria-label="Watch at 12:05">12:05</a> <span>Tim Hockin says every agent in Agent Substrate is sandboxed, cannot reach the network without permission, and has its own identity, with outbound traffic sent to a pluggable policy enforcement point.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=f3HsQwhIAnE&amp;t=876s" aria-label="Watch at 14:36">14:36</a> <span>Kelsey Hightower advises working out whether a task needs an agent at all, and recalls serverless functions that grew until they resembled apps on a VM.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=f3HsQwhIAnE&amp;t=1297s" aria-label="Watch at 21:37">21:37</a> <span>Asked about acting on behalf of a user, Tim Hockin says version one has its own identity and issuer and that an on-behalf-of flow is being discussed with users and is not done.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/agent-substrate-1067f1a4b76d.html">Agent Substrate</a><a class="tag project-tag" href="../technologies/docker-d548c5b83fa6.html">Docker</a><a class="tag project-tag" href="../technologies/istio-82d979a24d74.html">Istio</a><a class="tag project-tag" href="../technologies/knative-be6d9270de40.html">Knative</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

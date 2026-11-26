@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Ironic Standalone Operator talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Project</p><h1>Ironic Standalone Operator</h1>
+<p class="hero-copy">1 talk mentions Ironic Standalone Operator.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p><p class="muted">Also indexed as: IrSO.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/bare-metal-operator-d42111fa0659.html">Bare Metal Operator</a> <span>1 shared talk</span></li><li><a href="../technologies/cluster-api-provider-metal3-02f0563757ad.html">Cluster API Provider Metal3</a> <span>1 shared talk</span></li><li><a href="../technologies/github-actions-dce316af5efc.html">GitHub Actions</a> <span>1 shared talk</span></li><li><a href="../technologies/go-4cd0e21a9a07.html">Go</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>1 shared talk</span></li><li><a href="../technologies/metal3-8270e6d7ff4c.html">Metal3</a> <span>1 shared talk</span></li><li><a href="../technologies/metal3-ip-address-manager-7b353a757463.html">Metal3 IP Address Manager</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning Ironic Standalone Operator"><ul class="talk-list"><li class="talk-card" data-talk="KMNSq36-sDs" data-track="Maintainer Track"
+data-themes="[&quot;Observability and reliability&quot;, &quot;Kubernetes internals and runtimes&quot;]" data-search="Breaking Things Safely, Finding Bugs Before They Find You: Fuzzing Metal³ Through Controlled Chaos Moshiur Rahman Maintainer Track Metal3.io Observability and reliability Kubernetes internals and runtimes Bare Metal Operator Cluster API Provider Metal3 Ironic Standalone Operator Kubernetes Metal3 Metal3 IP Address Manager GitHub Actions Go Bare Metal Operator Cluster API Provider Metal3 GitHub Actions Go Ironic Standalone Operator Kubernetes Metal3 Metal3 IP Address Manager BMO CAPM3 Golang IrSO K8s k8s Metal Kubed Metal3 IPAM The speaker explains how the Metal3 project is starting to use fuzz testing on small, fast targets such as parsers and validation functions, and stresses that each target needs a clear expected behavior. He runs three Bare Metal Operator fuzz targets in a GitHub Actions workflow and says the project is at an early stage with many targets still to add. Watch this if you maintain Kubernetes controllers and want a practical starting point for adding fuzz tests without flooding maintainers with noise."
+data-technologies="[&quot;Bare Metal Operator&quot;, &quot;Cluster API Provider Metal3&quot;, &quot;GitHub Actions&quot;, &quot;Go&quot;, &quot;Ironic Standalone Operator&quot;, &quot;Kubernetes&quot;, &quot;Metal3&quot;, &quot;Metal3 IP Address Manager&quot;]" data-demo="yes"
+data-length="30" data-level="" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-1">Maintainer Track</span><span class="demo-badge">Demo</span></div>
+<h3><a href="../talks/KMNSq36-sDs.html">Breaking Things Safely, Finding Bugs Before They Find You: Fuzzing Metal³ Through Controlled Chaos</a></h3>
+<p class="speakers">Moshiur Rahman</p><p class="card-summary">The speaker explains how the Metal3 project is starting to use fuzz testing on small, fast targets such as parsers and validation functions, and stresses that each target needs a clear expected behavior. He runs three Bare Metal Operator fuzz targets in a GitHub Actions workflow and says the project is at an early stage with many targets still to add.</p>
+<p class="schedule-summary">30 min slot · Level not listed · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></div><p class="card-watch"><strong>Watch this if:</strong> you maintain Kubernetes controllers and want a practical starting point for adding fuzz tests without flooding maintainers with noise.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=KMNSq36-sDs&amp;t=349s" aria-label="Watch at 5:49">5:49</a> <span>The speaker names the components in scope, the IP address manager, the Cluster API provider, Bare Metal Operator, and Ironic Standalone Operator, and says he is not claiming they all have the same fuzzing coverage.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=KMNSq36-sDs&amp;t=448s" aria-label="Watch at 7:28">7:28</a> <span>The speaker says a fuzzer does not know which unusual results are wrong, so each target needs an oracle such as no panic, a required invariant, or an expected error.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=KMNSq36-sDs&amp;t=783s" aria-label="Watch at 13:03">13:03</a> <span>The speaker lists good first targets: parsers, decoders, validation paths, input normalization, and small deterministic functions with a clear expected behavior.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=KMNSq36-sDs&amp;t=1126s" aria-label="Watch at 18:46">18:46</a> <span>In a live run, the speaker starts a one-minute workflow with three Bare Metal Operator fuzz targets and explains that the reported new interesting inputs mean new code paths, not faults.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=KMNSq36-sDs&amp;t=1538s" aria-label="Watch at 25:38">25:38</a> <span>The speaker gives current target counts per component and his estimate of how many more each needs, and invites new contributors to start with the least covered ones.</span></li></ol>
+<a class="card-link" href="../talks/KMNSq36-sDs.html" aria-label="Explore Breaking Things Safely, Finding Bugs Before They Find You: Fuzzing Metal³ Through Controlled Chaos">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>etcd Operator, Rebuilt and Ready | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-6">Project Lightning Talks</span></div>
+<h1>etcd Operator, Rebuilt and Ready</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Arka Saha</dd></div>
+<div><dt>Track</dt><dd>Project Lightning Talks</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a><a class="tag theme-tag" href="../index.html?theme=Data%2C%20storage%20and%20state#library">Data, storage and state</a><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>5 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Lightning Talk</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=EXD3lipOa8A">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1289890">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Arka Saha, an etcd-operator contributor, recaps the operator&#x27;s releases and explains why version 0.3 replaced StatefulSets with a custom controller. He describes how the new design replaces a corrupted member, a new option to pause reconciliation, and what is planned next.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you operate etcd clusters on Kubernetes and want to know how the official operator now handles failed members.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=EXD3lipOa8A&amp;t=20s" aria-label="Watch at 0:20">0:20</a> <span>Arka Saha recaps the releases: 0.1 could create and scale an etcd cluster, 0.2 added TLS support, and 0.3 replaced the StatefulSet with the project&#x27;s own custom controller.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=EXD3lipOa8A&amp;t=71s" aria-label="Watch at 1:11">1:11</a> <span>He explains the StatefulSet problem: replacing a corrupted second member of a three-member cluster would mean scaling down, which he says also removes a healthy member.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=EXD3lipOa8A&amp;t=149s" aria-label="Watch at 2:29">2:29</a> <span>He describes the new design as two CRDs: the etcd cluster the user defines, which manages etcd member resources that in turn manage the pods and PVCs.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=EXD3lipOa8A&amp;t=174s" aria-label="Watch at 2:54">2:54</a> <span>He walks through recovery of a corrupted member: remove the member, delete its pod and PVC, start a new pod with a fresh PVC, add it as a learner and wait for it to become a voter.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=EXD3lipOa8A&amp;t=222s" aria-label="Watch at 3:42">3:42</a> <span>He says users can now pause reconciliation to fix a stuck upgrade by hand, and names alarm-driven reconciliation, repair, and backup and restore in 0.4 as upcoming work.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/etcd-c38cbd92fce4.html">etcd</a><a class="tag project-tag" href="../technologies/etcd-operator-8df75a0c56f0.html">etcd-operator</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>
