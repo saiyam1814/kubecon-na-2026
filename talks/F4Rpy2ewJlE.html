@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Ask Your Platform: Putting AI to Work Where the Questions Live | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">AI Inference + Agentic</span><span class="demo-badge">Demo</span></div>
+<h1>Ask Your Platform: Putting AI to Work Where the Questions Live</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Anton Alexander, Scott Adams</dd></div>
+<div><dt>Track</dt><dd>AI Inference + Agentic</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Platform%20engineering%20and%20developer%20experience#library">Platform engineering and developer experience</a><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Any Level</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=F4Rpy2ewJlE">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1246200">Schedule</a> · <a href="https://sessionize.com/download/itwavpeu~KoQTNM1fhMA3oPAQZtwvvF.pdf~kubecon-ask-your-platform-pdf.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Two platform engineers at a Fortune 100 company describe adding AI agents to the places people already ask questions: the developer portal, kubectl, node debugging with netshoot, and a ClickHouse history of cluster objects. They say they keep the agents safe with a read-only kubectl wrapper, permission rules shared in a Git repository and RBAC that excludes secrets, and that deterministic tools worked better for them than prompts.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You run a platform team and want concrete, read-only ways to let AI agents answer developers&#x27; and on-call engineers&#x27; questions about clusters.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=F4Rpy2ewJlE&amp;t=255s" aria-label="Watch at 4:15">4:15</a> <span>Anton Alexander says their approach was to start with a question, not an AI product, and to put AI where that question is already asked.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=F4Rpy2ewJlE&amp;t=324s" aria-label="Watch at 5:24">5:24</a> <span>He says the agent in the developer portal passes the developer&#x27;s identity to the cluster so it cannot see more than that person can, and it traces a 503 to a wrong service selector.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=F4Rpy2ewJlE&amp;t=559s" aria-label="Watch at 9:19">9:19</a> <span>He says instructions are guidance, not enforcement, so their coding agent may only call a wrapper CLI that exposes read-only kubectl operations, with other commands denied by permission rules.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=F4Rpy2ewJlE&amp;t=746s" aria-label="Watch at 12:26">12:26</a> <span>The wrapper also lets the agent schedule a netshoot pod on a target node and run an allowed set of commands, for node-level questions the Kubernetes API cannot answer.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=F4Rpy2ewJlE&amp;t=943s" aria-label="Watch at 15:43">15:43</a> <span>Scott Adams describes watching every object in their clusters and storing spec and status history in ClickHouse, so an agent can answer with SQL what changed or whether an image ever ran.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/clickhouse-7e099f39b84e.html">ClickHouse</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/netshoot-fb71754ad087.html">netshoot</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/claude-code-a625159d18da.html">Claude Code</a><a class="tag project-tag" href="../technologies/codex-57de4cf40144.html">Codex</a><a class="tag project-tag" href="../technologies/git-9a881b9b9f23.html">Git</a><a class="tag project-tag" href="../technologies/kubectl-7a7f09de08e3.html">kubectl</a><a class="tag project-tag" href="../technologies/model-context-protocol-9c5da690faad.html">Model Context Protocol</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

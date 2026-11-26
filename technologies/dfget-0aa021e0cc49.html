@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>dfget talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>dfget</h1>
+<p class="hero-copy">1 talk mentions dfget.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/dragonfly-e2ca6aec5255.html">Dragonfly</a> <span>1 shared talk</span></li><li><a href="../technologies/dragonfly-injector-b6fef16ee213.html">dragonfly-injector</a> <span>1 shared talk</span></li><li><a href="../technologies/dynamic-resource-allocation-d7775471dc59.html">Dynamic Resource Allocation</a> <span>1 shared talk</span></li><li><a href="../technologies/hami-ab87e616aa3b.html">HAMi</a> <span>1 shared talk</span></li><li><a href="../technologies/helm-ab14d3faa25e.html">Helm</a> <span>1 shared talk</span></li><li><a href="../technologies/hugging-face-e3ce9cc5efa9.html">Hugging Face</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>1 shared talk</span></li><li><a href="../technologies/modelscope-143306bb5a0c.html">ModelScope</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning dfget"><ul class="talk-list"><li class="talk-card" data-talk="e6emzSogSs4" data-track="Maintainer Track"
+data-themes="[&quot;Data, storage and state&quot;, &quot;AI inference and serving&quot;]" data-search="Scaling AI Model Distribution with Dragonfly: From HuggingFace to Production GPU Clusters Pavan Madduri Maintainer Track Dragonfly Data, storage and state AI inference and serving Dragonfly Hugging Face ModelScope Nydus Kubernetes HAMi Dynamic Resource Allocation Helm dfget dragonfly-injector NVIDIA MIG dfget Dragonfly dragonfly-injector Dynamic Resource Allocation HAMi Helm Hugging Face Kubernetes ModelScope NVIDIA MIG Nydus DRA K8s k8s MIG Multi-Instance GPU Pavan Madduri, a Dragonfly contributor presenting alone because co-speaker Wenbo Qi could not travel, argues that pulling model weights of hundreds of gigabytes onto every GPU node at once is an infrastructure problem and explains how Dragonfly&#x27;s peer-to-peer distribution and preheating address it. He then walks through the two pieces he says he contributed, the Hugging Face and ModelScope backends and the dragonfly-injector webhook, plus a cross-cloud pattern and the project roadmap. Watch this if large model downloads are slowing your GPU nodes or raising your egress bill and you want to see how Dragonfly handles it."
+data-technologies="[&quot;dfget&quot;, &quot;Dragonfly&quot;, &quot;dragonfly-injector&quot;, &quot;Dynamic Resource Allocation&quot;, &quot;HAMi&quot;, &quot;Helm&quot;, &quot;Hugging Face&quot;, &quot;Kubernetes&quot;, &quot;ModelScope&quot;, &quot;NVIDIA MIG&quot;, &quot;Nydus&quot;]" data-demo="no"
+data-length="30" data-level="" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-1">Maintainer Track</span></div>
+<h3><a href="../talks/e6emzSogSs4.html">Scaling AI Model Distribution with Dragonfly: From HuggingFace to Production GPU Clusters</a></h3>
+<p class="speakers">Pavan Madduri</p><p class="card-summary">Pavan Madduri, a Dragonfly contributor presenting alone because co-speaker Wenbo Qi could not travel, argues that pulling model weights of hundreds of gigabytes onto every GPU node at once is an infrastructure problem and explains how Dragonfly&#x27;s peer-to-peer distribution and preheating address it. He then walks through the two pieces he says he contributed, the Hugging Face and ModelScope backends and the dragonfly-injector webhook, plus a cross-cloud pattern and the project roadmap.</p>
+<p class="schedule-summary">30 min slot · Level not listed · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Data%2C%20storage%20and%20state#library">Data, storage and state</a><a class="tag theme-tag" href="../index.html?theme=AI%20inference%20and%20serving#library">AI inference and serving</a></div><p class="card-watch"><strong>Watch this if:</strong> large model downloads are slowing your GPU nodes or raising your egress bill and you want to see how Dragonfly handles it.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=e6emzSogSs4&amp;t=264s" aria-label="Watch at 4:24">4:24</a> <span>Pavan Madduri describes the thundering herd he sees with model weights: a scale-out sends 100 GPU nodes to the same registry at once, the origin saturates and downloads time out and retry.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=e6emzSogSs4&amp;t=604s" aria-label="Watch at 10:04">10:04</a> <span>He cites a test of a 130 GB model on 200 nodes where only the seed peer pulled from the origin, which he puts at about 99% less egress than 26 TB, and adds that the number depends on the setup.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=e6emzSogSs4&amp;t=781s" aria-label="Watch at 13:01">13:01</a> <span>He shows the Hugging Face and ModelScope backends: dfget with an hf scheme makes the seed peer fetch the model from the hub once and other nodes get the pieces from peers.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=e6emzSogSs4&amp;t=991s" aria-label="Watch at 16:31">16:31</a> <span>He explains the dragonfly-injector: a mutating admission webhook adds the Dragonfly client and daemon socket to pods carrying an inject annotation, so teams change Helm values instead of application code.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=e6emzSogSs4&amp;t=1386s" aria-label="Watch at 23:06">23:06</a> <span>He lists the roadmap he took from version 2.6: a Python SDK after the Rust and Go ones, RDMA-based distribution between peers, and bandwidth negotiation across parent peers.</span></li></ol>
+<a class="card-link" href="../talks/e6emzSogSs4.html" aria-label="Explore Scaling AI Model Distribution with Dragonfly: From HuggingFace to Production GPU Clusters">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

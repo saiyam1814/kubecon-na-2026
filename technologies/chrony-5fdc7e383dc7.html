@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>chrony talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>chrony</h1>
+<p class="hero-copy">1 talk mentions chrony.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/containerd-2397d068a8d1.html">containerd</a> <span>1 shared talk</span></li><li><a href="../technologies/crictl-6903df3a1637.html">crictl</a> <span>1 shared talk</span></li><li><a href="../technologies/go-jose-8f2d06c15117.html">go-jose</a> <span>1 shared talk</span></li><li><a href="../technologies/kube-proxy-7d7d4eed89b7.html">kube-proxy</a> <span>1 shared talk</span></li><li><a href="../technologies/kubectl-7a7f09de08e3.html">kubectl</a> <span>1 shared talk</span></li><li><a href="../technologies/kubelet-1ca4bc7eb9b3.html">kubelet</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-api-server-73536e21b454.html">Kubernetes API server</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning chrony"><ul class="talk-list"><li class="talk-card" data-talk="VapUpUGylDg" data-track="Operations + Performance"
+data-themes="[&quot;Observability and reliability&quot;, &quot;Kubernetes internals and runtimes&quot;]" data-search="When the Clock Lies: How an 8-Minute Time Skew Locked Kubernetes cluster for a day Akhil Mohan Operations + Performance  Observability and reliability Kubernetes internals and runtimes Kubernetes containerd kube-proxy Kubernetes API server crictl kubectl systemd kubelet chrony VMware ESXi vSphere CSI driver go-jose vSphere Kubernetes Service chrony containerd crictl go-jose kube-proxy kubectl kubelet Kubernetes Kubernetes API server systemd VMware ESXi vSphere CSI driver vSphere Kubernetes Service K8s k8s kube-apiserver Akhil Mohan of VMware by Broadcom, a containerd maintainer, retraces how a CSI pod on an internal cluster sat in CreateContainerError for 19 hours after a hypervisor power failure while its containers were in fact running. He traces it to a VM that booted about eight minutes in the future, so tokens were issued in the future and kubelet&#x27;s sorting of containers by creation time got stuck once chrony stepped the clock back, and he describes the fix of starting kubelet only after time sync. Watch this if you operate Kubernetes nodes on virtual machines and want a worked example of debugging from a stuck pod down to the hardware clock."
+data-technologies="[&quot;chrony&quot;, &quot;containerd&quot;, &quot;crictl&quot;, &quot;go-jose&quot;, &quot;kube-proxy&quot;, &quot;kubectl&quot;, &quot;kubelet&quot;, &quot;Kubernetes&quot;, &quot;Kubernetes API server&quot;, &quot;systemd&quot;, &quot;VMware ESXi&quot;, &quot;vSphere CSI driver&quot;, &quot;vSphere Kubernetes Service&quot;]" data-demo="no"
+data-length="30" data-level="Any Level" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-0">Operations + Performance</span></div>
+<h3><a href="../talks/VapUpUGylDg.html">When the Clock Lies: How an 8-Minute Time Skew Locked Kubernetes cluster for a day</a></h3>
+<p class="speakers">Akhil Mohan</p><p class="card-summary">Akhil Mohan of VMware by Broadcom, a containerd maintainer, retraces how a CSI pod on an internal cluster sat in CreateContainerError for 19 hours after a hypervisor power failure while its containers were in fact running. He traces it to a VM that booted about eight minutes in the future, so tokens were issued in the future and kubelet&#x27;s sorting of containers by creation time got stuck once chrony stepped the clock back, and he describes the fix of starting kubelet only after time sync.</p>
+<p class="schedule-summary">30 min slot · Any Level · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></div><p class="card-watch"><strong>Watch this if:</strong> you operate Kubernetes nodes on virtual machines and want a worked example of debugging from a stuck pod down to the hardware clock.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=VapUpUGylDg&amp;t=26s" aria-label="Watch at 0:26">0:26</a> <span>Mohan lays out the symptom: a CSI pod in CreateContainerError with over 5,000 retries failing on a container name reservation, while crictl on the node shows the same containers already running.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=VapUpUGylDg&amp;t=531s" aria-label="Watch at 8:51">8:51</a> <span>He finds kube-proxy rejected by the API server because its service account token is not valid yet, issued by a control plane VM whose clock was ahead of the other two.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=VapUpUGylDg&amp;t=608s" aria-label="Watch at 10:08">10:08</a> <span>Journal logs show the time jumping backwards 45 seconds after boot: he says the VM inherited a clock about eight minutes ahead from the ESXi host and chrony stepped it back in one go, after kubelet had already started.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=VapUpUGylDg&amp;t=1135s" aria-label="Watch at 18:55">18:55</a> <span>He explains the loop: kubelet sorts container statuses by created-at wall clock time, so the attempt created on the future clock always looks newest and kubelet keeps trying to recreate an attempt that is already running.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=VapUpUGylDg&amp;t=1296s" aria-label="Watch at 21:36">21:36</a> <span>The fix he describes is ordering the kubelet systemd unit after a chrony wait service with a 180 second timeout, chosen so a node boots slower instead of never booting when NTP is unavailable.</span></li></ol>
+<a class="card-link" href="../talks/VapUpUGylDg.html" aria-label="Explore When the Clock Lies: How an 8-Minute Time Skew Locked Kubernetes cluster for a day">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

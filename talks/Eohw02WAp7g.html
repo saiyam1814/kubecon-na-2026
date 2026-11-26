@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Fighting Fire with Fire: Scaling KubeEdge Vulnerability Management in the New AI Era | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">Maintainer Track</span></div>
+<h1>Fighting Fire with Fire: Scaling KubeEdge Vulnerability Management in the New AI Era</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Yin Ding</dd></div>
+<div><dt>Track</dt><dd>Maintainer Track</dd></div>
+<div><dt>Topic</dt><dd>Security</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Security%2C%20identity%20and%20policy#library">Security, identity and policy</a><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=Eohw02WAp7g">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1289664">Schedule</a></p>
+<section><h2>Talk summary</h2><p>KubeEdge maintainer Yin Ding gives background on KubeEdge and its Sedna edge AI toolkit, then says AI-assisted scanning has pushed vulnerability reports beyond what the project&#x27;s few volunteer security maintainers can triage. He walks through a proposed, partly implemented pipeline in which AI agents scout upstream fixes, rank and auto-close reports that do not apply, generate patches and score them before a human review.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you maintain an open source project with few security volunteers and want to see how one CNCF project plans to use AI agents for vulnerability triage and patching.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=Eohw02WAp7g&amp;t=545s" aria-label="Watch at 9:05">9:05</a> <span>Yin Ding describes Sedna&#x27;s joint inference, where a smaller model on the edge node answers first and the request goes to a larger cloud model only when the confidence score is too low.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Eohw02WAp7g&amp;t=727s" aria-label="Watch at 12:07">12:07</a> <span>He says security vulnerability reports are accelerating with AI help, and that the project went from seven security issues fixed across 2023 to early 2026 to four CVEs and five other issues fixed in the second half of 2026.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Eohw02WAp7g&amp;t=797s" aria-label="Watch at 13:17">13:17</a> <span>He says 27 fixes are waiting for review because the project lacks people to verify and review the patches.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Eohw02WAp7g&amp;t=1019s" aria-label="Watch at 16:59">16:59</a> <span>He describes a scouting step that uses the cheapest model to check what upstream Kubernetes is already fixing, so KubeEdge can wait for the upstream patch and bump its base version.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Eohw02WAp7g&amp;t=1248s" aria-label="Watch at 20:48">20:48</a> <span>He says the plan is for four agents to judge each generated patch and produce a confidence score, with low-confidence patches going back to human judgment, and that only the correctness check exists so far.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/claude-code-a625159d18da.html">Claude Code</a><a class="tag project-tag" href="../technologies/codex-57de4cf40144.html">Codex</a><a class="tag project-tag" href="../technologies/kubeedge-73420e23f208.html">KubeEdge</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/sedna-386ffd7941cf.html">Sedna</a><a class="tag project-tag" href="../technologies/slsa-a2492840045a.html">SLSA</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/mqtt-046adb88a188.html">MQTT</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

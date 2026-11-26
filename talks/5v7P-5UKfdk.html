@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Green Dashboards, Broken Clusters: Taming Stale Watches in Kubernetes Operators | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-0">Operations + Performance</span></div>
+<h1>Green Dashboards, Broken Clusters: Taming Stale Watches in Kubernetes Operators</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Michael Aspinwall, Alvaro Aleman</dd></div>
+<div><dt>Track</dt><dd>Operations + Performance</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Advanced</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=5v7P-5UKfdk">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1247283">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Michael Aspinwall and Alvaro Aleman explain how a controller that reads from a lagging informer cache can miss its own writes, using a DaemonSet controller case in which duplicate pods were created on every node. They describe the upstream Kubernetes work on comparable resource versions, informer staleness metrics and a consistency store in client-go, and the different approach controller-runtime takes with a client that waits for the cache to catch up.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you write or operate Kubernetes controllers and want to know how stale informer caches cause duplicate or wrong actions, and what client-go and controller-runtime now offer to avoid them.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=5v7P-5UKfdk&amp;t=227s" aria-label="Watch at 3:47">3:47</a> <span>Aspinwall walks through the case study: the DaemonSet controller&#x27;s write expectations expire after about five minutes, so when the pod informer lags longer than that, the controller sees no pod in its stale cache and creates another one on the same node.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=5v7P-5UKfdk&amp;t=353s" aria-label="Watch at 5:53">5:53</a> <span>He says KEP-5504 extends to clients the guarantee that resource versions can be compared, so a controller can tell from the version returned by its write whether its cache has caught up.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=5v7P-5UKfdk&amp;t=381s" aria-label="Watch at 6:21">6:21</a> <span>He describes a new metric on every informer store in client-go that can be subtracted from the API server&#x27;s watch cache resource version, and shows a scale-test graph in which one API server falls up to 350,000 resource versions behind.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=5v7P-5UKfdk&amp;t=437s" aria-label="Watch at 7:17">7:17</a> <span>He explains the consistency store, which records the resource version of each write and returns an error at the start of the next reconcile until the store has synced past it, and says it is already in the DaemonSet, Job, StatefulSet and ReplicaSet controllers.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=5v7P-5UKfdk&amp;t=1107s" aria-label="Watch at 18:27">18:27</a> <span>Aleman describes controller-runtime&#x27;s consistent client as two layers: reads that start after a write block until the write finishes, and then wait until the cache has reached the resource version that write returned.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/client-go-8a2a2228162e.html">client-go</a><a class="tag project-tag" href="../technologies/controller-runtime-7c437512b658.html">controller-runtime</a><a class="tag project-tag" href="../technologies/etcd-c38cbd92fce4.html">etcd</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/kubernetes-api-server-73536e21b454.html">Kubernetes API server</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/promql-2f37bf644d8b.html">PromQL</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

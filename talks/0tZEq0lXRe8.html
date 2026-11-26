@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>BurritoBot Said Let&#x27;s Dance, the Platform Said No | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-0">Platform Engineering</span><span class="demo-badge">Demo</span></div>
+<h1>BurritoBot Said Let&#x27;s Dance, the Platform Said No</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Whitney Lee, Michael Forrester</dd></div>
+<div><dt>Track</dt><dd>Platform Engineering</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Security%2C%20identity%20and%20policy#library">Security, identity and policy</a><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a><a class="tag theme-tag" href="../index.html?theme=Platform%20engineering%20and%20developer%20experience#library">Platform engineering and developer experience</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Any Level</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=0tZEq0lXRe8">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1249553">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Whitney Lee and Michael Forrester let the audience attack a deliberately unprotected burrito-ordering chatbot that is wired to MCP tools and runs on a Kubernetes-based internal developer platform. They then switch on Kubernetes guardrails and LLM-specific guardrails in stages and explain which control they say stopped each attack.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you want to see prompt injection and tool poisoning against a chatbot on Kubernetes, and which guardrail the speakers use against each.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=0tZEq0lXRe8&amp;t=136s" aria-label="Watch at 2:16">2:16</a> <span>The speakers invite the audience to break a live BurritoBot that they say has no guardrails, warning that submitted prompts can be shown on screen.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=0tZEq0lXRe8&amp;t=449s" aria-label="Watch at 7:29">7:29</a> <span>Whitney talks the bot into revealing the fictional CEO&#x27;s home address, which she says is stored in a Kubernetes secret the bot should not be able to read.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=0tZEq0lXRe8&amp;t=908s" aria-label="Watch at 15:08">15:08</a> <span>Whitney turns on the Kubernetes guardrails with one command and says it adds Kyverno, KubeArmor, RBAC and network policy, then maps each one to the attack it blocked.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=0tZEq0lXRe8&amp;t=1169s" aria-label="Watch at 19:29">19:29</a> <span>Michael shows a support ticket with hidden instructions that makes the bot deploy an app, which he calls prompt injection in a trusted system, before turning on the AI guardrails.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=0tZEq0lXRe8&amp;t=1701s" aria-label="Watch at 28:21">28:21</a> <span>Michael explains a poisoned get-weather MCP tool whose description makes the bot read an internal config, and says the MCP gateway&#x27;s classifier removes the tool from the tool set.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/falco-f5bed22b9f4b.html">Falco</a><a class="tag project-tag" href="../technologies/kubearmor-8ec3fca21747.html">KubeArmor</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/kyverno-6900ead2739f.html">Kyverno</a><a class="tag project-tag" href="../technologies/model-context-protocol-9c5da690faad.html">Model Context Protocol</a><a class="tag project-tag" href="../technologies/opentelemetry-15646ccfc423.html">OpenTelemetry</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/datadog-4d8bd97f0310.html">Datadog</a><a class="tag project-tag" href="../technologies/llm-guard-3eb9b7be3d8c.html">LLM Guard</a><a class="tag project-tag" href="../technologies/owasp-top-10-for-llm-applications-7abc35caa627.html">OWASP Top 10 for LLM Applications</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

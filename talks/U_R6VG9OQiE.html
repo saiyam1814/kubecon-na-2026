@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Saturated by Design - Maximizing Cluster Allocation in On-Premises Kubernetes | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-0">Operations + Performance</span></div>
+<h1>Saturated by Design - Maximizing Cluster Allocation in On-Premises Kubernetes</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Dakota Sullivan, Isaac Wilson</dd></div>
+<div><dt>Track</dt><dd>Operations + Performance</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Advanced</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=U_R6VG9OQiE">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1250350">Schedule</a> · <a href="https://sessionize.com/download/ccaosmeh~YJrUKLfo2PG87KXNnMWPX8.pdf~saturated-by-design.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>The speakers describe how The Trade Desk raised allocation in its fixed-size on-premises Kubernetes clusters from about 20% with default scheduler settings to what they say is a consistent 97%. They walk through four problems, node scoring, deployment overscaling, fragmentation and right-sizing, and the scoring change, two custom scheduler plugins and a simulation-driven controller they built for them.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You run fixed-capacity or on-premises Kubernetes clusters with large pods and topology constraints and want to see how one team pushed allocation toward full.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=U_R6VG9OQiE&amp;t=254s" aria-label="Watch at 4:14">4:14</a> <span>Isaac Wilson says switching node scoring from least allocated to most allocated was the easiest and most significant change, taking utilization from about 20% to 85%.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=U_R6VG9OQiE&amp;t=390s" aria-label="Watch at 6:30">6:30</a> <span>Dakota Sullivan describes Plimsoll, a custom scheduler plugin that holds back extra pods created during rollouts and deletions until terminating pods are gone, which he says also works with out-of-tree controllers such as Argo Rollouts.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=U_R6VG9OQiE&amp;t=684s" aria-label="Watch at 11:24">11:24</a> <span>Wilson describes ResourceShuffler, a second scheduler plugin that moves pods without topology spread constraints to make room for constrained pending pods while respecting PodDisruptionBudgets, bringing utilization to 97% by their account.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=U_R6VG9OQiE&amp;t=909s" aria-label="Watch at 15:09">15:09</a> <span>Sullivan explains modeling workloads elastically, which he compares to CSS flexbox: each has a basis scale plus a min and max, so all workloads shrink or grow fairly when capacity changes.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=U_R6VG9OQiE&amp;t=1104s" aria-label="Watch at 18:24">18:24</a> <span>He introduces Bento, a controller that snapshots the cluster, runs simulations with the real Kubernetes scheduler to find ideal scales and moves workloads part way toward them on each loop.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/amazon-eks-d1b0dcc4b268.html">Amazon EKS</a><a class="tag project-tag" href="../technologies/argo-rollouts-5caab7b8435d.html">Argo Rollouts</a><a class="tag project-tag" href="../technologies/cluster-autoscaler-472c424b3c06.html">Cluster Autoscaler</a><a class="tag project-tag" href="../technologies/karpenter-5648b3be51b2.html">Karpenter</a><a class="tag project-tag" href="../technologies/kube-scheduler-a6fbf422f675.html">kube-scheduler</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/bento-4243b479ae1f.html">Bento</a><a class="tag project-tag" href="../technologies/plimsoll-25318c2d6a84.html">Plimsoll</a><a class="tag project-tag" href="../technologies/resourceshuffler-8c1af413e877.html">ResourceShuffler</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

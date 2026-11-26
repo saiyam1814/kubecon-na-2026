@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Autoscaling Reality Check: The Hands-On HTTP Optimization Challenge | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-3">Tutorials</span><span class="demo-badge">Demo</span></div>
+<h1>Autoscaling Reality Check: The Hands-On HTTP Optimization Challenge</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>David Pech</dd></div>
+<div><dt>Track</dt><dd>Tutorials</dd></div>
+<div><dt>Topic</dt><dd>Cloud Native Experience</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+<div><dt>Scheduled slot</dt><dd>80 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Any Level</dd></div>
+<div><dt>Session type</dt><dd>Tutorial</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=h914LjZEeDE">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1250326">Schedule</a> · <a href="https://sessionize.com/download/igbakden~UAWy72zE1xbxa9soESLmiu.pdf~autoscaling-reality-check.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>David Pech runs a hands-on tutorial in which attendees benchmark HTTP services in NGINX, Go, PHP and Java with k6 and watch how autoscaling reacts, first with the CPU-based Horizontal Pod Autoscaler and then with Knative scaling on concurrent requests. He walks through each round on a Grafana dashboard and describes the tuning he tried, including cases where he says his own improvement failed.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you run HTTP services behind HPA or Knative and want to see, round by round, where autoscaling lags behind real traffic.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=h914LjZEeDE&amp;t=611s" aria-label="Watch at 10:11">10:11</a> <span>The speaker lays out the lab: Argo CD, Istio, Knative and a Prometheus stack on a local k3d cluster or GitHub Codespaces, with k6 load tests run against services in several flavors.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=h914LjZEeDE&amp;t=1755s" aria-label="Watch at 29:15">29:15</a> <span>In the NGINX round scaled on CPU, the speaker shows on the dashboard that pods stay at the maximum after the load falls and that latencies remain, and asks the room why.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=h914LjZEeDE&amp;t=2183s" aria-label="Watch at 36:23">36:23</a> <span>The speaker explains Knative&#x27;s panic window: when demand jumps well above the estimate the autoscaler enters panic mode and does not scale down during it.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=h914LjZEeDE&amp;t=3826s" aria-label="Watch at 1:03:46">1:03:46</a> <span>For the Java round the speaker says slow startup limits how fast scaling can react, names GraalVM as one option, and shows a tuning attempt that he says failed completely.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=h914LjZEeDE&amp;t=3973s" aria-label="Watch at 1:06:13">1:06:13</a> <span>In the scale-to-zero round the speaker points out that a workload at zero has no metrics, which he says makes alerting on it hard.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/argo-cd-b9549e9e9e77.html">Argo CD</a><a class="tag project-tag" href="../technologies/github-codespaces-c69aa74ebb9a.html">GitHub Codespaces</a><a class="tag project-tag" href="../technologies/go-4cd0e21a9a07.html">Go</a><a class="tag project-tag" href="../technologies/grafana-cace491b6955.html">Grafana</a><a class="tag project-tag" href="../technologies/horizontal-pod-autoscaler-3f81f3af4cf4.html">Horizontal Pod Autoscaler</a><a class="tag project-tag" href="../technologies/istio-82d979a24d74.html">Istio</a><a class="tag project-tag" href="../technologies/java-38a0963a6364.html">Java</a><a class="tag project-tag" href="../technologies/k3d-90ea02d07bba.html">k3d</a><a class="tag project-tag" href="../technologies/k6-1d92ad4b6987.html">k6</a><a class="tag project-tag" href="../technologies/knative-be6d9270de40.html">Knative</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/nginx-5be1ecc7935f.html">NGINX</a><a class="tag project-tag" href="../technologies/postgresql-a478b4566be5.html">PostgreSQL</a><a class="tag project-tag" href="../technologies/prometheus-1809f7cd0c75.html">Prometheus</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/apache-tomcat-5f63c8d6591e.html">Apache Tomcat</a><a class="tag project-tag" href="../technologies/graalvm-309d902acdbc.html">GraalVM</a><a class="tag project-tag" href="../technologies/php-12a5d18ee896.html">PHP</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

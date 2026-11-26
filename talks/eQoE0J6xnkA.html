@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Demystifying Upgrades for Stateful, Dormant AI Agents: Unleashing Seamless Updates in Dynamic Sand | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">Maintainer Track</span></div>
+<h1>Demystifying Upgrades for Stateful, Dormant AI Agents: Unleashing Seamless Updates in Dynamic Sand</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Zhang Zhen</dd></div>
+<div><dt>Track</dt><dd>Maintainer Track</dd></div>
+<div><dt>Topic</dt><dd>AI agents</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a><a class="tag theme-tag" href="../index.html?theme=Delivery%2C%20GitOps%20and%20release%20safety#library">Delivery, GitOps and release safety</a><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=eQoE0J6xnkA">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1289663">Schedule</a></p>
+<section><h2>Talk summary</h2><p>OpenKruise maintainer Zhang Zhen describes how OpenKruise Agents, which he presents as a Kubernetes-native sandbox operator that runs agent sandboxes as pods, upgrades sandboxes that hold state and are mostly hibernated. He walks through upgrade paths for warm pools, for sandboxes at claim time and for running or paused sandboxes, including recreate with backup hooks, in-place update, checkpoint and restore, an installer approach using ephemeral containers, and a sandbox service for fleet rollouts.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you run long-lived agent sandboxes on Kubernetes and need ways to patch them without losing the agent&#x27;s files and session state.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=eQoE0J6xnkA&amp;t=212s" aria-label="Watch at 3:32">3:32</a> <span>Zhang Zhen says that in their production environment about 99% of sandboxes are hibernated at any time, so an upgrade has to reach paused sandboxes as well as running ones.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=eQoE0J6xnkA&amp;t=611s" aria-label="Watch at 10:11">10:11</a> <span>He describes probe-based idle detection, where a node daemon repeatedly runs a command inside the sandbox to check for an active session before an upgrade is allowed.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=eQoE0J6xnkA&amp;t=817s" aria-label="Watch at 13:37">13:37</a> <span>He says that on an overlay filesystem you cannot both swap the image and keep the writable layer for free, because mixing old and new files gives unpredictable results.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=eQoE0J6xnkA&amp;t=1051s" aria-label="Watch at 17:31">17:31</a> <span>He presents a checkpoint and restore strategy that takes a filesystem-only snapshot, recreates the pod with non-image changes such as environment variables or mounts, and restores the writable layer.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=eQoE0J6xnkA&amp;t=1274s" aria-label="Watch at 21:14">21:14</a> <span>He introduces a sandbox service that he compares to a Service plus Deployment for sandboxes, with a stable endpoint, a gateway mapping session IDs to sandboxes, and rollouts that drain old sandboxes.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/claude-code-a625159d18da.html">Claude Code</a><a class="tag project-tag" href="../technologies/codex-57de4cf40144.html">Codex</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/openclaw-96a4bc260265.html">OpenClaw</a><a class="tag project-tag" href="../technologies/openkruise-c1dee9c0155d.html">OpenKruise</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/e2b-3032646694ad.html">E2B</a><a class="tag project-tag" href="../technologies/overlayfs-334aabcbb7fe.html">OverlayFS</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

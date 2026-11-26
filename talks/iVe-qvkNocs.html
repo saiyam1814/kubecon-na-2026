@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Volcano for the Agentic AI Era: Unified Scheduling Across Training, Inference, and Agents | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">Maintainer Track</span></div>
+<h1>Volcano for the Agentic AI Era: Unified Scheduling Across Training, Inference, and Agents</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Ricardo Aravena, Rainie Li</dd></div>
+<div><dt>Track</dt><dd>Maintainer Track</dd></div>
+<div><dt>Topic</dt><dd>Volcano</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a><a class="tag theme-tag" href="../index.html?theme=AI%20inference%20and%20serving#library">AI inference and serving</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=iVe-qvkNocs">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1289640">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Rainie Li explains how Volcano aims to schedule training, inference and agent workloads on one Kubernetes cluster, using a batch scheduler and an agent scheduler that share nodes through a sharding controller, plus multi-level gang scheduling, network topology hypernodes and gang-aware preemption. Ricardo Aravena then covers how workload controllers such as Kthena, KubeRay and Grove map onto Volcano primitives, the project&#x27;s benchmarking work and the roadmap.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you schedule AI training, inference or agent workloads on shared GPU clusters and want to know what Volcano offers for gang and topology-aware placement.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=iVe-qvkNocs&amp;t=182s" aria-label="Watch at 3:02">3:02</a> <span>Rainie Li says Volcano uses two schedulers, a batch scheduler for coordinated workloads and an agent scheduler for latency-sensitive pods, with a sharding controller assigning candidate nodes to each and moving them as demand changes.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=iVe-qvkNocs&amp;t=409s" aria-label="Watch at 6:49">6:49</a> <span>She introduces multi-level gang scheduling, in which a pod group contains subgroups with their own completeness requirements, such as a tensor-parallel group or a prefill or decode replica.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=iVe-qvkNocs&amp;t=596s" aria-label="Watch at 9:56">9:56</a> <span>She explains gang-aware preemption, which treats victims as groups and simulates placement first, so no pod is evicted if the whole incoming gang cannot fit.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=iVe-qvkNocs&amp;t=912s" aria-label="Watch at 15:12">15:12</a> <span>Ricardo Aravena says KubeRay support is merged upstream and listed for Volcano 1.16, and walks through how its head and worker groups translate into Volcano subgroups.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=iVe-qvkNocs&amp;t=1115s" aria-label="Watch at 18:35">18:35</a> <span>He describes the scheduling benchmark framework shipped with Volcano 1.15, which reports scheduling latency and binding throughput on kind, KWOK or an existing cluster, and notes it says nothing about GPU job speed.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/apache-spark-fc9560c0c055.html">Apache Spark</a><a class="tag project-tag" href="../technologies/apache-yunikorn-f309c3bd3305.html">Apache YuniKorn</a><a class="tag project-tag" href="../technologies/dra-net-6d262602a1a6.html">DRA-Net</a><a class="tag project-tag" href="../technologies/dynamic-resource-allocation-d7775471dc59.html">Dynamic Resource Allocation</a><a class="tag project-tag" href="../technologies/grove-8a0e7f923a4d.html">Grove</a><a class="tag project-tag" href="../technologies/kind-0b27c158feb3.html">kind</a><a class="tag project-tag" href="../technologies/kthena-71205f7e5da9.html">Kthena</a><a class="tag project-tag" href="../technologies/kube-scheduler-a6fbf422f675.html">kube-scheduler</a><a class="tag project-tag" href="../technologies/kubeflow-22db977b4caf.html">Kubeflow</a><a class="tag project-tag" href="../technologies/kuberay-7ff1239820e8.html">KubeRay</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/kueue-5798625f00ad.html">Kueue</a><a class="tag project-tag" href="../technologies/kwok-1f60f69f9012.html">KWOK</a><a class="tag project-tag" href="../technologies/leaderworkerset-bcc3c85597aa.html">LeaderWorkerSet</a><a class="tag project-tag" href="../technologies/nvidia-dcgm-5dc07bb38f0f.html">NVIDIA DCGM</a><a class="tag project-tag" href="../technologies/prometheus-1809f7cd0c75.html">Prometheus</a><a class="tag project-tag" href="../technologies/ray-c04bc270f965.html">Ray</a><a class="tag project-tag" href="../technologies/volcano-06612c283234.html">Volcano</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

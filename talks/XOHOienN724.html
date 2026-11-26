@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Dockerfiles Made Software Reproducible. What Makes an Agent Reproducible? | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-7">Experiences</span><span class="demo-badge">Demo</span></div>
+<h1>Dockerfiles Made Software Reproducible. What Makes an Agent Reproducible?</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Per Krogslund</dd></div>
+<div><dt>Track</dt><dd>Experiences</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a><a class="tag theme-tag" href="../index.html?theme=Security%2C%20identity%20and%20policy#library">Security, identity and policy</a><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Birds of a Feather</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=XOHOienN724">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1367762">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Per Krogslund argues that a Dockerfile describes an agent&#x27;s workload but says nothing about what the agent is allowed to reach, and presents Docker&#x27;s open sandbox kit spec, which records those capabilities as annotations on an OCI image. He shows kits being run and built with Docker&#x27;s microVM-based sandbox runtime and takes audience questions on Kubernetes support, other runtimes and updating a kit&#x27;s metadata.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you run coding agents and want to see one proposal for declaring an agent&#x27;s network, credential and device access alongside its image so teams can share and check it.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=XOHOienN724&amp;t=294s" aria-label="Watch at 4:54">4:54</a> <span>Krogslund says a container is process isolation and not a security boundary, and that running a coding agent in a privileged container with access to the Docker socket gives it a route to the host machine.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=XOHOienN724&amp;t=417s" aria-label="Watch at 6:57">6:57</a> <span>He says Docker is building an agent runtime and supply chain on top of OCI and not a new format, that the sandbox kit spec is already open source, and that Docker has discussed handing it over to the CNCF.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=XOHOienN724&amp;t=663s" aria-label="Watch at 11:03">11:03</a> <span>He describes Docker&#x27;s own runtime as a microVM with a private Docker engine whose only way out is a network proxy, which applies allow and deny rules and swaps a placeholder credential for the real one on outbound requests.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=XOHOienN724&amp;t=816s" aria-label="Watch at 13:36">13:36</a> <span>He walks through a kit&#x27;s YAML file, which names the hosts the agent needs, the service credential it needs without storing it, and any agent context file, and later shows network rules that differ between install and run time.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=XOHOienN724&amp;t=1291s" aria-label="Watch at 21:31">21:31</a> <span>Asked about Kubernetes, he says there is no Kubernetes runtime yet beyond an experimental version inside Docker, that the focus so far is the local experience, and that he wants input on the use cases.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/docker-d548c5b83fa6.html">Docker</a><a class="tag project-tag" href="../technologies/git-9a881b9b9f23.html">Git</a><a class="tag project-tag" href="../technologies/github-c0b0109d9439.html">GitHub</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/open-container-initiative-5c80c13f76a6.html">Open Container Initiative</a><a class="tag project-tag" href="../technologies/opensandbox-9be5f1b3279c.html">OpenSandbox</a><a class="tag project-tag" href="../technologies/openshell-dc5cbc21a452.html">OpenShell</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/claude-code-a625159d18da.html">Claude Code</a><a class="tag project-tag" href="../technologies/docker-buildx-0bc541ac232f.html">Docker Buildx</a><a class="tag project-tag" href="../technologies/docker-hub-1f6b8212fdab.html">Docker Hub</a><a class="tag project-tag" href="../technologies/docker-sandboxes-63d2adea4147.html">Docker Sandboxes</a><a class="tag project-tag" href="../technologies/github-cli-13ad88ffbe7a.html">GitHub CLI</a><a class="tag project-tag" href="../technologies/npm-d79677188687.html">npm</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>From ListenerSets to eBPF Plugins: Cilium&#x27;s Evolution Across the Stack | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">Maintainer Track</span></div>
+<h1>From ListenerSets to eBPF Plugins: Cilium&#x27;s Evolution Across the Stack</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Christine Kim, Katie Meinders, Hadrien Patte</dd></div>
+<div><dt>Track</dt><dd>Maintainer Track</dd></div>
+<div><dt>Topic</dt><dd>Cilium</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Networking%20and%20connectivity#library">Networking and connectivity</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=U1AbN6SOR_c">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1289674">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Katie Meinders walks through what the speakers say shipped in Cilium 1.20 and Tetragon 1.8, including datapath plugins, netkit auto mode and ztunnel-based mTLS in beta. Hadrien Patte of Datadog then explains why IPv6 for AWS ENI IPAM took four years to land, and Christine Kim covers the Gateway API additions of external auth, TCPRoute and UDPRoute, and ListenerSets.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you run Cilium and want a tour of 1.20, or want to see how one long-requested feature, IPv6 on AWS ENI, finally got built.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=U1AbN6SOR_c&amp;t=143s" aria-label="Watch at 2:23">2:23</a> <span>Katie Meinders describes datapath plugins, which she says came from Google and let third-party code instrument Cilium&#x27;s datapath as a plugin without patching or forking Cilium.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=U1AbN6SOR_c&amp;t=215s" aria-label="Watch at 3:35">3:35</a> <span>She says ztunnel mTLS is now in beta, built on Istio&#x27;s ztunnel, and replaces the older Cilium mutual authentication feature, which she says is deprecated.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=U1AbN6SOR_c&amp;t=518s" aria-label="Watch at 8:38">8:38</a> <span>Hadrien Patte shows the feature request for IPv6 in AWS ENI mode, opened in January 2022 the day after AWS announced IPv6 for EKS, and says it shipped in 1.20 in July 2026.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=U1AbN6SOR_c&amp;t=806s" aria-label="Watch at 13:26">13:26</a> <span>He explains the blocker: the operator listed every available IP in the CiliumNode resource, which cannot hold a /80 IPv6 prefix, so ENI mode was changed to advertise CIDRs as the multi-pool IPAM mode does.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=U1AbN6SOR_c&amp;t=1100s" aria-label="Watch at 18:20">18:20</a> <span>Christine Kim explains ListenerSets, which she says lift the limit of 64 listeners per Gateway and let application teams manage their own TLS certificates, with the older listener winning conflicts.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/amazon-eks-d1b0dcc4b268.html">Amazon EKS</a><a class="tag project-tag" href="../technologies/cilium-887318495291.html">Cilium</a><a class="tag project-tag" href="../technologies/ebpf-942d8abc75dd.html">eBPF</a><a class="tag project-tag" href="../technologies/gateway-api-2929f65596ea.html">Gateway API</a><a class="tag project-tag" href="../technologies/hubble-18d9486f99df.html">Hubble</a><a class="tag project-tag" href="../technologies/istio-82d979a24d74.html">Istio</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/tetragon-7e3f9fad8d9e.html">Tetragon</a><a class="tag project-tag" href="../technologies/ztunnel-f68c1c6fd4bf.html">ztunnel</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/aws-eni-7df3e4782182.html">AWS ENI</a><a class="tag project-tag" href="../technologies/multi-cluster-services-api-5a26a2bc6f39.html">Multi-Cluster Services API</a><a class="tag project-tag" href="../technologies/netkit-4a0c39400d29.html">netkit</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

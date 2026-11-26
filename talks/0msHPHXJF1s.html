@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Managing Network Security in Multi-Tenant Environments with Istio and Cilium | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-5">Connectivity</span></div>
+<h1>Managing Network Security in Multi-Tenant Environments with Istio and Cilium</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Michael Bolot, Zaira Shaikh</dd></div>
+<div><dt>Track</dt><dd>Connectivity</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Security%2C%20identity%20and%20policy#library">Security, identity and policy</a><a class="tag theme-tag" href="../index.html?theme=Networking%20and%20connectivity#library">Networking and connectivity</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Any Level</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=0msHPHXJF1s">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1247970">Schedule</a> · <a href="https://sessionize.com/download/ilmabux~pkbNNWYJseMqGEvAeHeYTZ.pdf~cilium_istiotalkkubecon26.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Michael Bolot and Zaira Shaikh of GEICO describe replacing a mix of cloud firewalls, on-premises firewalls and in-cluster policies with one API that configures Istio and Cilium across clusters on a flat, routable pod IP space. They explain how SPIRE identities and Istio authorization policies decide which applications may talk, while a small set of Cilium policies blocks what bypasses the sidecar, and they close with tips for writing Cilium policies safely.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you run Cilium and Istio together and want to hear how one platform team splits network policy duties between them.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=0msHPHXJF1s&amp;t=104s" aria-label="Watch at 1:44">1:44</a> <span>Bolot lists the problems with the legacy setup: no unified definition of the policy affecting a device, manual configuration, inconsistent enforcement and a complex network topology.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=0msHPHXJF1s&amp;t=423s" aria-label="Watch at 7:03">7:03</a> <span>Shaikh describes the new system: pods are restricted by Istio resources and network policies written by a data plane agent on every workload cluster, configured from a central API server, with Cilium&#x27;s BGP features advertising all pod IPs.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=0msHPHXJF1s&amp;t=903s" aria-label="Watch at 15:03">15:03</a> <span>Bolot says SPIRE handles authentication by issuing workloads a certificate after attestation, and Istio authorization policies state what a given SPIFFE ID may reach, with service entries and workload entries connecting clusters.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=0msHPHXJF1s&amp;t=1195s" aria-label="Watch at 19:55">19:55</a> <span>Bolot gives three reasons they do not use Cilium for everything: they want authorization based on SPIFFE IDs, user-chosen labels would exhaust Cilium&#x27;s identity map, and Cilium&#x27;s layer 7 Envoy would duplicate the one Istio already runs.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=0msHPHXJF1s&amp;t=1529s" aria-label="Watch at 25:29">25:29</a> <span>Shaikh shares tips for Cilium policies, including using audit mode and Hubble, minding the default enforcement mode, and never cutting the operator or etcd off from the API server.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/apache-cassandra-52264ab7d060.html">Apache Cassandra</a><a class="tag project-tag" href="../technologies/apache-kafka-8bcf11933046.html">Apache Kafka</a><a class="tag project-tag" href="../technologies/azure-kubernetes-service-394f8f8f7ed2.html">Azure Kubernetes Service</a><a class="tag project-tag" href="../technologies/cilium-887318495291.html">Cilium</a><a class="tag project-tag" href="../technologies/coredns-8a32e516d741.html">CoreDNS</a><a class="tag project-tag" href="../technologies/envoy-84532b306f25.html">Envoy</a><a class="tag project-tag" href="../technologies/etcd-c38cbd92fce4.html">etcd</a><a class="tag project-tag" href="../technologies/gvisor-1f6d325084c7.html">gVisor</a><a class="tag project-tag" href="../technologies/hubble-18d9486f99df.html">Hubble</a><a class="tag project-tag" href="../technologies/istio-82d979a24d74.html">Istio</a><a class="tag project-tag" href="../technologies/kamaji-29ab0ac552a9.html">Kamaji</a><a class="tag project-tag" href="../technologies/kata-containers-1a987ab98658.html">Kata Containers</a><a class="tag project-tag" href="../technologies/kind-0b27c158feb3.html">kind</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/postgresql-a478b4566be5.html">PostgreSQL</a><a class="tag project-tag" href="../technologies/spiffe-10aca797a724.html">SPIFFE</a><a class="tag project-tag" href="../technologies/spire-8aa27f40201f.html">SPIRE</a><a class="tag project-tag" href="../technologies/terraform-94dc3ea57721.html">Terraform</a><a class="tag project-tag" href="../technologies/vcluster-f689954fb7af.html">vCluster</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

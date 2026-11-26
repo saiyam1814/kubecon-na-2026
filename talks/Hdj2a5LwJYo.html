@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Keeping Envoy Boring in an eBPF Datapath (Cilium L7) | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-0">EnvoyCon</span></div>
+<h1>Keeping Envoy Boring in an eBPF Datapath (Cilium L7)</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Kateryna Nezdolii</dd></div>
+<div><dt>Track</dt><dd>EnvoyCon</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Networking%20and%20connectivity#library">Networking and connectivity</a><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>10 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=Hdj2a5LwJYo">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1334801">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Kateryna Nezdolii of Isovalent, an Envoy maintainer, follows one HTTP request and one policy update through Cilium to show where the eBPF datapath enforces L3/L4 checks and where a node-local Envoy enforces HTTP rules. She then describes how Cilium ships and tests its own Envoy build, keeps the last accepted configuration on rejected updates and agent restarts, and is migrating its xDS control plane.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You run Cilium with L7 policies and want to know what Envoy does in that path and how updates are kept safe.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=Hdj2a5LwJYo&amp;t=142s" aria-label="Watch at 2:22">2:22</a> <span>She says Cilium turns one CiliumNetworkPolicy into a datapath redirect plus an Envoy HTTP rule: the datapath checks identity, protocol and port, and Envoy checks method and path.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Hdj2a5LwJYo&amp;t=303s" aria-label="Watch at 5:03">5:03</a> <span>She explains that a request denied at L3/L4 is dropped in the datapath with no HTTP response, while one that fails the HTTP rule gets a 403 from Envoy, and that Hubble records the L7 verdict.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Hdj2a5LwJYo&amp;t=402s" aria-label="Watch at 6:42">6:42</a> <span>She says Cilium ships its own Envoy build called cilium-proxy with a minimal set of extensions, its own policy filters, a version compatibility matrix and a set of patches.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Hdj2a5LwJYo&amp;t=448s" aria-label="Watch at 7:28">7:28</a> <span>She says that when Envoy rejects a configuration update the last accepted config keeps running, and that an agent restart compares desired and accepted config so a working proxy is left alone.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Hdj2a5LwJYo&amp;t=517s" aria-label="Watch at 8:37">8:37</a> <span>She describes ongoing work: migrating from a custom split-xDS control plane to an ADS implementation, adding delta ADS, and a Network Policy Resource Discovery Service that splits the policy into smaller resources.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/cilium-887318495291.html">Cilium</a><a class="tag project-tag" href="../technologies/ebpf-942d8abc75dd.html">eBPF</a><a class="tag project-tag" href="../technologies/envoy-84532b306f25.html">Envoy</a><a class="tag project-tag" href="../technologies/hubble-18d9486f99df.html">Hubble</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/cilium-proxy-22bb7aea526e.html">cilium-proxy</a><a class="tag project-tag" href="../technologies/xds-3e2ef76298b1.html">xDS</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>ListenerSets: Ingress → Gateway API | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-0">EnvoyCon</span></div>
+<h1>ListenerSets: Ingress → Gateway API</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Karol Szwaj, Isaac Wilson</dd></div>
+<div><dt>Track</dt><dd>EnvoyCon</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Networking%20and%20connectivity#library">Networking and connectivity</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>10 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=VAkkvVLch_Y">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1334797">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Two Envoy Gateway maintainers compare Envoy Gateway&#x27;s Merged Gateways feature with ListenerSets in Gateway API as ways for many teams to share one proxy fleet when moving off Ingress. They recommend that Envoy Gateway users switch to ListenerSets and say they plan to deprecate Merged Gateways.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You share one ingress proxy between many teams and want to know whether to use Merged Gateways or ListenerSets in Envoy Gateway.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=VAkkvVLch_Y&amp;t=60s" aria-label="Watch at 1:00">1:00</a> <span>Karol Szwaj contrasts Ingress, where any team could claim any hostname and annotations shared one proxy configuration, with Gateway API&#x27;s role split through Kubernetes RBAC and explicit cross-namespace attachment.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=VAkkvVLch_Y&amp;t=106s" aria-label="Watch at 1:46">1:46</a> <span>He describes Merged Gateways, added to Envoy Gateway three years ago and enabled by setting mergeGateways to true on the EnvoyProxy resource linked to a GatewayClass, so all Gateways share one Envoy fleet, IP and load balancer.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=VAkkvVLch_Y&amp;t=192s" aria-label="Watch at 3:12">3:12</a> <span>He lists the trade-offs: one fleet to scale and simpler DNS, but port, hostname and protocol must not collide across Gateways, fleet settings are not per team, and failures have a larger blast radius.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=VAkkvVLch_Y&amp;t=263s" aria-label="Watch at 4:23">4:23</a> <span>Isaac Wilson says ListenerSets have been standard in Gateway API since v1.5 and let teams attach their own listeners to a single shared Gateway.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=VAkkvVLch_Y&amp;t=393s" aria-label="Watch at 6:33">6:33</a> <span>He says Envoy Gateway now recommends that users move to ListenerSets because the maintainers plan to deprecate Merged Gateways.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/envoy-84532b306f25.html">Envoy</a><a class="tag project-tag" href="../technologies/envoy-gateway-e441e6aaf66b.html">Envoy Gateway</a><a class="tag project-tag" href="../technologies/gateway-api-2929f65596ea.html">Gateway API</a><a class="tag project-tag" href="../technologies/ingress-nginx-34f2b6a43f67.html">ingress-nginx</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

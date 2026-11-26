@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Tracing at Scale: Running a 16 Billion Spans/Hour Pipeline at Nubank | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-3">Observability</span></div>
+<h1>Tracing at Scale: Running a 16 Billion Spans/Hour Pipeline at Nubank</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Felipe Araujo, Kaynan Coelho</dd></div>
+<div><dt>Track</dt><dd>Observability</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Any Level</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=lxXoNNwmgIc">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1239823">Schedule</a> · <a href="https://sessionize.com/download/cbapxeod~MvuVzKGoBKpZXwEKHsJ5oo.pdf~tracing-at-scale.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>The speakers describe how Nubank built its distributed tracing pipeline, from instrumenting a handful of shared libraries to an ingestion platform built around the OpenTelemetry Collector, micro-batches on S3 and queues, KEDA scaling and tail sampling with Refinery before data goes to Honeycomb. They share the sampling rules they settled on, cases where traces helped them cut latency and storage, and advice for teams building something similar.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You are scaling distributed tracing past what head sampling and a single vendor pipeline handle and want one bank&#x27;s architecture and sampling choices.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=lxXoNNwmgIc&amp;t=94s" aria-label="Watch at 1:34">1:34</a> <span>Kaynan Coelho says the pipeline now receives more than 23 billion spans per hour, over 700 terabytes of data a day, and that five engineers work on it full time.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lxXoNNwmgIc&amp;t=241s" aria-label="Watch at 4:01">4:01</a> <span>Coelho explains that because most Nubank services share the same Clojure template and libraries, they instrumented six core libraries instead of more than 4,000 services.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lxXoNNwmgIc&amp;t=501s" aria-label="Watch at 8:21">8:21</a> <span>Felipe Araujo says streaming was too expensive and large batches too slow, so the collector writes roughly 10-second micro-batches to S3 and a queue notification tells the next application to pick them up, a pattern he identifies as claim check.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lxXoNNwmgIc&amp;t=726s" aria-label="Watch at 12:06">12:06</a> <span>Araujo says percentage-based tail sampling hid rare critical paths, so they moved to dynamic rules that keep slow requests and all 500 errors and reduce fast, common successes.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lxXoNNwmgIc&amp;t=863s" aria-label="Watch at 14:23">14:23</a> <span>Coelho describes using traces to find that some app requests waited on more than 30 content providers, and says the fixes brought latency in those transactions down to about 200 milliseconds.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/amazon-s3-ebf704baa88d.html">Amazon S3</a><a class="tag project-tag" href="../technologies/apache-kafka-8bcf11933046.html">Apache Kafka</a><a class="tag project-tag" href="../technologies/aws-7d1507284a57.html">AWS</a><a class="tag project-tag" href="../technologies/keda-308c477e9c54.html">KEDA</a><a class="tag project-tag" href="../technologies/opentelemetry-15646ccfc423.html">OpenTelemetry</a><a class="tag project-tag" href="../technologies/opentelemetry-collector-64b757c33a41.html">OpenTelemetry Collector</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/amazon-dynamodb-f6fce77d4a6f.html">Amazon DynamoDB</a><a class="tag project-tag" href="../technologies/amazon-sqs-0ad8c3795bf9.html">Amazon SQS</a><a class="tag project-tag" href="../technologies/clojure-4f3ea34e0a3a.html">Clojure</a><a class="tag project-tag" href="../technologies/datomic-bfebc8605a5a.html">Datomic</a><a class="tag project-tag" href="../technologies/honeycomb-dd0cf4ed95b6.html">Honeycomb</a><a class="tag project-tag" href="../technologies/honeycomb-refinery-7aa09b8e46c2.html">Honeycomb Refinery</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Turning Apple Silicon into Production GPU Nodes for LLM Inference on Kubernetes | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">AI Inference + Agentic</span><span class="demo-badge">Demo</span></div>
+<h1>Turning Apple Silicon into Production GPU Nodes for LLM Inference on Kubernetes</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Christopher Maher</dd></div>
+<div><dt>Track</dt><dd>AI Inference + Agentic</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=AI%20inference%20and%20serving#library">AI inference and serving</a><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Advanced</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=8jFui8KHK80">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1205589">Schedule</a> · <a href="https://sessionize.com/download/joqsao~MZuw9pocnf6Csqn7o5jqdJ.pdf~kubecon-na-2026-apple-silicon.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>The speaker, who maintains LLMKube, shows live how a Mac joins a Kubernetes cluster as a MetalNode: an agent on the Mac starts the inference engine natively and publishes an EndpointSlice, so clients see an ordinary OpenAI-compatible service. He says unified memory makes memory the thing to schedule on, recounts a kernel panic that led him to make the agent refuse models it cannot size, and shows traffic failing over to NVIDIA nodes when the Mac&#x27;s lid closes.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You want to serve LLMs on Macs or other unified-memory machines you already own, behind the same Kubernetes operator and service as your NVIDIA nodes.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=8jFui8KHK80&amp;t=316s" aria-label="Watch at 5:16">5:16</a> <span>The speaker lists why a Mac cannot simply join a cluster: Metal is not available inside a Linux container, no device plugin advertises the Mac&#x27;s GPU, and the kubelet cannot see how much unified memory the GPU holds.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=8jFui8KHK80&amp;t=392s" aria-label="Watch at 6:32">6:32</a> <span>He describes the Mac path: an agent running under launchd watches for inference services, starts the engine natively and publishes an EndpointSlice, so clients see an ordinary OpenAI-compatible service.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=8jFui8KHK80&amp;t=556s" aria-label="Watch at 9:16">9:16</a> <span>In a live demo a second MacBook joins his home cluster with a token-based join command and appears as a MetalNode.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=8jFui8KHK80&amp;t=743s" aria-label="Watch at 12:23">12:23</a> <span>He says the agent now fails closed after an incident in which a memory check failed open, llama-server ran with mlock and the laptop hit a kernel panic; admission also counts memory already committed.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=8jFui8KHK80&amp;t=956s" aria-label="Watch at 15:56">15:56</a> <span>In a live demo he closes the lid of the Mac serving traffic, and the same endpoint is then answered by NVIDIA nodes in his home lab.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/grafana-cace491b6955.html">Grafana</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/llama-cpp-150dc86746a9.html">llama.cpp</a><a class="tag project-tag" href="../technologies/llmkube-b25a586f205a.html">LLMKube</a><a class="tag project-tag" href="../technologies/mlx-339a1eac565d.html">MLX</a><a class="tag project-tag" href="../technologies/ollama-76e3c7bfe641.html">Ollama</a><a class="tag project-tag" href="../technologies/opencode-62f8e1ec095e.html">OpenCode</a><a class="tag project-tag" href="../technologies/sglang-6c87e5496f59.html">SGLang</a><a class="tag project-tag" href="../technologies/vllm-ec8207a3dde6.html">vLLM</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/cuda-e636c973d999.html">CUDA</a><a class="tag project-tag" href="../technologies/homebrew-12c87370d1b5.html">Homebrew</a><a class="tag project-tag" href="../technologies/launchd-c826e841fb37.html">launchd</a><a class="tag project-tag" href="../technologies/metal-03ecab669ba2.html">Metal</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

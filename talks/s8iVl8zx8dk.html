@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>When GPUs Become NUMA Nodes: Challenges Running Kubernetes with Memory-Coherent Hardware | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-2">Emerging + Advanced</span></div>
+<h1>When GPUs Become NUMA Nodes: Challenges Running Kubernetes with Memory-Coherent Hardware</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Kevin Klues</dd></div>
+<div><dt>Track</dt><dd>Emerging + Advanced</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Advanced</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=s8iVl8zx8dk">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1229671">Schedule</a> · <a href="https://sessionize.com/download/inkacsef~pW2ujMYKo5VmXnZbweriCF.pdf~kubecon-na-2026-when-gpus-become-numa-nodes_-challenges-running-kubernetes-with-memory-coherent-hardware.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Kevin Klues, presenting alone because his listed co-speaker could not attend, explains how NVIDIA systems with memory-coherent CPU and GPU links exposed GPU memory as NUMA nodes and why he says that broke the kubelet&#x27;s memory accounting, pod memory limits and GPU isolation. He walks through two workarounds his team abandoned, the driver mode called CDMM that they adopted instead, and a kubelet fix that was still needed.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you run Kubernetes on NVIDIA GB200-class or other unified-memory hardware and want to know how GPU memory interacts with kubelet memory accounting.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=s8iVl8zx8dk&amp;t=449s" aria-label="Watch at 7:29">7:29</a> <span>Klues lists three problems with the driver&#x27;s NUMA mode on Kubernetes: memory over-reporting to the kubelet, a broken pod memory limit contract, and any container being able to allocate GPU memory it was not assigned.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=s8iVl8zx8dk&amp;t=655s" aria-label="Watch at 10:55">10:55</a> <span>He describes the first attempt, hiding GPU NUMA nodes from the kubelet with reserved memory settings, and says it failed on ordering with the GPU driver and on dynamic MIG devices.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=s8iVl8zx8dk&amp;t=824s" aria-label="Watch at 13:44">13:44</a> <span>He describes a second attempt using an NRI plugin to restrict each container to the NUMA nodes of its own GPUs, which he says got complicated once GPUs were injected through CDI and DRA.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=s8iVl8zx8dk&amp;t=995s" aria-label="Watch at 16:35">16:35</a> <span>He introduces Coherent Driver-Based Memory Management (CDMM), a driver mode that he says keeps GPU memory NUMA nodes offline while retaining pointer coherency over NVLink.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=s8iVl8zx8dk&amp;t=1119s" aria-label="Watch at 18:39">18:39</a> <span>He says enabling the topology manager stalled the kubelet because it iterated combinations of 34 NUMA nodes, and that a patch merged in Kubernetes 1.36 skips nodes with no memory.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/container-device-interface-5d444eeca62a.html">Container Device Interface</a><a class="tag project-tag" href="../technologies/dynamic-resource-allocation-d7775471dc59.html">Dynamic Resource Allocation</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/node-resource-interface-eb67c07c3428.html">Node Resource Interface</a><a class="tag project-tag" href="../technologies/nvidia-gpu-operator-bf2d4560761b.html">NVIDIA GPU Operator</a><a class="tag project-tag" href="../technologies/nvidia-nvlink-9c5fa81163e5.html">NVIDIA NVLink</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/cuda-e636c973d999.html">CUDA</a><a class="tag project-tag" href="../technologies/numactl-0d5ffd33e266.html">numactl</a><a class="tag project-tag" href="../technologies/nvidia-dgx-spark-086cbc5a635f.html">NVIDIA DGX Spark</a><a class="tag project-tag" href="../technologies/nvidia-gb200-7c2089e8c07b.html">NVIDIA GB200</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

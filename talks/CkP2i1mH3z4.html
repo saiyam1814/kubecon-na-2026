@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Death by a Thousand Patches: How Routine Kubernetes Operations Can Turn Healthy Clusters Read-Only | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-0">Operations + Performance</span><span class="demo-badge">Demo</span></div>
+<h1>Death by a Thousand Patches: How Routine Kubernetes Operations Can Turn Healthy Clusters Read-Only</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Sharik Pahwa, Hardeep Singh Tiwana</dd></div>
+<div><dt>Track</dt><dd>Operations + Performance</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Advanced</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=CkP2i1mH3z4">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1250567">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Sharik Pahwa and Hardeep Singh Tiwana demonstrate a healthy cluster going read-only after a storm of status patches fills a deliberately small etcd quota, and then trace the triggers and the failure back through etcd&#x27;s multi-version storage. They walk through recovery with compaction and defragmentation and suggest alerts, admission policies and scheduled defragmentation to prevent a repeat.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you run Kubernetes control planes or write controllers and want to understand how frequent status and annotation writes can fill etcd, and how to recover and guard against it.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=CkP2i1mH3z4&amp;t=202s" aria-label="Watch at 3:22">3:22</a> <span>In the demo, Pahwa says a script creates 80 pod replicas and sends a storm of status patches, each of which makes etcd store a full copy of the object, until the cluster with a 100 MB etcd quota turns read-only while the pods keep running.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=CkP2i1mH3z4&amp;t=283s" aria-label="Watch at 4:43">4:43</a> <span>Pahwa lists triggers that he says compound: scheduler retries on unschedulable pods, crash-looping containers, node lease renewals, controllers that write status without a change, annotations used as a message channel, and jobs without TTLs.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=CkP2i1mH3z4&amp;t=619s" aria-label="Watch at 10:19">10:19</a> <span>He argues that a read-only cluster is worse than an outage because pod status still shows Running and alarms stay green, and failures then arrive as a cascade of alarms that hides the etcd cause.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=CkP2i1mH3z4&amp;t=1083s" aria-label="Watch at 18:03">18:03</a> <span>Tiwana explains that compaction only marks old revisions as deleted and leaves the file size unchanged, so space comes back only after defragmentation, which he advises running on one etcd member at a time because it pauses that member.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=CkP2i1mH3z4&amp;t=1444s" aria-label="Watch at 24:04">24:04</a> <span>As a preventive guardrail, Tiwana shows a validating admission policy that limits how large an annotation or status update can be, and a test in which the oversized write is rejected.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/etcd-c38cbd92fce4.html">etcd</a><a class="tag project-tag" href="../technologies/kind-0b27c158feb3.html">kind</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/kubernetes-api-server-73536e21b454.html">Kubernetes API server</a><a class="tag project-tag" href="../technologies/kyverno-6900ead2739f.html">Kyverno</a><a class="tag project-tag" href="../technologies/prometheus-1809f7cd0c75.html">Prometheus</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/amazon-eks-d1b0dcc4b268.html">Amazon EKS</a><a class="tag project-tag" href="../technologies/github-c0b0109d9439.html">GitHub</a><a class="tag project-tag" href="../technologies/kube-scheduler-a6fbf422f675.html">kube-scheduler</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

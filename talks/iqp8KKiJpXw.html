@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>KubeRay 101 | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-7">Experiences</span></div>
+<h1>KubeRay 101</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Kai-Hsun Chen, Richard Liaw, Mengjin Yan, Jui-An Huang</dd></div>
+<div><dt>Track</dt><dd>Experiences</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a><a class="tag theme-tag" href="../index.html?theme=Community%20and%20open%20source%20adoption#library">Community and open source adoption</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Birds of a Feather</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=iqp8KKiJpXw">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1345967">Schedule</a></p>
+<section><h2>Talk summary</h2><p>The KubeRay maintainers give a short introduction to Ray and to KubeRay, the Kubernetes operator that runs Ray clusters, and say the session falls on the first day KubeRay is announced as donated to the CNCF. Kai-Hsun Chen then describes how his startup runs its audio model work on Ray, and the second half is audience questions on cluster sharing, reinforcement learning, MultiKueue and Grove.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you run Kubernetes and are new to Ray, and want to know what KubeRay&#x27;s custom resources do and how one team pairs it with Kueue for training and serving.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=iqp8KKiJpXw&amp;t=342s" aria-label="Watch at 5:42">5:42</a> <span>Huang says Ray distributes actors across the resources it has but does not allocate those resources itself, and that on Kubernetes this is the job of KubeRay, an operator that manages the lifecycle of a Ray cluster.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=iqp8KKiJpXw&amp;t=372s" aria-label="Watch at 6:12">6:12</a> <span>He walks through the custom resources: RayCluster for a long-lived cluster suited to prototyping, RayJob and a cron variant that create a short-lived cluster and clean it up afterwards, and RayService for online serving.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=iqp8KKiJpXw&amp;t=572s" aria-label="Watch at 9:32">9:32</a> <span>Chen describes his company&#x27;s audio model pipeline: Ray Data with CPU and GPU steps for data preparation, a Ray cluster with Kueue and MultiKueue for training and evaluation, and RayService for serving.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=iqp8KKiJpXw&amp;t=780s" aria-label="Watch at 13:00">13:00</a> <span>Huang lists recent contributions he attributes to other companies, including a history server for logs and events, a RocksDB backend for Ray&#x27;s metadata store, Kubernetes RBAC for Ray token authentication, and integration with the Kubernetes workload API.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=iqp8KKiJpXw&amp;t=1195s" aria-label="Watch at 19:55">19:55</a> <span>Asked about MultiKueue, Chen says he uses it with autoscaling and describes issues he ran into, such as one cluster holding hundreds of workload objects and a periodic reconnect that requeued everything, which he says were fixed upstream within days.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/apache-yunikorn-f309c3bd3305.html">Apache YuniKorn</a><a class="tag project-tag" href="../technologies/grove-8a0e7f923a4d.html">Grove</a><a class="tag project-tag" href="../technologies/kuberay-7ff1239820e8.html">KubeRay</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/kueue-5798625f00ad.html">Kueue</a><a class="tag project-tag" href="../technologies/ray-c04bc270f965.html">Ray</a><a class="tag project-tag" href="../technologies/redis-34fb46c847bb.html">Redis</a><a class="tag project-tag" href="../technologies/volcano-06612c283234.html">Volcano</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/ray-data-b742aae1eeb2.html">Ray Data</a><a class="tag project-tag" href="../technologies/ray-serve-ea71db273d01.html">Ray Serve</a><a class="tag project-tag" href="../technologies/rocksdb-321997a4d32b.html">RocksDB</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

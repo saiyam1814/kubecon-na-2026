@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Crossplane - The Cloud Native Framework for Platform Engineering | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">Maintainer Track</span><span class="demo-badge">Demo</span></div>
+<h1>Crossplane - The Cloud Native Framework for Platform Engineering</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Adam Wolfe Gordon, Jared Watts</dd></div>
+<div><dt>Track</dt><dd>Maintainer Track</dd></div>
+<div><dt>Topic</dt><dd>Platform engineering</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Platform%20engineering%20and%20developer%20experience#library">Platform engineering and developer experience</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=K1cDKsj6Y20">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1289696">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Crossplane maintainers Jared Watts and Adam Wolfe Gordon recap how composite resources, function pipelines and managed resources fit together, then demo two features they say are about to ship: simulations in the Crossplane CLI and function-controlled deletion in the 2.5 release. They also say v1.20 reaches end of life with that release, describe a proposed migration controller for moving v1 cluster-scoped resources to v2 namespaced ones, and credit the ModelPlane project with driving fixes upstream.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you run Crossplane and want to see a plan-style preview of changes and controlled deletion in action, or need to plan a move from v1 to v2.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=K1cDKsj6Y20&amp;t=669s" aria-label="Watch at 11:09">11:09</a> <span>Adam Wolfe Gordon introduces simulations, a set of Crossplane CLI commands built on render and crossplane-diff that also ask providers, through new plan servers, what they would do with a changed managed resource.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=K1cDKsj6Y20&amp;t=780s" aria-label="Watch at 13:00">13:00</a> <span>In a terminal demo he runs simulate commands on a managed resource, a composite resource and a whole project, and the output warns when an AWS VPC change would need a replacement and manual intervention.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=K1cDKsj6Y20&amp;t=1084s" aria-label="Watch at 18:04">18:04</a> <span>Jared Watts says compositions get a deletion policy field in 2.5 with background, foreground and pipeline options, where pipeline calls the function pipeline during deletion so it can order and clean up.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=K1cDKsj6Y20&amp;t=1334s" aria-label="Watch at 22:14">22:14</a> <span>In his demo, deleting a workspace with the pipeline deletion policy starts a backup job for its Postgres database before the resources are removed, while the background one is deleted immediately.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=K1cDKsj6Y20&amp;t=1437s" aria-label="Watch at 23:57">23:57</a> <span>He says v2 is backwards compatible but recommends running the crossplane upgrade check command first, and that v1.20 reaches end of life with the 2.5 release.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/crossplane-de727ce20dac.html">Crossplane</a><a class="tag project-tag" href="../technologies/helm-ab14d3faa25e.html">Helm</a><a class="tag project-tag" href="../technologies/kro-53478db94ea6.html">kro</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/modelplane-a396d576e467.html">ModelPlane</a><a class="tag project-tag" href="../technologies/postgresql-a478b4566be5.html">PostgreSQL</a><a class="tag project-tag" href="../technologies/terraform-94dc3ea57721.html">Terraform</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/aws-vpc-05226d7524bc.html">AWS VPC</a><a class="tag project-tag" href="../technologies/crossplane-diff-f53ef29f8fa3.html">crossplane-diff</a><a class="tag project-tag" href="../technologies/go-4cd0e21a9a07.html">Go</a><a class="tag project-tag" href="../technologies/kcl-3c0d9cd68e4a.html">KCL</a><a class="tag project-tag" href="../technologies/python-11a4a60b518b.html">Python</a><a class="tag project-tag" href="../technologies/upjet-214e11f6b2a8.html">Upjet</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

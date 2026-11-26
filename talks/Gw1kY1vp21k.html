@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Anthropic’s Kubernetes Scheduler for Frontier AI: What Worked, What Broke | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">AI Inference + Agentic</span></div>
+<h1>Anthropic’s Kubernetes Scheduler for Frontier AI: What Worked, What Broke</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Decheng Dai</dd></div>
+<div><dt>Track</dt><dd>AI Inference + Agentic</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a><a class="tag theme-tag" href="../index.html?theme=Networking%20and%20connectivity#library">Networking and connectivity</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Advanced</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=Gw1kY1vp21k">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1228453">Schedule</a> · <a href="https://sessionize.com/download/icbawzey~gDjxfSyCG74A7fJMThqRj.pdf~anthropics-kubernetes-scheduler-for-frontier-ai-what-worked-what-broke-5.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Decheng Dai describes why Anthropic wrote its own Kubernetes scheduler for accelerator workloads, covering gang scheduling, the topologies of Google TPUs and AWS Trainium, and a tree model of data center networks. He walks through the design choices he says keep the scheduling loop fast on very large clusters, then discusses soft slicing, defragmentation and the lack of transactional binding in the API server.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you schedule large training or inference jobs on Kubernetes and want to hear how one team handles gang and topology constraints at very large cluster sizes.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=Gw1kY1vp21k&amp;t=87s" aria-label="Watch at 1:27">1:27</a> <span>Dai frames the problem as gang scheduling plus topology-aware scheduling and describes two gang modes: a full gang where every pod must run, and replicas that are each a gang but fail independently.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Gw1kY1vp21k&amp;t=407s" aria-label="Watch at 6:47">6:47</a> <span>He says the team models every cluster as a tree of network domains whose leaves are TPU slices, Trainium servers or GPU nodes, and built a drop-in replacement scheduler that jobs select by scheduler name.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Gw1kY1vp21k&amp;t=495s" aria-label="Watch at 8:15">8:15</a> <span>He describes the control loop: take a snapshot of the cluster, plan all pending jobs from highest to lowest priority, and schedule jobs rather than pods, with the loop kept within 10 seconds on their largest cluster.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Gw1kY1vp21k&amp;t=1008s" aria-label="Watch at 16:48">16:48</a> <span>He says scoring nodes only once for jobs that are identical from a scheduling perspective is by far the largest scaling factor in their system.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=Gw1kY1vp21k&amp;t=1435s" aria-label="Watch at 23:55">23:55</a> <span>As something that does not work well, Dai points to gang binding without transactions in the API server: some of the bind calls can fail, forcing eviction of the pods already bound.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/kube-scheduler-a6fbf422f675.html">kube-scheduler</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/kubernetes-api-server-73536e21b454.html">Kubernetes API server</a><a class="tag project-tag" href="../technologies/kueue-5798625f00ad.html">Kueue</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/aws-trainium-c1fc39f00460.html">AWS Trainium</a><a class="tag project-tag" href="../technologies/google-tpu-84257de1d05d.html">Google TPU</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

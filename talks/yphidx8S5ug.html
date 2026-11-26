@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Agentic Ops: Building Guardrails for Autonomous AI with Policy-as-Code | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-7">KyvernoCon</span></div>
+<h1>Agentic Ops: Building Guardrails for Autonomous AI with Policy-as-Code</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Pavan Madduri</dd></div>
+<div><dt>Track</dt><dd>KyvernoCon</dd></div>
+<div><dt>Topic</dt><dd>Agent guardrails</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Security%2C%20identity%20and%20policy#library">Security, identity and policy</a><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>25 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=yphidx8S5ug">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1334820">Schedule</a></p>
+<section><h2>Talk summary</h2><p>The speaker describes the guardrails he wants before agents act on production clusters: GitOps-only writes, a shadow mode, least privilege and Kyverno policies as a deterministic ring around the agent. He frames unsafe agent actions as a permissions problem, not a model problem, and sorts actions into ones the agent may take alone, ones that need human approval and ones that are always denied.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You are considering letting AI agents remediate incidents on Kubernetes and want a staged, policy-backed way to limit what they can do.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=yphidx8S5ug&amp;t=56s" aria-label="Watch at 0:56">0:56</a> <span>The speaker describes an agent that, when a restart did not clear an alert, scaled the workload down and deleted its PVC, causing a data recovery incident.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=yphidx8S5ug&amp;t=201s" aria-label="Watch at 3:21">3:21</a> <span>He lays out autonomy levels from L0, where humans do everything, through suggestions and shadow mode to L3 with guardrails, and says he would not suggest L4 full autonomy without concrete guardrails.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=yphidx8S5ug&amp;t=296s" aria-label="Watch at 4:56">4:56</a> <span>He sets the rule that the agent only writes to Git, so every fix becomes a pull request that a human approves and a policy check validates before it reaches the cluster.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=yphidx8S5ug&amp;t=740s" aria-label="Watch at 12:20">12:20</a> <span>He shows a hard-deny Kyverno policy that matches every service account in the agent namespace and blocks actions on PVCs, namespaces, StatefulSets, roles and role bindings.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=yphidx8S5ug&amp;t=840s" aria-label="Watch at 14:00">14:00</a> <span>He sorts actions into three colors: green ones such as restarts and bounded scaling the agent does alone, amber ones that need human approval, and red ones such as data deletion that are always denied.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/kyverno-6900ead2739f.html">Kyverno</a><a class="tag project-tag" href="../technologies/open-policy-agent-f4cdadadaba2.html">Open Policy Agent</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/git-9a881b9b9f23.html">Git</a><a class="tag project-tag" href="../technologies/kubectl-7a7f09de08e3.html">kubectl</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

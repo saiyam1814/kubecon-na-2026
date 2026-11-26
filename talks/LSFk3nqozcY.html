@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Just Keep Swimming: Benchmarking OSS Agent Memory on Kubernetes with OpenTelemetry | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">AI Inference + Agentic</span></div>
+<h1>Just Keep Swimming: Benchmarking OSS Agent Memory on Kubernetes with OpenTelemetry</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Henrik Rexed</dd></div>
+<div><dt>Track</dt><dd>AI Inference + Agentic</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Advanced</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=LSFk3nqozcY">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1241330">Schedule</a> · <a href="https://sessionize.com/download/lhasjeq~PJgsfWjza9BoSTUBGrGy6q.pdf~just-keep-swimming.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Henrik Rexed describes benchmarking five open source agent memory servers (Mem0, MemOS, MemPalace, Zep and his own MemKeys) behind kagent agents on Kubernetes, with OpenTelemetry metrics he says he contributed to most of them. He reports results for an SRE troubleshooting scenario and a multi-agent coding scenario, and says which approach suited each in his tests.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you are choosing a memory backend for agents on Kubernetes and want to see how one benchmark compared token use, resource use and recall.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=LSFk3nqozcY&amp;t=246s" aria-label="Watch at 4:06">4:06</a> <span>The speaker walks through the memory architectures he compares: plain embeddings, vector plus graph, knowledge graph, temporal knowledge graph, and a key-based store.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=LSFk3nqozcY&amp;t=757s" aria-label="Watch at 12:37">12:37</a> <span>The speaker says he built one generic MCP server in front of all the memory backends so the kagent agent setup stays the same across runs.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=LSFk3nqozcY&amp;t=816s" aria-label="Watch at 13:36">13:36</a> <span>The speaker explains the SRE scenario: a cold run with empty memory, then a warm run with memory populated, measuring the difference across injected Kubernetes and Gateway API failures.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=LSFk3nqozcY&amp;t=1196s" aria-label="Watch at 19:56">19:56</a> <span>The speaker reports that in the SRE scenario MemOS, Zep and MemPalace gained from memory on the warm run, while Mem0 and MemKeys did worse, which he puts down to retrieving wrong or too many facts.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=LSFk3nqozcY&amp;t=1356s" aria-label="Watch at 22:36">22:36</a> <span>The speaker concludes that embedding or text search suited the SRE case in his tests, while a key store helped the coding crew that already works with project metadata.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/agent2agent-protocol-fb1ce646ada6.html">Agent2Agent Protocol</a><a class="tag project-tag" href="../technologies/gamma-be9d587defa1.html">GAMMA</a><a class="tag project-tag" href="../technologies/gateway-api-2929f65596ea.html">Gateway API</a><a class="tag project-tag" href="../technologies/graphiti-bd3dd14c754f.html">Graphiti</a><a class="tag project-tag" href="../technologies/kagent-4690e9665ffd.html">kagent</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/mem0-a9aff9e0737a.html">Mem0</a><a class="tag project-tag" href="../technologies/memkeys-e0ec36f3c5ea.html">MemKeys</a><a class="tag project-tag" href="../technologies/memos-2b8d8df819e0.html">MemOS</a><a class="tag project-tag" href="../technologies/mempalace-4c21ead5f629.html">MemPalace</a><a class="tag project-tag" href="../technologies/model-context-protocol-9c5da690faad.html">Model Context Protocol</a><a class="tag project-tag" href="../technologies/openclaw-96a4bc260265.html">OpenClaw</a><a class="tag project-tag" href="../technologies/opentelemetry-15646ccfc423.html">OpenTelemetry</a><a class="tag project-tag" href="../technologies/zep-19278a5fa603.html">Zep</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/bmad-method-567695aa74f4.html">BMAD Method</a><a class="tag project-tag" href="../technologies/deepseek-6f7ac1823da8.html">DeepSeek</a><a class="tag project-tag" href="../technologies/neo4j-13fd9e770be3.html">Neo4j</a><a class="tag project-tag" href="../technologies/paperclip-670d47ccb9a6.html">Paperclip</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

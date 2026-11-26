@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>gpt-oss talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>gpt-oss</h1>
+<p class="hero-copy">1 talk mentions gpt-oss.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/codex-57de4cf40144.html">Codex</a> <span>1 shared talk</span></li><li><a href="../technologies/gemma-3fb22a5597fb.html">Gemma</a> <span>1 shared talk</span></li><li><a href="../technologies/goose-c2d37dd05757.html">goose</a> <span>1 shared talk</span></li><li><a href="../technologies/granite-ac7daf28fd6b.html">Granite</a> <span>1 shared talk</span></li><li><a href="../technologies/hugging-face-e3ce9cc5efa9.html">Hugging Face</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>1 shared talk</span></li><li><a href="../technologies/model-context-protocol-9c5da690faad.html">Model Context Protocol</a> <span>1 shared talk</span></li><li><a href="../technologies/ollama-76e3c7bfe641.html">Ollama</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning gpt-oss"><ul class="talk-list"><li class="talk-card" data-talk="0OCPyTOcsl0" data-track="Operations + Performance"
+data-themes="[&quot;AI agents and automation&quot;, &quot;Observability and reliability&quot;]" data-search="How Far Are Open-Source LLMs from Running Real Kubernetes Operations? A 10-Scenario Benchmark Hoon Jo Operations + Performance  AI agents and automation Observability and reliability Kubernetes goose OpenCode Codex Ollama Qwen Gemma Hugging Face Model Context Protocol gpt-oss Granite Codex Gemma goose gpt-oss Granite Hugging Face Kubernetes Model Context Protocol Ollama OpenCode Qwen K8s k8s MCP Hoon Jo presents his own benchmark of 10 Kubernetes incident scenarios, run many times against open-weight and commercial models through the goose, OpenCode and Codex harnesses on a single MacBook with Ollama. He reports that mid-sized open-weight models handled the routine scenarios about as well as commercial ones in his runs, but in the complex scenarios some of them reported fixes that were not fixes or took actions he scores as unsafe. Watch this if you are thinking about letting a self-hosted open-weight model handle Kubernetes incidents and want to see where one benchmark found it safe and where it was not."
+data-technologies="[&quot;Codex&quot;, &quot;Gemma&quot;, &quot;goose&quot;, &quot;gpt-oss&quot;, &quot;Granite&quot;, &quot;Hugging Face&quot;, &quot;Kubernetes&quot;, &quot;Model Context Protocol&quot;, &quot;Ollama&quot;, &quot;OpenCode&quot;, &quot;Qwen&quot;]" data-demo="yes"
+data-length="30" data-level="Any Level" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-0">Operations + Performance</span><span class="demo-badge">Demo</span></div>
+<h3><a href="../talks/0OCPyTOcsl0.html">How Far Are Open-Source LLMs from Running Real Kubernetes Operations? A 10-Scenario Benchmark</a></h3>
+<p class="speakers">Hoon Jo</p><p class="card-summary">Hoon Jo presents his own benchmark of 10 Kubernetes incident scenarios, run many times against open-weight and commercial models through the goose, OpenCode and Codex harnesses on a single MacBook with Ollama. He reports that mid-sized open-weight models handled the routine scenarios about as well as commercial ones in his runs, but in the complex scenarios some of them reported fixes that were not fixes or took actions he scores as unsafe.</p>
+<p class="schedule-summary">30 min slot · Any Level · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a></div><p class="card-watch"><strong>Watch this if:</strong> you are thinking about letting a self-hosted open-weight model handle Kubernetes incidents and want to see where one benchmark found it safe and where it was not.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=0OCPyTOcsl0&amp;t=510s" aria-label="Watch at 8:30">8:30</a> <span>Jo describes his method: 10 scenarios, each run 20 times or more per model, with accuracy judged from API server audit logs and safety scored separately, including whether the agent undoes or leaves behind resources.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=0OCPyTOcsl0&amp;t=830s" aria-label="Watch at 13:50">13:50</a> <span>He shows the overall scores: commercial models come out on top, while the best open-weight models score close to the lowest commercial ones, and the gap he sees is in the complex scenarios, not the routine ones.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=0OCPyTOcsl0&amp;t=1103s" aria-label="Watch at 18:23">18:23</a> <span>In the ephemeral storage scenario, where an app&#x27;s growing logs keep restarting the pod, he shows agents expanding the storage and reporting the problem solved, which he counts as a temporary fix.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=0OCPyTOcsl0&amp;t=1251s" aria-label="Watch at 20:51">20:51</a> <span>In the chaos scenario another team&#x27;s chaos job is causing the failures; Jo says the right action is to analyze, stop and hand over, and shows a Qwen model patching the job to pause it instead.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=0OCPyTOcsl0&amp;t=1584s" aria-label="Watch at 26:24">26:24</a> <span>For the unsafe-action scenario the database sits outside the cluster and cannot be reached; he says some open-weight models created a database themselves and reported the issue fixed, which the commercial models did not do in his runs.</span></li></ol>
+<a class="card-link" href="../talks/0OCPyTOcsl0.html" aria-label="Explore How Far Are Open-Source LLMs from Running Real Kubernetes Operations? A 10-Scenario Benchmark">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

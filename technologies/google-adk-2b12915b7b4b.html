@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Google ADK talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>Google ADK</h1>
+<p class="hero-copy">1 talk mentions Google ADK.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/agent-substrate-1067f1a4b76d.html">Agent Substrate</a> <span>1 shared talk</span></li><li><a href="../technologies/cadence-4f6b9e1c24d9.html">Cadence</a> <span>1 shared talk</span></li><li><a href="../technologies/michelangelo-0a0a80b74c33.html">Michelangelo</a> <span>1 shared talk</span></li><li><a href="../technologies/openai-agents-sdk-8b1ad30cdfe9.html">OpenAI Agents SDK</a> <span>1 shared talk</span></li><li><a href="../technologies/temporal-e4540a7c8404.html">Temporal</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning Google ADK"><ul class="talk-list"><li class="talk-card" data-talk="n8t6AblQUMY" data-track="AI Inference + Agentic"
+data-themes="[&quot;AI agents and automation&quot;, &quot;Observability and reliability&quot;]" data-search="Agents Fail. Workflows Recover. Durable Agent Orchestration with Cadence Diana Zawadzki Shijie Sheng AI Inference + Agentic  AI agents and automation Observability and reliability Cadence Temporal Agent Substrate Michelangelo Google ADK OpenAI Agents SDK Agent Substrate Cadence Google ADK Michelangelo OpenAI Agents SDK Temporal Diana Zawadzki and Shijie Sheng of Uber&#x27;s Cadence team argue that agent workflows fail like any other workflow and describe wrapping model and tool calls as Cadence activities so a replacement worker can resume from recorded history. They show a demo of an error-analysis agent that survives a rate limit and a killed worker, share numbers from Uber&#x27;s Agent Executor Service, and answer questions on Temporal, guardrails and operating Cadence. Watch this if you run long-lived AI agents in production and want to see how a workflow engine can let them resume after crashes instead of starting over."
+data-technologies="[&quot;Agent Substrate&quot;, &quot;Cadence&quot;, &quot;Google ADK&quot;, &quot;Michelangelo&quot;, &quot;OpenAI Agents SDK&quot;, &quot;Temporal&quot;]" data-demo="yes"
+data-length="30" data-level="Any Level" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-1">AI Inference + Agentic</span><span class="demo-badge">Demo</span></div>
+<h3><a href="../talks/n8t6AblQUMY.html">Agents Fail. Workflows Recover. Durable Agent Orchestration with Cadence</a></h3>
+<p class="speakers">Diana Zawadzki, Shijie Sheng</p><p class="card-summary">Diana Zawadzki and Shijie Sheng of Uber&#x27;s Cadence team argue that agent workflows fail like any other workflow and describe wrapping model and tool calls as Cadence activities so a replacement worker can resume from recorded history. They show a demo of an error-analysis agent that survives a rate limit and a killed worker, share numbers from Uber&#x27;s Agent Executor Service, and answer questions on Temporal, guardrails and operating Cadence.</p>
+<p class="schedule-summary">30 min slot · Any Level · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a></div><p class="card-watch"><strong>Watch this if:</strong> you run long-lived AI agents in production and want to see how a workflow engine can let them resume after crashes instead of starting over.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=n8t6AblQUMY&amp;t=62s" aria-label="Watch at 1:02">1:02</a> <span>Zawadzki explains the model: each model call is a Cadence activity, the workflow is the code that orders them, and progress is recorded in a separate service so a replacement worker can reuse completed results.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=n8t6AblQUMY&amp;t=331s" aria-label="Watch at 5:31">5:31</a> <span>She says Uber&#x27;s Agent Executor Service, built in July, hosted around 830,000 agentic workflows on Cadence in September for background and scheduled jobs.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=n8t6AblQUMY&amp;t=499s" aria-label="Watch at 8:19">8:19</a> <span>Sheng demos an error-analysis agent with a human in the loop: a rate-limited log fetch is retried automatically, a human signal asks for more evidence, and after the worker is killed a new worker replays history to the current state.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=n8t6AblQUMY&amp;t=753s" aria-label="Watch at 12:33">12:33</a> <span>Zawadzki says the protected run in their demo used about half the model responses and tokens of the raw run with zero new calls during recovery, while cautioning that failures were injected on purpose.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=n8t6AblQUMY&amp;t=1116s" aria-label="Watch at 18:36">18:36</a> <span>Asked how Cadence compares with Temporal, the speakers say Temporal forked from Cadence in 2019 and describe Cadence as the more community-driven CNCF project.</span></li></ol>
+<a class="card-link" href="../talks/n8t6AblQUMY.html" aria-label="Explore Agents Fail. Workflows Recover. Durable Agent Orchestration with Cadence">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

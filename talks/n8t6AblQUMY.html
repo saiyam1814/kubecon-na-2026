@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Agents Fail. Workflows Recover. Durable Agent Orchestration with Cadence | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">AI Inference + Agentic</span><span class="demo-badge">Demo</span></div>
+<h1>Agents Fail. Workflows Recover. Durable Agent Orchestration with Cadence</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Diana Zawadzki, Shijie Sheng</dd></div>
+<div><dt>Track</dt><dd>AI Inference + Agentic</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Any Level</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=n8t6AblQUMY">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1238002">Schedule</a> · <a href="https://sessionize.com/download/xjavdep~Bi64NzrQHkXAVLo7pvyQdv.pdf~agents-fail-workflows-recover-audience-slides.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Diana Zawadzki and Shijie Sheng of Uber&#x27;s Cadence team argue that agent workflows fail like any other workflow and describe wrapping model and tool calls as Cadence activities so a replacement worker can resume from recorded history. They show a demo of an error-analysis agent that survives a rate limit and a killed worker, share numbers from Uber&#x27;s Agent Executor Service, and answer questions on Temporal, guardrails and operating Cadence.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you run long-lived AI agents in production and want to see how a workflow engine can let them resume after crashes instead of starting over.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=n8t6AblQUMY&amp;t=62s" aria-label="Watch at 1:02">1:02</a> <span>Zawadzki explains the model: each model call is a Cadence activity, the workflow is the code that orders them, and progress is recorded in a separate service so a replacement worker can reuse completed results.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=n8t6AblQUMY&amp;t=331s" aria-label="Watch at 5:31">5:31</a> <span>She says Uber&#x27;s Agent Executor Service, built in July, hosted around 830,000 agentic workflows on Cadence in September for background and scheduled jobs.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=n8t6AblQUMY&amp;t=499s" aria-label="Watch at 8:19">8:19</a> <span>Sheng demos an error-analysis agent with a human in the loop: a rate-limited log fetch is retried automatically, a human signal asks for more evidence, and after the worker is killed a new worker replays history to the current state.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=n8t6AblQUMY&amp;t=753s" aria-label="Watch at 12:33">12:33</a> <span>Zawadzki says the protected run in their demo used about half the model responses and tokens of the raw run with zero new calls during recovery, while cautioning that failures were injected on purpose.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=n8t6AblQUMY&amp;t=1116s" aria-label="Watch at 18:36">18:36</a> <span>Asked how Cadence compares with Temporal, the speakers say Temporal forked from Cadence in 2019 and describe Cadence as the more community-driven CNCF project.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/agent-substrate-1067f1a4b76d.html">Agent Substrate</a><a class="tag project-tag" href="../technologies/cadence-4f6b9e1c24d9.html">Cadence</a><a class="tag project-tag" href="../technologies/michelangelo-0a0a80b74c33.html">Michelangelo</a><a class="tag project-tag" href="../technologies/temporal-e4540a7c8404.html">Temporal</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/google-adk-2b12915b7b4b.html">Google ADK</a><a class="tag project-tag" href="../technologies/openai-agents-sdk-8b1ad30cdfe9.html">OpenAI Agents SDK</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Engineering High-Performance Telemetry Pipelines: Lessons from Fluent Bit | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">Maintainer Track</span></div>
+<h1>Engineering High-Performance Telemetry Pipelines: Lessons from Fluent Bit</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Eduardo Silva</dd></div>
+<div><dt>Track</dt><dd>Maintainer Track</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=vp7WMLDKl0U">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1289665">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Eduardo Silva, creator and maintainer of Fluent Bit, walks through how a telemetry pipeline is built and what changed in the 5.2 release, including a new Lua scripting interface for logs, metrics and traces and a WebAssembly build that runs in the browser. He then describes the performance work behind the release, which he says came from profiling with perf, removing repeated encoding steps, pre-allocating memory and batching.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you run or build telemetry collectors and want to hear how the Fluent Bit maintainer profiles and removes CPU and memory overhead.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=vp7WMLDKl0U&amp;t=459s" aria-label="Watch at 7:39">7:39</a> <span>Silva introduces a new Lua scripting interface he calls FTS, which he says adds primitives for metrics and traces as well as logs, something scripts could not work with before.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=vp7WMLDKl0U&amp;t=673s" aria-label="Watch at 11:13">11:13</a> <span>He announces Fluent Bit Studio, an experimental web interface that he says runs Fluent Bit as WebAssembly in the browser so a configuration can be tried before it reaches production.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=vp7WMLDKl0U&amp;t=904s" aria-label="Watch at 15:04">15:04</a> <span>He describes letting an AI coding agent run perf against the code and collect results over repeated runs, and says Fluent Bit ships a benchmark skill others can copy.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=vp7WMLDKl0U&amp;t=1093s" aria-label="Watch at 18:13">18:13</a> <span>He explains a fast path that decodes OTLP straight into the internal record format and encodes to MessagePack once, instead of encoding twice as before.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=vp7WMLDKl0U&amp;t=1544s" aria-label="Watch at 25:44">25:44</a> <span>He compares Fluent Bit 5.2 with 5.1 and the OpenTelemetry Collector on OTLP processing and says the process of measuring mattered more than any single change.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/codex-57de4cf40144.html">Codex</a><a class="tag project-tag" href="../technologies/fluent-bit-5d9bc164b0dc.html">Fluent Bit</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/opentelemetry-15646ccfc423.html">OpenTelemetry</a><a class="tag project-tag" href="../technologies/opentelemetry-collector-64b757c33a41.html">OpenTelemetry Collector</a><a class="tag project-tag" href="../technologies/webassembly-8e7fbcb09aac.html">WebAssembly</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/fluent-bit-studio-6cb3ad2e9aa8.html">Fluent Bit Studio</a><a class="tag project-tag" href="../technologies/lua-dc436b329f4d.html">Lua</a><a class="tag project-tag" href="../technologies/messagepack-3a7c00f3ba50.html">MessagePack</a><a class="tag project-tag" href="../technologies/perf-342edb77c95f.html">perf</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Packer talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>Packer</h1>
+<p class="hero-copy">1 talk mentions Packer.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/azure-kubernetes-service-394f8f8f7ed2.html">Azure Kubernetes Service</a> <span>1 shared talk</span></li><li><a href="../technologies/cluster-api-9af21ad5b6d4.html">Cluster API</a> <span>1 shared talk</span></li><li><a href="../technologies/cluster-autoscaler-472c424b3c06.html">Cluster Autoscaler</a> <span>1 shared talk</span></li><li><a href="../technologies/containerd-2397d068a8d1.html">containerd</a> <span>1 shared talk</span></li><li><a href="../technologies/cuda-e636c973d999.html">CUDA</a> <span>1 shared talk</span></li><li><a href="../technologies/google-kubernetes-engine-eda631ccae23.html">Google Kubernetes Engine</a> <span>1 shared talk</span></li><li><a href="../technologies/karpenter-5648b3be51b2.html">Karpenter</a> <span>1 shared talk</span></li><li><a href="../technologies/kubeadm-d5be59665977.html">kubeadm</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning Packer"><ul class="talk-list"><li class="talk-card" data-talk="A8VYfi4NdFQ" data-track="Operations + Performance"
+data-themes="[&quot;Kubernetes internals and runtimes&quot;, &quot;Accelerators and workload scheduling&quot;]" data-search="From Pending Pod to Ready Node: Declarative Worker Images for Kubernetes Scale-Out Matt Boersma Mark Rossetti Operations + Performance  Kubernetes internals and runtimes Accelerators and workload scheduling Kubernetes Cluster API Cluster Autoscaler Ray kubeadm containerd NVIDIA GPU Operator NVIDIA Container Toolkit PyTorch Karpenter Azure Kubernetes Service Google Kubernetes Engine Nodesmith Kubernetes image-builder Packer CUDA Azure Kubernetes Service Cluster API Cluster Autoscaler containerd CUDA Google Kubernetes Engine Karpenter kubeadm Kubernetes Kubernetes image-builder Nodesmith NVIDIA Container Toolkit NVIDIA GPU Operator Packer PyTorch Ray AKS CAPI GKE K8s k8s The speakers break down what happens between a pending pod and a new worker doing useful work, and argue for moving repeatable setup into prepared, validated worker images. They describe a controller they built on Cluster API that declares worker images as custom resources, and share timings from a four-node GPU training job on Azure. You scale GPU or other specialized node pools and want to shorten the time from a pending pod to a worker doing useful work."
+data-technologies="[&quot;Azure Kubernetes Service&quot;, &quot;Cluster API&quot;, &quot;Cluster Autoscaler&quot;, &quot;containerd&quot;, &quot;CUDA&quot;, &quot;Google Kubernetes Engine&quot;, &quot;Karpenter&quot;, &quot;kubeadm&quot;, &quot;Kubernetes&quot;, &quot;Kubernetes image-builder&quot;, &quot;Nodesmith&quot;, &quot;NVIDIA Container Toolkit&quot;, &quot;NVIDIA GPU Operator&quot;, &quot;Packer&quot;, &quot;PyTorch&quot;, &quot;Ray&quot;]" data-demo="no"
+data-length="30" data-level="Any Level" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-0">Operations + Performance</span></div>
+<h3><a href="../talks/A8VYfi4NdFQ.html">From Pending Pod to Ready Node: Declarative Worker Images for Kubernetes Scale-Out</a></h3>
+<p class="speakers">Matt Boersma, Mark Rossetti</p><p class="card-summary">The speakers break down what happens between a pending pod and a new worker doing useful work, and argue for moving repeatable setup into prepared, validated worker images. They describe a controller they built on Cluster API that declares worker images as custom resources, and share timings from a four-node GPU training job on Azure.</p>
+<p class="schedule-summary">30 min slot · Any Level · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a><a class="tag theme-tag" href="../index.html?theme=Accelerators%20and%20workload%20scheduling#library">Accelerators and workload scheduling</a></div><p class="card-watch"><strong>Watch this if:</strong> You scale GPU or other specialized node pools and want to shorten the time from a pending pod to a worker doing useful work.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=A8VYfi4NdFQ&amp;t=235s" aria-label="Watch at 3:55">3:55</a> <span>The speakers separate reusable preparation from the work every new machine must still do, and say it matters for node replacement and rolling updates as well as scale-out.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=A8VYfi4NdFQ&amp;t=398s" aria-label="Watch at 6:38">6:38</a> <span>The speakers follow a Ray training job waiting for GPU nodes, and say useful work starts long after the containers report running.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=A8VYfi4NdFQ&amp;t=814s" aria-label="Watch at 13:34">13:34</a> <span>The speakers propose two loops: a preparation loop that builds, validates and approves an image when inputs change, and a capacity loop that consumes the approved version on demand.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=A8VYfi4NdFQ&amp;t=872s" aria-label="Watch at 14:32">14:32</a> <span>The speakers introduce Nodesmith, which they say declares a worker image as a custom resource, builds it with Packer and image-builder in the cluster, and hands the rollout to Cluster API.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=A8VYfi4NdFQ&amp;t=1009s" aria-label="Watch at 16:49">16:49</a> <span>The speakers report a median of about 13 minutes 10 seconds from capacity request to first training step with stock images, and about 9 minutes 23 seconds with prepared images.</span></li></ol>
+<a class="card-link" href="../talks/A8VYfi4NdFQ.html" aria-label="Explore From Pending Pod to Ready Node: Declarative Worker Images for Kubernetes Scale-Out">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

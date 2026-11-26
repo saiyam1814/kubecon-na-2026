@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Beyond Dashboards: A Semantic Layer for AI-Driven Observability in Kubernetes | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-3">Observability</span><span class="demo-badge">Demo</span></div>
+<h1>Beyond Dashboards: A Semantic Layer for AI-Driven Observability in Kubernetes</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Pronnoy Goswami</dd></div>
+<div><dt>Track</dt><dd>Observability</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a></dd></div>
+<div><dt>Demo</dt><dd>Yes</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Any Level</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=lIbzmHEwazM">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1230488">Schedule</a> · <a href="https://sessionize.com/download/citigja~72z7S3MCp41y5wgNCTRfjw.pdf~goswamipronnoy_kubecon26_talk.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>Pronnoy Goswami argues that pasting raw logs and traces into an LLM gives unreliable answers, and presents a four-layer design that uses OpenTelemetry for consistent context and an MCP server that exposes typed, bounded, summarized tools instead of raw query access. He shows a recorded local demo with synthetic data and shares lessons on cardinality, latency and when he thinks the approach reduces MTTR.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you are wiring an AI agent to your metrics and traces and want a bounded design for it.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=lIbzmHEwazM&amp;t=112s" aria-label="Watch at 1:52">1:52</a> <span>Pronnoy lists four ways he says raw telemetry in a prompt fails: volume, no schema, unbounded queries and no provenance.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lIbzmHEwazM&amp;t=260s" aria-label="Watch at 4:20">4:20</a> <span>He outlines the four layers: instrument with OpenTelemetry semantic conventions, collect and store, an MCP semantic query layer, and agents with human approval.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lIbzmHEwazM&amp;t=561s" aria-label="Watch at 9:21">9:21</a> <span>He says MCP tools should be designed for how an on-call engineer thinks rather than wrapping the Prometheus API, and should be typed, discoverable, summarized and cited.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lIbzmHEwazM&amp;t=780s" aria-label="Watch at 13:00">13:00</a> <span>In a recorded demo with a fault injected into a payments API, the tool reports spikes in the checkout API&#x27;s error ratio and p99 latency and in the payments API&#x27;s p99 latency as the top three signals.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lIbzmHEwazM&amp;t=1052s" aria-label="Watch at 17:32">17:32</a> <span>He shares production lessons: never offer a free-form group by, back the catalog with recording rules, set per-tool timeouts and budgets, cache, and summarize inside the server.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/grafana-mimir-c090ac15b5c5.html">Grafana Mimir</a><a class="tag project-tag" href="../technologies/jaeger-c0bbec68cf41.html">Jaeger</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/model-context-protocol-9c5da690faad.html">Model Context Protocol</a><a class="tag project-tag" href="../technologies/opentelemetry-15646ccfc423.html">OpenTelemetry</a><a class="tag project-tag" href="../technologies/prometheus-1809f7cd0c75.html">Prometheus</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/mcp-python-sdk-ee22239a4b72.html">MCP Python SDK</a><a class="tag project-tag" href="../technologies/promql-2f37bf644d8b.html">PromQL</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

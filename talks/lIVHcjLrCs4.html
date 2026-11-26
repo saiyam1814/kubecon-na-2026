@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Authorized? It Depends. | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-1">Maintainer Track</span></div>
+<h1>Authorized? It Depends.</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Rita Zhang, David Eads, Micah Hausler, Ben Petersen, Stanislav Láznička</dd></div>
+<div><dt>Track</dt><dd>Maintainer Track</dd></div>
+<div><dt>Topic</dt><dd>Auth</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Security%2C%20identity%20and%20policy#library">Security, identity and policy</a><a class="tag theme-tag" href="../index.html?theme=Kubernetes%20internals%20and%20runtimes#library">Kubernetes internals and runtimes</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Not listed</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=lIVHcjLrCs4">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1289677">Schedule</a></p>
+<section><h2>Talk summary</h2><p>Kubernetes SIG Auth maintainers give a deep dive on conditional authorization, which lets an authorizer answer with conditions that are enforced later at admission, tracing the idea from a Cedar-based prototype to the interface now in the API server. They also cover a proposal to use the certificate APIs inside the platform, fixes to the Secrets Store CSI Driver and its sync controller, a proposal for authenticating requests to admission webhooks, and a proposal for signed requests to the API server.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you write Kubernetes authorizers, admission webhooks or platform extensions and want to know what SIG Auth is changing.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=lIVHcjLrCs4&amp;t=156s" aria-label="Watch at 2:36">2:36</a> <span>Rita Zhang gives the motivating case for conditional authorization: a controller that may update a pod but should only touch its own finalizer currently needs one access rule split across authorization and admission, which must be kept aligned.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lIVHcjLrCs4&amp;t=565s" aria-label="Watch at 9:25">9:25</a> <span>David Eads describes the new conditional authorizer interface, in which an authorizer that answers maybe stores its conditions in the request context so admission can evaluate them once the object is available, and results are downgraded if the admission plugin is turned off.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lIVHcjLrCs4&amp;t=969s" aria-label="Watch at 16:09">16:09</a> <span>He says the project does not yet know what the user-facing API on top of this mechanism should look like, and invites people to bring prototypes to the SIG Auth meeting.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lIVHcjLrCs4&amp;t=1125s" aria-label="Watch at 18:45">18:45</a> <span>Stanislav Láznička describes a proposal that adds a serving certificate signer for services and pods, so webhooks and aggregated API servers would no longer need to mint their own certificates.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=lIVHcjLrCs4&amp;t=1910s" aria-label="Watch at 31:50">31:50</a> <span>Micah Hausler argues that most Kubernetes credentials can be replayed if logged or intercepted, and describes a proposal for clients to sign requests to the API server so that a captured request cannot be reused.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/aws-7d1507284a57.html">AWS</a><a class="tag project-tag" href="../technologies/cedar-0c2746399367.html">Cedar</a><a class="tag project-tag" href="../technologies/cert-manager-e6bb20df7151.html">cert-manager</a><a class="tag project-tag" href="../technologies/common-expression-language-087472d4b6a1.html">Common Expression Language</a><a class="tag project-tag" href="../technologies/gatekeeper-9ce00b27299c.html">Gatekeeper</a><a class="tag project-tag" href="../technologies/ingress-nginx-34f2b6a43f67.html">ingress-nginx</a><a class="tag project-tag" href="../technologies/istio-82d979a24d74.html">Istio</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/secrets-store-csi-driver-c7637aac0b76.html">Secrets Store CSI Driver</a><a class="tag project-tag" href="../technologies/spiffe-10aca797a724.html">SPIFFE</a></div><div class="tags"><strong>Tools:</strong> <a class="tag project-tag" href="../technologies/tpm-533541fb465a.html">TPM</a><a class="tag project-tag" href="../technologies/yubikey-71a5f9794408.html">YubiKey</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

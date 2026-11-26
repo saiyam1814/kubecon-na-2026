@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Private Service Connect talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>Private Service Connect</h1>
+<p class="hero-copy">1 talk mentions Private Service Connect.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/busybox-9d75f0d7c398.html">BusyBox</a> <span>1 shared talk</span></li><li><a href="../technologies/container-storage-interface-43634ceadaa4.html">Container Storage Interface</a> <span>1 shared talk</span></li><li><a href="../technologies/containerd-2397d068a8d1.html">containerd</a> <span>1 shared talk</span></li><li><a href="../technologies/grpc-b389db1475dc.html">gRPC</a> <span>1 shared talk</span></li><li><a href="../technologies/karpenter-5648b3be51b2.html">Karpenter</a> <span>1 shared talk</span></li><li><a href="../technologies/konnectivity-a6049c5d2dab.html">Konnectivity</a> <span>1 shared talk</span></li><li><a href="../technologies/kubectl-7a7f09de08e3.html">kubectl</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning Private Service Connect"><ul class="talk-list"><li class="talk-card" data-talk="vnYfzOENEDQ" data-track="Connectivity"
+data-themes="[&quot;Networking and connectivity&quot;, &quot;Security, identity and policy&quot;]" data-search="No Network? No Problem: How We Designed for Kubernetes Nodes Running in Air-Gapped VPCs Shachar Tal Connectivity  Networking and connectivity Security, identity and policy Kubernetes Konnectivity Karpenter containerd gRPC systemd kubectl Container Storage Interface Private Service Connect BusyBox BusyBox Container Storage Interface containerd gRPC Karpenter Konnectivity kubectl Kubernetes Private Service Connect systemd apiserver-network-proxy K8s k8s Shachar Tal describes a security scanning product that runs in customer-owned cloud accounts with no ingress or egress, and how his team replaced Konnectivity&#x27;s gRPC tunnel with a cloud storage bucket so Kubernetes nodes there can talk to a remote control plane. He demos kubectl exec and logs running over bucket objects and says adaptive polling keeps the cost at about $5 per VM instance per month. Watch this if you need Kubernetes nodes in networks with zero egress and want to see a control plane tunnel built on object storage."
+data-technologies="[&quot;BusyBox&quot;, &quot;Container Storage Interface&quot;, &quot;containerd&quot;, &quot;gRPC&quot;, &quot;Karpenter&quot;, &quot;Konnectivity&quot;, &quot;kubectl&quot;, &quot;Kubernetes&quot;, &quot;Private Service Connect&quot;, &quot;systemd&quot;]" data-demo="yes"
+data-length="30" data-level="Any Level" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-5">Connectivity</span><span class="demo-badge">Demo</span></div>
+<h3><a href="../talks/vnYfzOENEDQ.html">No Network? No Problem: How We Designed for Kubernetes Nodes Running in Air-Gapped VPCs</a></h3>
+<p class="speakers">Shachar Tal</p><p class="card-summary">Shachar Tal describes a security scanning product that runs in customer-owned cloud accounts with no ingress or egress, and how his team replaced Konnectivity&#x27;s gRPC tunnel with a cloud storage bucket so Kubernetes nodes there can talk to a remote control plane. He demos kubectl exec and logs running over bucket objects and says adaptive polling keeps the cost at about $5 per VM instance per month.</p>
+<p class="schedule-summary">30 min slot · Any Level · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Networking%20and%20connectivity#library">Networking and connectivity</a><a class="tag theme-tag" href="../index.html?theme=Security%2C%20identity%20and%20policy#library">Security, identity and policy</a></div><p class="card-watch"><strong>Watch this if:</strong> you need Kubernetes nodes in networks with zero egress and want to see a control plane tunnel built on object storage.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=vnYfzOENEDQ&amp;t=238s" aria-label="Watch at 3:58">3:58</a> <span>Tal says the outpost VPC is designed so that an attacker who gets code running inside cannot exfiltrate data, with one tightly controlled bucket as the only path.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=vnYfzOENEDQ&amp;t=677s" aria-label="Watch at 11:17">11:17</a> <span>Tal says Konnectivity solves only one direction of reachability, so his team carries messages in both directions through the bucket as a rendezvous point.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=vnYfzOENEDQ&amp;t=1128s" aria-label="Watch at 18:48">18:48</a> <span>In the demo, Tal runs kubectl exec into a pod and says every keystroke is a file uploaded to the bucket and pulled down by the other side.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=vnYfzOENEDQ&amp;t=1296s" aria-label="Watch at 21:36">21:36</a> <span>Tal says moving to Kubernetes with CSI plugins let the team throw out 80% of its application code for volumes, snapshots and mounting.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=vnYfzOENEDQ&amp;t=1385s" aria-label="Watch at 23:05">23:05</a> <span>Tal explains that polling speeds up to 500 milliseconds while a session is active and backs off to 10 seconds, at a cost he puts at about $5 per VM instance per month.</span></li></ol>
+<a class="card-link" href="../talks/vnYfzOENEDQ.html" aria-label="Explore No Network? No Problem: How We Designed for Kubernetes Nodes Running in Air-Gapped VPCs">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

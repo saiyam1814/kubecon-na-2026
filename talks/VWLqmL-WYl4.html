@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>The SRE Is Not Dead: What AI Taught Us about Missing Context in Kubernetes Incident Response | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-3">Observability</span></div>
+<h1>The SRE Is Not Dead: What AI Taught Us about Missing Context in Kubernetes Incident Response</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Muhammed Yunas Chirayath, Ajmal Ali kannu</dd></div>
+<div><dt>Track</dt><dd>Observability</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Observability%20and%20reliability#library">Observability and reliability</a><a class="tag theme-tag" href="../index.html?theme=AI%20agents%20and%20automation#library">AI agents and automation</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Any Level</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=VWLqmL-WYl4">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1250770">Schedule</a> · <a href="https://sessionize.com/download/ixdansem~3kzrWssu5xxerSXGZjjTLy.pdf~the-sre-is-not-dead-for-employer-review.pptx.pdf">Slides</a></p>
+<section><h2>Talk summary</h2><p>The speakers, an SRE and an application engineer at Best Buy, argue that AI in incident response falls short when it sees telemetry but not the context a team relies on, such as recent deployments, dependencies and current service owners. Using three example incidents they say are illustrative, they describe the context sources to connect, a read-only tool gateway for the agent and what to measure, and conclude that AI should work with SREs.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>You are adding AI to incident response and want a grounded view of what context it needs before its summaries can be trusted.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=VWLqmL-WYl4&amp;t=483s" aria-label="Watch at 8:03">8:03</a> <span>In the first example a &#x27;CPU is high&#x27; page arrives 20 minutes after a deployment without mentioning it; the speakers say timing makes the deploy a place to start looking, not a proven root cause.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=VWLqmL-WYl4&amp;t=658s" aria-label="Watch at 10:58">10:58</a> <span>In the second example latency starts upstream but the alert fires on a downstream service, and the speakers say the AI found the loudest service, not the guilty one, because it lacked dependency context.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=VWLqmL-WYl4&amp;t=759s" aria-label="Watch at 12:39">12:39</a> <span>In the third example the alert and summary are correct but ownership data is stale, so the page goes to a former owner and time is lost finding the right team.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=VWLqmL-WYl4&amp;t=928s" aria-label="Watch at 15:28">15:28</a> <span>The speakers call these data and operational problems, not model problems, giving the example of a service named checkout-v2 in deployment logs and checkout-api in metrics.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=VWLqmL-WYl4&amp;t=1176s" aria-label="Watch at 19:36">19:36</a> <span>They describe a tool gateway through which the agent reads telemetry, deployment records, ownership and SLO data with read-only scope, audit logging of queries and source and timestamp on each result.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/argo-cd-b9549e9e9e77.html">Argo CD</a><a class="tag project-tag" href="../technologies/grafana-cace491b6955.html">Grafana</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/opentelemetry-15646ccfc423.html">OpenTelemetry</a><a class="tag project-tag" href="../technologies/prometheus-1809f7cd0c75.html">Prometheus</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

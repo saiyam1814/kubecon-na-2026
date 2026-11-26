@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>From Bearer Tokens to Mesh-Native mTLS: Modernizing Service Identity at Coinbase | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<article class="talk-detail"><a class="back-link" href="../index.html#library">← All talks</a>
+<div class="detail-eyebrow"><span class="tag track-tag track-5">Connectivity</span></div>
+<h1>From Bearer Tokens to Mesh-Native mTLS: Modernizing Service Identity at Coinbase</h1>
+<dl class="metadata">
+<div><dt>Speakers</dt><dd>Zachary Schwartz, Yair Temkin</dd></div>
+<div><dt>Track</dt><dd>Connectivity</dd></div>
+<div><dt>Themes</dt><dd><a class="tag theme-tag" href="../index.html?theme=Security%2C%20identity%20and%20policy#library">Security, identity and policy</a><a class="tag theme-tag" href="../index.html?theme=Networking%20and%20connectivity#library">Networking and connectivity</a></dd></div>
+<div><dt>Demo</dt><dd>No</dd></div>
+<div><dt>Scheduled slot</dt><dd>30 minutes (not video runtime)</dd></div>
+<div><dt>Level</dt><dd>Any Level</dd></div>
+<div><dt>Session type</dt><dd>Session</dd></div>
+</dl>
+<p class="talk-links"><a href="https://www.youtube.com/watch?v=MnDbkN8OGSE">Watch the full talk on YouTube</a> · <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1250086">Schedule</a> · <a href="https://sessionize.com/download/ixobvay~QZbhgHrRqBkk3ATdVABeaB.pptx~from-bearer-tokens-to-mesh-native-mtls.pptx">Slides</a></p>
+<section><h2>Talk summary</h2><p>Yair Temkin and Zachary Schwartz describe how Coinbase replaced a homegrown service-to-service auth system with SPIFFE identities issued by SPIRE and checked by an auth sidecar, and say every service is now off the legacy system. They share lessons from the migration and then outline plans to use Istio ambient mesh, with JWT validation at the ingress gateway and ztunnel mTLS, so the sidecars can eventually be removed.</p><aside class="watch-callout"><strong>Watch this if:</strong><p>you are planning a move from token-based service auth to SPIFFE identities or Istio ambient mesh and want a peer&#x27;s account of the migration.</p></aside></section>
+<section><h2>Key points from the speaker</h2><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=MnDbkN8OGSE&amp;t=83s" aria-label="Watch at 1:23">1:23</a> <span>Temkin says the legacy service auth system was tightly coupled to AWS, tied to one region and JWT-only, and was retired in March 2025 when SPIRE became the paved road.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=MnDbkN8OGSE&amp;t=146s" aria-label="Watch at 2:26">2:26</a> <span>Schwartz lists why they chose SPIRE, including compatibility with services outside Kubernetes, JWT SVIDs and separate trust domains per region and environment, and reports 70% less CPU in the auth path and about 50 milliseconds less latency than the legacy system.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=MnDbkN8OGSE&amp;t=406s" aria-label="Watch at 6:46">6:46</a> <span>Schwartz says managing the migration centrally through the sidecar and a control plane, without pull requests in every service team&#x27;s repository, let them move much faster, and that all services now use the SPIRE-based system.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=MnDbkN8OGSE&amp;t=642s" aria-label="Watch at 10:42">10:42</a> <span>Among the lessons, he says init containers could start before the auth sidecar and have no identity, which they solved with Kubernetes native sidecars, and that bursts of new pods overwhelmed the SPIRE agent until caching was tuned.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=MnDbkN8OGSE&amp;t=817s" aria-label="Watch at 13:37">13:37</a> <span>Temkin describes the ambient mesh plan for ingress: Envoy filters at the ingress gateway validate JWTs centrally and set a subject header, and authorization policies at the gateway and at ztunnel restrict who can call each service.</span></li></ol></section>
+<section><h2>Projects and tools mentioned</h2><div class="tags"><strong>Projects:</strong> <a class="tag project-tag" href="../technologies/aws-lambda-37c8906f4374.html">AWS Lambda</a><a class="tag project-tag" href="../technologies/envoy-84532b306f25.html">Envoy</a><a class="tag project-tag" href="../technologies/grpc-b389db1475dc.html">gRPC</a><a class="tag project-tag" href="../technologies/istio-82d979a24d74.html">Istio</a><a class="tag project-tag" href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a><a class="tag project-tag" href="../technologies/spiffe-10aca797a724.html">SPIFFE</a><a class="tag project-tag" href="../technologies/spire-8aa27f40201f.html">SPIRE</a><a class="tag project-tag" href="../technologies/ztunnel-f68c1c6fd4bf.html">ztunnel</a></div></section></article>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>

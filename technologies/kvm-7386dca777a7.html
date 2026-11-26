@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>KVM talks | KubeCon NA 2026 Map</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../appearance.js"></script>
+<script src="../browse.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header shell">
+  <div class="brand-group"><a class="brand" href="../index.html">KubeCon NA 2026 Map</a><span class="unofficial">Unofficial</span></div>
+  <div class="header-actions">
+  <nav aria-label="Browse talks">
+    <a href="../guides.html">Start here</a>
+    <a href="../index.html#library">All talks</a>
+    <a href="../tracks.html">By track</a>
+    <a href="../themes.html">By theme</a>
+    <a href="../technologies.html">By technology</a>
+    <a href="../index.html#projects">Projects</a>
+  </nav>
+  <label class="appearance" hidden>Appearance
+    <select id="appearance" aria-label="Color mode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+  </label>
+  </div>
+</header>
+<main id="main" class="shell">
+<!-- kubecon-map:generated-technology-page -->
+<a class="back-link" href="../technologies.html">← All technologies</a>
+<section class="technology-heading"><p class="eyebrow">Tool / technology</p><h1>KVM</h1>
+<p class="hero-copy">1 talk mentions KVM.
+Choose a talk by its summary and watch-this-if line, or go straight to one of its key moments.</p>
+<p class="muted">Moments summarize the whole talk; not every moment is about this technology. Talks are listed alphabetically.</p></section>
+<aside class="related-technologies"><h2>Explore connected technologies</h2><ul><li><a href="../technologies/buildkit-f32de15df923.html">BuildKit</a> <span>1 shared talk</span></li><li><a href="../technologies/cgroups-a51b96e413b1.html">cgroups</a> <span>1 shared talk</span></li><li><a href="../technologies/gatekeeper-9ce00b27299c.html">Gatekeeper</a> <span>1 shared talk</span></li><li><a href="../technologies/kata-containers-1a987ab98658.html">Kata Containers</a> <span>1 shared talk</span></li><li><a href="../technologies/kubernetes-94abcb2d2773.html">Kubernetes</a> <span>1 shared talk</span></li><li><a href="../technologies/netfilter-28b47a1b64cd.html">Netfilter</a> <span>1 shared talk</span></li><li><a href="../technologies/nftables-ac8cc19bba56.html">nftables</a> <span>1 shared talk</span></li><li><a href="../technologies/open-policy-agent-f4cdadadaba2.html">Open Policy Agent</a> <span>1 shared talk</span></li></ul></aside><section class="technology-talks" aria-label="Talks mentioning KVM"><ul class="talk-list"><li class="talk-card" data-talk="3d4Gn7zoA3I" data-track="Security"
+data-themes="[&quot;Security, identity and policy&quot;]" data-search="Five Stages of Kubernetes Security Grief Ann Wallace Kavitha Daula Security  Security, identity and policy Kubernetes Open Policy Agent Gatekeeper BuildKit Kata Containers runc cgroups Netfilter nftables seccomp SELinux Pod Security Admission KVM Xen seL4 BuildKit cgroups Gatekeeper Kata Containers Kubernetes KVM Netfilter nftables Open Policy Agent Pod Security Admission runc seccomp seL4 SELinux Xen OPA Gatekeeper K8s k8s OPA Ann Wallace and Kavitha Daula walk through denial, anger, bargaining, depression and acceptance as stages of Kubernetes security, with Wallace voicing what teams say at each stage and Daula describing a CVE in the shared Linux kernel or container runtime that she says undercuts it. They conclude that namespaces and policies remain needed but do not give a workload its own kernel, and argue for hypervisor-based isolation with a guest kernel per workload. Watch this if you treat Kubernetes namespaces as a tenant boundary and want a quick tour of the kernel and runtime CVEs the speakers use to argue for hypervisor-based isolation."
+data-technologies="[&quot;BuildKit&quot;, &quot;cgroups&quot;, &quot;Gatekeeper&quot;, &quot;Kata Containers&quot;, &quot;Kubernetes&quot;, &quot;KVM&quot;, &quot;Netfilter&quot;, &quot;nftables&quot;, &quot;Open Policy Agent&quot;, &quot;Pod Security Admission&quot;, &quot;runc&quot;, &quot;seccomp&quot;, &quot;seL4&quot;, &quot;SELinux&quot;, &quot;Xen&quot;]" data-demo="no"
+data-length="30" data-level="Any Level" data-type="Session">
+<div class="card-eyebrow"><span class="tag track-tag track-7">Security</span></div>
+<h3><a href="../talks/3d4Gn7zoA3I.html">Five Stages of Kubernetes Security Grief</a></h3>
+<p class="speakers">Ann Wallace, Kavitha Daula</p><p class="card-summary">Ann Wallace and Kavitha Daula walk through denial, anger, bargaining, depression and acceptance as stages of Kubernetes security, with Wallace voicing what teams say at each stage and Daula describing a CVE in the shared Linux kernel or container runtime that she says undercuts it. They conclude that namespaces and policies remain needed but do not give a workload its own kernel, and argue for hypervisor-based isolation with a guest kernel per workload.</p>
+<p class="schedule-summary">30 min slot · Any Level · Session</p>
+<div class="tags"><a class="tag theme-tag" href="../index.html?theme=Security%2C%20identity%20and%20policy#library">Security, identity and policy</a></div><p class="card-watch"><strong>Watch this if:</strong> you treat Kubernetes namespaces as a tenant boundary and want a quick tour of the kernel and runtime CVEs the speakers use to argue for hypervisor-based isolation.</p><ol class="key-points"><li><a class="timestamp" href="https://www.youtube.com/watch?v=3d4Gn7zoA3I&amp;t=189s" aria-label="Watch at 3:09">3:09</a> <span>For the denial stage, Daula says Kubernetes namespaces organize workloads but containers still share one Linux kernel, and walks through CVE-2022-0492, where a container could use the cgroups v1 release agent to run code as root on the host.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=3d4Gn7zoA3I&amp;t=344s" aria-label="Watch at 5:44">5:44</a> <span>For anger, she describes a Netfilter use-after-free reachable from a container&#x27;s own user and network namespaces, which she says researchers exploited to become root even though the application never touches firewall rules.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=3d4Gn7zoA3I&amp;t=522s" aria-label="Watch at 8:42">8:42</a> <span>For bargaining, she recounts the 2019 runc escape in which the host runc binary could be overwritten, noting that running as non-root or enforcing SELinux could have prevented it but that policy does not patch a vulnerable runtime.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=3d4Gn7zoA3I&amp;t=696s" aria-label="Watch at 11:36">11:36</a> <span>For depression, she explains Leaky Vessels, where a leaked file descriptor in runc gave a container access to the host file system, and says it covered four CVEs across runc and BuildKit.</span></li><li><a class="timestamp" href="https://www.youtube.com/watch?v=3d4Gn7zoA3I&amp;t=826s" aria-label="Watch at 13:46">13:46</a> <span>For acceptance, Daula argues for changing the isolation boundary itself by giving each workload its own guest kernel behind a hypervisor, and says vulnerabilities do not disappear and the security policies are still needed.</span></li></ol>
+<a class="card-link" href="../talks/3d4Gn7zoA3I.html" aria-label="Explore Five Stages of Kubernetes Security Grief">Explore key moments <span aria-hidden="true">↗</span></a>
+</li></ul></section>
+</main>
+<footer class="shell"><span>KubeCon + CloudNativeCon North America 2026</span><span>Just the talks. No tracking. No external assets.</span>
+<p class="disclaimer">Unofficial guide made with a Devin Bot for Kubesimplify. Not affiliated with CNCF or the Linux Foundation. Talks and recordings belong to their speakers and CNCF.</p></footer>
+</body>
+</html>
